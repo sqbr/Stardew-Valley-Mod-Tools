@@ -1,0 +1,117 @@
+
+		 {     	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Update": "OnLocationChange",
+			"When": { "AbigailGender": "Male", "DayEvent": "flower dance", "Time": "{{Range: 2200, 2600}}" },
+			"Entries": {
+				"Abigail": "teen/rude/outgoing/neutral/male/datable/Sebastian/Town/{{AbigailBirthday}}/Caroline 'Mom' Pierre 'Dad'/SeedShop 1 9/{{AbigailName}}",
+			},
+		 },
+		 {	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Update": "OnLocationChange",
+			"When": { "ElliottGender": "Female", "DayEvent": "flower dance", "Time": "{{Range: 2200, 2600}}" },
+			"Entries": {
+				"Elliott": "adult/polite/neutral/neutral/female/datable/Leah/Town/{{ElliottBirthday}}/Willy ''/ElliottHouse 1 5/{{ElliottName}}",
+			},
+		 },
+		 {	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Update": "OnLocationChange",
+			"When": { "EmilyGender": "Male", "DayEvent": "flower dance", "Time": "{{Range: 2200, 2600}}" },
+			"Entries": {
+				"Emily": "adult/polite/outgoing/positive/male/datable/null/Town/{{EmilyBirthday}}/Haley 'sister'/HaleyHouse 16 5/{{EmilyName}}",
+			},
+		 },
+		 {	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Update": "OnLocationChange",
+			"When": { "HaleyGender": "Male", "DayEvent": "flower dance", "Time": "{{Range: 2200, 2600}}" },
+			"Entries": {
+				"Haley": "adult/rude/outgoing/neutral/male/datable/Alex/Town/{{HaleyBirthday}}/Emily 'sister'/HaleyHouse 8 7/{{HaleyName}}",
+			},
+		 },
+		 {	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Update": "OnLocationChange",
+			"When": { "HarveyGender": "Female", "DayEvent": "flower dance", "Time": "{{Range: 2200, 2600}}" },
+			"Entries": {
+				"Harvey": "adult/polite/shy/positive/female/datable/Maru/Town/{{HarveyBirthday}}//HarveyRoom 13 4/{{HarveyName}}",
+			},
+		 },
+		 {	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Update": "OnLocationChange",
+			"When": { "AlexGender": "Female", "DayEvent": "flower dance", "Time": "{{Range: 2200, 2600}}" },
+			"Entries": {
+				"Alex": "adult/rude/outgoing/positive/female/datable/Haley/Town/{{AlexBirthday}}/George 'grandpa' Evelyn 'grandma'/JoshHouse 19 5/{{AlexName}}",
+			},
+		 },
+		 {	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Update": "OnLocationChange",
+			"When": { "LeahGender": "Male", "DayEvent": "flower dance", "Time": "{{Range: 2200, 2600}}" },
+			"Entries": {
+				"Leah": "adult/polite/neutral/positive/male/datable/Elliott/Town/{{LeahBirthday}}//LeahHouse 3 7/{{LeahName}}",
+			},
+		 },
+		 {	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Update": "OnLocationChange",
+			"When": { "MaruGender": "Male", "DayEvent": "flower dance", "Time": "{{Range: 2200, 2600}}" },
+			"Entries": {
+				"Maru": "teen/neutral/outgoing/positive/male/datable/Harvey/Town/{{MaruBirthday}}/Robin 'Mom' Demetrius 'Dad' Sebastian 'half-brother'/ScienceHouse 2 4/{{MaruName}}",
+			},
+		 },
+		 {	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Update": "OnLocationChange",
+			"When": { "PennyGender": "Male", "DayEvent": "flower dance", "Time": "{{Range: 2200, 2600}}" },
+			"Entries": {
+				"Penny": "teen/polite/shy/positive/male/datable/Sam/Town/{{PennyBirthday}}/Pam 'mother'/Trailer 4 9/{{PennyName}}",
+			},
+		 },
+		 {	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Update": "OnLocationChange",
+			"When": { "SamGender": "Female", "DayEvent": "flower dance", "Time": "{{Range: 2200, 2600}}" },
+			"Entries": {
+				"Sam": "teen/neutral/outgoing/positive/female/datable/Penny/Town/{{SamBirthday}}/Vincent 'little_brother' Jodi 'Mom' Kent 'Dad' Sebastian ''/SamHouse 22 13/{{SamName}}",
+			},
+		 },
+		 {	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Update": "OnLocationChange",
+			"When": { "SebastianGender": "Female", "DayEvent": "flower dance", "Time": "{{Range: 2200, 2600}}" },
+			"Entries": {
+				"Sebastian": "teen/rude/shy/negative/female/datable/Abigail/Town/{{SebastianBirthday}}/Robin 'Mom' Maru 'half-sister' Sam ''/SebastianRoom 10 9/{{SebastianName}}",
+			},
+		 },
+		 {	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Update": "OnLocationChange",
+			"When": { "ShaneGender": "Female", "DayEvent": "flower dance", "Time": "{{Range: 2200, 2600}}" },
+			"Entries": {
+				"Shane": "adult/rude/shy/negative/female/datable/null/Town/{{ShaneBirthday}}/Marnie 'aunt'/AnimalShop 25 6/{{ShaneName}}",
+			},
+		 },
+		 {	//Can't get pronouns to work. Will fix later
+      		"Action": "EditData",
+      		"Target": "Strings/Locations",
+      		"Entries": {
+        			"DoorUnlock_NotFriend_Male": "You're not good enough friends with {0} to enter their bedroom.",
+        			"DoorUnlock_NotFriend_Female": "You're not good enough friends with {0} to enter their bedroom.",
+			},
+		 },

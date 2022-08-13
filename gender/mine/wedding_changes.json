@@ -1,0 +1,264 @@
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Alex": "Engaged", "AlexGender": "Male" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Elliott": "Engaged", "ElliottGender": "Male" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Harvey": "Engaged", "HarveyGender": "Male" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Sam": "Engaged", "SamGender": "Male" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Sebastian": "Engaged", "SebastianGender": "Male" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Leah": "Engaged", "LeahGender": "Male" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Maru": "Engaged", "MaruGender": "Male" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Penny": "Engaged", "PennyGender": "Male" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Shane": "Engaged", "ShaneGender": "Male" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Abigail": "Engaged", "AbigailGender": "Male" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Emily": "Engaged", "EmilyGender": "Male" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Haley": "Engaged", "HaleyGender": "Male" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Alex": "Engaged", "AlexGender": "Female" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Elliott": "Engaged", "ElliottGender": "Female" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Harvey": "Engaged", "HarveyGender": "Female" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Sam": "Engaged", "SamGender": "Female" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Sebastian": "Engaged", "SebastianGender": "Female" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Leah": "Engaged", "LeahGender": "Female" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Maru": "Engaged", "MaruGender": "Female" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Penny": "Engaged", "PennyGender": "Female" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Shane": "Engaged", "ShaneGender": "Female" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Abigail": "Engaged", "AbigailGender": "Female" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Emily": "Engaged", "EmilyGender": "Female" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h"
+			}
+		},
+		{
+      		"Action": "EditData",
+      		"Target": "strings/StringsFromCSFiles",
+		"When": { "Relationship:Haley": "Engaged", "HaleyGender": "Female" },
+      		"Entries": {
+			"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+			"Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h",
+			"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h"
+			}
+		},

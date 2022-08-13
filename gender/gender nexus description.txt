@@ -1,0 +1,107 @@
+This mod allows the player to set the gender and pronouns of every villager, and make their appearance more androgynous. 
+
+Reccommend Pregnancy Role https://www.nexusmods.com/stardewvalley/mods/5762?tab=description
+
+Art:
+
+This mod has the option to change the sprite and portrait art for all the villagers and some background characters to be more androgynous. Leah can be a wheelchair user, and Marnie, Jas and Elliott can have darker colouring. There's also a few variants in the Variants folder from when I was experimenting with art styles, but you'll have to edit those in yourself.   
+
+What counts as 'androgynous' is pretty subjective, but my goal was to create art that can be read as a man, woman, or ambiguous. And also to do as little work as possible ;)
+
+I used/edited art from these mods, which are great, and worth checking out if my art doesn't quite work for you:
+Elliot: Slightly Edited Portraits https://www.nexusmods.com/stardewvalley/mods/4824 
+talkohlooeys' Portraits https://www.nexusmods.com/stardewvalley/mods/5269
+
+Slightly Cuter Character Sprites https://www.nexusmods.com/stardewvalley/mods/1437
+
+Vanilla Facelift (Portrait Mod) https://www.nexusmods.com/stardewvalley/mods/7116?tab=files
+
+Shane Revised (CP) https://www.nexusmods.com/stardewvalley/mods/10050?tab=files&file_id=46789
+
+Grandpa's Bed - Better Introduction for Content Patcher https://www.nexusmods.com/stardewvalley/mods/6590?tab=files
+
+Also I edited an image from This Person Does Not Exist. 
+
+Here's some more mods with nice androgynous and/or diverse art that I was too shy to ask to edit but that you can install yourself:
+
+Just Another Bachelors' Portraits Mod https://www.nexusmods.com/stardewvalley/mods/144?tab=files
+
+Miowee's Portraits https://www.nexusmods.com/stardewvalley/mods/1345
+
+Dong's Harvest Moon-Inspired Portraits (Content Patcher) https://www.nexusmods.com/stardewvalley/mods/7443
+
+Leyalluna's Portraits (Content Patcher) https://www.nexusmods.com/stardewvalley/mods/2181
+
+Genderbent Bachelorettes https://www.nexusmods.com/stardewvalley/mods/199
+
+Bachelor and Bachelorettes all portraits https://www.nexusmods.com/stardewvalley/mods/59
+
+Dreamburrows Elliott Portrait https://www.nexusmods.com/stardewvalley/mods/158
+
+Seasonal Younger Wizard - Moth's Vanilla Facelift-style Portraits https://www.nexusmods.com/stardewvalley/mods/10555
+
+Shane anime portrait https://www.nexusmods.com/stardewvalley/mods/1634
+
+gotama's Shane portrait without facial hair https://www.nexusmods.com/stardewvalley/mods/1325
+
+Diverse Stardew Valley https://diversestardewvalley.weebly.com/
+
+For marriageable characters, if you replace their sprite sheet with one for the opposite of their canon gender, scroll down to the advanced settings and switch their "GameGender". 
+
+General Settings:
+
+"MiscEdits": A bunch of little changes to dialogue and art to make everything less heteronormative/ableist etc. For example: George is no longer homophobic, there's less ableism, the witch is now the same gender as the wizard, the goblins and witch no longer have hooked noses.    
+  
+"PatchOriginalWeddingArt": Whether to patch in the vanilla game's wedding art for any character whose game gender is being changed and who is not using the mod's art. See "A Marriageable Character's 'game gender'" section for more explanation. 
+
+"EditIslandCharacters": Whether or not to edit the dialogue for characters from or on Ginger Island. This is to support use of mods affecting Ginger Island. 
+<ul>
+<li>"Full": Changes as much text as necessary to preserve all name/pronoun etc choices, including for Birdie, Leo, and Professor Snail. Will break the dialogue for any mod affecting Ginger Island, may cause map bugs etc. 
+
+"Minimal": makes only minor changes, to preserve name/pronoun etc choices for characters other than Birdie, Leo, and Professor Snail as much as possible. Will not always preserve these choices, but should be compatible with most mods affecting Ginger Island.
+
+"None": Makes no changes for any dialogue for characters from or on Ginger Island. Should definitely be compatible with any mods affecting Ginger Island, but will ignore name/pronoun etc choices a lot. 
+
+Basic Character Settings:
+
+"(name)Name": the new name to use in dialogue etc
+"(name)Gender": How people describe this character using gendered words. "Female" characters are called woman/girl/daughter, "Male" characters called man/boy/son, "Neutral" characters called person/kid/child, etc.  
+"(name)Pronoun": What pronoun this character uses, eg if you pick "They", text would change from from "Abigail plays her flute" to "Abigail plays their flute".  
+"(name)Images": whether or not to replace the character's portrait and sprites with this mod's androgynous versions. A few characters have variants: Leah has "wheelchair" vs "Able-bodied", while Jas, Marnie and Elliott have "Lighter" vs "Darker". 
+
+Advanced Character Settings: 
+
+"(name)Birthday": The character's birthday
+"(name)GameGender": the 'game gender' used by the internal game code, affecting how sprites get used and whether the character can get pregnant. 
+
+
+Possible conflict with other mods: 
+
+Image mods: If you've already replaced a sprite for character "Name" with another mod, you need to turn off (Name)EditImage and "PatchOriginalWeddingArt". For marriageable characters, if you replace their sprite sheet with one for the opposite of their canon gender, scroll down to the advanced settings and switch their "GameGender".  
+
+If you have "MiscEdits" turned on then the mod will also overwrite the images for the witch and some other background characters. 
+
+This mod only overwrites the relevant parts of each image file, so it shouldn't cause any other problems. 
+
+Dialogue mods: This mod changes a lot of dialogue, so will conflict with most other dialogue mods. Setting "EditIslandCharacters" to "None" or "Minimal" will stop the mod breaking Ginger Island related dialogue. 
+
+
+Known Issues:
+
+ I think it may be technically possible for this to cause unwanted effects on things like pregnancy if you're not controlling that wirh
+
+A Marriageable Character's 'game gender':
+
+Most people can skip this part, it's only relevant if you're using a genderswap mod for marriage candidates, or want to change whether characters can get pregnant without using a different mod. 
+
+Separate to the variables defined in this mod, the internal game code defines each character as male or female, which I have called the "game gender". This 'game gender' doesn't change much and the mod mostly ignores it, but it affects a couple of key traits for marriageable characters: 'male' and 'female' characters have differently structured sprite sheets, and 'female' characters can get pregnant. 
+
+There's an option in the advanced settings to change the game gender. The only time I would recommend doing this is if you're also using a genderswap mod with it's own sprites, since in that case this mod will set the game gender back to the default and mess up the sprites.  
+
+If you just want to change whether a character can get pregnant, I recommend using Pregnancy Role https://www.nexusmods.com/stardewvalley/mods/5762?tab=description instead of changing the game gender. Marriageable character's game genders are temporarily set back to their original state during the flower dance, which could cause unwanted pregnancy if you're not using Pregnancy Role.
+
+If you set "(name)EditArt" to "true", all sprites, portraits, and other appearances for (name) will be replaced with the androgynous version. The mod will move things around behind the scenes as necessary so the GameGender only affects pregnancy. 
+
+If you set "(name)EditArt" to "false" and "PatchOriginalWeddingArt" to "false", the mod won't do anything to (name)'s appearance. Choose this if you have modded (name)'s sprite with some other mod. If you've genderswapped a character, swap their game gender too so the sprite sheets work.  
+
+If you set "(name)EditArt" to "false" and "PatchOriginalWeddingArt" to "true", the mod will patch in images from the vanilla game wedding sprites during any wedding scene with this character where their GameGender is the opposite of canon. Choose this if you are using the vanilla game sprites and changing the GameGender. Which I don't recommend, but I'm not the boss of you ;) 

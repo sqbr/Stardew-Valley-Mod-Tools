@@ -1,0 +1,11 @@
+{
+    "Name": "Goth Ground",
+    "Author": "sqbr",
+    "Version": "1.0.0",
+    "Description": "Makes the colours of everything grey-blue-ish gothic.",
+    "UniqueID": "Sqbr.GothGround",
+    "UpdateKeys": [],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
+}

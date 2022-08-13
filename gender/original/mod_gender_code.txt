@@ -1,0 +1,4110 @@
+{
+     "Name": "AbigailGenderUC",
+	    "Value": "She",
+            "When": { "AbigailGender": "Female" },
+       },
+                {
+	    "Name": "AbigailGenderLC",
+	    "Value": "she",
+            "When": { "AbigailGender": "Female" },
+       },	
+                {
+	    "Name": "AbigailGenderUC",
+	    "Value": "He",
+            "When": { "AbigailGender": "Male" },
+       },	
+                {
+	    "Name": "AbigailGenderLC",
+	    "Value": "he",
+            "When": { "AbigailGender": "Male" },
+       },	
+                {
+	    "Name": "AbigailPronounUC1",
+	    "Value": "Her",
+            "When": { "AbigailGender": "Female" },
+       },	
+                {
+	    "Name": "AbigailPronounLC1",
+	    "Value": "her",
+            "When": { "AbigailGender": "Female" },
+       },
+                {
+	    "Name": "AbigailPronounUC2",
+	    "Value": "Her",
+            "When": { "AbigailGender": "Female" },
+       },	
+                {
+	    "Name": "AbigailPronounLC2",
+	    "Value": "her",
+            "When": { "AbigailGender": "Female" },
+       },		
+                {
+	    "Name": "AbigailPronounUC1",
+	    "Value": "Him",
+            "When": { "AbigailGender": "Male" },
+       },	
+                {
+	    "Name": "AbigailPronounLC1",
+	    "Value": "him",
+            "When": { "AbigailGender": "Male" },
+       },
+                {
+	    "Name": "AbigailPronounUC2",
+	    "Value": "His",
+            "When": { "AbigailGender": "Male" },
+       },	
+                {
+	    "Name": "AbigailPronounLC2",
+	    "Value": "his",
+            "When": { "AbigailGender": "Male" },
+       },
+                {
+	    "Name": "AbigailChild",
+	    "Value": "son",
+            "When": { "AbigailGender": "Male" },
+       },	
+                {
+	    "Name": "AbigailChild",
+	    "Value": "daughter",
+            "When": { "AbigailGender": "Female" },
+       },
+                {
+	    "Name": "AbigailGenderLC3",
+	    "Value": "guy",
+            "When": { "AbigailGender": "Male" },
+       },
+                {
+	    "Name": "AbigailGenderLC3",
+	    "Value": "girl",
+            "When": { "AbigailGender": "Female" },
+       },
+                {
+	    "Name": "AbigailGenderLC4",
+	    "Value": "girl",
+            "When": { "AbigailGender": "Female" },
+       },
+                {
+	    "Name": "AbigailGenderLC4",
+	    "Value": "boy",
+            "When": { "AbigailGender": "Male" },
+       },
+                {
+	    "Name": "AbigailParentUC",
+	    "Value": "Dad",
+            "When": { "AbigailGender": "Male" },
+       },
+                {
+	    "Name": "AbigailParentUC",
+	    "Value": "Mom",
+            "When": { "AbigailGender": "Female" },
+       },
+                {
+	    "Name": "AbigailMarriedLC",
+	    "Value": "husband",
+            "When": { "AbigailGender": "Male" },
+       },
+                {
+	    "Name": "AbigailMarriedLC",
+	    "Value": "wife",
+            "When": { "AbigailGender": "Female" },
+       },
+                {
+	    "Name": "AbigailParentLC",
+	    "Value": "mother",
+            "When": { "AbigailGender": "Female" },
+       },
+                {
+	    "Name": "AbigailParentLC",
+	    "Value": "father",
+            "When": { "AbigailGender": "Male" },
+       },
+                {
+	    "Name": "AlexGenderUC",
+	    "Value": "She",
+            "When": { "AlexGender": "Female" },
+       },
+                {
+	    "Name": "AlexGenderLC",
+	    "Value": "she",
+            "When": { "AlexGender": "Female" },
+       },	
+                {
+	    "Name": "AlexGenderUC",
+	    "Value": "He",
+            "When": { "AlexGender": "Male" },
+       },	
+                {
+	    "Name": "AlexGenderLC",
+	    "Value": "he",
+            "When": { "AlexGender": "Male" },
+       },	
+                {
+	    "Name": "AlexPronounUC1",
+	    "Value": "Her",
+            "When": { "AlexGender": "Female" },
+       },	
+                {
+	    "Name": "AlexPronounLC1",
+	    "Value": "her",
+            "When": { "AlexGender": "Female" },
+       },
+                {
+	    "Name": "AlexPronounUC2",
+	    "Value": "Her",
+            "When": { "AlexGender": "Female" },
+       },	
+                {
+	    "Name": "AlexPronounLC2",
+	    "Value": "her",
+            "When": { "AlexGender": "Female" },
+       },		
+                {
+	    "Name": "AlexPronounUC1",
+	    "Value": "Him",
+            "When": { "AlexGender": "Male" },
+       },	
+                {
+	    "Name": "AlexPronounLC1",
+	    "Value": "him",
+            "When": { "AlexGender": "Male" },
+       },
+                {
+	    "Name": "AlexPronounUC2",
+	    "Value": "His",
+            "When": { "AlexGender": "Male" },
+       },	
+                {
+	    "Name": "AlexPronounLC2",
+	    "Value": "his",
+            "When": { "AlexGender": "Male" },
+       },
+                {
+	    "Name": "AlexChild",
+	    "Value": "son",
+            "When": { "AlexGender": "Male" },
+       },	
+                {
+	    "Name": "AlexChild",
+	    "Value": "daughter",
+            "When": { "AlexGender": "Female" },
+       },
+                {
+	    "Name": "AlexGenderLC4",
+	    "Value": "girl",
+            "When": { "AlexGender": "Female" },
+       },
+                {
+	    "Name": "AlexGenderLC4",
+	    "Value": "boy",
+            "When": { "AlexGender": "Male" },
+       },
+                {
+	    "Name": "AlexMarriedLC",
+	    "Value": "husband",
+            "When": { "AlexGender": "Male" },
+       },
+                {
+	    "Name": "AlexMarriedLC",
+	    "Value": "wife",
+            "When": { "AlexGender": "Female" },
+       },
+           	{
+	    "Name": "AlexGenderLC3",
+	    "Value": "guy",
+            "When": { "AlexGender": "Male" },
+       },
+                {
+	    "Name": "AlexGenderLC3",
+	    "Value": "girl",
+            "When": { "AlexGender": "Female" },
+       },
+     		{
+	    "Name": "AlexParentUC",
+	    "Value": "Dad",
+            "When": { "AlexGender": "Male" },
+       },	
+                {
+	    "Name": "AlexParentUC",
+	    "Value": "Mom",
+            "When": { "AlexGender": "Female" },
+       },
+                {
+	    "Name": "CarolineGenderUC",
+	    "Value": "She",
+            "When": { "CarolineGender": "Female" },
+       },
+                {
+	    "Name": "CarolineGenderLC",
+	    "Value": "she",
+            "When": { "CarolineGender": "Female" },
+       },	
+                {
+	    "Name": "CarolineGenderUC",
+	    "Value": "He",
+            "When": { "CarolineGender": "Male" },
+       },	
+                {
+	    "Name": "CarolineGenderLC",
+	    "Value": "he",
+            "When": { "CarolineGender": "Male" },
+       },	
+                {
+	    "Name": "CarolinePronounUC1",
+	    "Value": "Her",
+            "When": { "CarolineGender": "Female" },
+       },	
+                {
+	    "Name": "CarolinePronounLC1",
+	    "Value": "her",
+            "When": { "CarolineGender": "Female" },
+       },
+                {
+	    "Name": "CarolinePronounUC2",
+	    "Value": "Her",
+            "When": { "CarolineGender": "Female" },
+       },	
+                {
+	    "Name": "CarolinePronounLC2",
+	    "Value": "her",
+            "When": { "CarolineGender": "Female" },
+       },		
+                {
+	    "Name": "CarolinePronounUC1",
+	    "Value": "Him",
+            "When": { "CarolineGender": "Male" },
+       },	
+                {
+	    "Name": "CarolinePronounLC1",
+	    "Value": "him",
+            "When": { "CarolineGender": "Male" },
+       },
+                {
+	    "Name": "CarolinePronounUC2",
+	    "Value": "His",
+            "When": { "CarolineGender": "Male" },
+       },	
+                {
+	    "Name": "CarolinePronounLC2",
+	    "Value": "his",
+            "When": { "CarolineGender": "Male" },
+       },
+     		{
+	    "Name": "CarolineParentUC",
+	    "Value": "Dad",
+            "When": { "CarolineGender": "Male" },
+       },	
+                {
+	    "Name": "CarolineParentUC",
+	    "Value": "Mom",
+            "When": { "CarolineGender": "Female" },
+       },
+                {
+	    "Name": "CarolineParentLC",
+	    "Value": "father",
+            "When": { "CarolineGender": "Male" },
+       },	
+                {
+	    "Name": "CarolineParentLC",
+	    "Value": "mother",
+            "When": { "CarolineGender": "Female" },
+       },
+                {
+	    "Name": "CarolineMarriedLC",
+	    "Value": "husband",
+            "When": { "CarolineGender": "Male" },
+       },
+                {
+	    "Name": "CarolineMarriedLC",
+	    "Value": "wife",
+            "When": { "CarolineGender": "Female" },
+       },
+           	{
+	    "Name": "CarolineGenderLC4",
+	    "Value": "boy",
+            "When": { "CarolineGender": "Male" },
+       },
+                {
+	    "Name": "CarolineGenderLC4",
+	    "Value": "girl",
+            "When": { "CarolineGender": "Female" },
+       },
+                {
+	    "Name": "CharlieGenderUC",
+	    "Value": "She",
+            "When": { "CharlieGender": "Female" },
+       },
+                {
+	    "Name": "CharlieGenderLC",
+	    "Value": "she",
+            "When": { "CharlieGender": "Female" },
+       },	
+                {
+	    "Name": "CharlieGenderUC",
+	    "Value": "He",
+            "When": { "CharlieGender": "Male" },
+       },	
+                {
+	    "Name": "CharlieGenderLC",
+	    "Value": "he",
+            "When": { "CharlieGender": "Male" },
+       },	
+                {
+	    "Name": "CharliePronounUC1",
+	    "Value": "Her",
+            "When": { "CharlieGender": "Female" },
+       },	
+                {
+	    "Name": "CharliePronounLC1",
+	    "Value": "her",
+            "When": { "CharlieGender": "Female" },
+       },
+                {
+	    "Name": "CharliePronounUC2",
+	    "Value": "Her",
+            "When": { "CharlieGender": "Female" },
+       },	
+                {
+	    "Name": "CharliePronounLC2",
+	    "Value": "her",
+            "When": { "CharlieGender": "Female" },
+       },		
+                {
+	    "Name": "CharliePronounUC1",
+	    "Value": "Him",
+            "When": { "CharlieGender": "Male" },
+       },	
+                {
+	    "Name": "CharliePronounLC1",
+	    "Value": "him",
+            "When": { "CharlieGender": "Male" },
+       },
+                {
+	    "Name": "CharliePronounUC2",
+	    "Value": "His",
+            "When": { "CharlieGender": "Male" },
+       },	
+                {
+	    "Name": "CharliePronounLC2",
+	    "Value": "his",
+            "When": { "CharlieGender": "Male" },
+       },
+                {
+	    "Name": "ClintGenderUC",
+	    "Value": "She",
+            "When": { "ClintGender": "Female" },
+       },
+                {
+	    "Name": "ClintGenderLC",
+	    "Value": "she",
+            "When": { "ClintGender": "Female" },
+       },	
+                {
+	    "Name": "ClintGenderUC",
+	    "Value": "He",
+            "When": { "ClintGender": "Male" },
+       },	
+                {
+	    "Name": "ClintGenderLC",
+	    "Value": "he",
+            "When": { "ClintGender": "Male" },
+       },	
+                {
+	    "Name": "ClintPronounUC1",
+	    "Value": "Her",
+            "When": { "ClintGender": "Female" },
+       },	
+                {
+	    "Name": "ClintPronounLC1",
+	    "Value": "her",
+            "When": { "ClintGender": "Female" },
+       },
+                {
+	    "Name": "ClintPronounUC2",
+	    "Value": "Her",
+            "When": { "ClintGender": "Female" },
+       },	
+                {
+	    "Name": "ClintPronounLC2",
+	    "Value": "her",
+            "When": { "ClintGender": "Female" },
+       },		
+                {
+	    "Name": "ClintPronounUC1",
+	    "Value": "Him",
+            "When": { "ClintGender": "Male" },
+       },	
+                {
+	    "Name": "ClintPronounLC1",
+	    "Value": "him",
+            "When": { "ClintGender": "Male" },
+       },
+                {
+	    "Name": "ClintPronounUC2",
+	    "Value": "His",
+            "When": { "ClintGender": "Male" },
+       },	
+                {
+	    "Name": "ClintPronounLC2",
+	    "Value": "his",
+            "When": { "ClintGender": "Male" },
+       },
+                {
+	    "Name": "ClintGenderLC3",
+	    "Value": "guy",
+            "When": { "ClintGender": "Male" },
+       },
+                {
+	    "Name": "ClintGenderLC3",
+	    "Value": "girl",
+            "When": { "ClintGender": "Female" },
+       },
+                {
+	    "Name": "DemetriusGenderUC",
+	    "Value": "She",
+            "When": { "DemetriusGender": "Female" },
+       },
+                {
+	    "Name": "DemetriusGenderLC",
+	    "Value": "she",
+            "When": { "DemetriusGender": "Female" },
+       },	
+                {
+	    "Name": "DemetriusGenderUC",
+	    "Value": "He",
+            "When": { "DemetriusGender": "Male" },
+       },	
+                {
+	    "Name": "DemetriusGenderLC",
+	    "Value": "he",
+            "When": { "DemetriusGender": "Male" },
+       },	
+                {
+	    "Name": "DemetriusPronounUC1",
+	    "Value": "Her",
+            "When": { "DemetriusGender": "Female" },
+       },	
+                {
+	    "Name": "DemetriusPronounLC1",
+	    "Value": "her",
+            "When": { "DemetriusGender": "Female" },
+       },
+                {
+	    "Name": "DemetriusPronounUC2",
+	    "Value": "Her",
+            "When": { "DemetriusGender": "Female" },
+       },	
+                {
+	    "Name": "DemetriusPronounLC2",
+	    "Value": "her",
+            "When": { "DemetriusGender": "Female" },
+       },		
+                {
+	    "Name": "DemetriusPronounUC1",
+	    "Value": "Him",
+            "When": { "DemetriusGender": "Male" },
+       },	
+                {
+	    "Name": "DemetriusPronounLC1",
+	    "Value": "him",
+            "When": { "DemetriusGender": "Male" },
+       },
+                {
+	    "Name": "DemetriusPronounUC2",
+	    "Value": "His",
+            "When": { "DemetriusGender": "Male" },
+       },	
+                {
+	    "Name": "DemetriusPronounLC2",
+	    "Value": "his",
+            "When": { "DemetriusGender": "Male" },
+       },
+                {
+	    "Name": "DemetriusPronounLC3",
+	    "Value": "hers",
+            "When": { "DemetriusGender": "Female" },
+       },	
+                {
+	    "Name": "DemetriusPronounLC3",
+	    "Value": "his",
+            "When": { "DemetriusGender": "Male" },
+       },
+     		{
+	    "Name": "DemetriusParentUC",
+	    "Value": "Dad",
+            "When": { "DemetriusGender": "Male" },
+       },	
+                {
+	    "Name": "DemetriusParentUC",
+	    "Value": "Mom",
+            "When": { "DemetriusGender": "Female" },
+       },
+                {
+	    "Name": "DemetriusParentLC",
+	    "Value": "father",
+            "When": { "DemetriusGender": "Male" },
+       },	
+                {
+	    "Name": "DemetriusParentLC",
+	    "Value": "mother",
+            "When": { "DemetriusGender": "Female" },
+       },
+                {
+	    "Name": "DemetriusMarriedLC",
+	    "Value": "husband",
+            "When": { "DemetriusGender": "Male" },
+       },
+                {
+	    "Name": "DemetriusMarriedLC",
+	    "Value": "wife",
+            "When": { "DemetriusGender": "Female" },
+       },
+                {
+	    "Name": "ElliottGenderUC",
+	    "Value": "She",
+            "When": { "ElliottGender": "Female" },
+       },
+                {
+	    "Name": "ElliottGenderLC",
+	    "Value": "she",
+            "When": { "ElliottGender": "Female" },
+       },	
+                {
+	    "Name": "ElliottGenderUC",
+	    "Value": "He",
+            "When": { "ElliottGender": "Male" },
+       },	
+                {
+	    "Name": "ElliottGenderLC",
+	    "Value": "he",
+            "When": { "ElliottGender": "Male" },
+       },	
+                {
+	    "Name": "ElliottPronounUC1",
+	    "Value": "Her",
+            "When": { "ElliottGender": "Female" },
+       },	
+                {
+	    "Name": "ElliottPronounLC1",
+	    "Value": "her",
+            "When": { "ElliottGender": "Female" },
+       },
+                {
+	    "Name": "ElliottPronounUC2",
+	    "Value": "Her",
+            "When": { "ElliottGender": "Female" },
+       },	
+                {
+	    "Name": "ElliottPronounLC2",
+	    "Value": "her",
+            "When": { "ElliottGender": "Female" },
+       },		
+                {
+	    "Name": "ElliottPronounUC1",
+	    "Value": "Him",
+            "When": { "ElliottGender": "Male" },
+       },	
+                {
+	    "Name": "ElliottPronounLC1",
+	    "Value": "him",
+            "When": { "ElliottGender": "Male" },
+       },
+                {
+	    "Name": "ElliottPronounUC2",
+	    "Value": "His",
+            "When": { "ElliottGender": "Male" },
+       },	
+                {
+	    "Name": "ElliottPronounLC2",
+	    "Value": "his",
+            "When": { "ElliottGender": "Male" },
+       },
+                {
+	    "Name": "ElliottLetter",
+	    "Value": "Husband",
+            "When": { "ElliottGender": "Male" },
+       },	
+                {
+	    "Name": "ElliottLetter",
+	    "Value": "Wife",
+            "When": { "ElliottGender": "Female" },
+       },
+                {
+	    "Name": "ElliottGenderLC4",
+	    "Value": "girl",
+            "When": { "ElliottGender": "Female" },
+       },
+                {
+	    "Name": "ElliottGenderLC4",
+	    "Value": "boy",
+            "When": { "ElliottGender": "Male" },
+       },
+                {
+	    "Name": "ElliottMarriedLC",
+	    "Value": "husband",
+            "When": { "ElliottGender": "Male" },
+       },
+                {
+	    "Name": "ElliottMarriedLC",
+	    "Value": "wife",
+            "When": { "ElliottGender": "Female" },
+       },
+                {
+	    "Name": "ElliottParentLC",
+	    "Value": "father",
+            "When": { "ElliottGender": "Male" },
+       },
+                {
+	    "Name": "ElliottParentLC",
+	    "Value": "mother",
+            "When": { "ElliottGender": "Female" },
+       },
+     		{
+	    "Name": "ElliottParentUC",
+	    "Value": "Dad",
+            "When": { "ElliottGender": "Male" },
+       },	
+                {
+	    "Name": "ElliottGenderLC2",
+	    "Value": "man",
+            "When": { "ElliottGender": "Male" },
+       },	
+                {
+	    "Name": "ElliottGenderLC2",
+	    "Value": "woman",
+            "When": { "ElliottGender": "Female" },
+       },
+                {
+	    "Name": "ElliottParentUC",
+	    "Value": "Mom",
+            "When": { "ElliottGender": "Female" },
+       },
+                {
+	    "Name": "EmilyGenderUC",
+	    "Value": "She",
+            "When": { "EmilyGender": "Female" },
+       },
+                {
+	    "Name": "EmilyGenderLC",
+	    "Value": "she",
+            "When": { "EmilyGender": "Female" },
+       },	
+                {
+	    "Name": "EmilyGenderUC",
+	    "Value": "He",
+            "When": { "EmilyGender": "Male" },
+       },	
+                {
+	    "Name": "EmilyGenderLC",
+	    "Value": "he",
+            "When": { "EmilyGender": "Male" },
+       },	
+                {
+	    "Name": "EmilyPronounUC1",
+	    "Value": "Her",
+            "When": { "EmilyGender": "Female" },
+       },	
+                {
+	    "Name": "EmilyPronounLC1",
+	    "Value": "her",
+            "When": { "EmilyGender": "Female" },
+       },
+                {
+	    "Name": "EmilyPronounUC2",
+	    "Value": "Her",
+            "When": { "EmilyGender": "Female" },
+       },	
+                {
+	    "Name": "EmilyPronounLC2",
+	    "Value": "her",
+            "When": { "EmilyGender": "Female" },
+       },		
+                {
+	    "Name": "EmilyPronounUC1",
+	    "Value": "Him",
+            "When": { "EmilyGender": "Male" },
+       },	
+                {
+	    "Name": "EmilyPronounLC1",
+	    "Value": "him",
+            "When": { "EmilyGender": "Male" },
+       },
+                {
+	    "Name": "EmilyPronounUC2",
+	    "Value": "His",
+            "When": { "EmilyGender": "Male" },
+       },	
+                {
+	    "Name": "EmilyPronounLC2",
+	    "Value": "his",
+            "When": { "EmilyGender": "Male" },
+       },
+                {
+	    "Name": "EmilyMarriedUC",
+	    "Value": "Husband",
+            "When": { "EmilyGender": "Male" },
+       },	
+                {
+	    "Name": "EmilyMarriedUC",
+	    "Value": "Wife",
+            "When": { "EmilyGender": "Female" },
+       },
+                {
+	    "Name": "EmilyMarriedLC",
+	    "Value": "husband",
+            "When": { "EmilyGender": "Male" },
+       },
+                {
+	    "Name": "EmilyMarriedLC",
+	    "Value": "wife",
+            "When": { "EmilyGender": "Female" },
+       },
+                {
+	    "Name": "EmilySibling",
+	    "Value": "brother",
+            "When": { "EmilyGender": "Male" },
+       },
+                {
+	    "Name": "EmilySibling",
+	    "Value": "sister",
+            "When": { "EmilyGender": "Female" },
+       },
+                {
+	    "Name": "EvelynGenderUC",
+	    "Value": "She",
+            "When": { "EvelynGender": "Female" },
+       },
+                {
+	    "Name": "EvelynGenderLC",
+	    "Value": "she",
+            "When": { "EvelynGender": "Female" },
+       },	
+                {
+	    "Name": "EvelynGenderUC",
+	    "Value": "He",
+            "When": { "EvelynGender": "Male" },
+       },	
+                {
+	    "Name": "EvelynGenderLC",
+	    "Value": "he",
+            "When": { "EvelynGender": "Male" },
+       },	
+                {
+	    "Name": "EvelynPronounUC1",
+	    "Value": "Her",
+            "When": { "EvelynGender": "Female" },
+       },	
+                {
+	    "Name": "EvelynPronounLC1",
+	    "Value": "her",
+            "When": { "EvelynGender": "Female" },
+       },
+                {
+	    "Name": "EvelynPronounUC2",
+	    "Value": "Her",
+            "When": { "EvelynGender": "Female" },
+       },	
+                {
+	    "Name": "EvelynPronounLC2",
+	    "Value": "her",
+            "When": { "EvelynGender": "Female" },
+       },		
+                {
+	    "Name": "EvelynPronounUC1",
+	    "Value": "Him",
+            "When": { "EvelynGender": "Male" },
+       },	
+                {
+	    "Name": "EvelynPronounLC1",
+	    "Value": "him",
+            "When": { "EvelynGender": "Male" },
+       },
+                {
+	    "Name": "EvelynPronounUC2",
+	    "Value": "His",
+            "When": { "EvelynGender": "Male" },
+       },	
+                {
+	    "Name": "EvelynPronounLC2",
+	    "Value": "his",
+            "When": { "EvelynGender": "Male" },
+       },
+                {
+	    "Name": "EvelynElder",
+	    "Value": "Grandpa",
+            "When": { "EvelynGender": "Male" },
+       },	
+                {
+	    "Name": "EvelynElder",
+	    "Value": "Granny",
+            "When": { "EvelynGender": "Female" },
+       },
+                {
+	    "Name": "EvelynMarriedUC",
+	    "Value": "Husband",
+            "When": { "EvelynGender": "Male" },
+       },	
+                {
+	    "Name": "EvelynMarriedUC",
+	    "Value": "Wife",
+            "When": { "EvelynGender": "Female" },
+       },
+                {
+	    "Name": "EvelynGenderLC3",
+	    "Value": "guy",
+            "When": { "EvelynGender": "Male" },
+       },
+                {
+	    "Name": "EvelynGenderLC3",
+	    "Value": "girl",
+            "When": { "EvelynGender": "Female" },
+       },
+                {
+	    "Name": "EvelynGenderLC4",
+	    "Value": "girl",
+            "When": { "EvelynGender": "Female" },
+       },
+                {
+	    "Name": "EvelynGenderLC4",
+	    "Value": "boy",
+            "When": { "EvelynGender": "Male" },
+       },
+                {
+	    "Name": "EvelynMarriedLC",
+	    "Value": "husband",
+            "When": { "EvelynGender": "Male" },
+       },
+                {
+	    "Name": "EvelynMarriedLC",
+	    "Value": "wife",
+            "When": { "EvelynGender": "Female" },
+       },
+                {
+	    "Name": "EvelynParentUC",
+	    "Value": "Dad",
+            "When": { "EvelynGender": "Male" },
+       },
+                {
+	    "Name": "EvelynParentUC",
+	    "Value": "Mom",
+            "When": { "EvelynGender": "Female" },
+       },
+               {
+	    "Name": "GeorgeGenderUC",
+	    "Value": "She",
+            "When": { "GeorgeGender": "Female" },
+       },
+                {
+	    "Name": "GeorgeGenderLC",
+	    "Value": "she",
+            "When": { "GeorgeGender": "Female" },
+       },	
+                {
+	    "Name": "GeorgeGenderUC",
+	    "Value": "He",
+            "When": { "GeorgeGender": "Male" },
+       },	
+                {
+	    "Name": "GeorgeGenderLC",
+	    "Value": "he",
+            "When": { "GeorgeGender": "Male" },
+       },	
+                {
+	    "Name": "GeorgePronounUC1",
+	    "Value": "Her",
+            "When": { "GeorgeGender": "Female" },
+       },	
+                {
+	    "Name": "GeorgePronounLC1",
+	    "Value": "her",
+            "When": { "GeorgeGender": "Female" },
+       },
+                {
+	    "Name": "GeorgePronounUC2",
+	    "Value": "Her",
+            "When": { "GeorgeGender": "Female" },
+       },	
+                {
+	    "Name": "GeorgePronounLC2",
+	    "Value": "her",
+            "When": { "GeorgeGender": "Female" },
+       },		
+                {
+	    "Name": "GeorgePronounUC1",
+	    "Value": "Him",
+            "When": { "GeorgeGender": "Male" },
+       },	
+                {
+	    "Name": "GeorgePronounLC1",
+	    "Value": "him",
+            "When": { "GeorgeGender": "Male" },
+       },
+                {
+	    "Name": "GeorgePronounUC2",
+	    "Value": "His",
+            "When": { "GeorgeGender": "Male" },
+       },	
+                {
+	    "Name": "GeorgePronounLC2",
+	    "Value": "his",
+            "When": { "GeorgeGender": "Male" },
+       },
+                {
+	    "Name": "GeorgePronounLC3",
+	    "Value": "hers",
+            "When": { "GeorgeGender": "Female" },
+       },	
+                {
+	    "Name": "GeorgePronounLC3",
+	    "Value": "his",
+            "When": { "GeorgeGender": "Male" },
+       },
+                {
+	    "Name": "GeorgeMarital",
+	    "Value": "Mr.",
+            "When": { "GeorgeGender": "Male" },
+       },
+                {
+	    "Name": "GeorgeMarital",
+	    "Value": "Mrs.",
+            "When": { "GeorgeGender": "Female" },
+       },
+                {
+	    "Name": "GeorgeElder",
+	    "Value": "Grandpa",
+            "When": { "GeorgeGender": "Male" },
+       },	
+                {
+	    "Name": "GeorgeElder",
+	    "Value": "Granny",
+            "When": { "GeorgeGender": "Female" },
+       },
+                {
+	    "Name": "GeorgeGenderLC2",
+	    "Value": "man",
+            "When": { "GeorgeGender": "Male" },
+       },	
+                {
+	    "Name": "GeorgeGenderLC2",
+	    "Value": "woman",
+            "When": { "GeorgeGender": "Female" },
+       },
+              {
+	    "Name": "GeorgeMarriedLC",
+	    "Value": "husband",
+            "When": { "GeorgeGender": "Male" },
+       },
+                {
+	    "Name": "GeorgeMarriedLC",
+	    "Value": "wife",
+            "When": { "GeorgeGender": "Female" },
+       },	
+                {
+	    "Name": "GuntherGenderUC",
+	    "Value": "She",
+            "When": { "GuntherGender": "Female" },
+       },
+                {
+	    "Name": "GuntherGenderLC",
+	    "Value": "she",
+            "When": { "GuntherGender": "Female" },
+       },	
+                {
+	    "Name": "GuntherGenderUC",
+	    "Value": "He",
+            "When": { "GuntherGender": "Male" },
+       },	
+                {
+	    "Name": "GuntherGenderLC",
+	    "Value": "he",
+            "When": { "GuntherGender": "Male" },
+       },	
+                {
+	    "Name": "GuntherPronounUC1",
+	    "Value": "Her",
+            "When": { "GuntherGender": "Female" },
+       },	
+                {
+	    "Name": "GuntherPronounLC1",
+	    "Value": "her",
+            "When": { "GuntherGender": "Female" },
+       },
+                {
+	    "Name": "GuntherPronounUC2",
+	    "Value": "Her",
+            "When": { "GuntherGender": "Female" },
+       },	
+                {
+	    "Name": "GuntherPronounLC2",
+	    "Value": "her",
+            "When": { "GuntherGender": "Female" },
+       },		
+                {
+	    "Name": "GuntherPronounUC1",
+	    "Value": "Him",
+            "When": { "GuntherGender": "Male" },
+       },	
+                {
+	    "Name": "GuntherPronounLC1",
+	    "Value": "him",
+            "When": { "GuntherGender": "Male" },
+       },
+                {
+	    "Name": "GuntherPronounUC2",
+	    "Value": "His",
+            "When": { "GuntherGender": "Male" },
+       },	
+                {
+	    "Name": "GuntherPronounLC2",
+	    "Value": "his",
+            "When": { "GuntherGender": "Male" },
+       },
+                {
+	    "Name": "GuntherGenderLC2",
+	    "Value": "man",
+            "When": { "GuntherGender": "Male" },
+       },	
+                {
+	    "Name": "GuntherGenderLC2",
+	    "Value": "woman",
+            "When": { "GuntherGender": "Female" },
+       },
+                {
+	    "Name": "GusGenderUC",
+	    "Value": "She",
+            "When": { "GusGender": "Female" },
+       },
+                {
+	    "Name": "GusGenderLC",
+	    "Value": "she",
+            "When": { "GusGender": "Female" },
+       },	
+                {
+	    "Name": "GusGenderUC",
+	    "Value": "He",
+            "When": { "GusGender": "Male" },
+       },	
+                {
+	    "Name": "GusGenderLC",
+	    "Value": "he",
+            "When": { "GusGender": "Male" },
+       },	
+                {
+	    "Name": "GusPronounUC1",
+	    "Value": "Her",
+            "When": { "GusGender": "Female" },
+       },	
+                {
+	    "Name": "GusPronounLC1",
+	    "Value": "her",
+            "When": { "GusGender": "Female" },
+       },
+                {
+	    "Name": "GusPronounUC2",
+	    "Value": "Her",
+            "When": { "GusGender": "Female" },
+       },	
+                {
+	    "Name": "GusPronounLC2",
+	    "Value": "her",
+            "When": { "GusGender": "Female" },
+       },		
+                {
+	    "Name": "GusPronounUC1",
+	    "Value": "Him",
+            "When": { "GusGender": "Male" },
+       },	
+                {
+	    "Name": "GusPronounLC1",
+	    "Value": "him",
+            "When": { "GusGender": "Male" },
+       },
+                {
+	    "Name": "GusPronounUC2",
+	    "Value": "His",
+            "When": { "GusGender": "Male" },
+       },	
+                {
+	    "Name": "GusPronounLC2",
+	    "Value": "his",
+            "When": { "GusGender": "Male" },
+       },
+                {
+	    "Name": "GusGenderLC3",
+	    "Value": "guy",
+            "When": { "GusGender": "Male" },
+       },
+                {
+	    "Name": "GusGenderLC3",
+	    "Value": "girl",
+            "When": { "GusGender": "Female" },
+       },
+                {
+	    "Name": "HaleyGenderUC",
+	    "Value": "She",
+            "When": { "HaleyGender": "Female" },
+       },
+                {
+	    "Name": "HaleyGenderLC",
+	    "Value": "she",
+            "When": { "HaleyGender": "Female" },
+       },	
+                {
+	    "Name": "HaleyGenderUC",
+	    "Value": "He",
+            "When": { "HaleyGender": "Male" },
+       },	
+                {
+	    "Name": "HaleyGenderLC",
+	    "Value": "he",
+            "When": { "HaleyGender": "Male" },
+       },	
+                {
+	    "Name": "HaleyPronounUC1",
+	    "Value": "Her",
+            "When": { "HaleyGender": "Female" },
+       },	
+                {
+	    "Name": "HaleyPronounLC1",
+	    "Value": "her",
+            "When": { "HaleyGender": "Female" },
+       },
+                {
+	    "Name": "HaleyPronounUC2",
+	    "Value": "Her",
+            "When": { "HaleyGender": "Female" },
+       },	
+                {
+	    "Name": "HaleyPronounLC2",
+	    "Value": "her",
+            "When": { "HaleyGender": "Female" },
+       },		
+                {
+	    "Name": "HaleyPronounUC1",
+	    "Value": "Him",
+            "When": { "HaleyGender": "Male" },
+       },	
+                {
+	    "Name": "HaleyPronounLC1",
+	    "Value": "him",
+            "When": { "HaleyGender": "Male" },
+       },
+                {
+	    "Name": "HaleyPronounUC2",
+	    "Value": "His",
+            "When": { "HaleyGender": "Male" },
+       },	
+                {
+	    "Name": "HaleyPronounLC2",
+	    "Value": "his",
+            "When": { "HaleyGender": "Male" },
+       },
+                {
+	    "Name": "HaleyMarriedLC",
+	    "Value": "husband",
+            "When": { "HaleyGender": "Male" },
+       },
+                {
+	    "Name": "HaleyMarriedLC",
+	    "Value": "wife",
+            "When": { "HaleyGender": "Female" },
+       },
+                {
+	    "Name": "HaleyParentLC",
+	    "Value": "father",
+            "When": { "HaleyGender": "Male" },
+       },
+                {
+	    "Name": "HaleyParentLC",
+	    "Value": "mother",
+            "When": { "HaleyGender": "Female" },
+       },
+                {
+	    "Name": "HaleyGenderLC4",
+	    "Value": "girl",
+            "When": { "HaleyGender": "Female" },
+       },
+                {
+	    "Name": "HaleyGenderLC4",
+	    "Value": "boy",
+            "When": { "HaleyGender": "Male" },
+       },
+                {
+	    "Name": "HaleySibling",
+	    "Value": "brother",
+            "When": { "HaleyGender": "Male" },
+       },
+                {
+	    "Name": "HaleySibling",
+	    "Value": "sister",
+            "When": { "HaleyGender": "Female" },
+       },
+                {
+	    "Name": "HaleyGenderLC3",
+	    "Value": "guy",
+            "When": { "HaleyGender": "Male" },
+       },
+                {
+	    "Name": "HaleyGenderLC3",
+	    "Value": "girl",
+            "When": { "HaleyGender": "Female" },
+       },
+                {
+	    "Name": "HarveyGenderUC",
+	    "Value": "She",
+            "When": { "HarveyGender": "Female" },
+       },
+                {
+	    "Name": "HarveyGenderLC",
+	    "Value": "she",
+            "When": { "HarveyGender": "Female" },
+       },	
+                {
+	    "Name": "HarveyGenderUC",
+	    "Value": "He",
+            "When": { "HarveyGender": "Male" },
+       },	
+                {
+	    "Name": "HarveyGenderLC",
+	    "Value": "he",
+            "When": { "HarveyGender": "Male" },
+       },	
+                {
+	    "Name": "HarveyPronounUC1",
+	    "Value": "Her",
+            "When": { "HarveyGender": "Female" },
+       },	
+                {
+	    "Name": "HarveyPronounLC1",
+	    "Value": "her",
+            "When": { "HarveyGender": "Female" },
+       },
+                {
+	    "Name": "HarveyPronounUC2",
+	    "Value": "Her",
+            "When": { "HarveyGender": "Female" },
+       },	
+                {
+	    "Name": "HarveyPronounLC2",
+	    "Value": "her",
+            "When": { "HarveyGender": "Female" },
+       },		
+                {
+	    "Name": "HarveyPronounUC1",
+	    "Value": "Him",
+            "When": { "HarveyGender": "Male" },
+       },	
+                {
+	    "Name": "HarveyPronounLC1",
+	    "Value": "him",
+            "When": { "HarveyGender": "Male" },
+       },
+                {
+	    "Name": "HarveyPronounUC2",
+	    "Value": "His",
+            "When": { "HarveyGender": "Male" },
+       },	
+                {
+	    "Name": "HarveyPronounLC2",
+	    "Value": "his",
+            "When": { "HarveyGender": "Male" },
+       },
+                {
+	    "Name": "HarveyPronounLC3",
+	    "Value": "hers",
+            "When": { "HarveyGender": "Female" },
+       },	
+                {
+	    "Name": "HarveyPronounLC3",
+	    "Value": "his",
+            "When": { "HarveyGender": "Male" },
+       },
+                {
+	    "Name": "HarveyGenderLC2",
+	    "Value": "man",
+            "When": { "HarveyGender": "Male" },
+       },	
+                {
+	    "Name": "HarveyGenderLC2",
+	    "Value": "woman",
+            "When": { "HarveyGender": "Female" },
+       },
+                {
+	    "Name": "HarveyMarriedLC",
+	    "Value": "husband",
+            "When": { "HarveyGender": "Male" },
+       },
+                {
+	    "Name": "HarveyMarriedLC",
+	    "Value": "wife",
+            "When": { "HarveyGender": "Female" },
+       },
+           	{
+	    "Name": "HarveyGenderLC3",
+	    "Value": "guy",
+            "When": { "HarveyGender": "Male" },
+       },
+                {
+	    "Name": "HarveyGenderLC3",
+	    "Value": "girl",
+            "When": { "HarveyGender": "Female" },
+       },
+     		{
+	    "Name": "HarveyParentLC",
+	    "Value": "father",
+            "When": { "HarveyGender": "Male" },
+       },	
+                {
+	    "Name": "HarveyParentLC",
+	    "Value": "mother",
+            "When": { "HarveyGender": "Female" },
+       },	
+                {
+	    "Name": "JasGenderUC",
+	    "Value": "She",
+            "When": { "JasGender": "Female" },
+       },
+                {
+	    "Name": "JasGenderLC",
+	    "Value": "she",
+            "When": { "JasGender": "Female" },
+       },	
+                {
+	    "Name": "JasGenderUC",
+	    "Value": "He",
+            "When": { "JasGender": "Male" },
+       },	
+                {
+	    "Name": "JasGenderLC",
+	    "Value": "he",
+            "When": { "JasGender": "Male" },
+       },	
+                {
+	    "Name": "JasPronounUC1",
+	    "Value": "Her",
+            "When": { "JasGender": "Female" },
+       },	
+                {
+	    "Name": "JasPronounLC1",
+	    "Value": "her",
+            "When": { "JasGender": "Female" },
+       },
+                {
+	    "Name": "JasPronounUC2",
+	    "Value": "Her",
+            "When": { "JasGender": "Female" },
+       },	
+                {
+	    "Name": "JasPronounLC2",
+	    "Value": "her",
+            "When": { "JasGender": "Female" },
+       },		
+                {
+	    "Name": "JasPronounUC1",
+	    "Value": "Him",
+            "When": { "JasGender": "Male" },
+       },	
+                {
+	    "Name": "JasPronounLC1",
+	    "Value": "him",
+            "When": { "JasGender": "Male" },
+       },
+                {
+	    "Name": "JasPronounUC2",
+	    "Value": "His",
+            "When": { "JasGender": "Male" },
+       },	
+                {
+	    "Name": "JasPronounLC2",
+	    "Value": "his",
+            "When": { "JasGender": "Male" },
+       },
+                {
+	    "Name": "JasGenderLC3",
+	    "Value": "guy",
+            "When": { "JasGender": "Male" },
+       },
+                {
+	    "Name": "JasGenderLC3",
+	    "Value": "girl",
+            "When": { "JasGender": "Female" },
+       },
+                {
+	    "Name": "JasGenderLC4",
+	    "Value": "girl",
+            "When": { "JasGender": "Female" },
+       },
+                {
+	    "Name": "JasGenderLC4",
+	    "Value": "boy",
+            "When": { "JasGender": "Male" },
+       },	
+                {
+	    "Name": "JodiGenderUC",
+	    "Value": "She",
+            "When": { "JodiGender": "Female" },
+       },
+                {
+	    "Name": "JodiGenderLC",
+	    "Value": "she",
+            "When": { "JodiGender": "Female" },
+       },	
+                {
+	    "Name": "JodiGenderUC",
+	    "Value": "He",
+            "When": { "JodiGender": "Male" },
+       },	
+                {
+	    "Name": "JodiGenderLC",
+	    "Value": "he",
+            "When": { "JodiGender": "Male" },
+       },	
+                {
+	    "Name": "JodiPronounUC1",
+	    "Value": "Her",
+            "When": { "JodiGender": "Female" },
+       },	
+                {
+	    "Name": "JodiPronounLC1",
+	    "Value": "her",
+            "When": { "JodiGender": "Female" },
+       },
+                {
+	    "Name": "JodiPronounUC2",
+	    "Value": "Her",
+            "When": { "JodiGender": "Female" },
+       },	
+                {
+	    "Name": "JodiPronounLC2",
+	    "Value": "her",
+            "When": { "JodiGender": "Female" },
+       },		
+                {
+	    "Name": "JodiPronounUC1",
+	    "Value": "Him",
+            "When": { "JodiGender": "Male" },
+       },	
+                {
+	    "Name": "JodiPronounLC1",
+	    "Value": "him",
+            "When": { "JodiGender": "Male" },
+       },
+                {
+	    "Name": "JodiPronounUC2",
+	    "Value": "His",
+            "When": { "JodiGender": "Male" },
+       },	
+                {
+	    "Name": "JodiPronounLC2",
+	    "Value": "his",
+            "When": { "JodiGender": "Male" },
+       },
+     		{
+	    "Name": "JodiParentUC",
+	    "Value": "Dad",
+            "When": { "JodiGender": "Male" },
+       },	
+                {
+	    "Name": "JodiParentUC",
+	    "Value": "Mom",
+            "When": { "JodiGender": "Female" },
+       },
+                {
+	    "Name": "JodiParentLC",
+	    "Value": "father",
+            "When": { "JodiGender": "Male" },
+       },	
+                {
+	    "Name": "JodiParentLC",
+	    "Value": "mother",
+            "When": { "JodiGender": "Female" },
+       },
+                {
+	    "Name": "JodiMarriedLC",
+	    "Value": "husband",
+            "When": { "JodiGender": "Male" },
+       },
+                {
+	    "Name": "JodiMarriedLC",
+	    "Value": "wife",
+            "When": { "JodiGender": "Female" },
+       },	
+                {
+	    "Name": "KentGenderUC",
+	    "Value": "She",
+            "When": { "KentGender": "Female" },
+       },
+                {
+	    "Name": "KentGenderLC",
+	    "Value": "she",
+            "When": { "KentGender": "Female" },
+       },	
+                {
+	    "Name": "KentGenderUC",
+	    "Value": "He",
+            "When": { "KentGender": "Male" },
+       },	
+                {
+	    "Name": "KentGenderLC",
+	    "Value": "he",
+            "When": { "KentGender": "Male" },
+       },	
+                {
+	    "Name": "KentPronounUC1",
+	    "Value": "Her",
+            "When": { "KentGender": "Female" },
+       },	
+                {
+	    "Name": "KentPronounLC1",
+	    "Value": "her",
+            "When": { "KentGender": "Female" },
+       },
+                {
+	    "Name": "KentPronounUC2",
+	    "Value": "Her",
+            "When": { "KentGender": "Female" },
+       },	
+                {
+	    "Name": "KentPronounLC2",
+	    "Value": "her",
+            "When": { "KentGender": "Female" },
+       },		
+                {
+	    "Name": "KentPronounUC1",
+	    "Value": "Him",
+            "When": { "KentGender": "Male" },
+       },	
+                {
+	    "Name": "KentPronounLC1",
+	    "Value": "him",
+            "When": { "KentGender": "Male" },
+       },
+                {
+	    "Name": "KentPronounUC2",
+	    "Value": "His",
+            "When": { "KentGender": "Male" },
+       },	
+                {
+	    "Name": "KentPronounLC2",
+	    "Value": "his",
+            "When": { "KentGender": "Male" },
+       },
+     		{
+	    "Name": "KentParentUC",
+	    "Value": "Dad",
+            "When": { "KentGender": "Male" },
+       },	
+                {
+	    "Name": "KentParentUC",
+	    "Value": "Mom",
+            "When": { "KentGender": "Female" },
+       },
+                {
+	    "Name": "KentParentLC",
+	    "Value": "father",
+            "When": { "KentGender": "Male" },
+       },	
+                {
+	    "Name": "KentParentLC",
+	    "Value": "mother",
+            "When": { "KentGender": "Female" },
+       },
+                {
+	    "Name": "KentGenderLC2",
+	    "Value": "man",
+            "When": { "KentGender": "Male" },
+       },	
+                {
+	    "Name": "KentGenderLC2",
+	    "Value": "woman",
+            "When": { "KentGender": "Female" },
+       },
+                {
+	    "Name": "KentMarriedLC",
+	    "Value": "husband",
+            "When": { "KentGender": "Male" },
+       },
+                {
+	    "Name": "KentMarriedLC",
+	    "Value": "wife",
+            "When": { "KentGender": "Female" },
+       },	
+                {
+	    "Name": "KrobusGenderUC",
+	    "Value": "She",
+            "When": { "KrobusGender": "Female" },
+       },
+                {
+	    "Name": "KrobusGenderLC",
+	    "Value": "she",
+            "When": { "KrobusGender": "Female" },
+       },	
+                {
+	    "Name": "KrobusGenderUC",
+	    "Value": "He",
+            "When": { "KrobusGender": "Male" },
+       },	
+                {
+	    "Name": "KrobusGenderLC",
+	    "Value": "he",
+            "When": { "KrobusGender": "Male" },
+       },	
+                {
+	    "Name": "KrobusPronounUC1",
+	    "Value": "Her",
+            "When": { "KrobusGender": "Female" },
+       },	
+                {
+	    "Name": "KrobusPronounLC1",
+	    "Value": "her",
+            "When": { "KrobusGender": "Female" },
+       },
+                {
+	    "Name": "KrobusPronounUC2",
+	    "Value": "Her",
+            "When": { "KrobusGender": "Female" },
+       },	
+                {
+	    "Name": "KrobusPronounLC2",
+	    "Value": "her",
+            "When": { "KrobusGender": "Female" },
+       },		
+                {
+	    "Name": "KrobusPronounUC1",
+	    "Value": "Him",
+            "When": { "KrobusGender": "Male" },
+       },	
+                {
+	    "Name": "KrobusPronounLC1",
+	    "Value": "him",
+            "When": { "KrobusGender": "Male" },
+       },
+                {
+	    "Name": "KrobusPronounUC2",
+	    "Value": "His",
+            "When": { "KrobusGender": "Male" },
+       },	
+                {
+	    "Name": "KrobusPronounLC2",
+	    "Value": "his",
+            "When": { "KrobusGender": "Male" },
+       },
+                {
+	    "Name": "LeahGenderUC",
+	    "Value": "She",
+            "When": { "LeahGender": "Female" },
+       },
+                {
+	    "Name": "LeahGenderLC",
+	    "Value": "she",
+            "When": { "LeahGender": "Female" },
+       },	
+                {
+	    "Name": "LeahGenderUC",
+	    "Value": "He",
+            "When": { "LeahGender": "Male" },
+       },	
+                {
+	    "Name": "LeahGenderLC",
+	    "Value": "he",
+            "When": { "LeahGender": "Male" },
+       },	
+                {
+	    "Name": "LeahPronounUC1",
+	    "Value": "Her",
+            "When": { "LeahGender": "Female" },
+       },	
+                {
+	    "Name": "LeahPronounLC1",
+	    "Value": "her",
+            "When": { "LeahGender": "Female" },
+       },
+                {
+	    "Name": "LeahPronounUC2",
+	    "Value": "Her",
+            "When": { "LeahGender": "Female" },
+       },	
+                {
+	    "Name": "LeahPronounLC2",
+	    "Value": "her",
+            "When": { "LeahGender": "Female" },
+       },		
+                {
+	    "Name": "LeahPronounUC1",
+	    "Value": "Him",
+            "When": { "LeahGender": "Male" },
+       },	
+                {
+	    "Name": "LeahPronounLC1",
+	    "Value": "him",
+            "When": { "LeahGender": "Male" },
+       },
+                {
+	    "Name": "LeahPronounUC2",
+	    "Value": "His",
+            "When": { "LeahGender": "Male" },
+       },	
+                {
+	    "Name": "LeahPronounLC2",
+	    "Value": "his",
+            "When": { "LeahGender": "Male" },
+       },
+                {
+	    "Name": "LeahGenderLC3",
+	    "Value": "guy",
+            "When": { "LeahGender": "Male" },
+       },
+                {
+	    "Name": "LeahGenderLC3",
+	    "Value": "girl",
+            "When": { "LeahGender": "Female" },
+       },
+                {
+	    "Name": "LeahGenderLC4",
+	    "Value": "girl",
+            "When": { "LeahGender": "Female" },
+       },
+                {
+	    "Name": "LeahGenderLC4",
+	    "Value": "boy",
+            "When": { "LeahGender": "Male" },
+       },
+                {
+	    "Name": "LeahMarriedLC",
+	    "Value": "husband",
+            "When": { "LeahGender": "Male" },
+       },
+                {
+	    "Name": "LeahMarriedLC",
+	    "Value": "wife",
+            "When": { "LeahGender": "Female" },
+       },
+                {
+	    "Name": "LeoGenderUC",
+	    "Value": "She",
+            "When": { "LeoGender": "Female" },
+       },
+                {
+	    "Name": "LeoGenderLC",
+	    "Value": "she",
+            "When": { "LeoGender": "Female" },
+       },	
+                {
+	    "Name": "LeoGenderUC",
+	    "Value": "He",
+            "When": { "LeoGender": "Male" },
+       },	
+                {
+	    "Name": "LeoGenderLC",
+	    "Value": "he",
+            "When": { "LeoGender": "Male" },
+       },	
+                {
+	    "Name": "LeoPronounUC1",
+	    "Value": "Her",
+            "When": { "LeoGender": "Female" },
+       },	
+                {
+	    "Name": "LeoPronounLC1",
+	    "Value": "her",
+            "When": { "LeoGender": "Female" },
+       },
+                {
+	    "Name": "LeoPronounUC2",
+	    "Value": "Her",
+            "When": { "LeoGender": "Female" },
+       },	
+                {
+	    "Name": "LeoPronounLC2",
+	    "Value": "her",
+            "When": { "LeoGender": "Female" },
+       },		
+                {
+	    "Name": "LeoPronounUC1",
+	    "Value": "Him",
+            "When": { "LeoGender": "Male" },
+       },	
+                {
+	    "Name": "LeoPronounLC1",
+	    "Value": "him",
+            "When": { "LeoGender": "Male" },
+       },
+                {
+	    "Name": "LeoPronounUC2",
+	    "Value": "His",
+            "When": { "LeoGender": "Male" },
+       },	
+                {
+	    "Name": "LeoPronounLC2",
+	    "Value": "his",
+            "When": { "LeoGender": "Male" },
+       },
+                {
+	    "Name": "LeoGenderLC3",
+	    "Value": "guy",
+            "When": { "LeoGender": "Male" },
+       },
+                {
+	    "Name": "LeoGenderLC3",
+	    "Value": "girl",
+            "When": { "LeoGender": "Female" },
+       },
+                {
+	    "Name": "LewisGenderUC",
+	    "Value": "She",
+            "When": { "LewisGender": "Female" },
+       },
+                {
+	    "Name": "LewisGenderLC",
+	    "Value": "she",
+            "When": { "LewisGender": "Female" },
+       },	
+                {
+	    "Name": "LewisGenderUC",
+	    "Value": "He",
+            "When": { "LewisGender": "Male" },
+       },	
+                {
+	    "Name": "LewisGenderLC",
+	    "Value": "he",
+            "When": { "LewisGender": "Male" },
+       },	
+                {
+	    "Name": "LewisPronounUC1",
+	    "Value": "Her",
+            "When": { "LewisGender": "Female" },
+       },	
+                {
+	    "Name": "LewisPronounLC1",
+	    "Value": "her",
+            "When": { "LewisGender": "Female" },
+       },
+                {
+	    "Name": "LewisPronounUC2",
+	    "Value": "Her",
+            "When": { "LewisGender": "Female" },
+       },	
+                {
+	    "Name": "LewisPronounLC2",
+	    "Value": "her",
+            "When": { "LewisGender": "Female" },
+       },		
+                {
+	    "Name": "LewisPronounUC1",
+	    "Value": "Him",
+            "When": { "LewisGender": "Male" },
+       },	
+                {
+	    "Name": "LewisPronounLC1",
+	    "Value": "him",
+            "When": { "LewisGender": "Male" },
+       },
+                {
+	    "Name": "LewisPronounUC2",
+	    "Value": "His",
+            "When": { "LewisGender": "Male" },
+       },	
+                {
+	    "Name": "LewisPronounLC2",
+	    "Value": "his",
+            "When": { "LewisGender": "Male" },
+       },
+                {
+	    "Name": "LewisPronounLC3",
+	    "Value": "hers",
+            "When": { "LewisGender": "Female" },
+       },	
+                {
+	    "Name": "LewisPronounLC3",
+	    "Value": "his",
+            "When": { "LewisGender": "Male" },
+       },
+                {
+	    "Name": "LewisMarital",
+	    "Value": "Mr.",
+            "When": { "LewisGender": "Male" },
+       },
+                {
+	    "Name": "LewisMarital",
+	    "Value": "Ms.",
+            "When": { "LewisGender": "Female" },
+       },
+                {
+	    "Name": "LewisGenderLC2",
+	    "Value": "man",
+            "When": { "LewisGender": "Male" },
+       },	
+                {
+	    "Name": "LewisGenderLC2",
+	    "Value": "woman",
+            "When": { "LewisGender": "Female" },
+       },
+           	{
+	    "Name": "LewisGenderLC3",
+	    "Value": "guy",
+            "When": { "LewisGender": "Male" },
+       },
+                {
+	    "Name": "LewisGenderLC3",
+	    "Value": "girl",
+            "When": { "LewisGender": "Female" },
+       },
+                {
+	    "Name": "LinusGenderUC",
+	    "Value": "She",
+            "When": { "LinusGender": "Female" },
+       },
+                {
+	    "Name": "LinusGenderLC",
+	    "Value": "she",
+            "When": { "LinusGender": "Female" },
+       },	
+                {
+	    "Name": "LinusGenderUC",
+	    "Value": "He",
+            "When": { "LinusGender": "Male" },
+       },	
+                {
+	    "Name": "LinusGenderLC",
+	    "Value": "he",
+            "When": { "LinusGender": "Male" },
+       },	
+                {
+	    "Name": "LinusPronounUC1",
+	    "Value": "Her",
+            "When": { "LinusGender": "Female" },
+       },	
+                {
+	    "Name": "LinusPronounLC1",
+	    "Value": "her",
+            "When": { "LinusGender": "Female" },
+       },
+                {
+	    "Name": "LinusPronounUC2",
+	    "Value": "Her",
+            "When": { "LinusGender": "Female" },
+       },	
+                {
+	    "Name": "LinusPronounLC2",
+	    "Value": "her",
+            "When": { "LinusGender": "Female" },
+       },		
+                {
+	    "Name": "LinusPronounUC1",
+	    "Value": "Him",
+            "When": { "LinusGender": "Male" },
+       },	
+                {
+	    "Name": "LinusPronounLC1",
+	    "Value": "him",
+            "When": { "LinusGender": "Male" },
+       },
+                {
+	    "Name": "LinusPronounUC2",
+	    "Value": "His",
+            "When": { "LinusGender": "Male" },
+       },	
+                {
+	    "Name": "LinusPronounLC2",
+	    "Value": "his",
+            "When": { "LinusGender": "Male" },
+       },
+                {
+	    "Name": "LinusPronounLC3",
+	    "Value": "hers",
+            "When": { "LinusGender": "Female" },
+       },	
+                {
+	    "Name": "LinusPronounLC3",
+	    "Value": "his",
+            "When": { "LinusGender": "Male" },
+       },
+     		{
+	    "Name": "LinusRelation",
+	    "Value": "Uncle",
+            "When": { "LinusGender": "Male" },
+       },
+                {
+	    "Name": "LinusGenderLC2",
+	    "Value": "man",
+            "When": { "LinusGender": "Male" },
+       },	
+                {
+	    "Name": "LinusGenderLC2",
+	    "Value": "woman",
+            "When": { "LinusGender": "Female" },
+       },	
+     		{
+	    "Name": "LinusRelation",
+	    "Value": "Aunt",
+            "When": { "LinusGender": "Female" },
+       },
+                {
+	    "Name": "LinusGenderLC3",
+	    "Value": "guy",
+            "When": { "LinusGender": "Male" },
+       },
+                {
+	    "Name": "LinusGenderLC3",
+	    "Value": "girl",
+            "When": { "LinusGender": "Female" },
+       },	
+                {
+	    "Name": "MarlonGenderUC",
+	    "Value": "She",
+            "When": { "MarlonGender": "Female" },
+       },
+                {
+	    "Name": "MarlonGenderLC",
+	    "Value": "she",
+            "When": { "MarlonGender": "Female" },
+       },	
+                {
+	    "Name": "MarlonGenderUC",
+	    "Value": "He",
+            "When": { "MarlonGender": "Male" },
+       },	
+                {
+	    "Name": "MarlonGenderLC",
+	    "Value": "he",
+            "When": { "MarlonGender": "Male" },
+       },	
+                {
+	    "Name": "MarlonPronounUC1",
+	    "Value": "Her",
+            "When": { "MarlonGender": "Female" },
+       },	
+                {
+	    "Name": "MarlonPronounLC1",
+	    "Value": "her",
+            "When": { "MarlonGender": "Female" },
+       },
+                {
+	    "Name": "MarlonPronounUC2",
+	    "Value": "Her",
+            "When": { "MarlonGender": "Female" },
+       },	
+                {
+	    "Name": "MarlonPronounLC2",
+	    "Value": "her",
+            "When": { "MarlonGender": "Female" },
+       },		
+                {
+	    "Name": "MarlonPronounUC1",
+	    "Value": "Him",
+            "When": { "MarlonGender": "Male" },
+       },	
+                {
+	    "Name": "MarlonPronounLC1",
+	    "Value": "him",
+            "When": { "MarlonGender": "Male" },
+       },
+                {
+	    "Name": "MarlonPronounUC2",
+	    "Value": "His",
+            "When": { "MarlonGender": "Male" },
+       },	
+                {
+	    "Name": "MarlonPronounLC2",
+	    "Value": "his",
+            "When": { "MarlonGender": "Male" },
+       },
+                {
+	    "Name": "MarlonGenderLC2",
+	    "Value": "man",
+            "When": { "MarlonGender": "Male" },
+       },	
+                {
+	    "Name": "MarlonGenderLC2",
+	    "Value": "woman",
+            "When": { "MarlonGender": "Female" },
+       },
+                {
+	    "Name": "MarlonGenderLC3",
+	    "Value": "guy",
+            "When": { "MarlonGender": "Male" },
+       },
+                {
+	    "Name": "MarlonGenderLC3",
+	    "Value": "girl",
+            "When": { "MarlonGender": "Female" },
+       },
+                {
+	    "Name": "MarnieGenderUC",
+	    "Value": "She",
+            "When": { "MarnieGender": "Female" },
+       },
+                {
+	    "Name": "MarnieGenderLC",
+	    "Value": "she",
+            "When": { "MarnieGender": "Female" },
+       },	
+                {
+	    "Name": "MarnieGenderUC",
+	    "Value": "He",
+            "When": { "MarnieGender": "Male" },
+       },	
+                {
+	    "Name": "MarnieGenderLC",
+	    "Value": "he",
+            "When": { "MarnieGender": "Male" },
+       },	
+                {
+	    "Name": "MarniePronounUC1",
+	    "Value": "Her",
+            "When": { "MarnieGender": "Female" },
+       },	
+                {
+	    "Name": "MarniePronounLC1",
+	    "Value": "her",
+            "When": { "MarnieGender": "Female" },
+       },
+                {
+	    "Name": "MarniePronounUC2",
+	    "Value": "Her",
+            "When": { "MarnieGender": "Female" },
+       },	
+                {
+	    "Name": "MarniePronounLC2",
+	    "Value": "her",
+            "When": { "MarnieGender": "Female" },
+       },		
+                {
+	    "Name": "MarniePronounUC1",
+	    "Value": "Him",
+            "When": { "MarnieGender": "Male" },
+       },	
+                {
+	    "Name": "MarniePronounLC1",
+	    "Value": "him",
+            "When": { "MarnieGender": "Male" },
+       },
+                {
+	    "Name": "MarniePronounUC2",
+	    "Value": "His",
+            "When": { "MarnieGender": "Male" },
+       },	
+                {
+	    "Name": "MarniePronounLC2",
+	    "Value": "his",
+            "When": { "MarnieGender": "Male" },
+       },
+     		{
+	    "Name": "MarniePronounLC3",
+	    "Value": "hers",
+            "When": { "MarnieGender": "Female" },
+       },	
+     		{
+	    "Name": "MarnieRelation",
+	    "Value": "Uncle",
+            "When": { "MarnieGender": "Male" },
+       },	
+     		{
+	    "Name": "MarnieRelation",
+	    "Value": "Aunt",
+            "When": { "MarnieGender": "Female" },
+       },	
+     		{
+	    "Name": "MarniePronounLC3",
+	    "Value": "his",
+            "When": { "MarnieGender": "Male" },
+       },	
+                {
+	    "Name": "MaruGenderUC",
+	    "Value": "She",
+            "When": { "MaruGender": "Female" },
+       },
+                {
+	    "Name": "MaruGenderLC",
+	    "Value": "she",
+            "When": { "MaruGender": "Female" },
+       },	
+                {
+	    "Name": "MaruGenderUC",
+	    "Value": "He",
+            "When": { "MaruGender": "Male" },
+       },	
+                {
+	    "Name": "MaruGenderLC",
+	    "Value": "he",
+            "When": { "MaruGender": "Male" },
+       },	
+                {
+	    "Name": "MaruPronounUC1",
+	    "Value": "Her",
+            "When": { "MaruGender": "Female" },
+       },	
+                {
+	    "Name": "MaruPronounLC1",
+	    "Value": "her",
+            "When": { "MaruGender": "Female" },
+       },
+                {
+	    "Name": "MaruPronounUC2",
+	    "Value": "Her",
+            "When": { "MaruGender": "Female" },
+       },	
+                {
+	    "Name": "MaruPronounLC2",
+	    "Value": "her",
+            "When": { "MaruGender": "Female" },
+       },		
+                {
+	    "Name": "MaruPronounUC1",
+	    "Value": "Him",
+            "When": { "MaruGender": "Male" },
+       },	
+                {
+	    "Name": "MaruPronounLC1",
+	    "Value": "him",
+            "When": { "MaruGender": "Male" },
+       },
+                {
+	    "Name": "MaruPronounUC2",
+	    "Value": "His",
+            "When": { "MaruGender": "Male" },
+       },	
+                {
+	    "Name": "MaruPronounLC2",
+	    "Value": "his",
+            "When": { "MaruGender": "Male" },
+       },
+                {
+	    "Name": "MaruChild",
+	    "Value": "son",
+            "When": { "MaruGender": "Male" },
+       },	
+                {
+	    "Name": "MaruChild",
+	    "Value": "daughter",
+            "When": { "MaruGender": "Female" },
+       },
+                {
+	    "Name": "MaruGenderLC3",
+	    "Value": "guy",
+            "When": { "MaruGender": "Male" },
+       },
+                {
+	    "Name": "MaruGenderLC3",
+	    "Value": "girl",
+            "When": { "MaruGender": "Female" },
+       },
+                {
+	    "Name": "MaruGenderLC4",
+	    "Value": "girl",
+            "When": { "MaruGender": "Female" },
+       },
+                {
+	    "Name": "MaruGenderLC4",
+	    "Value": "boy",
+            "When": { "MaruGender": "Male" },
+       },
+                {
+	    "Name": "MaruMarriedLC",
+	    "Value": "husband",
+            "When": { "MaruGender": "Male" },
+       },
+                {
+	    "Name": "MaruMarriedLC",
+	    "Value": "wife",
+            "When": { "MaruGender": "Female" },
+       },
+                {
+	    "Name": "MisterQiGenderUC",
+	    "Value": "She",
+            "When": { "MisterQiGender": "Female" },
+       },
+                {
+	    "Name": "MisterQiGenderLC",
+	    "Value": "she",
+            "When": { "MisterQiGender": "Female" },
+       },	
+                {
+	    "Name": "MisterQiGenderUC",
+	    "Value": "He",
+            "When": { "MisterQiGender": "Male" },
+       },	
+                {
+	    "Name": "MisterQiGenderLC",
+	    "Value": "he",
+            "When": { "MisterQiGender": "Male" },
+       },	
+                {
+	    "Name": "MisterQiPronounUC1",
+	    "Value": "Her",
+            "When": { "MisterQiGender": "Female" },
+       },	
+                {
+	    "Name": "MisterQiPronounLC1",
+	    "Value": "her",
+            "When": { "MisterQiGender": "Female" },
+       },
+                {
+	    "Name": "MisterQiPronounUC2",
+	    "Value": "Her",
+            "When": { "MisterQiGender": "Female" },
+       },	
+                {
+	    "Name": "MisterQiPronounLC2",
+	    "Value": "her",
+            "When": { "MisterQiGender": "Female" },
+       },		
+                {
+	    "Name": "MisterQiPronounUC1",
+	    "Value": "Him",
+            "When": { "MisterQiGender": "Male" },
+       },	
+                {
+	    "Name": "MisterQiPronounLC1",
+	    "Value": "him",
+            "When": { "MisterQiGender": "Male" },
+       },
+                {
+	    "Name": "MisterQiPronounUC2",
+	    "Value": "His",
+            "When": { "MisterQiGender": "Male" },
+       },	
+                {
+	    "Name": "MisterQiPronounLC2",
+	    "Value": "his",
+            "When": { "MisterQiGender": "Male" },
+       },
+                {
+	    "Name": "MisterQiGenderLC4",
+	    "Value": "girl",
+            "When": { "MisterQiGender": "Female" },
+       },
+                {
+	    "Name": "MisterQiGenderLC4",
+	    "Value": "boy",
+            "When": { "MisterQiGender": "Male" },
+       },	
+                {
+	    "Name": "MorrisGenderUC",
+	    "Value": "She",
+            "When": { "MorrisGender": "Female" },
+       },
+                {
+	    "Name": "MorrisGenderLC",
+	    "Value": "she",
+            "When": { "MorrisGender": "Female" },
+       },	
+                {
+	    "Name": "MorrisGenderUC",
+	    "Value": "He",
+            "When": { "MorrisGender": "Male" },
+       },	
+                {
+	    "Name": "MorrisGenderLC",
+	    "Value": "he",
+            "When": { "MorrisGender": "Male" },
+       },	
+                {
+	    "Name": "MorrisPronounUC1",
+	    "Value": "Her",
+            "When": { "MorrisGender": "Female" },
+       },	
+                {
+	    "Name": "MorrisPronounLC1",
+	    "Value": "her",
+            "When": { "MorrisGender": "Female" },
+       },
+                {
+	    "Name": "MorrisPronounUC2",
+	    "Value": "Her",
+            "When": { "MorrisGender": "Female" },
+       },	
+                {
+	    "Name": "MorrisPronounLC2",
+	    "Value": "her",
+            "When": { "MorrisGender": "Female" },
+       },		
+                {
+	    "Name": "MorrisPronounUC1",
+	    "Value": "Him",
+            "When": { "MorrisGender": "Male" },
+       },	
+                {
+	    "Name": "MorrisPronounLC1",
+	    "Value": "him",
+            "When": { "MorrisGender": "Male" },
+       },
+                {
+	    "Name": "MorrisPronounUC2",
+	    "Value": "His",
+            "When": { "MorrisGender": "Male" },
+       },	
+                {
+	    "Name": "MorrisPronounLC2",
+	    "Value": "his",
+            "When": { "MorrisGender": "Male" },
+       },
+                {
+	    "Name": "MorrisMarital",
+	    "Value": "Mr.",
+            "When": { "MorrisGender": "Male" },
+       },
+                {
+	    "Name": "MorrisMarital",
+	    "Value": "Ms.",
+            "When": { "MorrisGender": "Female" },
+       },		
+                {
+	    "Name": "PamGenderUC",
+	    "Value": "She",
+            "When": { "PamGender": "Female" },
+       },
+                {
+	    "Name": "PamGenderLC",
+	    "Value": "she",
+            "When": { "PamGender": "Female" },
+       },	
+                {
+	    "Name": "PamGenderUC",
+	    "Value": "He",
+            "When": { "PamGender": "Male" },
+       },	
+                {
+	    "Name": "PamGenderLC",
+	    "Value": "he",
+            "When": { "PamGender": "Male" },
+       },	
+                {
+	    "Name": "PamPronounUC1",
+	    "Value": "Her",
+            "When": { "PamGender": "Female" },
+       },	
+                {
+	    "Name": "PamPronounLC1",
+	    "Value": "her",
+            "When": { "PamGender": "Female" },
+       },
+                {
+	    "Name": "PamPronounUC2",
+	    "Value": "Her",
+            "When": { "PamGender": "Female" },
+       },	
+                {
+	    "Name": "PamPronounLC2",
+	    "Value": "her",
+            "When": { "PamGender": "Female" },
+       },		
+                {
+	    "Name": "PamPronounUC1",
+	    "Value": "Him",
+            "When": { "PamGender": "Male" },
+       },	
+                {
+	    "Name": "PamPronounLC1",
+	    "Value": "him",
+            "When": { "PamGender": "Male" },
+       },
+                {
+	    "Name": "PamPronounUC2",
+	    "Value": "His",
+            "When": { "PamGender": "Male" },
+       },	
+                {
+	    "Name": "PamPronounLC2",
+	    "Value": "his",
+            "When": { "PamGender": "Male" },
+       },
+                {
+	    "Name": "PamGenderLC2",
+	    "Value": "man",
+            "When": { "PamGender": "Male" },
+       },	
+                {
+	    "Name": "PamGenderLC2",
+	    "Value": "woman",
+            "When": { "PamGender": "Female" },
+       },
+     		{
+	    "Name": "PamParentUC",
+	    "Value": "Dad",
+            "When": { "PamGender": "Male" },
+       },	
+                {
+	    "Name": "PamParentUC",
+	    "Value": "Mom",
+            "When": { "PamGender": "Female" },
+       },
+                {
+	    "Name": "PamParentLC",
+	    "Value": "father",
+            "When": { "PamGender": "Male" },
+       },	
+                {
+	    "Name": "PamParentLC",
+	    "Value": "mother",
+            "When": { "PamGender": "Female" },
+       },
+                {
+	    "Name": "PamGenderLC4",
+	    "Value": "girl",
+            "When": { "PamGender": "Female" },
+       },
+                {
+	    "Name": "PamGenderLC4",
+	    "Value": "boy",
+            "When": { "PamGender": "Male" },
+       },
+                {
+	    "Name": "PennyGenderUC",
+	    "Value": "She",
+            "When": { "PennyGender": "Female" },
+       },
+                {
+	    "Name": "PennyGenderLC",
+	    "Value": "she",
+            "When": { "PennyGender": "Female" },
+       },	
+                {
+	    "Name": "PennyGenderUC",
+	    "Value": "He",
+            "When": { "PennyGender": "Male" },
+       },	
+                {
+	    "Name": "PennyGenderLC",
+	    "Value": "he",
+            "When": { "PennyGender": "Male" },
+       },	
+                {
+	    "Name": "PennyPronounUC1",
+	    "Value": "Her",
+            "When": { "PennyGender": "Female" },
+       },	
+                {
+	    "Name": "PennyPronounLC1",
+	    "Value": "her",
+            "When": { "PennyGender": "Female" },
+       },
+                {
+	    "Name": "PennyPronounUC2",
+	    "Value": "Her",
+            "When": { "PennyGender": "Female" },
+       },	
+                {
+	    "Name": "PennyPronounLC2",
+	    "Value": "her",
+            "When": { "PennyGender": "Female" },
+       },		
+                {
+	    "Name": "PennyPronounUC1",
+	    "Value": "Him",
+            "When": { "PennyGender": "Male" },
+       },	
+                {
+	    "Name": "PennyPronounLC1",
+	    "Value": "him",
+            "When": { "PennyGender": "Male" },
+       },
+                {
+	    "Name": "PennyPronounUC2",
+	    "Value": "His",
+            "When": { "PennyGender": "Male" },
+       },	
+                {
+	    "Name": "PennyPronounLC2",
+	    "Value": "his",
+            "When": { "PennyGender": "Male" },
+       },
+                {
+	    "Name": "PennyMarital",
+	    "Value": "Miss",
+            "When": { "PennyGender": "Female" },
+       },
+                {
+	    "Name": "PennyMarital",
+	    "Value": "Mister",
+            "When": { "PennyGender": "Male" },
+       },
+                {
+	    "Name": "PennyGenderLC3",
+	    "Value": "guy",
+            "When": { "PennyGender": "Male" },
+       },
+                {
+	    "Name": "PennyGenderLC3",
+	    "Value": "girl",
+            "When": { "PennyGender": "Female" },
+       },
+                {
+	    "Name": "PennyGenderLC4",
+	    "Value": "girl",
+            "When": { "PennyGender": "Female" },
+       },
+                {
+	    "Name": "PennyGenderLC4",
+	    "Value": "boy",
+            "When": { "PennyGender": "Male" },
+       },
+                {
+	    "Name": "PennyMarriedLC",
+	    "Value": "husband",
+            "When": { "PennyGender": "Male" },
+       },
+                {
+	    "Name": "PennyMarriedLC",
+	    "Value": "wife",
+            "When": { "PennyGender": "Female" },
+       },
+                {
+	    "Name": "PierreGenderUC",
+	    "Value": "She",
+            "When": { "PierreGender": "Female" },
+       },
+                {
+	    "Name": "PierreGenderLC",
+	    "Value": "she",
+            "When": { "PierreGender": "Female" },
+       },	
+                {
+	    "Name": "PierreGenderUC",
+	    "Value": "He",
+            "When": { "PierreGender": "Male" },
+       },	
+                {
+	    "Name": "PierreGenderLC",
+	    "Value": "he",
+            "When": { "PierreGender": "Male" },
+       },	
+                {
+	    "Name": "PierrePronounUC1",
+	    "Value": "Her",
+            "When": { "PierreGender": "Female" },
+       },	
+                {
+	    "Name": "PierrePronounLC1",
+	    "Value": "her",
+            "When": { "PierreGender": "Female" },
+       },
+                {
+	    "Name": "PierrePronounUC2",
+	    "Value": "Her",
+            "When": { "PierreGender": "Female" },
+       },	
+                {
+	    "Name": "PierrePronounLC2",
+	    "Value": "her",
+            "When": { "PierreGender": "Female" },
+       },		
+                {
+	    "Name": "PierrePronounUC1",
+	    "Value": "Him",
+            "When": { "PierreGender": "Male" },
+       },	
+                {
+	    "Name": "PierrePronounLC1",
+	    "Value": "him",
+            "When": { "PierreGender": "Male" },
+       },
+                {
+	    "Name": "PierrePronounUC2",
+	    "Value": "His",
+            "When": { "PierreGender": "Male" },
+       },	
+                {
+	    "Name": "PierrePronounLC2",
+	    "Value": "his",
+            "When": { "PierreGender": "Male" },
+       },
+                {
+	    "Name": "PierrePronounLC3",
+	    "Value": "hers",
+            "When": { "PierreGender": "Female" },
+       },	
+                {
+	    "Name": "PierrePronounLC3",
+	    "Value": "his",
+            "When": { "PierreGender": "Male" },
+       },
+                {
+	    "Name": "PierreMarital",
+	    "Value": "Mrs.",
+            "When": { "PierreGender": "Female" },
+       },	
+                {
+	    "Name": "PierreMarital",
+	    "Value": "Mr.",
+            "When": { "PierreGender": "Male" },
+       },
+     		{
+	    "Name": "PierreParentUC",
+	    "Value": "Dad",
+            "When": { "PierreGender": "Male" },
+       },	
+                {
+	    "Name": "PierreParentUC",
+	    "Value": "Mom",
+            "When": { "PierreGender": "Female" },
+       },
+                {
+	    "Name": "PierreParentLC",
+	    "Value": "father",
+            "When": { "PierreGender": "Male" },
+       },	
+                {
+	    "Name": "PierreParentLC",
+	    "Value": "mother",
+            "When": { "PierreGender": "Female" },
+       },
+                {
+	    "Name": "PierreMarriedLC",
+	    "Value": "husband",
+            "When": { "PierreGender": "Male" },
+       },
+                {
+	    "Name": "PierreMarriedLC",
+	    "Value": "wife",
+            "When": { "PierreGender": "Female" },
+       },
+                {
+	    "Name": "RobinGenderUC",
+	    "Value": "She",
+            "When": { "RobinGender": "Female" },
+       },
+                {
+	    "Name": "RobinGenderLC",
+	    "Value": "she",
+            "When": { "RobinGender": "Female" },
+       },	
+                {
+	    "Name": "RobinGenderUC",
+	    "Value": "He",
+            "When": { "RobinGender": "Male" },
+       },	
+                {
+	    "Name": "RobinGenderLC",
+	    "Value": "he",
+            "When": { "RobinGender": "Male" },
+       },	
+                {
+	    "Name": "RobinPronounUC1",
+	    "Value": "Her",
+            "When": { "RobinGender": "Female" },
+       },	
+                {
+	    "Name": "RobinPronounLC1",
+	    "Value": "her",
+            "When": { "RobinGender": "Female" },
+       },
+                {
+	    "Name": "RobinPronounUC2",
+	    "Value": "Her",
+            "When": { "RobinGender": "Female" },
+       },	
+                {
+	    "Name": "RobinPronounLC2",
+	    "Value": "her",
+            "When": { "RobinGender": "Female" },
+       },		
+                {
+	    "Name": "RobinPronounUC1",
+	    "Value": "Him",
+            "When": { "RobinGender": "Male" },
+       },	
+                {
+	    "Name": "RobinPronounLC1",
+	    "Value": "him",
+            "When": { "RobinGender": "Male" },
+       },
+                {
+	    "Name": "RobinPronounUC2",
+	    "Value": "His",
+            "When": { "RobinGender": "Male" },
+       },	
+                {
+	    "Name": "RobinPronounLC2",
+	    "Value": "his",
+            "When": { "RobinGender": "Male" },
+       },
+     		{
+	    "Name": "RobinPronounLC3",
+	    "Value": "hers",
+            "When": { "RobinGender": "Female" },
+       },	
+     		{
+	    "Name": "RobinPronounLC3",
+	    "Value": "his",
+            "When": { "RobinGender": "Male" },
+       },
+     		{
+	    "Name": "RobinParentUC",
+	    "Value": "Dad",
+            "When": { "RobinGender": "Male" },
+       },	
+                {
+	    "Name": "RobinParentUC",
+	    "Value": "Mom",
+            "When": { "RobinGender": "Female" },
+       },
+                {
+	    "Name": "RobinParentLC",
+	    "Value": "father",
+            "When": { "RobinGender": "Male" },
+       },	
+                {
+	    "Name": "RobinParentLC",
+	    "Value": "mother",
+            "When": { "RobinGender": "Female" },
+       },
+                {
+	    "Name": "RobinMarriedLC",
+	    "Value": "husband",
+            "When": { "RobinGender": "Male" },
+       },
+                {
+	    "Name": "RobinMarriedLC",
+	    "Value": "wife",
+            "When": { "RobinGender": "Female" },
+       },
+                {
+	    "Name": "RobinGenderLC2",
+	    "Value": "woman",
+            "When": { "RobinGender": "Female" },
+       },
+                {
+	    "Name": "RobinGenderLC2",
+	    "Value": "man",
+            "When": { "RobinGender": "Male" },
+       },
+                {
+	    "Name": "SamGenderUC",
+	    "Value": "She",
+            "When": { "SamGender": "Female" },
+       },
+                {
+	    "Name": "SamGenderLC",
+	    "Value": "she",
+            "When": { "SamGender": "Female" },
+       },	
+                {
+	    "Name": "SamGenderUC",
+	    "Value": "He",
+            "When": { "SamGender": "Male" },
+       },	
+                {
+	    "Name": "SamGenderLC",
+	    "Value": "he",
+            "When": { "SamGender": "Male" },
+       },	
+                {
+	    "Name": "SamPronounUC1",
+	    "Value": "Her",
+            "When": { "SamGender": "Female" },
+       },	
+                {
+	    "Name": "SamPronounLC1",
+	    "Value": "her",
+            "When": { "SamGender": "Female" },
+       },
+                {
+	    "Name": "SamPronounUC2",
+	    "Value": "Her",
+            "When": { "SamGender": "Female" },
+       },	
+                {
+	    "Name": "SamPronounLC2",
+	    "Value": "her",
+            "When": { "SamGender": "Female" },
+       },		
+                {
+	    "Name": "SamPronounUC1",
+	    "Value": "Him",
+            "When": { "SamGender": "Male" },
+       },	
+                {
+	    "Name": "SamPronounLC1",
+	    "Value": "him",
+            "When": { "SamGender": "Male" },
+       },
+                {
+	    "Name": "SamPronounUC2",
+	    "Value": "His",
+            "When": { "SamGender": "Male" },
+       },	
+                {
+	    "Name": "SamPronounLC2",
+	    "Value": "his",
+            "When": { "SamGender": "Male" },
+       },
+                {
+	    "Name": "SamPronounLC3",
+	    "Value": "hers",
+            "When": { "SamGender": "Female" },
+       },	
+                {
+	    "Name": "SamPronounLC3",
+	    "Value": "his",
+            "When": { "SamGender": "Male" },
+       },
+                {
+	    "Name": "SamGenderLC2",
+	    "Value": "man",
+            "When": { "SamGender": "Male" },
+       },	
+                {
+	    "Name": "SamGenderLC2",
+	    "Value": "woman",
+            "When": { "SamGender": "Female" },
+       },
+                {
+	    "Name": "SamMarriedLC",
+	    "Value": "husband",
+            "When": { "SamGender": "Male" },
+       },
+                {
+	    "Name": "SamMarriedLC",
+	    "Value": "wife",
+            "When": { "SamGender": "Female" },
+       },
+                {
+	    "Name": "SamSibling",
+	    "Value": "brother",
+            "When": { "SamGender": "Male" },
+       },
+                {
+	    "Name": "SamSibling",
+	    "Value": "sister",
+            "When": { "SamGender": "Female" },
+       },
+                {
+	    "Name": "SamParentLC",
+	    "Value": "father",
+            "When": { "SamGender": "Male" },
+       },
+                {
+	    "Name": "SamParentLC",
+	    "Value": "mother",
+            "When": { "SamGender": "Female" },
+       },
+                {
+	    "Name": "SamGenderLC4",
+	    "Value": "girl",
+            "When": { "SamGender": "Female" },
+       },
+                {
+	    "Name": "SamGenderLC4",
+	    "Value": "boy",
+            "When": { "SamGender": "Male" },
+       },
+                {
+	    "Name": "SandyGenderUC",
+	    "Value": "She",
+            "When": { "SandyGender": "Female" },
+       },
+                {
+	    "Name": "SandyGenderLC",
+	    "Value": "she",
+            "When": { "SandyGender": "Female" },
+       },	
+                {
+	    "Name": "SandyGenderUC",
+	    "Value": "He",
+            "When": { "SandyGender": "Male" },
+       },	
+                {
+	    "Name": "SandyGenderLC",
+	    "Value": "he",
+            "When": { "SandyGender": "Male" },
+       },	
+                {
+	    "Name": "SandyPronounUC1",
+	    "Value": "Her",
+            "When": { "SandyGender": "Female" },
+       },	
+                {
+	    "Name": "SandyPronounLC1",
+	    "Value": "her",
+            "When": { "SandyGender": "Female" },
+       },
+                {
+	    "Name": "SandyPronounUC2",
+	    "Value": "Her",
+            "When": { "SandyGender": "Female" },
+       },	
+                {
+	    "Name": "SandyPronounLC2",
+	    "Value": "her",
+            "When": { "SandyGender": "Female" },
+       },		
+                {
+	    "Name": "SandyPronounUC1",
+	    "Value": "Him",
+            "When": { "SandyGender": "Male" },
+       },	
+                {
+	    "Name": "SandyPronounLC1",
+	    "Value": "him",
+            "When": { "SandyGender": "Male" },
+       },
+                {
+	    "Name": "SandyPronounUC2",
+	    "Value": "His",
+            "When": { "SandyGender": "Male" },
+       },	
+                {
+	    "Name": "SandyPronounLC2",
+	    "Value": "his",
+            "When": { "SandyGender": "Male" },
+       },
+                {
+	    "Name": "SebastianGenderUC",
+	    "Value": "She",
+            "When": { "SebastianGender": "Female" },
+       },
+                {
+	    "Name": "SebastianGenderLC",
+	    "Value": "she",
+            "When": { "SebastianGender": "Female" },
+       },	
+                {
+	    "Name": "SebastianGenderUC",
+	    "Value": "He",
+            "When": { "SebastianGender": "Male" },
+       },	
+                {
+	    "Name": "SebastianGenderLC",
+	    "Value": "he",
+            "When": { "SebastianGender": "Male" },
+       },	
+                {
+	    "Name": "SebastianPronounUC1",
+	    "Value": "Her",
+            "When": { "SebastianGender": "Female" },
+       },	
+                {
+	    "Name": "SebastianPronounLC1",
+	    "Value": "her",
+            "When": { "SebastianGender": "Female" },
+       },
+                {
+	    "Name": "SebastianPronounUC2",
+	    "Value": "Her",
+            "When": { "SebastianGender": "Female" },
+       },	
+                {
+	    "Name": "SebastianPronounLC2",
+	    "Value": "her",
+            "When": { "SebastianGender": "Female" },
+       },		
+                {
+	    "Name": "SebastianPronounUC1",
+	    "Value": "Him",
+            "When": { "SebastianGender": "Male" },
+       },	
+                {
+	    "Name": "SebastianPronounLC1",
+	    "Value": "him",
+            "When": { "SebastianGender": "Male" },
+       },
+                {
+	    "Name": "SebastianPronounUC2",
+	    "Value": "His",
+            "When": { "SebastianGender": "Male" },
+       },	
+                {
+	    "Name": "SebastianPronounLC2",
+	    "Value": "his",
+            "When": { "SebastianGender": "Male" },
+       },
+                {
+	    "Name": "SebastianChild",
+	    "Value": "son",
+            "When": { "SebastianGender": "Male" },
+       },	
+                {
+	    "Name": "SebastianChild",
+	    "Value": "daughter",
+            "When": { "SebastianGender": "Female" },
+       },
+                {
+	    "Name": "SebastianGenderLC3",
+	    "Value": "guy",
+            "When": { "SebastianGender": "Male" },
+       },
+                {
+	    "Name": "SebastianGenderLC3",
+	    "Value": "girl",
+            "When": { "SebastianGender": "Female" },
+       },
+                {
+	    "Name": "SebastianMarriedLC",
+	    "Value": "husband",
+            "When": { "SebastianGender": "Male" },
+       },
+                {
+	    "Name": "SebastianMarriedLC",
+	    "Value": "wife",
+            "When": { "SebastianGender": "Female" },
+       },
+                {
+	    "Name": "SebastianSibling",
+	    "Value": "brother",
+            "When": { "SebastianGender": "Male" },
+       },
+                {
+	    "Name": "SebastianSibling",
+	    "Value": "sister",
+            "When": { "SebastianGender": "Female" },
+       },	
+                {
+	    "Name": "SebastianParentLC",
+	    "Value": "father",
+            "When": { "SebastianGender": "Male" },
+       },
+                {
+	    "Name": "SebastianParentLC",
+	    "Value": "mother",
+            "When": { "SebastianGender": "Female" },
+       },
+                {
+	    "Name": "ShaneGenderUC",
+	    "Value": "She",
+            "When": { "ShaneGender": "Female" },
+       },
+                {
+	    "Name": "ShaneGenderLC",
+	    "Value": "she",
+            "When": { "ShaneGender": "Female" },
+       },	
+                {
+	    "Name": "ShaneGenderUC",
+	    "Value": "He",
+            "When": { "ShaneGender": "Male" },
+       },	
+                {
+	    "Name": "ShaneGenderLC",
+	    "Value": "he",
+            "When": { "ShaneGender": "Male" },
+       },	
+                {
+	    "Name": "ShanePronounUC1",
+	    "Value": "Her",
+            "When": { "ShaneGender": "Female" },
+       },	
+                {
+	    "Name": "ShanePronounLC1",
+	    "Value": "her",
+            "When": { "ShaneGender": "Female" },
+       },
+                {
+	    "Name": "ShanePronounUC2",
+	    "Value": "Her",
+            "When": { "ShaneGender": "Female" },
+       },	
+                {
+	    "Name": "ShanePronounLC2",
+	    "Value": "her",
+            "When": { "ShaneGender": "Female" },
+       },		
+                {
+	    "Name": "ShanePronounUC1",
+	    "Value": "Him",
+            "When": { "ShaneGender": "Male" },
+       },	
+                {
+	    "Name": "ShanePronounLC1",
+	    "Value": "him",
+            "When": { "ShaneGender": "Male" },
+       },
+                {
+	    "Name": "ShanePronounUC2",
+	    "Value": "His",
+            "When": { "ShaneGender": "Male" },
+       },	
+                {
+	    "Name": "ShanePronounLC2",
+	    "Value": "his",
+            "When": { "ShaneGender": "Male" },
+       },
+     		{
+	    "Name": "ShaneRelation",
+	    "Value": "Uncle",
+            "When": { "ShaneGender": "Male" },
+       },	
+     		{
+	    "Name": "ShaneRelation",
+	    "Value": "Aunt",
+            "When": { "ShaneGender": "Female" },
+       },
+                {
+	    "Name": "ShaneChild2",
+	    "Value": "godfather",
+            "When": { "ShaneGender": "Male" },
+       },	
+                {
+	    "Name": "ShaneChild2",
+	    "Value": "godmother",
+            "When": { "ShaneGender": "Female" },
+       },
+                {
+	    "Name": "ShaneChild3",
+	    "Value": "nephew",
+            "When": { "ShaneGender": "Male" },
+       },	
+                {
+	    "Name": "ShaneChild3",
+	    "Value": "niece",
+            "When": { "ShaneGender": "Female" },
+       },
+                {
+	    "Name": "ShaneGenderLC3",
+	    "Value": "guy",
+            "When": { "ShaneGender": "Male" },
+       },
+                {
+	    "Name": "ShaneGenderLC3",
+	    "Value": "girl",
+            "When": { "ShaneGender": "Female" },
+       },
+                {
+	    "Name": "ShaneGenderLC4",
+	    "Value": "girl",
+            "When": { "ShaneGender": "Female" },
+       },
+                {
+	    "Name": "ShaneGenderLC4",
+	    "Value": "boy",
+            "When": { "ShaneGender": "Male" },
+       },
+                {
+	    "Name": "ShaneMarriedLC",
+	    "Value": "husband",
+            "When": { "ShaneGender": "Male" },
+       },
+                {
+	    "Name": "ShaneMarriedLC",
+	    "Value": "wife",
+            "When": { "ShaneGender": "Female" },
+       },
+                {
+	    "Name": "ShaneParentLC",
+	    "Value": "father",
+            "When": { "ShaneGender": "Male" },
+       },
+                {
+	    "Name": "ShaneParentLC",
+	    "Value": "mother",
+            "When": { "ShaneGender": "Female" },
+       },
+     		{
+	    "Name": "ShaneParentUC",
+	    "Value": "Dad",
+            "When": { "ShaneGender": "Male" },
+       },	
+                {
+	    "Name": "ShaneParentUC",
+	    "Value": "Mom",
+            "When": { "ShaneGender": "Female" },
+       },	
+                {
+	    "Name": "VincentGenderUC",
+	    "Value": "She",
+            "When": { "VincentGender": "Female" },
+       },
+                {
+	    "Name": "VincentGenderLC",
+	    "Value": "she",
+            "When": { "VincentGender": "Female" },
+       },	
+                {
+	    "Name": "VincentGenderUC",
+	    "Value": "He",
+            "When": { "VincentGender": "Male" },
+       },	
+                {
+	    "Name": "VincentGenderLC",
+	    "Value": "he",
+            "When": { "VincentGender": "Male" },
+       },	
+                {
+	    "Name": "VincentPronounUC1",
+	    "Value": "Her",
+            "When": { "VincentGender": "Female" },
+       },	
+                {
+	    "Name": "VincentPronounLC1",
+	    "Value": "her",
+            "When": { "VincentGender": "Female" },
+       },
+                {
+	    "Name": "VincentPronounUC2",
+	    "Value": "Her",
+            "When": { "VincentGender": "Female" },
+       },	
+                {
+	    "Name": "VincentPronounLC2",
+	    "Value": "her",
+            "When": { "VincentGender": "Female" },
+       },		
+                {
+	    "Name": "VincentPronounUC1",
+	    "Value": "Him",
+            "When": { "VincentGender": "Male" },
+       },	
+                {
+	    "Name": "VincentPronounLC1",
+	    "Value": "him",
+            "When": { "VincentGender": "Male" },
+       },
+                {
+	    "Name": "VincentPronounUC2",
+	    "Value": "His",
+            "When": { "VincentGender": "Male" },
+       },	
+                {
+	    "Name": "VincentPronounLC2",
+	    "Value": "his",
+            "When": { "VincentGender": "Male" },
+       },
+                {
+	    "Name": "VincentGenderLC3",
+	    "Value": "guy",
+            "When": { "VincentGender": "Male" },
+       },
+                {
+	    "Name": "VincentGenderLC3",
+	    "Value": "girl",
+            "When": { "VincentGender": "Female" },
+       },
+                {
+	    "Name": "VincentGenderLC4",
+	    "Value": "girl",
+            "When": { "VincentGender": "Female" },
+       },
+                {
+	    "Name": "VincentGenderLC4",
+	    "Value": "boy",
+            "When": { "VincentGender": "Male" },
+       },
+                {
+	    "Name": "VincentSibling",
+	    "Value": "brother",
+            "When": { "VincentGender": "Male" },
+       },
+                {
+	    "Name": "VincentSibling",
+	    "Value": "sister",
+            "When": { "VincentGender": "Female" },
+       },
+                {
+	    "Name": "WillyGenderUC",
+	    "Value": "She",
+            "When": { "WillyGender": "Female" },
+       },
+                {
+	    "Name": "WillyGenderLC",
+	    "Value": "she",
+            "When": { "WillyGender": "Female" },
+       },	
+                {
+	    "Name": "WillyGenderUC",
+	    "Value": "He",
+            "When": { "WillyGender": "Male" },
+       },	
+                {
+	    "Name": "WillyGenderLC",
+	    "Value": "he",
+            "When": { "WillyGender": "Male" },
+       },	
+                {
+	    "Name": "WillyPronounUC1",
+	    "Value": "Her",
+            "When": { "WillyGender": "Female" },
+       },	
+                {
+	    "Name": "WillyPronounLC1",
+	    "Value": "her",
+            "When": { "WillyGender": "Female" },
+       },
+                {
+	    "Name": "WillyPronounUC2",
+	    "Value": "Her",
+            "When": { "WillyGender": "Female" },
+       },	
+                {
+	    "Name": "WillyPronounLC2",
+	    "Value": "her",
+            "When": { "WillyGender": "Female" },
+       },		
+                {
+	    "Name": "WillyPronounUC1",
+	    "Value": "Him",
+            "When": { "WillyGender": "Male" },
+       },	
+                {
+	    "Name": "WillyPronounLC1",
+	    "Value": "him",
+            "When": { "WillyGender": "Male" },
+       },
+                {
+	    "Name": "WillyPronounUC2",
+	    "Value": "His",
+            "When": { "WillyGender": "Male" },
+       },	
+                {
+	    "Name": "WillyPronounLC2",
+	    "Value": "his",
+            "When": { "WillyGender": "Male" },
+       },
+                {
+	    "Name": "WillyPronounLC3",
+	    "Value": "hers",
+            "When": { "WillyGender": "Female" },
+       },	
+                {
+	    "Name": "WillyPronounLC3",
+	    "Value": "his",
+            "When": { "WillyGender": "Male" },
+       },
+                {
+	    "Name": "WizardGenderUC",
+	    "Value": "She",
+            "When": { "WizardGender": "Female" },
+       },
+                {
+	    "Name": "WizardGenderLC",
+	    "Value": "she",
+            "When": { "WizardGender": "Female" },
+       },	
+                {
+	    "Name": "WizardGenderUC",
+	    "Value": "He",
+            "When": { "WizardGender": "Male" },
+       },	
+                {
+	    "Name": "WizardGenderLC",
+	    "Value": "he",
+            "When": { "WizardGender": "Male" },
+       },	
+                {
+	    "Name": "WizardPronounUC1",
+	    "Value": "Her",
+            "When": { "WizardGender": "Female" },
+       },	
+                {
+	    "Name": "WizardPronounLC1",
+	    "Value": "her",
+            "When": { "WizardGender": "Female" },
+       },
+                {
+	    "Name": "WizardPronounUC2",
+	    "Value": "Her",
+            "When": { "WizardGender": "Female" },
+       },	
+                {
+	    "Name": "WizardPronounLC2",
+	    "Value": "her",
+            "When": { "WizardGender": "Female" },
+       },		
+                {
+	    "Name": "WizardPronounUC1",
+	    "Value": "Him",
+            "When": { "WizardGender": "Male" },
+       },	
+                {
+	    "Name": "WizardPronounLC1",
+	    "Value": "him",
+            "When": { "WizardGender": "Male" },
+       },
+                {
+	    "Name": "WizardPronounUC2",
+	    "Value": "His",
+            "When": { "WizardGender": "Male" },
+       },	
+                {
+	    "Name": "WizardPronounLC2",
+	    "Value": "his",
+            "When": { "WizardGender": "Male" },
+       },
+                {
+	    "Name": "WizardGenderLC2",
+	    "Value": "man",
+            "When": { "WizardGender": "Male" },
+       },	
+                {
+	    "Name": "WizardGenderLC2",
+	    "Value": "woman",
+            "When": { "WizardGender": "Female" },
+       },
+                {
+	    "Name": "BirdieGenderUC",
+	    "Value": "She",
+            "When": { "BirdieGender": "Female" },
+       },
+                {
+	    "Name": "BirdieGenderLC",
+	    "Value": "she",
+            "When": { "BirdieGender": "Female" },
+       },	
+                {
+	    "Name": "BirdieGenderUC",
+	    "Value": "He",
+            "When": { "BirdieGender": "Male" },
+       },	
+                {
+	    "Name": "BirdieGenderLC",
+	    "Value": "he",
+            "When": { "BirdieGender": "Male" },
+       },	
+                {
+	    "Name": "BirdiePronounUC1",
+	    "Value": "Her",
+            "When": { "BirdieGender": "Female" },
+       },	
+                {
+	    "Name": "BirdiePronounLC1",
+	    "Value": "her",
+            "When": { "BirdieGender": "Female" },
+       },
+                {
+	    "Name": "BirdiePronounUC2",
+	    "Value": "Her",
+            "When": { "BirdieGender": "Female" },
+       },	
+                {
+	    "Name": "BirdiePronounLC2",
+	    "Value": "her",
+            "When": { "BirdieGender": "Female" },
+       },		
+                {
+	    "Name": "BirdiePronounUC1",
+	    "Value": "Him",
+            "When": { "BirdieGender": "Male" },
+       },	
+                {
+	    "Name": "BirdiePronounLC1",
+	    "Value": "him",
+            "When": { "BirdieGender": "Male" },
+       },
+                {
+	    "Name": "BirdiePronounUC2",
+	    "Value": "His",
+            "When": { "BirdieGender": "Male" },
+       },	
+                {
+	    "Name": "BirdiePronounLC2",
+	    "Value": "his",
+            "When": { "BirdieGender": "Male" },
+       },
+                {
+	    "Name": "BirdieGenderLC2",
+	    "Value": "woman",
+            "When": { "BirdieGender": "Female" },
+       },
+                {
+	    "Name": "BirdieGenderLC2",
+	    "Value": "man",
+            "When": { "BirdieGender": "Male" },
+       },
+                {
+	    "Name": "BirdieGenderLC3",
+	    "Value": "lady",
+            "When": { "BirdieGender": "Female" },
+       },
+                {
+	    "Name": "BirdieGenderLC3",
+	    "Value": "man",
+            "When": { "BirdieGender": "Male" },
+       },
+                {
+	    "Name": "BouncerGenderUC",
+	    "Value": "She",
+            "When": { "BouncerGender": "Female" },
+       },
+                {
+	    "Name": "BouncerGenderLC",
+	    "Value": "she",
+            "When": { "BouncerGender": "Female" },
+       },	
+                {
+	    "Name": "BouncerGenderUC",
+	    "Value": "He",
+            "When": { "BouncerGender": "Male" },
+       },	
+                {
+	    "Name": "BouncerGenderLC",
+	    "Value": "he",
+            "When": { "BouncerGender": "Male" },
+       },	
+                {
+	    "Name": "BouncerPronounUC1",
+	    "Value": "Her",
+            "When": { "BouncerGender": "Female" },
+       },	
+                {
+	    "Name": "BouncerPronounLC1",
+	    "Value": "her",
+            "When": { "BouncerGender": "Female" },
+       },
+                {
+	    "Name": "BouncerPronounUC2",
+	    "Value": "Her",
+            "When": { "BouncerGender": "Female" },
+       },	
+                {
+	    "Name": "BouncerPronounLC2",
+	    "Value": "her",
+            "When": { "BouncerGender": "Female" },
+       },		
+                {
+	    "Name": "BouncerPronounUC1",
+	    "Value": "Him",
+            "When": { "BouncerGender": "Male" },
+       },	
+                {
+	    "Name": "BouncerPronounLC1",
+	    "Value": "him",
+            "When": { "BouncerGender": "Male" },
+       },
+                {
+	    "Name": "BouncerPronounUC2",
+	    "Value": "His",
+            "When": { "BouncerGender": "Male" },
+       },	
+                {
+	    "Name": "BouncerPronounLC2",
+	    "Value": "his",
+            "When": { "BouncerGender": "Male" },
+       },
+                {
+	    "Name": "GilGenderUC",
+	    "Value": "She",
+            "When": { "GilGender": "Female" },
+       },
+                {
+	    "Name": "GilGenderLC",
+	    "Value": "she",
+            "When": { "GilGender": "Female" },
+       },	
+                {
+	    "Name": "GilGenderUC",
+	    "Value": "He",
+            "When": { "GilGender": "Male" },
+       },	
+                {
+	    "Name": "GilGenderLC",
+	    "Value": "he",
+            "When": { "GilGender": "Male" },
+       },	
+                {
+	    "Name": "GilPronounUC1",
+	    "Value": "Her",
+            "When": { "GilGender": "Female" },
+       },	
+                {
+	    "Name": "GilPronounLC1",
+	    "Value": "her",
+            "When": { "GilGender": "Female" },
+       },
+                {
+	    "Name": "GilPronounUC2",
+	    "Value": "Her",
+            "When": { "GilGender": "Female" },
+       },	
+                {
+	    "Name": "GilPronounLC2",
+	    "Value": "her",
+            "When": { "GilGender": "Female" },
+       },		
+                {
+	    "Name": "GilPronounUC1",
+	    "Value": "Him",
+            "When": { "GilGender": "Male" },
+       },	
+                {
+	    "Name": "GilPronounLC1",
+	    "Value": "him",
+            "When": { "GilGender": "Male" },
+       },
+                {
+	    "Name": "GilPronounUC2",
+	    "Value": "His",
+            "When": { "GilGender": "Male" },
+       },	
+                {
+	    "Name": "GilPronounLC2",
+	    "Value": "his",
+            "When": { "GilGender": "Male" },
+       },
+                {
+	    "Name": "GovernorGenderUC",
+	    "Value": "She",
+            "When": { "GovernorGender": "Female" },
+       },
+                {
+	    "Name": "GovernorGenderLC",
+	    "Value": "she",
+            "When": { "GovernorGender": "Female" },
+       },	
+                {
+	    "Name": "GovernorGenderUC",
+	    "Value": "He",
+            "When": { "GovernorGender": "Male" },
+       },	
+                {
+	    "Name": "GovernorGenderLC",
+	    "Value": "he",
+            "When": { "GovernorGender": "Male" },
+       },	
+                {
+	    "Name": "GovernorPronounUC1",
+	    "Value": "Her",
+            "When": { "GovernorGender": "Female" },
+       },	
+                {
+	    "Name": "GovernorPronounLC1",
+	    "Value": "her",
+            "When": { "GovernorGender": "Female" },
+       },
+                {
+	    "Name": "GovernorPronounUC2",
+	    "Value": "Her",
+            "When": { "GovernorGender": "Female" },
+       },	
+                {
+	    "Name": "GovernorPronounLC2",
+	    "Value": "her",
+            "When": { "GovernorGender": "Female" },
+       },		
+                {
+	    "Name": "GovernorPronounUC1",
+	    "Value": "Him",
+            "When": { "GovernorGender": "Male" },
+       },	
+                {
+	    "Name": "GovernorPronounLC1",
+	    "Value": "him",
+            "When": { "GovernorGender": "Male" },
+       },
+                {
+	    "Name": "GovernorPronounUC2",
+	    "Value": "His",
+            "When": { "GovernorGender": "Male" },
+       },	
+                {
+	    "Name": "GovernorPronounLC2",
+	    "Value": "his",
+            "When": { "GovernorGender": "Male" },
+       },
+                {
+	    "Name": "GovernorGenderLC2",
+	    "Value": "guy",
+            "When": { "GovernorGender": "Male" },
+       },	
+                {
+	    "Name": "GovernorGenderLC2",
+	    "Value": "girl",
+            "When": { "GovernorGender": "Female" },
+       },
+                {
+	    "Name": "GrandpaGenderUC",
+	    "Value": "She",
+            "When": { "GrandpaGender": "Female" },
+       },
+                {
+	    "Name": "GrandpaGenderLC",
+	    "Value": "she",
+            "When": { "GrandpaGender": "Female" },
+       },	
+                {
+	    "Name": "GrandpaGenderUC",
+	    "Value": "He",
+            "When": { "GrandpaGender": "Male" },
+       },	
+                {
+	    "Name": "GrandpaGenderLC",
+	    "Value": "he",
+            "When": { "GrandpaGender": "Male" },
+       },	
+                {
+	    "Name": "GrandpaPronounUC1",
+	    "Value": "Her",
+            "When": { "GrandpaGender": "Female" },
+       },	
+                {
+	    "Name": "GrandpaPronounLC1",
+	    "Value": "her",
+            "When": { "GrandpaGender": "Female" },
+       },
+                {
+	    "Name": "GrandpaPronounUC2",
+	    "Value": "Her",
+            "When": { "GrandpaGender": "Female" },
+       },	
+                {
+	    "Name": "GrandpaPronounLC2",
+	    "Value": "her",
+            "When": { "GrandpaGender": "Female" },
+       },		
+                {
+	    "Name": "GrandpaPronounUC1",
+	    "Value": "Him",
+            "When": { "GrandpaGender": "Male" },
+       },	
+                {
+	    "Name": "GrandpaPronounLC1",
+	    "Value": "him",
+            "When": { "GrandpaGender": "Male" },
+       },
+                {
+	    "Name": "GrandpaPronounUC2",
+	    "Value": "His",
+            "When": { "GrandpaGender": "Male" },
+       },	
+                {
+	    "Name": "GrandpaPronounLC2",
+	    "Value": "his",
+            "When": { "GrandpaGender": "Male" },
+       },
+                {
+	    "Name": "GrandpaParentLC",
+	    "Value": "father",
+            "When": { "GrandpaGender": "Male" },
+       },	
+                {
+	    "Name": "GrandpaParentLC",
+	    "Value": "mother",
+            "When": { "GrandpaGender": "Female" },
+       },
+                {
+	    "Name": "HenchmanGenderUC",
+	    "Value": "She",
+            "When": { "HenchmanGender": "Female" },
+       },
+                {
+	    "Name": "HenchmanGenderLC",
+	    "Value": "she",
+            "When": { "HenchmanGender": "Female" },
+       },	
+                {
+	    "Name": "HenchmanGenderUC",
+	    "Value": "He",
+            "When": { "HenchmanGender": "Male" },
+       },	
+                {
+	    "Name": "HenchmanGenderLC",
+	    "Value": "he",
+            "When": { "HenchmanGender": "Male" },
+       },	
+                {
+	    "Name": "HenchmanPronounUC1",
+	    "Value": "Her",
+            "When": { "HenchmanGender": "Female" },
+       },	
+                {
+	    "Name": "HenchmanPronounLC1",
+	    "Value": "her",
+            "When": { "HenchmanGender": "Female" },
+       },
+                {
+	    "Name": "HenchmanPronounUC2",
+	    "Value": "Her",
+            "When": { "HenchmanGender": "Female" },
+       },	
+                {
+	    "Name": "HenchmanPronounLC2",
+	    "Value": "her",
+            "When": { "HenchmanGender": "Female" },
+       },		
+                {
+	    "Name": "HenchmanPronounUC1",
+	    "Value": "Him",
+            "When": { "HenchmanGender": "Male" },
+       },	
+                {
+	    "Name": "HenchmanPronounLC1",
+	    "Value": "him",
+            "When": { "HenchmanGender": "Male" },
+       },
+                {
+	    "Name": "HenchmanPronounUC2",
+	    "Value": "His",
+            "When": { "HenchmanGender": "Male" },
+       },	
+                {
+	    "Name": "HenchmanPronounLC2",
+	    "Value": "his",
+            "When": { "HenchmanGender": "Male" },
+       },
+                {
+	    "Name": "OldMarinerGenderUC",
+	    "Value": "She",
+            "When": { "OldMarinerGender": "Female" },
+       },
+                {
+	    "Name": "OldMarinerGenderLC",
+	    "Value": "she",
+            "When": { "OldMarinerGender": "Female" },
+       },	
+                {
+	    "Name": "OldMarinerGenderUC",
+	    "Value": "He",
+            "When": { "OldMarinerGender": "Male" },
+       },	
+                {
+	    "Name": "OldMarinerGenderLC",
+	    "Value": "he",
+            "When": { "OldMarinerGender": "Male" },
+       },	
+                {
+	    "Name": "OldMarinerPronounUC1",
+	    "Value": "Her",
+            "When": { "OldMarinerGender": "Female" },
+       },	
+                {
+	    "Name": "OldMarinerPronounLC1",
+	    "Value": "her",
+            "When": { "OldMarinerGender": "Female" },
+       },
+                {
+	    "Name": "OldMarinerPronounUC2",
+	    "Value": "Her",
+            "When": { "OldMarinerGender": "Female" },
+       },	
+                {
+	    "Name": "OldMarinerPronounLC2",
+	    "Value": "her",
+            "When": { "OldMarinerGender": "Female" },
+       },		
+                {
+	    "Name": "OldMarinerPronounUC1",
+	    "Value": "Him",
+            "When": { "OldMarinerGender": "Male" },
+       },	
+                {
+	    "Name": "OldMarinerPronounLC1",
+	    "Value": "him",
+            "When": { "OldMarinerGender": "Male" },
+       },
+                {
+	    "Name": "OldMarinerPronounUC2",
+	    "Value": "His",
+            "When": { "OldMarinerGender": "Male" },
+       },	
+                {
+	    "Name": "OldMarinerPronounLC2",
+	    "Value": "his",
+            "When": { "OldMarinerGender": "Male" },
+       },
+                {
+	    "Name": "DwarfGenderUC",
+	    "Value": "She",
+            "When": { "DwarfGender": "Female" },
+       },
+                {
+	    "Name": "DwarfGenderLC",
+	    "Value": "she",
+            "When": { "DwarfGender": "Female" },
+       },	
+                {
+	    "Name": "DwarfGenderUC",
+	    "Value": "He",
+            "When": { "DwarfGender": "Male" },
+       },	
+                {
+	    "Name": "DwarfGenderLC",
+	    "Value": "he",
+            "When": { "DwarfGender": "Male" },
+       },	
+                {
+	    "Name": "DwarfPronounUC1",
+	    "Value": "Her",
+            "When": { "DwarfGender": "Female" },
+       },	
+                {
+	    "Name": "DwarfPronounLC1",
+	    "Value": "her",
+            "When": { "DwarfGender": "Female" },
+       },
+                {
+	    "Name": "DwarfPronounUC2",
+	    "Value": "Her",
+            "When": { "DwarfGender": "Female" },
+       },	
+                {
+	    "Name": "DwarfPronounLC2",
+	    "Value": "her",
+            "When": { "DwarfGender": "Female" },
+       },		
+                {
+	    "Name": "DwarfPronounUC1",
+	    "Value": "Him",
+            "When": { "DwarfGender": "Male" },
+       },	
+                {
+	    "Name": "DwarfPronounLC1",
+	    "Value": "him",
+            "When": { "DwarfGender": "Male" },
+       },
+                {
+	    "Name": "DwarfPronounUC2",
+	    "Value": "His",
+            "When": { "DwarfGender": "Male" },
+       },	
+                {
+	    "Name": "DwarfPronounLC2",
+	    "Value": "his",
+            "When": { "DwarfGender": "Male" },
+       },
+                {
+	    "Name": "ProfessorSnailGenderUC",
+	    "Value": "She",
+            "When": { "ProfessorSnailGender": "Female" },
+       },
+                {
+	    "Name": "ProfessorSnailGenderLC",
+	    "Value": "she",
+            "When": { "ProfessorSnailGender": "Female" },
+       },	
+                {
+	    "Name": "ProfessorSnailGenderUC",
+	    "Value": "He",
+            "When": { "ProfessorSnailGender": "Male" },
+       },	
+                {
+	    "Name": "ProfessorSnailGenderLC",
+	    "Value": "he",
+            "When": { "ProfessorSnailGender": "Male" },
+       },	
+                {
+	    "Name": "ProfessorSnailPronounUC1",
+	    "Value": "Her",
+            "When": { "ProfessorSnailGender": "Female" },
+       },	
+                {
+	    "Name": "ProfessorSnailPronounLC1",
+	    "Value": "her",
+            "When": { "ProfessorSnailGender": "Female" },
+       },
+                {
+	    "Name": "ProfessorSnailPronounUC2",
+	    "Value": "Her",
+            "When": { "ProfessorSnailGender": "Female" },
+       },	
+                {
+	    "Name": "ProfessorSnailPronounLC2",
+	    "Value": "her",
+            "When": { "ProfessorSnailGender": "Female" },
+       },		
+                {
+	    "Name": "ProfessorSnailPronounUC1",
+	    "Value": "Him",
+            "When": { "ProfessorSnailGender": "Male" },
+       },	
+                {
+	    "Name": "ProfessorSnailPronounLC1",
+	    "Value": "him",
+            "When": { "ProfessorSnailGender": "Male" },
+       },
+                {
+	    "Name": "ProfessorSnailPronounUC2",
+	    "Value": "His",
+            "When": { "ProfessorSnailGender": "Male" },
+       },	
+                {
+	    "Name": "ProfessorSnailPronounLC2",
+	    "Value": "his",
+            "When": { "ProfessorSnailGender": "Male" },
+       },	

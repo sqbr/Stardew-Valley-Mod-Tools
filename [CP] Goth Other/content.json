@@ -1,0 +1,4038 @@
+{
+   "Format": "1.27.0",
+   "Changes": [
+      {
+         "Action": "EditImage",
+         "Target": "Maps/ElliottSeaTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_outdoorsTileSheet2",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/DesertTiles_Extended",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/townInterior_2",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/summer_island_tilesheet_1",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/MovieTheaterJoja_TileSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_beach",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/night_market_tilesheet_objects",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/qiNutRoom_tilesheet_0",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/paths",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/mermaid_house_tiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/farmhouse_tiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/CarolineGreenhouseTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_island_tilesheet_1",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/qiNutRoom_tilesheet",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Island_FieldOffice_Tilesheet",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/summer_outdoorsTileSheet2",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/bathhouse_tiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/winter_beach",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/summer_monsterGraveTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/bugLandTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/DesertTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/springobjects",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_outdoorsTileSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_monsterGraveTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/darkroom_tiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/nightSceneMaruTrees",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/submarine_tilesheet",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Festivals",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/SewerTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/MenuTilesUncolored",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/busPeople",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_beach",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/sebastianRideTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/winter_town",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/GreenHouseInterior",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_BusStop",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/winter_monsterGraveTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/boatTunnelTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/MovieTheaterJoja_TileSheet_international",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/stadium_tiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/summer_town",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/CarolineGreenhouseTiles_rainy",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/nightSceneMaru",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/winter_island_tilesheet_1",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/winter_outdoorsTileSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/HarveyBalloonTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/MenuTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/JojaRuins_TileSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_island_tilesheet_1",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Farm Obelisk",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/characterSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_town",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/coopTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/cave",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/sebastianMountainTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/walls_and_floors",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/ElliottHouseTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/MovieTheater_TileSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_outdoorsTileSheet2",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Island_Hut_tilesheet",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/samshowtiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/winter_outdoorsTileSheet2",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/MovieTheaterScreen_TileSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/summer_beach",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/cavedarker",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_outdoorsTileSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/summer_outdoorsTileSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/WizardHouseTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_monsterGraveTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/witchSwampTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/WitchHutTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/WoodBuildings",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/EmilyDreamscapeTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/TownIndoors",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/island_tilesheet_1",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_town",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/LeoTreeHouse_Tilesheet",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/townInterior",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/FarmhouseTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/island_tilesheet_2",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/pirates_tilesheet",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Movies",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/LightRays",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/chatBox",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/emojis",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/textBox",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/cowPhotosWinter",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/skillTitles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Cursors",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/hoverBox",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/font_colored",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/DialogBoxGreen",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/ControllerMaps",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/BundleSprites",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/yellowLettersLogo",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Concessions",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/AquariumFish",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/EmoteMenu",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Giftbox",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/mute_voice_icon",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/letterBG",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/CraneGame",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/tailoring",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/map",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/boardGameBorder",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/PlayerStatusList",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/dye_bench",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/temporary_sprites_1",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/SandDuggy",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Cloudy_Ocean_BG",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Fence2",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/font_bold",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/WillysBoat",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Fence3",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/CraneGame_international",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Fence1",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/robinAtWork",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/SpecialOrdersBoard",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/nightbg",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/logo",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/JojaCDForm",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/boardGame",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/buildingPlacementTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/ForgeMenu",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Fence5",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Cloudy_Ocean_BG_Night",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/steamAnimation",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/JunimoNote",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/SeaMonster",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/SuspensionBridge",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Bat",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/cowPhotos",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/LanguageButtons",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/birds",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Cursors2",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Billboard",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/shadow",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/daybg",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/GemBird",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/stardewPanorama",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/FieldOfficeDonationMenu",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/swimShadow",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Minigames/boatJourneyMap",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Minigames/Clouds",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Minigames/TitleButtons",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Minigames/Intro",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Minigames/MineCart",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Minigames/Darts",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Minigames/jojacorps",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Minigames/MaruComet",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/hoeDirt",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/DiggableWall_basic_dark",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/DiggableWall_lava",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree_palm",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/Flooring",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/Stalagmite",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree_palm2",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/BuffsIcons",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/DiggableWall_frost",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/Flooring_winter",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/grass",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree8_winter",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/DiggableWall_frost_dark",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/hoeDirtSnow",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/Stalagmite_Lava",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/Quartz",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/upperCavePlants",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/DiggableWall_basic",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/DiggableWall_lava_dark",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/Stalagmite_Frost",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/hoeDirtDark",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Sebastian",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/George",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Harvey_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Robin",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/ParrotBoy",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Alex_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Shane",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Dwarf",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Jodi",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Sebastian_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Maru",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Leah_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Marlon",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Lewis",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Pam_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Pierre",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/SafariGuy",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Jodi_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Jas",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Pierre_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Leah",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Wizard",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Shane_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Elliott_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Maru_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Elliott",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Sam_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Clint_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Haley_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Dobson",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Governor",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Abigail",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Clint",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Haley",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Emily",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Morris",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Evelyn",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Robin_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Alex",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Marnie",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Marnie_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Maru_Hospital",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Vincent",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Abigail_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Caroline",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Penny",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Birdie",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Krobus_Trenchcoat",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Gus",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Linus",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Pam",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Gil",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Kent",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Emily_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Henchman",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Demetrius",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Sandy",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Gunther",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Caroline_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Harvey",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Bouncer",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Willy",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/AnsweringMachine",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Sam",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Bear",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Krobus",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Grandpa",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Penny_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/MrQi",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/weapons",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/Floors",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/Craftables",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/ChairTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/crops",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/furnitureFront",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/animations",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/emotes",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/tools",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/BuffsIcons",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/Projectiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/critters",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/fruitTrees",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/Fireball",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/bushes",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/SecretNotesImages",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/furniture",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/rain",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/debris",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/Duck",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/dog",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/BabyWhite Cow",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/horse",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/Rabbit",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/BabyBrown Cow",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/BabyRabbit",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/BabyPig",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/dog2",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/dog1",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/cat1",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/Golden Chicken",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/Void Chicken",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/Sheep",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/cat2",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/BabyVoid Chicken",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/Ostrich",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/Brown Cow",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/BabyOstrich",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/White Cow",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/Dinosaur",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/BabyGoat",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/cat",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/BabyWhite Chicken",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/BabyGolden Chicken",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/BabyBrown Chicken",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/ShearedSheep",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/BabySheep",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/Pig",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/Blue Chicken",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/Brown Chicken",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/Goat",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/BabyBlue Chicken",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Animals/White Chicken",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Sebastian",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/George",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Toddler",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Harvey_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Robin",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/ParrotBoy",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Alex_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Shane",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Dwarf",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Jodi",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Sebastian_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Maru",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Leah_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Marlon",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/LeahExFemale",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Lewis",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Pam_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Demetrius_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Pierre",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/SafariGuy",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Jodi_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Jas",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Pierre_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/SeaMonsterKrobus",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Marcello",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Leah",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Toddler_girl",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Wizard",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Dana",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Mariner",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Shane_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Elliott_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Maru_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Elliott",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Shane_JojaMart",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Sam_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Clint_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/KrobusRaven",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Haley_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/TrashBear",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Governor",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/LeahExMale",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Dick",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Abigail",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Clint",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Toddler_dark",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Haley",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Emily",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Morris",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Junimo",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Evelyn",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Robin_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Alex",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Marnie",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Marnie_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/ClothesTherapyCharacters",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Maru_Hospital",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Vincent",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Toddler_girl_dark",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/robot",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Abigail_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/femaleRival",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Caroline",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Penny",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Birdie",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Krobus_Trenchcoat",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Gus",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Linus",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Pam",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/maleRival",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/IslandParrot",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Kent",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Emily_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Henchman",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Demetrius",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Sandy",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Gunther",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Caroline_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Harvey",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Baby",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/WeddingOutfits",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Bouncer",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Willy",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Lewis_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Sam",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Gourmand",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Bear",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Krobus",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/shirts",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Baby_dark",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Grandpa",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Penny_Beach",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/MrQi",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Lighting/indoorWindowLight",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Lighting/projectorLight",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Lighting/sconceLight",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Lighting/fishTankLight",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Lighting/lantern",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Lighting/greenLight",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Lighting/windowLight",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Farmer/farmer_base_bald",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Farmer/farmer_girl_base_bald",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Farmer/shoeColors",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Farmer/farmer_base",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Farmer/skinColors",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Farmer/hats",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Farmer/farmer_girl_base",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Farmer/accessories",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Farmer/hairstyles2",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Farmer/hairstyles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Farmer/shirts",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Farmer/pants",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Magma Sprite",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Frost Bat_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Spider",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Bat_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Putrid Ghost",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Frost Bat",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Squid Kid",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Stone Golem_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Royal Serpent",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Bug_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Shadow Sniper",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Fly",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Skeleton_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Grub_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Stick Bug",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Metal Head",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/False Magma Cap",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Iridium Crab",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Stone Golem",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Mummy",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Armored Bug_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Big Slime",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Blue Squid",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Shadow Girl",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Armored Bug",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Wilderness Golem",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Magma Duggy",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Dust Spirit_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Ghost",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Crow",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Metal Head_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Shadow Shaman",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Rock Crab",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Cat",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Angry Roger",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Lava Lurk",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Spiker",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Green Slime",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Fly_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Skeleton Mage_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Haunted Skull",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Frog",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Lava Bat",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Magma Sparker",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Iridium Bat",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Haunted Skull_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Shadow Brute",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Mummy_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Rock Crab_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Lava Crab_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Dust Spirit",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Bat",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Tiger Slime",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Bug",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Pepper Rex",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Shadow Shaman_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Fireball",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Carbon Ghost",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Skeleton Mage",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Skeleton",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Lava Crab",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Duggy",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Duggy_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Grub",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Squid Kid_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Green Slime_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Hot Head",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Serpent",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Dwarvish Sentry",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Characters/Monsters/Shadow Brute_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_lava_dark",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_frost_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_dino",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_frost_dark",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_slime_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_lava_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_dark",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_desert",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/volcano_dungeon",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_lava",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_slime",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/volcano_caldera",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_desert_dark_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_frost",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_quarryshaft",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_dark_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_desert_dark",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_lava_dark_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_frost_dark_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Mines/mine_desert_dangerous",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Barn",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Big Barn",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Big Coop",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Big Shed",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Coop",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Deluxe Barn",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Deluxe Coop",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Desert Obelisk",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Earth Obelisk",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Fish Pond",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Gold Clock",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Greenhouse",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Junimo Hut",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Log Cabin",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Mill",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Plank Cabin",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Shed",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Shipping Bin",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Silo",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Slime Hutch",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Stable",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Stone Cabin",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Water Obelisk",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/Well",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Buildings/houses",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+   ]
+}

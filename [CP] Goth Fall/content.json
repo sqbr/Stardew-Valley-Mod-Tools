@@ -1,0 +1,77 @@
+{
+   "Format": "1.27.0",
+   "Changes": [
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_outdoorsTileSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_town",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_beach",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/mushroom_tree",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree1_fall",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree2_fall",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree8_fall",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/bushes",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+   ]
+}

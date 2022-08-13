@@ -1,0 +1,25 @@
+{
+   "Format": "1.27.0",
+   "Changes": [
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_town",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/summer_town",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+

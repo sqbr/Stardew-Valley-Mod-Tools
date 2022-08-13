@@ -1,0 +1,25 @@
+{
+    "Format": "1.23",
+
+    "ConfigSchema": {
+
+    "EditIslandCharacters": {
+        "AllowValues": "Full, Minimal, None",
+        "Default": "Full"
+    },
+
+    "MiscImageEdits": {
+        "AllowValues": "true, false",
+        "Default": "true"
+    },  
+    "MiscTextEdits": {
+        "AllowValues": "true, false",
+        "Default": "true"
+    },    
+
+    "PatchOriginalWeddingArt": {
+        "AllowValues": "true, false",
+        "Default": "false"
+    },    
+
+

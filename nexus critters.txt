@@ -1,0 +1,32 @@
+Weird Critters
+
+A mod to replace critters with various weird creatures, such as bats, fairies, dragons, and flying eyeballs. Not compatible with version 1.4 or below. 
+
+
+A mod to replace critters with various weird creatures, such as bats, fairies, dragons, and flying eyeballs. Critters are the little animals in the background: birds, rabbits, squirrels, butterflies etc. I didn't change the parrots that show up in the valley, any farm animals, or Rusty the dog. 
+
+Not compatible with version 1.4 or below. I am pretty sure it would work in other languages.  
+
+There's toggles to turn on and off weird creatures in the Valley, Desert and Ginger Island. But I didn't change the Ginger Island ones much asides from the butterflies becoming fairies. 
+
+Pairs well with my Cuter Mines. You could also add even more critters with any of the 
+
+Installation Guide:
+Install SMAPI and Content Patcher.
+Download the file and unzip.
+Put it in the Mods folder.
+
+Customisation:
+Either edit the config.json file or use Generic Mod Config Menu. 
+ValleyCritters: Turn on or off weird critters in the town/woods etc.
+DesertCritters: Turn on or off weird critters in the desert.
+IslandCritters: Turn on or off weird critters on Ginger Island.
+
+Credits and Permissions:
+I've used some creative commons sprite resources, as listed in the credits. Asides from the specific licenses associated with those files, people are welcome to modify and re-use this mod as long you give me and the other artists credit. 
+
+Known Issues:
+I haven't figured out how to test the bird animations during the Perfection cutscene so  if you manage to see them, let me know if they work >.>
+
+Conflicts:
+This only edits the parts of images to do with critters, so will conflict with critter editing mods but shouldn't affect any other sort of mods. 

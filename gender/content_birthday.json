@@ -1,0 +1,78 @@
+    "══════════════════════════════════════════════════════════════════════════════════════════════════════════════════": {
+    "AllowValues": "true, false","Default": "false"},
+
+    "Birthday": {"AllowValues": "true, false","Default": "true"},
+
+    "═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════": {
+    "AllowValues": "true, false","Default": "false"},
+
+    "AbigailBirthday": {"Default": "fall 13"},
+
+    "AlexBirthday": {"Default": "summer 13"},
+
+    "CarolineBirthday": {"Default": "winter 7"},
+
+    "ClintBirthday": {"Default": "winter 26"},
+
+    "DemetriusBirthday": {"Default": "summer 19"},
+
+    "DwarfBirthday": {"Default": "summer 22"},
+
+    "ElliottBirthday": {"Default": "fall 5"},
+
+    "EmilyBirthday": {"Default": "spring 27"},
+
+    "EvelynBirthday": {"Default": "winter 20"},
+
+    "GeorgeBirthday": {"Default": "fall 24"},
+
+    "GusBirthday": {"Default": "summer 8"},
+
+    "HaleyBirthday": {"Default": "spring 14"},
+
+    "HarveyBirthday": {"Default": "winter 14"},
+
+    "JasBirthday": {"Default": "summer 4"},
+
+    "JodiBirthday": {"Default": "fall 11"},
+
+    "KentBirthday": {"Default": "spring 4"},
+
+    "KrobusBirthday": {"Default": "winter 1"},
+
+    "LeahBirthday": {"Default": "winter 23"},
+
+    "LeoBirthday": {"Default": "summer 26"},
+
+    "LewisBirthday": {"Default": "spring 7"},
+
+    "LinusBirthday": {"Default": "winter 3"},
+
+    "MarlonBirthday": {"Default": "winter 19"},
+
+    "MarnieBirthday": {"Default": "fall 18"},
+
+    "MaruBirthday": {"Default": "summer 10"},
+
+    "PamBirthday": {"Default": "spring 18"},
+
+    "PennyBirthday": {"Default": "fall 2"},
+
+    "PierreBirthday": {"Default": "spring 26"},
+
+    "RobinBirthday": {"Default": "fall 21"},
+
+    "SamBirthday": {"Default": "summer 17"},
+
+    "SandyBirthday": {"Default": "fall 15"},
+
+    "SebastianBirthday": {"Default": "winter 10"},
+
+    "ShaneBirthday": {"Default": "spring 20"},
+
+    "VincentBirthday": {"Default": "spring 10"},
+
+    "WillyBirthday": {"Default": "summer 24"},
+
+    "WizardBirthday": {"Default": "winter 17"},
+

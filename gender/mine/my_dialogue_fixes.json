@@ -1,0 +1,869 @@
+		//These changes are by sqbr
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/George",
+			"Entries":
+				{
+					"Wed_inlaw_Alex": "You're part of the family, now. I'm glad that {{AlexName}} found someone worthy of {{Alex_them}}.",
+					"Wed10_inlaw_Alex": "You're part of the family, now... and I couldn't be more proud.",
+					"Thu": "I can't talk right now.#$e#My favorite program is on."
+					
+				}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries":
+				{
+					"Indoor_Night_0": "From the brightest winter star, to the shimmer of an iridium vein... nothing can compare to my wonderful beloved.$l",
+					"Good_3": "You are especially becoming today. Everything about you is perfect.$l"
+				},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/JoshHouse",
+			"Entries":
+				{
+					"5837189/n georgeGifts": "jaunty/-1000 -1000/farmer -100 -100 02 George 18 19 2 Evelyn 3 17 0/skippable/animate George false true 400 0 20/positionOffset George 0 -16/specificTemporarySprite staticSprite LooseSprites\\\\Cursors2 114 241 14 15 17 17/specificTemporarySprite staticSprite LooseSprites\\\\Cursors2 114 241 14 15 19.5 18.5/specificTemporarySprite staticSprite LooseSprites\\\\Cursors2 114 241 14 15 16.5 18/specificTemporarySprite staticSprite LooseSprites\\\\Cursors2 114 241 14 15 20 17/specificTemporarySprite staticSprite LooseSprites\\\\Cursors2 114 241 14 15 19 17/specificTemporarySprite staticSprite LooseSprites\\\\Cursors2 103 243 10 13 18.5 19.5/specificTemporarySprite staticSprite LooseSprites\\\\Cursors2 114 241 14 15 17.25 20.6/specificTemporarySprite staticSprite LooseSprites\\\\Cursors2 114 241 14 15 17 21/specificTemporarySprite staticSprite LooseSprites\\\\Cursors2 114 241 14 15 17.5 21/specificTemporarySprite staticSprite LooseSprites\\\\Cursors2 103 243 10 13 15 18/specificTemporarySprite staticSprite LooseSprites\\\\Cursors 288 1231 16 16 17 19 998/viewport 18 19 true/pause 5000/warp farmer 9 24/playSound doorClose/move farmer 0 -4 1/move farmer 4 0 1/stopAnimation George/faceDirection George 3/speak George \"@? What's the meaning of all this...#$b#Is this some kind of prank?\"/pause 500/quickQuestion #We wanted to show our appreciation#Your {{Evelyn_spouse}} set this up#Yes, it's a prank(break)playMusic none\\pause 1000\\positionOffset George -4 0\\playSound Cowboy_Footstep\\pause 500\\positionOffset George -4 0\\playSound Cowboy_Footstep\\pause 500\\positionOffset George -4 0\\playSound Cowboy_Footstep\\pause 500\\specificTemporarySprite georgeLeekGift\\specificTemporarySprite removeSprite 998\\playSound Ship\\pause 800\\showFrame George 21\\playSound coin\\playMusic echos\\pause 1000\\speak George \"Leek... $s\"\\pause 1000\\speak George \"My favorite... Just like Mama used to make, so many years ago...\"\\pause 2000\\showFrame George 0\\faceDirection George 2\\speak George \"Hmmph. Well...\"\\emote George 40\\showFrame George 16\\pause 500\\speak George \"Well... That... Hmmph.#$b#I guess maybe I'm not as forgotten and ignored as I thought...$s\"\\faceDirection George 3\\speak George \"Thanks, {{Lowercase: {{Random: {{ElderInformalNoun}} }} }}.$h#$b#You made an old-timer's day.$h\"\\pause 500\\emote farmer 32(break)playMusic none\\pause 300\\jump George\\pause 1000\\speak George \"Hah! She thought she could fool me!\"\\pause 500\\faceDirection George 2\\pause 400\\showFrame George 16\\pause 600\\speak George \"She thought she could fool me... into thinking I'm anything more than an inconvenience.$s\"\\stopAnimation George\\faceDirection George 3\\speak George \"Well, I know better...\"\\pause 400\\faceDirection George 1\\speak George \"Now, scram!$u\"\\emote farmer 28(break)playMusic none\\pause 300\\jump George\\pause 1000\\speak George \"Hah! You're a prankster, then?\"\\emote George 40\\playMusic playful\\speak George \"Hahah... You know, I was a bit of a prankster back in the day, too.$h\"\\faceDirection George 2\\speak George \"Well, at least you gave me a laugh.$h\"\\pause 2000\\faceDirection George 3\\emote George 8\\speak George \"What, you think I'm going to open them?\"\\jump George\\pause 1000\\speak George \"Hah! Not a chance. You think I'd fall for the old 'exploding present' gag?\"\\faceDirection George 2\\speak George \"These are going straight into the trash!\"\\pause 300\\faceDirection farmer 2 true\\showFrame farmer 94\\jump farmer/pause 2000/end"
+				
+				},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/Town",
+			"Entries":
+				{
+					"15389722/j 57": "springtown/62 93/farmer 54 94 1 Lewis 62 94 0 Robin 64 93 3/skippable/move farmer 6 0 1 true/animate Robin false true 100 24 25 26 27 27 27 27 27 27 27 27/pause 200/playSound crafting/pause 1200/playSound crafting/pause 1200/playSound crafting/pause 1200/playSound crafting/pause 500/stopAnimation Robin/faceDirection Lewis 3/speak Lewis \"Ah, hello there, @. You showed up at the perfect time.$h\"/pause 500/emote farmer 8/move farmer 1 0 0 true/faceDirection Lewis 0/pause 200/speak Lewis \"It's our new 'Special Orders' board.#$b#{{RobinName}} and I built it from scratch.$h\"/pause 500/speak Robin \"Um... {{LewisName}}? All you did was hold the nails.\"/pause 300/showFrame Lewis 26/playSound slimedead/jump Lewis/shake Lewis 1000/pause 1300/showFrame Lewis 12/faceDirection farmer 1/faceDirection Lewis 3/speak Lewis \"*Ahem*... Ignore {{Robin_them}}.$5\"/pause 400/faceDirection Lewis 0/speak Lewis \"Now, let me explain...\"/showFrame Lewis 20/speak Lewis \"You see... with %farm Farm back in business, the local economy has really been picking up.#$b#As a result, some of the local townsfolk have been asking me for a way to source local ingredients for their businesses or personal projects.\"/pause 200/showFrame Lewis 8/faceDirection Lewis 0/speak Lewis \"So, {{RobinName}} and I came up with the idea of a new 'Special Orders' board, where people can post bigger jobs than would make sense for the old billboard outside {{PierreName}}{{PierrePossession}}.\"/faceDirection farmer 0/pause 500/faceDirection Robin 3/move Robin 0 1 3/speak Robin \"Yeah... for example, I plan on requesting some hardwood for a bed I want to make.$h#$b#I won't put you on the spot, but if you want to help me out you can just accept the job from this board.#$b#Who knows, maybe if the bed turns out well I'll start selling them in my shop!$h\"/faceDirection farmer 1/quickQuestion #I look forward to helping!#Heh... I dunno... we'll see...(break)faceDirection Lewis 3\\speak Lewis \"I thought so! I wouldn't expect anything less from you, @.\"\\emote Robin 20\\speak Robin \"So, can we say that you're... --On Board--?$4\"\\pause 400\\showFrame Lewis 27\\shake Lewis 200\\pause 400\\textAboveHead Lewis \"*groan*\"\\animate Robin false true 150 32 33\\pause 1200\\showFrame Lewis 0\\faceDirection Lewis 3\\speak Lewis \"Well, I'm sure you're busy, so we won't keep you away from your work any longer.#$b#As always, I appreciate your willingness to contribute!$h#$b#Take care, @.\"(break)faceDirection Lewis 3\\emote Lewis 28\\speak Lewis \"Huh... I wouldn't expect such a tepid response from you, @. I'm disappointed.$s\"\\pause 400\\speak Robin \"It's fine, {{LewisName}}... there's no pressure to help out.$5#$b#Maybe I can get {{SebastianName}} to help. {{Sebastian_theyU}} could use some work away from the computer.\"\\playMusic none\\pause 500\\speak Lewis \"Hmmph... Well, we're done here, {{RobinName}}.$u#$b#...Wouldn't want to waste any more of @'s precious 'me' time.$u\"\\faceDirection Lewis 1(break)/pause 2000/end"
+				},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Alex",
+			"Entries":
+				{
+					"summer_Tue": "If my hair wasn't so popular with the hotties, I swear I'd shave it all off in a second.#$e#*sigh*... Life can be tough.",
+					"Wed": "Looks like a good day to play catch, huh?$u#$e#$q 5/6 Wed_01_old#I'd ask you to throw the ball around, but you don't really seem like the sports type.#$r 6 0 Wed_01_02#I'm fine just watching you from a distance.#$r 5 15 Wed_01_01#I want to play catch with you!#$r 5 0 Wed_01_03#(angry) What's that supposed to mean?",
+
+				},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAbigail",
+			"Entries":
+				{
+					"Outdoor_2": "Make sure to keep things tidy around your {{GrandpaName}}{{GrandpaPossession}} shrine. There's something special about it, I can feel it.",
+				},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Robin",
+			"Entries":
+				{
+					"fall_Fri": "Have you met the vagrant that lives behind our house?$s#$e#I guess I don't really mind, as long as {{Linus_they}} do{{Linus_es}}n't bother us.",
+				},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sandy",
+			"Entries":
+				{
+					"Thu": "That shady-looking {{Bouncer_guy}} in the back? I'm not supposed to talk about it.#$e#Anyway... what's the weather like in the valley?",
+					"Thu2": "That shady-looking {{Bouncer_guy}} in the back? I'm really not supposed to talk about it.#$e#Anyway... what's the weather like in the valley",
+  					"Thu4": "Hey... I think I can trust you. You can keep a secret, right?#$b#*whisper* That {{Bouncer_guy}} in the back... it's some kind of exclusive club. I've never been inside myself, but they pay me a generous monthly rent so I don't ask any questions.#$e#SOOOOoo! How's that Stardew Valley weather right now?",
+  					"Sun8": "Hi there, honey. Yep, it's just me, alone in this big old shop. Hmmm...#$e#Well, except for that creepy {{Bouncer_guy}} in the back. But {{Bouncer_they}} never move{{Bouncer_s}} a muscle, so I often forget about {{Bouncer_them}}.",
+				},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Vincent",
+			"Entries": {
+				"Sun": "Hi there!",
+				 }
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Wizard",
+			"Entries": {
+				"Thu10": "You musn't tell anyone... but I have reason to believe that one of the locals is actually my {{Abigail_child}}...#$e#I could be mistaken... It's rare, but it does happen.",
+				 }
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingChannel",
+			"Entries":
+				{
+					"23": "Pink Cake/A viewer from Pelican Town wrote to me recently... let's see... {{Haley_their}} name's {{HaleyName}}. {{Haley_theyU}} wrote, 'I tried your pink cake last time I was in Zuzu City and I fell in love with it. Could you share the recipe on your next episode?'. Well, why not? It's a marvelous cake. And you'll never guess the secret ingredient... melon!",
+				},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/EngagementDialogue",
+			"Entries":
+				{
+					"Maru0": "I'm really excited.$h#$b#I'm going to be your {{Maru_spouse}}. Hehe.$l",
+					  "Maru1": "I need to get mentally prepared for being a farmer's {{Maru_spouse}}.",
+
+				},
+		},
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/MovieReactions",
+			"Entries": {
+				"NPCName": "Evelyn",
+				"Reactions": [
+					{
+						"Tag": "like",
+						"Response": "like",
+						"Whitelist": [],
+						"SpecialResponses": {
+						  "BeforeMovie": {
+							"ResponsePoint": null,
+							"Script": "",
+							"Text": "It's very kind of you to invite an old-timer like me to the movies.$h"
+						  },
+						  "DuringMovie": null,
+						  "AfterMovie": {
+							"ResponsePoint": null,
+							"Script": "",
+							"Text": "I'm glad they're still making decent movies... I had a lot of fun!"
+						  }
+						},
+						"ID": "reaction_3"
+					  },
+				]
+			  },
+			},
+			{
+				"Action": "EditData",
+				"Target": "Data/Notes",
+				"Entries":
+					{
+						"3": "The Fishing Master, Act I: \nTex: Gordy, how do you catch so many fish? For me, it takes forever!\nGordy: You must make the choice to become a true fishing master... and over time your fishing speed will increase!\nTex: So you're saying that improving my fishing skill will make me fish faster?\nGordy:Correct. One day you may even learn the secret to creating your very own bobbers, improving your mastery even more. Now, begone!",
+						"14": "The Fishing Master, Act II: \nTex: Gordy, tell me your best fishing's story.\nGordy: *deep sigh*...I've caught a lot of big fish in my time...And some that are very rare and difficult...But there was one that I struggled to catch for three days and three nights\nGordy: I call this fish... 'The Legend'. It was a huge beast... And the harder I tugged on the line, the harder it tugged back. I let my guard down for a moment and it snapped my boat in two. I've never fished since.\nTex: Do you think anyone will ever catch him?\nGordy: Hmm... If this person were a master at fishing, and caught all other rare fish first, and made sure they ate the correct kind of food... then maybe. Above all you've got to have respect for the water, my child.\nTex:...your...child? Do you mean... you're...\n ...m...mother?\nGordy: Yes, my child.\n\n**Dramatic Music as the curtains fall**",
+					},
+					"When": { "MiscTextEdits": "true"} 
+			},
+			{
+				"Action": "EditData",
+				"Target": "Data/NPCGiftTastes",
+				"Entries":
+					{
+						"Evelyn": "*gasp*... This is absolutely marvelous!$u#$e#You've made an old creature very happy./72 220 239 284 591 595/Oh my, it looks wonderful! That's very kind of you./-6 18 402 418/Um, Where will I put this?/16 80/...it smells awful./225 226 227 228 219 396 397 393 372 248 296 -4 330/How nice. Thank you, dear.//",
+						"Kent": "Oh...! Mom used to give me this when I was young. It brings back wonderful memories. Thank you./607 649/Hey, now this is a really great gift. Thanks./-5 -79 18 402 418/Ah... It's a... what is this, exactly? Hmm.../80 330 416 873/This... They gave this to me in Gotoro prison camp. I've been trying to forget about that. *shudder*/-6 2 227 229 456/That's kind of you. The family will like this.//",
+					},
+			},
+			{
+				"Action": "EditData",
+				"Target": "Data/Quests",
+				"Entries":
+					{
+						"128": "SecretLostItem/.../.../.../Abigail 191 100 129/-1/0/-1/false/That necklace! Where did you find it?$7#$b#Well, thanks for bringing it to me, @. My parents will never know...$h",
+  						"129": "SecretLostItem/.../.../.../Caroline 191 50 128/-1/0/-1/false/What's this? My old necklace?$s#$b#That's strange, I didn't even notice it was missing... Well, thanks for bringing it back, @.$h",
+						"27": "Basic/Goblin Problem/There's a goblin blocking the path to the witch's hut. There must be some way to get the guard to move... Perhaps I should seek out more information on Goblins./Gain entrance to the witch's hut./-1/-1/0/-1/true",
+					},
+			},
+			{
+				"Action": "EditData",
+				"Target": "Data/SecretNotes",
+				"Entries":
+					{
+						"25": "^^ I 'borrowed' an old family necklace from my parents, but lost it somewhere near the bath house... They're going to freak out if they notice it's missing!",
+					},
+			},
+			{
+				"Action": "EditData",
+				"Target": "Strings/animationDescriptions",
+				"Entries":
+					{
+						"haley_photo": "% {{HaleyName}}{{HaleyPossession}} too involved with {{Haley_their}} camera to notice you.",
+						"harvey_radio": "% {{HarveyName}} looks busy right now.",
+						"robin_dance": "% {{RobinName}} is busy.",
+						"demetrius_dance": "% {{DemetriusName}} is busy.",
+						"shane_work": "% {{ShaneName}}{{ShanePossession}} hard at work. {{Shane_theyU}} do{{Shane_es}}n't seem{{Shane_s}} interested in talking.",
+						"marnie_exercise": "% {{MarnieName}} smiles at you through a mist of sweat.",
+						"vincent_read_right": " {{Penny_Mx}} {{PennyName}} says I have to read this book before I can go play.$s",
+						"sam_guitar": "% {{SamName}} is busy practicing the guitar.",
+						"sam_skateboarding": "% {{SamName}}{{SamPossession}} trying to do a kickflip.",
+						"sam_work": "% {{SamName}}{{SamPossession}} on the clock... better not get {{Sam_them}} in trouble."
+	
+					},
+			},
+			{
+				"Action": "EditData",
+				"Target": "Strings/Characters",
+				"Entries":
+					{
+						"MovieTheater_AfterMovieAlone": "The air practically buzzes with silent thoughts about the movie.",
+						"MovieTheater_AfterMovie": "Everyone is engaged in lively discussion about the film.",
+						"MovieTheater_LoveConcession_Female": "{0} is really enjoying the {1}!",
+						"MovieTheater_LikeConcession_Female": "{0} is enjoying the {1}.",
+						"MovieTheater_DislikeConcession_Female": "{0} hasn't touched the {1} at all...",
+						"MovieTheater_LoveConcession_Male": "{0} is really enjoying the {1}!",
+						"MovieTheater_LikeConcession_Male": "{0} is enjoying the {1}.",
+						"MovieTheater_DislikeConcession_Male": "{0} hasn't touched the {1} at all...",
+					},
+			},
+			{
+				"Action": "EditData",
+				"Target": "Strings/Locations",
+				"Entries":
+					{
+						"NutHint_Arch": "Help the one in a tent...",	
+					},
+			},
+			{
+				"Action": "EditData",
+				"Target": "Strings/StringsFromCSFiles",
+				"Entries":
+					{
+						"Event.cs.1597": "Wow, I got a low score. I guess Mayor {{LewisName}} isn't into fish. Oh well...$s",			
+						"Utility.cs.5314": "...Without further ado...",	  
+						"NPC.cs.4088": "I heard it direct from the horse's mouth.$h",
+						"NPC.cs.4089": "I heard it direct from the horse's mouth.$h",
+						"NPC.cs.4094": "If you want {0} to like you, I reccomend '{1}'.",
+						"NPC.cs.4097": "If you want {0} to like you, I reccomend '{1}'.",
+						"NPC.cs.4100": "If you want to get on {0}'s good side, go for '{1}'.",
+						"NPC.cs.4103": "If you want to get on {0}'s good side, go for '{1}'.",
+						"NPC.cs.4109": " It's a favorite.",
+						"NPC.cs.4111": " It's a favorite.",
+						"NPC.cs.4113": " Absolutely loves it.",
+						"NPC.cs.4114": " Totally loves that stuff.",
+						"NPC.cs.4115": " Absolutely loves it.",
+						"NPC.cs.4116": " Totally loves that stuff.",
+						"NPC.cs.4118": " I gave it as a gift one year and you wouldn't believe the excitement.",
+						"NPC.cs.4120": " I gave it as a gift one year and you wouldn't believe the excitement.",
+						"NPC.cs.4126": " You could really bring a lot of happiness with that.",
+						"NPC.cs.4128": " You could really bring a lot of happiness with that.",
+						"NPC.cs.4131": "{0} loves '{1}'. Keeps a box of it under the bed. Weird, huh?",
+						"NPC.cs.4135": " hates '{0}'? Finds it absolutely {1}.",
+						"NPC.cs.4138": " hates '{0}'? Finds it absolutely {1}.",
+						"NPC.cs.4141": "{0} really hates '{1}'! Trust me.$h",
+						"NPC.cs.4144": "{0} really hates '{1}'! Trust me.$h",
+						"NPC.cs.4149": "If you want {0} to dislike you, give '{1}'. {0} hates it with a passion.",
+						"NPC.cs.4152": "If you want {0} to dislike you, give '{1}'. {0} hates that stuff with a passion.",
+						"NPC.cs.4153": "If you want {0} to dislike you, give '{1}'. {0} hates it with a passion.",
+						"NPC.cs.4154": "If you want {0} to dislike you, give '{1}'. {0} hates that stuff with a passion.",
+						"NPC.cs.4161": "If you want to play a cruel joke, offer {0} '{1}'. You might not ever be forgiven, though.",
+						"NPC.cs.4164": "If you want to play a cruel joke, offer {0} '{1}'. You might not ever be forgiven, though.",
+						"NPC.cs.4170": " I learned that one the hard way.",
+						"NPC.cs.4171": " I'm not sure why.",
+						"NPC.cs.4172": " Just the thought of it gives {0} nightmares.",
+						"NPC.cs.4174": " Just the thought of it gives {0} nightmares.",
+						"NPC.cs.4176": " I think it might be allergies.",
+						"NPC.cs.4178": " I think it might be allergies.",
+						"PurchaseAnimalsMenu.cs.11311": "Great! I'll send little {0} home right away.",
+						"PurchaseAnimalsMenu.cs.11314": "Great! I'll send little {0} home right away.",
+						"SocialPage.cs.11636": "(spouse)",
+						"SocialPage.cs.11637": "(spouse)",
+						"SocialPage.cs.11639": "(partner)",
+						"SocialPage.cs.11640": "(partner)",
+						"SocialPage.cs.11642": "(ex)",
+						"SocialPage.cs.11643": "(ex)",
+					},
+			},
+			{
+				"Action": "EditData",
+				"Target": "Strings/StringsFromCSFiles",
+				"Entries":
+					{
+						"Farm.1": "{{GrandpaName}}{{GrandpaPossession}} Shrine",
+						"Farm_Combat.1": "{{GrandpaName}}{{GrandpaPossession}} Shrine",
+						"Farm_Fishing.1": "{{GrandpaName}}{{GrandpaPossession}} Shrine",
+						"Farm_Foraging.1": "{{GrandpaName}}{{GrandpaPossession}} Shrine",
+						"Farm_Mining.1": "{{GrandpaName}}{{GrandpaPossession}} Shrine",
+					}
+				},
+			//MiscTextEdits		
+
+			{
+				"Action": "EditData",
+				"Target": "Characters/Dialogue/Caroline",
+				"Entries": {
+					"Introduction": "Hello! You must be @, the new farmer. I'm {{CarolineName}}.#$e#My {{Pierre_spouse}} and I run the general store here. And have you met my {{Abigail_child}}, {{AbigailName}}? {{Abigail_theyU}} {{Abigail_are}} the pale one with the purple hair.",
+					"Thu": "#$1 Caroline1#{{PierreName}} may be the face of the store, but I do a lot of work behind the scenes.#$e#Hmmm... it's tax time soon.#$e#Better make sure {{PierreName}} has given me all {{Pierre_their}} reciepts.",
+					"Sat6": "#$1 Caroline12#When we first moved here, I took a while to settle down... I wasn't ready for the grind of helping run the store.#$e#Life with {{PierreName}} isn't always easy... but {{Pierre_they}} {{Pierre_are}} a good person. {{Pierre_theyU}} {{Pierre_are}} ambitious, but {{Pierre_they}} always put{{Pierre_s}} {{Pierre_their}} family first.",
+
+
+					},"When": {"MiscTextEdits": "true"},
+			},	
+			{
+				"Action": "EditData",
+				"Target": "Characters/Dialogue/Clint",
+				"Entries": {
+					"Mon": "Yep. I'm a blacksmith.#$e#My mother was also a blacksmith.#$e#My grandfather was a blacksmith as well.$u#$q 9/9 Mon_old#I bet you can't guess what my great-grandfather was...#$r 9 30 Mon_9#A blacksmith.#$r 9 50 Mon_clown#A silly clown.#$r 9 -50 Mon_rude#A sarcastic jerk.",
+						},"When": {"MiscTextEdits": "true"},
+			},
+			{
+				"Action": "EditData",
+				"Target": "Characters/Dialogue/George",
+				"Entries": {
+					"Wed8": "Maybe I could play catch with Alex.",
+					"Tue10": "I shouldn't get so down about things.#$e#I should just be happy that I'm alive.$h",
+						},"When": {"MiscTextEdits": "true"},
+			},
+			{
+				"Action": "EditData",
+				"Target": "Characters/Dialogue/Jas",
+				"Entries": {
+					"Fri2": "Do you like my outfit?",
+						},"When": {"MiscTextEdits": "true"},
+			},
+			{
+				"Action": "EditData",
+				"Target": "Characters/Dialogue/Penny",
+				"Entries": {
+					"event_mail1": "Thank you...$l#$b#But I'm sorry, {{George_Mx}} Mullner. You're right, it was rude not to ask.$s",
+					"event_mail2": "You're right.$l#$b#I'm sorry, {{George_Mx}} Mullner. It was rude not to ask.$s",
+					"Tue4": "$d bus#Maybe now that my {{Pam_parent}} has {{Pam_their}} bus driving job back, I can start saving more money to move out. Things are looking a little brighter.|I'm trying to save money from my tutoring job, but it's hard with my {{Pam_parent}} out of work.$s",
+					},"When": {"MiscTextEdits": "true"},
+			 },
+			
+			{
+				"Action": "EditData",
+				"Target": "Characters/Dialogue/Pierre",
+				"Entries": {
+					"Introduction": "Hey, the new farmer! I'm {{PierreName}}, my {{Caroline_spouse}} and I run the general store, though I'm the one you'll see behind the counter.#$b#If you're looking for seeds, our shop is the place to go. We'll also buy produce from you for a good price!#$e#A little agriculture could really inject new life into the local economy!",
+					"cc_Complete": "This is a dream-come-true! You can't begin to imagine how much stress JojaMart was causing me.#$e#For a small town like this, one store is enough! There's too much social pressure for us to overcharge, anyway.",
+  					"joja_Begin": "This is a sad day for Pelican Town... The stronger Joja becomes, the closer we move toward bankruptcy. We might have to sell the shop soon...$s",
+					"Sun": "#$1 pierreBlue#*sigh*... I've got those behind-the-counter blues...$k$s#$e#I wish I could go for a walk, but {{CarolineName}} is busy and {{AbigailName}} is no good with customers.#$e#I've heard the flowers are in bloom and the air smells great...$s",
+					"Thu2": "We really do appreciate your business, @. We've been having a harder and harder time turning a decent profit.",
+					"Fri": "#$1 pierreJoja#Business has been slow since Joja moved into town. It's hard to compete with their selection.$k$s#$e#Hi there. Is your farm doing well?#$e#Maybe a few of our seeds will spruce things up.",
+					"Sat": "If you find any wild produce, we'll take it off your hands for a reasonable price.",
+					"Wed6": "#$1 pierre1#*sigh*... No matter how well the business does, it's never enough to satisfy my desire for success. What's wrong with me? Maybe I'm just bored with domestic life.$s#$e#Some day we're going to open a new shop in the city and make a killing.#$e#Unfortunately, business is so slow we can hardly save any money...$s",
+					"fall_Fri": "#$1 pierreMEGA#My dream is to keep opening new stores until we become extremely wealthy. hehehe.$k#$e#Hi there. Is your farm still doing well?#$e#Maybe a few of our seeds will spruce things up.$h",
+					},"When": {"MiscTextEdits": "true"},
+			},	
+			{
+				"Action": "EditData",
+				"Target": "Characters/Dialogue/rainy",
+				"Entries": {
+					"Evelyn": "When I woke up I heard dripping from somewhere... I think the roof might be leaking.$s#$e#Maybe I should ask {{AlexName}} to take a look.",
+					},"When": {"MiscTextEdits": "true"},
+			 },
+			{
+				"Action": "EditData",
+				"Target": "Characters/Dialogue/Shane",
+				"Entries": {
+					"Resort_Entering": "Buh... this sun is too bright. Glad I'm wearing shades.",
+					"Resort_Bar": "Phew... feels good to have a cold drink...#$e",
+					"Wed4": "$d Joja#*sigh* ...Every day is the same. Stocking those horrible shelves, going to the saloon, tossing and turning all night.$s|I hated my job at JojaMart, but now that I'm unemployed I don't know what to do with myself.$s",
+					"Fri4": "$d Joja#What's the point of life if all you do is work?|{{MarnieName}}'s letting me pay my rent by helping out with the animals. At least it beats working at Joja.",
+					"Sat4": "$d Joja#I'm renting my room from {{MarnieName}} at a really good price. It's small but I can't complain.|If I could reset my life maybe I'd start a chicken farm. Only free-range eggs of course.",
+				  },"When": {"MiscTextEdits": "true"},
+			},	
+			{
+				"Action": "EditData",
+				"Target": "Characters/Dialogue/Wizard",
+				"Entries": {
+					"Fri6": "I was married, long ago. After my {{Wizard_spouse}} and I split, {{Wizard_they}} began flying around the countryside, cursing everything {{Wizard_they}} saw.#$e#It's not a very mature way to express one's anger.",				 
+					 },"When": {"MiscTextEdits": "true"},
+			},	
+			{
+				"Action": "EditData",
+				"Target": "Data/Events/Forest",
+				"Entries": {
+						"9348571/Hl willyBoatFixed": "ocean/6 8/farmer -1000 -1000 0 Willy -1000 -1000 0/skippable/pause 4000/warp farmer 6 12/playSound doorClose/move farmer 0 -2 0/emote farmer 8/pause 1500/warp Willy 6 12/playSound doorClose/move Willy 0 -1 0/pause 500/emote Willy 28/pause 250/move farmer 1 0 0/move Willy 0 -1 0/pause 700
+						/speak Willy \"Aye... a sad sight, isn't she?\"/pause 500
+						/speak Willy \"She was me parent's boat... Served them well for over 50 years.#$b#But now she can barely stay afloat.$s\"/faceDirection Willy 1/faceDirection farmer 3
+						/speak Willy \"I'd repair her myself, but I don't have the right materials.\"/faceDirection Willy 0
+						/speak Willy \"Aye... 200 pieces of hardwood to patch the hull would be a good start.#$b#But we'll also need to get the ticket machine back up, and the iridium anchor repaired.\"/faceDirection farmer 0/pause 400
+						/speak Willy \"If I could get me hands on the right materials, and repair the ol' girl... well, then I could take you to the Fern Islands.\"/faceDirection Willy 1/faceDirection farmer 3
+						/speak Willy \"Volcanic islands full of strange parrots, they say...\"/pause 400/quickQuestion #I'd like to help#Nah, I'll pass...(break)emote Willy 32\\speak Willy \"Aye... I thought you would.$h\"\\speak Willy \"I'll leave this door unlocked for ya... you can come drop off the materials whenever you like.\"(break)emote Willy 28\\speak Willy \"Alright, suit yourself...$s#$b#If you have a change of heart, you can always come back and help out. I'll leave this door unlocked, anyhow.\"/pause 2000/end"
+					},"When": {"MiscTextEdits": "true"},
+			},	
+			{
+				"Action": "EditData",
+				"Target": "Data/Events/Forest",
+				"Entries": {
+					"fieldTripEnd": "pause 400/emote Penny 40
+					/speak Penny \"Well, that's probably enough for today. You two run along and play.\"/speed Jas 4/move Jas 0 3 1/speed Jas 4/move Jas 9 0 3 true/faceDirection Vincent 2 true/jump Vincent/pause 800/speed Vincent 4/move Vincent 0 3 1 false/speed Vincent 4/move Vincent 9 0 1/pause 500/faceDirection Vincent 2/faceDirection Jas 2/faceDirection Penny 1/faceDirection farmer 3
+					/speak Penny \"It's a lot of work to take care of these kids...$u#$b#But I don't really mind. I enjoy seeing them learn... and hopefully I can help them grow up to be good people.\"/faceDirection Penny 2/pause 500/faceDirection Penny 1
+					/speak Penny \"$q -1 null#Would you ever want to be a parent, @?
+					#$r -1 0 event_speaker_kids1#I haven't really thought about it.
+					#$r -1 20 event_speaker_kids2#Absolutely. I want a big family.
+					#$r -1 20 event_speaker_kids3#I guess so. It's a natural urge.
+					#$r -1 10 event_speaker_kids4#No, I don't think I'd be good at it.
+					#$r -1 -10 event_speaker_kids5#No, the world's crowded enough already.
+					#$r -1 -10 event_speaker_kids6#No, I don't want to be tied down with a family.\"/viewport move 1 0 10000/pause 7000/stopMusic/globalFade/viewport -2000 -2000
+					/speak Penny \"I definitely want a family one day. But for that to happen, my life is going to have to change...$k#$b#Anyway, I'm glad you showed up, @. I think the kids had a great time.$h\"/end dialogue Penny \"Thanks for making my field trip a success today.\"",
+
+				},"When": {"MiscTextEdits": "true"},
+			},			
+
+			{
+				"Action": "EditData",
+				"Target": "Data/Events/JoshHouse",
+				"Entries": {
+					"18/f George 1500/p George": "sadpiano/17 17/farmer 10 19 1 George 18 17 0/skippable/emote George 12
+					/speak George \"Nnnnggghh....I just can't reach it!$u#$b#Why did {{EvelynName}} put it soo high up...$s\"/move farmer 4 0 0/move farmer 0 -2 0/move farmer 3 0 0/pause 500/showFrame 15/pause 500/pause 500/playSound Ship/pause 500/stopAnimation farmer/faceDirection farmer 1/faceDirection George 3/showFrame 35/pause 500/playSound coin/pause 300/stopAnimation farmer/pause 500
+					/speak George \"Hey! I was getting that myself!\"/pause 800/speed George 1/faceDirection George 2/pause 500/move George 0 1 2/faceDirection farmer 2/pause 1000
+					/speak George \"Thirty years it's been, and I still can't deal with people treating me like I'm weak. $s#$b#I used to be a coal miner, strong and able. We were near the end of our shift, but there was one last seam that needed to be broken up.#$b#I went in there aiming to set off a stick of dynamite, but my foot slipped into a crack and I dropped it. The dynamite exploded on impact.\"
+					/pause 800/speak George \"The next thing I remember, I was laying in the hospital... and they told me I'd never walk again.$s#$b#I got used to the chair pretty quick. But I've never gotten used the way people look at me when I'm in it. \"/faceDirection George 3
+					/speak George \"So there you have it. You probably figured I was just too old to walk.#$b#Well I'll have you know that I'm not as frail as you think! My arms are as strong as oaks!\"/faceDirection George 2
+					/speak George \"...or at least, they used to be. Now I'm old, I really am weak, just like everyone always thought.#$b#But maybe it's time I got used to that, too.\"/move farmer 0 1 1/pause 1700
+					/speak George \"You've been very nice to me. I appreciate that.#$b#When you're old, you start to forget that anyone cares about you.\"/pause 800/faceDirection George 3/pause 1000/end",
+					"56/f Harvey 500/p George": "jaunty/16 18/farmer 9 24 0 George 16 18 1 Harvey 15 18 1/skippable/move farmer 0 -4 1/move farmer 1 0 1
+					/speak Harvey \"Okay, {{GeorgeName}}. I want you take a deep breath for me.\"/pause 700
+					/speak Harvey \"Mmhmm... turn around, please.\"/pause 300/faceDirection George 2/faceDirection George 3
+					/speak Harvey \"{{GeorgeName}}, I'll be honest with you. You need to make some changes in your lifestyle if you want to stay healthy.#$b#I'd like you to reduce your sodium intake, and try to do more stretches.\"
+					/emote George 12/speak George \"Hmmph... I know what's best for me. Who do you think you are, telling me how to live my life?\"/pause 500
+					/speak Harvey \"I'm your doctor, {{GeorgeName}}. That's who I am...#$b#And I went to school for 8 years to learn how to help people stay healthy.#$b#If you have a specific problem with any of my advice we can discuss it, but if it's just that you don't like being told what to do...\"/move farmer 0 -1 1/move farmer 5 0 0/faceDirection Harvey 2 true/faceDirection George 2
+					/speak Harvey \"Oh!#$b#I'm sorry, but you shouldn't be here... these check-ups are supposed to be private.\"/faceDirection farmer 3
+					/speak George \"Not so fast! I'd like to get a second opinion from this youngster.\"/faceDirection farmer 1
+					/speak Harvey \"Very well...\"/speak Harvey \"$q 84 null#@, what do you think {{GeorgeName}} should do?
+					#$r 84 40 event_george1#{{GeorgeName}} should follow Dr. {{HarveyName}}{{HarveyPossession}} advice.
+					#$r 85 -40 event_george2#{{GeorgeName}} should follow {{George_their}} gut.\"/faceDirection Harvey 1/faceDirection George 2/emote George 28
+					/speak George \"Fine. I'll do what you say, doctor.\"/pause 500/faceDirection Harvey 2
+					/speak Harvey \"$p 84#Thanks for respecting my judgement, @. I appreciate it.$h|I'm glad {{GeorgeName}} was too sensible to listen to you, @.\"/end"
+
+				},"When": {"MiscTextEdits": "true"},
+			 },
+			 {
+				"Action": "EditData",
+				"Target": "Data/Events/Railroad",
+				"Entries": {"529952/C": "WizardSong/54 36/Wizard 54 36 0 farmer 50 40 1/addQuest 28/skippable/move farmer 1 0 0/move farmer 0 -4 1/faceDirection Wizard 3 true/move farmer 1 0 1/pause 800/faceDirection Wizard 0/pause 600/emote Wizard 40/pause 500
+				/speak Wizard \"Ah... @. I've been waiting for you.\"/pause 800/faceDirection Wizard 3/pause 400/faceDirection Wizard 0/pause 400
+				/speak Wizard \"Have I ever told you I used to be married?\"/pause 800/faceDirection Wizard 3 true/pause 50/faceDirection Wizard 2/pause 800/showFrame Wizard 18/pause 800
+				/speak Wizard \"Strange, I know... for a {{Wizard_adult}} like me. But it's true.\"/pause 500/showFrame Wizard 0/pause 800/faceDirection Wizard 3
+				/speak Wizard \"We were together for many years, until... until I made a mistake that drove {{Wizard_them}} away.\"/pause 400/faceDirection Wizard 0
+				/speak Wizard \"And now you can see my lost love flying around the countryside, cursing everything in {{Wizard_their}} path...\"/pause 1000
+				/speak Wizard \"When I found out, I sealed this passage to {{Wizard_their}} home... fearing that an innocent villager might fall prey to {{Wizard_their}} dark magic.\"/move Wizard -1 0 3
+				/speak Wizard \"But now, it must be unsealed... for when we separated, {{Wizard_they}} took my magic ink!#$b#I need that magic ink back!$h#$b#I would do this myself, but I... I can't see {{Wizard_them}} again. That's why I need your help.\"/move Wizard 1 0 0
+				/speak Wizard \"In order to unseal this passage, you'll need a dark talisman. Talk to {{KrobusName}}, in the sewer... {{Krobus_they}} should know where to find one.\"/pause 500/faceDirection Wizard 3
+				/speak Wizard \"I'm counting on you... if you can retrieve my magic ink I promise I'll make it worth your while... Now go!\"/pause 500/faceDirection Wizard 2/pause 500/showFrame Wizard 16/pause 500/playSound wand/warp Wizard -3000 -3000/specificTemporarySprite wizardWarp2/faceDirection farmer 2 true/showFrame farmer 94/pause 3000/showFrame farmer 0/specificTemporarySprite witchFlyby/pause 4000/end"
+				},"When": {"MiscTextEdits": "true"},
+			 },
+				
+			 {
+				"Action": "EditData",
+				"Target": "Data/Events/Town",
+				"Entries": {
+					"34/f Penny 500/t 900 1400/w sunny": "50s/49 64/farmer 43 64 1 Penny 59 69 1 George 49 64 0 Gus 37 70 3 Abigail -100 -100 2/skippable/pause 700/emote George 28/pause 500
+					/speak George \"*Sigh*... How am I going to reach that letter in the back?$s\"
+					/move Penny -3 0 0/move Penny 0 -5 3/move Penny -3 0 3/emote Penny 16/pause 300/speed Penny 4/move Penny -3 0 3/faceDirection George 1/pause 400/showFrame Penny 20/pause 400
+					/speak Penny \"Here, let me help you, {{George_Mx}} {{GeorgeName}}!\"
+					/pause 400/speed Penny 2/move Penny 0 1 3/move Penny -2 0 0/move Penny 0 -1 1/positionOffset Penny 2 0/pause 50/showFrame Penny 5/positionOffset Penny 2 0/pause 50/showFrame Penny 4/positionOffset Penny 2 0/pause 50/showFrame Penny 5/positionOffset Penny 2 0/pause 50/showFrame Penny 4/showFrame Penny 21/move George 1 0 1 true/emote George 16/positionOffset Penny 2 0/pause 50/showFrame Penny 22/positionOffset Penny 2 0/pause 50/faceDirection Penny 1/move Penny 1 0 1/pause 400/faceDirection Penny 0/playSound openBox/pause 600/faceDirection George 3/faceDirection Penny 1
+					/speak Penny \"There you go!$h\"/pause 300/emote George 12
+					/speak George \"Don't you know it's incredibly rude to move someone around without permission?$u#$b#How would you feel someone moved your legs without asking, hmm?\"
+					/move farmer 5 0 1/pause 200/faceDirection George 3/emote George 8/faceDirection Penny 3
+					/speak Penny \"$q 71 null#@? You were watching us?
+					#$r 71 50 event_mail1#I was. You meant well, {{PennyName}}.
+					#$r 71 -50 event_mail2#I was. You should've known to ask first.
+					#$r 71 0 event_mail3#I'm just taking a walk, minding my own business.\"
+					/pause 400/faceDirection George 2/pause 800/showFrame George 16/pause 500/emote George 28/pause 1000/faceDirection Penny 1
+					/speak George \"*sigh*...No, no... I'm sorry. I shouldn't have gotten so angry.$s\"/pause 500/faceDirection George 3/pause 400
+					/speak George \"You meant well. And I did need the help.\"/pause 400
+					/speak Penny \"No, I'm sorry, {{George_Mx}} {{GeorgeName}}. I'll remember to ask next time.\"/warp Abigail 44 1/pause 500/move Abigail 0 8 2 true/move George 7 0 0 false/pause 550/move Abigail -18 0 2 true/warp George -1 -1/playSound doorClose/pause 600/emote Penny 28/pause 700/faceDirection Penny 3/playMusic spring_day_ambient/pause 600
+					/speak Penny \"$q -1 null#It must be difficult to grow old...$u
+					#$r -1 0 event_old1#I'd rather not think about it.
+					#$r -1 0 event_old2#It's just a different part of life.
+					#$r -1 0 event_old3#That's why we should respect our elders.
+					#$r -1 0 event_old4#I'd rather die young...\"
+					/pause 500/emote Penny 40/faceDirection Penny 2/pause 500/faceDirection Penny 3
+					/speak Penny \"Well, it was interesting talking to you, @. I should go.$u\"/showFrame Penny 20/pause 500/showFrame Penny 12/pause 900/move Penny 6 0 2 true/globalFade/viewport -1000 -1000/end",
+        			
+				},"When": {"MiscTextEdits": "true"},
+			},	
+			{
+				"Action": "EditData",
+				"Target": "Data/Events/Trailer_Big",
+				"Entries": {
+					"503180/f Pam 2250/A pamHouseUpgrade/A pamHouseUpgradeAnonymous/Hn pamHouseUpgrade": "shaneTheme/-1000 -1000/farmer 18 11 1 Pam 25 9 1/skippable/specificTemporarySprite pamYobaStatue/viewport 25 9 true/move farmer 6 0 1/move farmer 0 -1 1/faceDirection Pam 2/pause 300
+					/speak Pam \"Hey, kid...\"/faceDirection Pam 1/pause 500
+					/speak Pam \"You caught me prayin'...\"/pause 500/move farmer 3 0 0/move farmer 0 -1 3/pause 500
+					/speak Pam \"This here's my new 'Sign Of The Vessel' statue.#$b#...Ordered it from Joja.com with free 2-day shipping. Don't tell Pierre.\"/pause 1000/faceDirection Pam 2/pause 400/faceDirection Pam 3/pause 500/faceDirection Pam 2/pause 500/faceDirection Pam 1
+					/speak Pam \"...I've been settling in to the new house. It's really a great place. Feels like home already. I really do appreciate this new comfort.$h\"/pause 500/faceDirection Pam 2/pause 1000/showFrame Pam 25/pause 1000/animate Pam false true 250 26 27/pause 400/emote farmer 8/pause 500
+					/textAboveHead Pam \"Oh, Sorry...\"/pause 1000/stopAnimation Pam/pause 950
+					/speak Pam \"*sniff*... It's just...$s#$b#...I should be so happy...$s\"/showFrame Pam 0/faceDirection Pam 1
+					/speak Pam \"...But I haven't been able to cut back on the beer... I haven't changed at all...$s\"/pause 500/emote farmer 28/pause 500
+					/speak Pam \"For a long time, now... I've felt like there's something missing from my life, @... $s#$b#I always thought it was about money... Just bein' poor... ya know? So I figured gettin' this house would solve everything. But ...it didn't.$s#$b#So that's... That's why I ordered this statue. Prayin'...it helps me get my head right, you know? Helps remind me what's important.\"/pause 1000
+					/question fork0 \"Say something to {{PamName}}:#I'm glad you're feeling hopeful#This won't save you.\"/fork positive/friendship Pam -1000/pause 500/speak Pam \"That ain't funny! ...I pour my heart out to you and that's how you respond? What in the void is wrong with you?$u\"/faceDirection Pam 3/shake Pam 10000/emote Pam 12/pause 1000/speak Pam \"I don't care what you say... I'm going to change! Now get out.$4\"/pause 1000/move farmer 0 1 3/move farmer -6 0 3 true/end",
+					"positive": "pause 100/emote farmer 56/pause 500/speak Pam \"Me too. Well, look at me! I'm gettin' real sappy in my old age, aren't I?  ...hehehe.$h\"/pause 1000/move Pam 0 1 1/move Pam 2 0 0/faceDirection farmer 2/viewport move 1 0 7000/textAboveHead Pam \"Thanks for lendin' an ear, kid\"/pause 5000/end"
+				},"When": {"MiscTextEdits": "true"},
+			 },
+			{
+				"Action": "EditData",
+				"Target": "Data/Events/WizardHouse",
+				"Entries": {
+						"418172/n hasPickedUpMagicInk": "WizardSong/2 14/farmer 3 14 3 Wizard 1 14 1/skippable/pause 1000/speak Wizard \"You've found my ink! Excellent.\"/move Wizard 1 0 1/pause 1000/speak Wizard \"Er...\"/faceDirection Wizard 2/pause 500/showFrame Wizard 18/pause 500/speak Wizard \"Did you... happen to see my {{Wizard_spouse}}?#$b#No? Well, what about the house...?#$b#Does it look like {{Wizard_they}} live{{Wizard_s}} alone? Or...$h\"/pause 500/showFrame Wizard 0/emote Wizard 12/pause 500/faceDirection Wizard 3/pause 500/speak Wizard \"...Actually, don't tell me... I don't want to know.\"/pause 500/pause 500/faceDirection Wizard 2/pause 500/speak Wizard \"Anyway... you must be wondering about your reward. Here...\"/move Wizard -1 0 1/pause 800/faceDirection Wizard 2/pause 1000/showFrame Wizard 16/pause 800/specificTemporarySprite arcaneBook/playSound fireball/shake Wizard 500/pause 4000/faceDirection farmer 0/faceDirection Wizard 1/faceDirection Wizard 0/pause 500/speak Wizard \"It's a book of summoning.#$b#The arcane potential is immense... but I'll make it simple for you.#$b#By using this book, you can summon magic buildings directly to your farm.#$b#I think you'll find it useful.\"/pause 500/faceDirection farmer 3/faceDirection Wizard 1/speak Wizard \"Oh, I almost forgot to say... ahem... Thank you.\"/pause 1000/emote farmer 32/pause 800/end"
+				},"When": {"MiscTextEdits": "true"},
+			 },
+			{
+				"Action": "EditData",
+				"Target": "Data/Festivals/fall16",
+				"Entries": {
+					"Pierre": "Our store carries the very finest quality products in the whole valley. Please, inspect our grange display closely and see for yourself!",
+        			"Caroline": "{{PierreName}} is very serious about our grange display. {{Pierre_theyU}} {{Pierre_have}} been getting me to set aside the best-looking produce for weeks in preparation.#$e#Hey, best of luck to you if you enter!",
+
+				},"When": {"MiscTextEdits": "true"},
+			},		
+
+			{
+				"Action": "EditData",
+				"Target": "Data/mail",
+				"Entries": {
+					"fertilizers": "Dear neighbor,^I hope you are feeling settled in your new home. I am writing to let you know that our store is now selling fertilizers! Why don't you swing by and see if you can afford a few dozen boxes or so?  ^   -{{PierreName}}[#]{{PierreName}}{{PierrePossession}} Fertilizers",
+        			"fertilizers2": "Dear @,^We are now selling higher quality fertilizers, as well as new crop selections! See you soon. ^   -{{PierreName}}[#]{{PierreName}}{{PierrePossession}} High Quality Fertilizers",
+					},"When": {"MiscTextEdits": "true"},
+			},	
+
+			 {
+				"Action": "EditData",
+				"Target": "Data/Quests",
+				"Entries":
+					{
+						"27": "Basic/Goblin Problem/There's a goblin blocking the path to the wizard's ex's hut. There must be some way to get the guard to move... Perhaps I should seek out more information on Goblins./Gain entrance to the wizard's ex's hut./-1/-1/0/-1/true",
+					},"When": {"MiscTextEdits": "true"},
+			},
+			{
+				"Action": "EditData",
+				"Target": "Data/SecretNotes",
+				"Entries":
+					{
+						"1011": "Day 37^^When I was a child of ten years old, my parents gave me a glow ring and a magnet ring. They've never left my fingers since.^^However, when I was standing on top of the volcano... a strange idea came over me.^^I took my two rings, and cast them into the forge.^^Lo and behold! They combined into one!^^Now I've got one glowing magnet ring... I hope my parents don't mind, rest their souls..."
+					},"When": {"MiscTextEdits": "true"},
+			},
+			{
+				"Action": "EditData",
+				"Target": "Strings/Characters",
+				"Entries": {
+					"Phone_Pierre_Open": "{{PierreName}}{{PierrePossession}} General Store! Oh, hello, @! Yes, we're open until 5pm today. Please come by for great deals on seeds and produce! Goodbye. *click*",
+        			"Phone_Pierre_Open_Rare": "{{AbigailName}}! Your guinea pig is loose again! Come here *right now* and take care of this! $3#$b#Oh! Uh... Hello? Thank you for calling. Y... Yes, we're open until 5PM. Goodbye. *click*$4",
+        			"Phone_Pierre_Closed": "Thank you for calling {{PierreName}}{{PierrePossession}} General Store. We're closed at the moment, but our hours are 9AM to 5PM. See you then! *beep*",
+        			"Phone_Pierre_Festival": "Thank you for calling {{PierreName}}{{PierrePossession}} General Store. We're closed today in observance of the festival. *beep*",        
+
+					},"When": {"MiscTextEdits": "true"},
+				},		
+				{
+					"Action": "EditData",
+					"Target": "Strings/Locations",
+					"Entries": {
+						"Town_mgThiefMessage": "Shadowy Figure: Eeeeep! You caught me! I'm sorry! Take it! Take it! It looked so valuable, I couldn't help myself...",
+	
+						},"When": {"MiscTextEdits": "true"},
+					},		
+			{
+				"Action": "EditData",
+				"Target": "Strings/StringsFromMaps",
+				"Entries":
+					{
+						"JoshHouse.1": "To my dearest {{Evelyn_parent}}-^If you're reading this, it means I've passed on. I'm so sorry you had to go through this. Know that I love you both.^Don't be too upset, I'm with Yoba now. ^My final request: take care of {{AlexName}}. {{Alex_theyU}} need{{Alex_s}} a family, something stable. {{Alex_theyU}} {{Alex_are}} a good kid.^ Love, ^Chris",     
+						"WitchHut.5": "Curse The Countryside!... A Spellbook For The Rural Hexer",
+						"MovieTheater_CraneMan": "Crane Player: Can't talk... I'm in the zone.",
+						"MovieTheater_CraneMan2": "Crane Player: Almost... got it...",
+						"MovieTheater_ShortsMan": "Corner Dweller: Brr... it's kind of drafty over here... I'm glad I wore my long pants!",
+						"MovieTheater_ShortsMan2": "Corner Dweller: Psst... I just saw the movie, and... Relax! I'm not going to spoil it for you.",
+						"MovieTheater_Mother": "Parent: Aiden, don't you want something healthy? *sigh*... okay...",
+						"MovieTheater_Mother2": "Parent: How about some apple slices? No? *sigh*... okay...",
+						"MovieTheater_Child": "Aiden: Hey! I want candy! *slurp*",
+						"MovieTheater_Child2": "Aiden: Hey! I want chocolate popcorn! *slurp*",
+						"MovieTheater_PurpleHairLady": "Moviegoer: Get lost... I'm busy rubbing elbows with the Governor!",
+						"MovieTheater_RedCapGuy": "Moviegoer: Uh oh... I think I'm a little overdressed for this place...",
+  						"MovieTheater_RedCapGuy2": "Moviegoer: I sat in the front row... big mistake.",
+						"Town-Fair.5": "Tourist: It was a long bus ride here, but totally worth it! This valley is so beautiful. Aiden loves it... don't you,Aiden?", 
+						},"When": {"MiscTextEdits": "true"},
+			}, 
+			
+			//Island Specific
+			{
+				"Action": "EditData",
+				"Target": "Data/Events/Mountain",
+				"Entries": {
+					"8959199/w sunny/t 600 1900/e 6497428/f Leo 2250/F": "sad_kid/-1000 -1000/farmer -100 -100 2 Linus 30 9 3 Leo 28 9 1 Penny -100 -100 2 Jas -100 -100 3 Vincent -100 -100 1/skippable/specificTemporarySprite LeoLinusCooking/animate Linus true true 500 20 21/viewport 26 9 clamp true/viewport move 1 0 10000/pause 1000/textAboveHead Leo \"It's ready!\"/pause 4000/textAboveHead Linus \"Not yet...\"/pause 1500/emote Leo 28 true/pause 500/fade/viewport -1000 -1000/changeLocation ArchaeologyHouse/warp Penny 18 9/warp Linus -100 -100/showFrame Penny 18/warp Jas 19 10/showFrame Jas 22/warp Vincent 16 10/showFrame Vincent 24/warp Leo 18 12/showFrame Leo 24/pause 500/viewport 13 10 clamp true/viewport move 1 0 8000/pause 2000/textAboveHead Penny \"Good answer, {{LeoName}}!\"/pause 1000/emote Leo 20 true/pause 2000/fade/viewport -1000 -1000/warp Penny -100 -100/warp Jas -100 -100/warp Jas -100 -100/changeLocation Beach/warp Leo 42 36/showFrame Leo 0/addTemporaryActor Willy 16 64 43 38 2/animate Willy false true 500 8 9 10 11/viewport 36 36 clamp true/viewport move 1 0 8000/pause 1000/emote Leo 40/pause 2000/shake Willy 3000/showFrame Leo 16/jump Leo/playSound waterSlosh/animate Willy false true 200 17 18/pause 500/specificTemporarySprite LeoWillyFishing/playSound dropItemInWater/textAboveHead Willy \"Got one!\"/pause 500/playSound waterSlosh/pause 500/playSound waterSlosh/pause 500/fade/viewport -1000 -1000/changeLocation Town/warp Vincent -100 -100/warp Willy -100 -100/warp Jas 18 16/animate Jas false true 80 16 17 18 19/warp Leo 25 15/faceDirection Leo 3/viewport 18 16 clamp true/viewport move 1 0 9000/pause 3000/doAction 24 16/pause 500/doAction 24 16/stopAnimation Jas/faceDirection Jas 1/emote Jas 8/doAction 24 16/showFrame Leo 16/shake Leo 3000/jump Leo/positionOffset Leo 4 0/pause 100/positionOffset Leo 4 0/pause 100/positionOffset Leo 4 0/pause 100/speed Leo 4/emote Jas 16 true/advancedMove Leo false 3 0 0 4 7 0/pause 2000/fade/viewport -1000 -1000/pause 600/changeLocation LeoTreeHouse/pause 500/warp Vincent -100 -100/warp Jas -100 -100/viewport 3 3 true/pause 4000/stopAnimation Leo/faceDirection Leo 0/warp Leo 3 8/playSound doorClose/move Leo 0 -3 0/move Leo -1 0 3/doAction 1 5/pause 500/speak Leo \"Haha! ...That was a great day!$h\"/pause 1000/faceDirection Leo 2/pause 1000/showFrame Leo 18/pause 1000/speak Leo \"You know... I still miss my family back on the island...$s\"/pause 400/showFrame Leo 0/speak Leo \"But mostly, I feel happy about the memories, not sad.\"/pause 400/faceDirection Leo 3/speak Leo \"...and I really feel like I belong here!$h\"/pause 500/doAction 1 5/pause 500/doAction 1 5/pause 1000/move Leo 0 -3 0/pause 2000/speak Leo \"It's a beautiful world, friends...\"/pause 600/faceDirection Leo 1 true/pause 140/faceDirection Leo 2/pause 800/speak Leo \"...and I'm glad to be part of it!$h\"/pause 1000/doAction 1 5/pause 1000/fade/viewport -2000 -2000/pause 1500/end"
+					},"When": {"EditIslandCharacters": "Full"},
+			},		
+			{
+				"Action": "EditData",
+				"Target": "Data/mail",
+				"Entries": {
+					"passedOutIsland": "@,^^You never showed up at the boat, so I went lookin' for ya.^^Found you sprawled out in the dirt, with a couple o' parrots pulling gold out of your pockets!^^Had to drag you all the way down to the boat. Me legs feel like two freshwater shrimp...^-{{WillyName}}",					
+					},//"When": {"EditIslandCharacters": "Full"},
+			},		
+
+			{
+				"Action": "EditData",
+				"Target": "Data/mail",
+				"Entries": {
+            			"LeoCooking": "@,^Here's a food from my home, that me and my family enjoy. Hope you like it. ^^  -{{LeoName}}^^P.S. {{WillyName}} helped me write this.%item cookingRecipe %%[#]{{LeoName}}{{LeoPossession}} Recipe"
+					},"When": {"EditIslandCharacters": "Minimal,Full"},
+			},	
+			{
+				"Action": "EditData",
+				"Target": "Data/mail",
+				"Entries": {
+        			"passedOutIsland_Leo": "Hi @,^^Last night, I found you slumbering in the dark.^It wasn't a very safe place, so the bird friends air-lifted you to your bed.^Please be careful from now on.^^-{{LeoName}}^^P.S. {{WillyName}} helped me write this.",
+        			"guntherBones": "Hi @,^^Thanks for all the bones. I've got a lot to sort through here! To think, each fragment belonged to a living, breathing body from the past. Fascinating.^^Please accept this unique crafting recipe as a thank-you gift!^^-{{GuntherName}}%item craftingRecipe Bone_Mill %%[#]{{GuntherName}}{{GuntherPossession}} Note",
+					},"When": {"EditIslandCharacters": "Full"},
+			},		
+			{
+				"Action": "EditData",
+				"Target": "Strings/Locations",
+				"Entries": {
+					"IslandNorth_Event_SafariManAppear": "tropical_island_day_ambient/-1000 -100/farmer 20 48 1/skippable/pause 1000/viewport 21 47 true/pause 1000/playSound thudStep/addTemporaryActor SafariGuy 16 32 22 45 2 true ???/move SafariGuy 0 3 3/pause 1000/speak SafariGuy \"Thank you! I thought I was done for... $h#$b#I've been stuck in this cave for months!\"/pause 500/faceDirection SafariGuy 2/pause 300/showFrame SafariGuy 16/pause 600/emote SafariGuy 28/speak SafariGuy \"...One more cave mushroom salad and I would've gone off the deep end... *shudder* ...so rubbery...$s\"/pause 500/showFrame SafariGuy 0/pause 500/faceDirection SafariGuy 3/pause 500/changeName SafariGuy Professor_Snail/speak SafariGuy \"Anyway... I'm Professor Snail.#$b#I've been conducting a survey of this island's flora and fauna for the last year. Truly a remarkable place!\"/pause 400/faceDirection SafariGuy 2/pause 250/faceDirection SafariGuy 3/speak SafariGuy \"Well, I think I'll go back to my tent and freshen up a little. I'm afraid I smell like mushrooms...$s#$b#Hey... you should stop by the tent sometime! An enterprising individual like yourself could be a major asset in my projects... hee hee! Farewell.$h\"/pause 200/showFrame SafariGuy 17/pause 800/showFrame SafariGuy 12/pause 200/advancedMove SafariGuy true 1 0 0 4/pause 250/end position 20 48",
+        			"IslandHut_Event_ParrotBoyIntro": "continue/-1000 -1000/farmer 7 7 3/skippable/specificTemporarySprite removeSprite 777/addTemporaryActor ParrotBoy 16 32 5 2 2 true ???/pause 2000/viewport 5 7 true/pause 2000/emote ParrotBoy 8/pause 1500/message \"The {{Leo_guy}} looks at you with curious eyes...\"/pause 1500/animate ParrotBoy false true 500 17 0/playSound parrot_squawk/pause 1000/playSound parrot_squawk/pause 800/stopAnimation ParrotBoy/specificTemporarySprite parrotHutSquawk/pause 800/move farmer -2 0 0/pause 500/emote farmer 8/pause 1000/message \"{{Leo_theyU}} seem{{Leo_s}} to have a close bond with the parrots.\"/pause 500/message \"But {{Leo_they}}{{Leo_'re}} too shy to approach you right now.\"/pause 1400/faceDirection farmer 1/pause 500/message \"Perhaps making friends with the parrots could earn {{Leo_their}} trust?\"/pause 1000/end position 5 7",
+					"IslandSecret_Event_BirdieFinished": "tropical_island_day_ambient/-1000 -1000/farmer 20 58 3/removeQuest 130/skippable/addTemporaryActor Birdie 32 32 17 58 3 true ???/animate Birdie false true 1000 8 9/pause 1000/viewport 18 58 clamp true/pause 2300/playMusic none/animate farmer true true 100 35/addObject 19 58 870/playSound sandyStep/pause 800/stopAnimation farmer/playFramesAhead 3/stopAnimation Birdie/extendSourceRect Birdie reset/warp Birdie 18 58/move Birdie 0 -1 2/move Birdie 1 0 2/pause 500/jump Birdie/pause 500/playMusic desolate/speak Birdie \"It's his...$s\"/emote Birdie 20/pause 1200/playSound coin/removeObject 19 58/showFrame Birdie 20/pause 2500/speak Birdie \"Heh... It still has his smell, after all these years...#$b#...that familiar, putrid funk...$h\"/pause 300/faceDirection farmer 2 true/playSound croak/animate farmer false false 350 104 105 104 105 104 105/pause 1000/faceDirection farmer 3/speak Birdie \"You know... It's been a lonely life here, child... but I don't regret it at all.#$b#I'm doin' right by my old man... and we'll be together again some day soon... hehe\"/pause 500/stopAnimation Birdie/move Birdie 0 1 3/playMusic tropical_island_day_ambient/faceDirection Birdie 1/quickQuestion #It's an honorable thing to do.#He's gone. You should live your life.(break)speak Birdie \"You have great wisdom, child.#$b#And you've brought me great peace... this locket will comfort me for the rest of my days.$h\"(break)emote Birdie 28\\speak Birdie \"An old {{Birdie_adult}} like me? I think it's too late, dear...$s#$b#Besides... I like it here! It's relaxing and beautiful. And I have an endless supply of fresh fish, oysters, and monkey meat. Hehehe.$h#$b#...I'm kidding about the monkey meat.\"/pause 1000/speak Birdie \"Now... how can I repay you for this?\"/jump Birdie/pause 500/speak Birdie \"Oh... How about I teach you a special recipe... Something I discovered in the many years I've spent here.\"/pause 1000/playSound reward/addCraftingRecipe Fairy Dust/message \"Learned to craft 'Fairy Dust'.\"/pause 1000/fork gotBirdieReward Strings\\\\Locations:alreadyGotNuts true/speak Birdie \"You can take these, too...\"/awardFestivalPrize birdieReward true/pause 1000/speak Birdie \"Though you're a stranger, you went out of your way to help an old {{Birdie_guy}}.#$b#Bless your heart!$h\"/emote Birdie 20/emote farmer 32/pause 1000/end",
+        			"alreadyGotNuts": "pause 50/pause 50/pause 1000/speak Birdie \"Though you're a stranger, you went out of your way to help an old {{Birdie_guy}}.#$b#Bless your heart!$h\"/emote Birdie 20/emote farmer 32/pause 1000/end",
+					},"When": {"EditIslandCharacters": "Full"},
+			},
+			
+			{
+				"Action": "EditData",
+				"Target": "Data/Quests",
+				"Entries": {
+					"130": "Basic/The Pirate's {{Birdie_spouseU}}/An old {{Birdie_guy}} living on Ginger Island is asking you to find a keepsake of {{Birdie_their}} husband's. {{Birdie_theyU}} gave you an old photograph of a soldier that washed up on shore, hoping it would help in some way./Find a keepsake that belonged to {{BirdieName}}{{BirdiePossession}} husband./-1/-1/0/-1/false"
+					},"When": {"EditIslandCharacters": "Full"},
+			},
+
+			{
+				"Action": "EditData",
+				"Target": "Characters/Dialogue/LeoMainland",
+				"Entries": {
+						"4": "I saw a big mango floating in the sky. {{LinusName}} told me it was a hot-air balloon!$u#$b#I thought only birds could fly...",
+						"18": "When I first arrived, {{LinusName}} made me a suit out of leaves, like {{Linus_theirs}}...#$b#But I looked funny... like a fuzzy mango!$h#$e#I think I'll stick to my feathers.",
+						"Tue": "{{Penny_Mx}} {{PennyName}} is doing {{Penny_their}} best to get me up to speed in my schooling. {{Penny_theyU}} {{Penny_are}} really nice...#$e#...Luckily, I remember some things from my old, old life... before washing up on the island... so it's not as difficult as it could be.#$e#{{Penny_Mx}} {{PennyName}} says {{Penny_they}} {{Penny_are}} impressed with how much I know!",
+						"Tue10": "I'm sure {{JasName}} and {{VincentName}} thought I was weird, at first. I accidentally squawked at the school table a few times... that didn't help.$s#$e#It was a big change for everyone. But we're good friends now!$h",
+						"Wed": "Between {{LinusName}} and {{Penny_Mx}} {{PennyName}}, I'm going to learn everything there is to learn!$h#$e#Mayor {{LewisName}} says I'm on the fast track to becoming a 'well-rounded citizen'... whatever that means.",
+						"Fri": "{{LinusName}} has been teaching me about all the wild food in the valley. There's a lot of good stuff out here!$h#$e#Though... I do kind of miss having golden walnuts for breakfast every morning...$s",
+						"winter_Fri": "{{LinusName}} taught me how to make a special spice berry rubbed fish...#$b#{{Linus_theyU}} say{{Linus_s}} if I eat enough of it it'll keep me warm this winter!$h",
+						"Fri8": "{{Linus_Auncle}} {{LinusName}} says I should 'cook' my fish before eating it...$s#$b#I'm having a hard time getting used to it... so dry...$s",
+						"Sat10": "@? Um... I'm a little embarrassed to ask...$u#$b#But... do you think {{JasName}} would ever like someone like me?$u#$b#Or am I too weird?$s#$e#Hahaha... who cares. I'll figure it out some day.$h"
+						},"When": {"EditIslandCharacters": "Full"},
+			 },
+			{
+				"Action": "EditData",
+				"Target": "Data/Events/IslandSouth",
+				"Entries": {
+						"IslandDepart": "/-1000 -1000/farmer 15 43 2 Willy 17 45 2/playMusic none/skippable true/playSound furnace/beginSimultaneousCommand/viewport 16 44 clamp true/globalFadeToClear 0.007/endSimultaneousCommand/locationSpecificCommand boat_reset/locationSpecificCommand boat_depart/globalFade/viewport -1000 -1000/end islandDepart",
+						"6497428/e 6497423/f Leo 1500/w sunny/t 600 1800/Hl leoMoved": "tropical_island_day_ambient/-1000 -1000/farmer 20 31 2 Leo 21 31 2 Willy -100 -100 1 Linus -100 -100 1/addConversationTopic LeoDeparture 0/skippable/move farmer 0 8 2 true/move Leo 0 5 2 true/viewport 21 38 true/proceedPosition Leo/emote Leo 8/speed Leo 4/move Leo 0 3 2 false/viewport move 0 1 2000/warp Willy 16 43/move Willy 1 0 1/warp Linus 16 43/move Willy 5 0 0/showFrame Leo 16/jump Leo/move Linus 4 0 0/showFrame Leo 0/shake Leo 1000/speed Leo 4/move Leo 0 -2 0/jump Linus/textAboveHead Linus \"Wait!\"/pause 2700/faceDirection Leo 3 true/pause 100/faceDirection Leo 2/pause 1000/move Linus 0 -1 0/pause 1000/faceDirection Linus 1 true/pause 50/faceDirection Linus 2/showFrame Linus 26/pause 500/showFrame Linus 25/playSound parrot_squawk/shake Linus 500/pause 500/showFrame Linus 25/pause 600/showFrame Linus 0/pause 500/faceDirection Linus 1 true/pause 100/faceDirection Linus 0/pause 400/emote Leo 8/move Leo 0 1 2/pause 1000/animate Leo false true 500 17/playSound parrot_squawk/shake Leo 800/pause 1600/stopAnimation Leo/pause 500/emote Linus 32/move Linus 1 0 0/move Linus 0 -1 0/faceDirection Linus 1 true/pause 50/faceDirection Linus 2/showFrame Linus 26/pause 500/showFrame Linus 25/playSound parrot_squawk/shake Linus 500/pause 300/showFrame Linus 26/pause 400/showFrame Linus 25/playSound parrot_squawk/shake Linus 500/pause 500/showFrame Linus 25/pause 600/showFrame Linus 0/pause 500/faceDirection Linus 1 true/pause 100/faceDirection Linus 0/pause 400/jump Leo/pause 1000/move Leo 0 1 2/pause 500/speak Linus \"Hello, {{LeoName}}... My name's {{LinusName}}.#$b#I've heard all about you, and your parrot family.#$b#It's really something special!$h\"/move Willy 0 -1 0/speak Willy \"Aye... {{LinusName}} lives on the mainland with the rest of us.#$b#After hearing your story... I wanted to help. So, I talked to {{LinusName}} here and hatched a little plan.$h\"/playMusic ocean/pause 500/faceDirection Willy 3/speak Willy \"Go on, {{LinusName}}... tell {{Leo_them}}.\"/faceDirection Linus 1/pause 500/faceDirection Linus 0/faceDirection Willy 0/playMusic sad_kid/speak Linus \"{{LeoName}}...#$b#I'd like you to come back with us, to Stardew Valley.#$b#It's a beautiful place... not as warm as here, but still full of life... and I live right in the middle of it!#$b#I know the lay of the land, and many things about the waters, the trees, the animals, and more...#$b#You see... I'm a child of nature, too. You might say we're 'birds of a feather'.$h#$b#But, I'm getting old... And I'd like to teach someone all that I've learned before moving on...$s#$b#{{LeoName}}... will you come back with us?\"/emote Leo 16/speak Leo \"L... leave the island?$u\"/pause 600/speak Willy \"I can take you back for a visit any time!$h#$b#But, {{LeoName}}.... You can't live here forever...#$b#You know, there are other children back home, too. I'm sure they'd love to meet ya...\"/shake Leo 500/pause 700/speak Leo \"O... other kids?$u\"/faceDirection Leo 3/pause 500/faceDirection Leo 2/speak Willy \"What do you think, @?\"/pause 400/quickQuestion #I think it's a great idea.#I think {{Leo_they}} should stay here.#It's up to {{LeoName}}...(break)pause 400\\emote Willy 32\\speak Linus \"Well, let's not forget... the choice is really up to {{LeoName}}...\"\\pause 500(break)pause 100\\emote Willy 28\\speak Linus \"I understand. This is {{LeoName}}{{LeoPossession}} home, after all.$s\"\\move Linus -1 0 0\\speak Linus \"...It's hard to make changes. But sometimes It's for the best.#$b#Still... the choice is really up to {{LeoName}}.\"(break)faceDirection farmer 1\\pause 400/faceDirection Leo 3/pause 400/faceDirection Leo 2/emote Leo 40/speak Leo \"I... $u#$b#I'll go...\"/emote Willy 32 true/pause 400/textAboveHead Linus \"Great!\"/pause 2000/faceDirection Leo 1 true/pause 100/faceDirection Leo 0/pause 300/emote Leo 28/pause 500/speak Leo \"But... my family...$s\"/playMusic ocean/pause 2000/playSound parrot_squawk/pause 600/emote Leo 8/pause 700/playSound parrot_squawk/specificTemporarySprite BoatParrot/pause 2000/faceDirection Leo 3/jump Leo/pause 500/faceDirection farmer 3/faceDirection Linus 3 true/faceDirection Willy 3/pause 1000/speed Leo 4/move Leo 0 1 3/move Leo -1 0 3/pause 2000/specificTemporarySprite BoatParrotSquawk/pause 500/specificTemporarySprite BoatParrotSquawkStop/pause 600/specificTemporarySprite BoatParrotSquawk/pause 500/specificTemporarySprite BoatParrotSquawkStop/pause 1000/emote Leo 20/pause 500/speak Leo \"She says...\"/pause 500/playMusic CloudCountry/faceDirection Leo 2/speak Leo \"She says the parrots are all happy for me.#$b#...And that they want me to start the next chapter of life, wherever it may lead...\"/pause 500/faceDirection Leo 3/speak Leo \"And no matter what happens... they'll always be my family... forever.\"/pause 400/specificTemporarySprite BoatParrotSquawk/pause 500/specificTemporarySprite BoatParrotSquawkStop/pause 1000/specificTemporarySprite BoatParrotLeave/pause 500/speed Leo 4/move Leo 2 0 0/faceDirection farmer 0/faceDirection Linus 0 true/faceDirection Willy 0 true/textAboveHead Leo \"Goodbye!\"/pause 5400/faceDirection Leo 1 true/pause 100/faceDirection Leo 2/emote Leo 40/pause 500/jump Leo/pause 500/speak Leo \"I'm ready!$h\"/faceDirection farmer 1/emote farmer 32 true/emote Willy 32 true/pause 1000/faceDirection Leo 3/pause 400/fade/viewport -1000 -1000/pause 1300/message \"A new arrival to the valley...\"/pause 1200/message \"It seems our little town is growing!\"/pause 1000/end Leo",
+						"PlayerKilled": "none/-100 -100/farmer 13 33 2 {0} 15 33 3/pause 1500/showFrame 5/message \" ...{2}?\"/pause 1000/message \" {2}, 일어나!\"/viewport 13 33 clamp true/pause 1000/speak {0} {1}/showFrame 0/pause 1000/emote farmer 28/minedeath/end"
+				},"When": {"EditIslandCharacters": "Full"},
+			 },
+			 {
+				"Action": "EditData",
+				"Target": "Data/Events/IslandWest",
+				"Entries": {
+						"6497423/e 1039573/f Leo 500/w sunny/t 600 1800/Hl leoMoved": "sad_kid/79 89/farmer 79 89 2 Leo 80 81 2 Willy 89 87 3/skippable/move Leo 0 8 2/pause 200/faceDirection Leo 3/pause 600/faceDirection Leo 2/pause 1000/speak Leo \"What are you doing, @?\"/pause 800/quickQuestion #Just enjoying the waves#Looking for fish#Thinking about someone special#Pondering the big questions(break)pause 500\\showFrame Leo 18\\emote Leo 28\\speak Leo \"Waves...$s#$b#The other birds say the reason {{LeoName}} can't fly... is because {{LeoName}} spend too much time in the waves, long ago.$s#$b#My wings full of water, now.$s\"\\emote farmer 8(break)pause 500\\speak Leo \"Fish? Easy... $h#$b#If you want to say 'hi', you just have to ask.\"\\pause 500\\animate Leo false true 500 17\\playSound parrot_squawk\\shake Leo 800\\pause 800\\stopAnimation Leo\\pause 1200\\playSound pullItemFromWater\\specificTemporarySprite islandFishSplash\\animate farmer false true 100 94\\jump farmer\\pause 500\\animate Leo false true 150 17 22\\pause 2000\\stopAnimation farmer\\pause 1200\\stopAnimation Leo(break)pause 500\\faceDirection Leo 3\\emote Leo 8\\faceDirection Leo 2\\speak Leo \"Hmm... I don't understand that, yet.$s#$b#Maybe when I become an elder, someday.\"(break)pause 500\\speak Leo \"Oh.. Yeah. {{LeoName}} ponders the big questions, too.\"\\faceDirection Leo 3\\speak Leo \"Like... 'will I find more walnuts on the beach, or in the volcano?'\"\\faceDirection Leo 2\\showFrame Leo 18\\emote Leo 28\\speak Leo \"*sigh*...Life complicated...$s\"/showFrame Leo 0/pause 1000/emote Leo 40/speak Leo \"@?$s\"/pause 200/faceDirection farmer 1/speak Leo \"Tell me about the place you come from... your home.$s\"/pause 500/faceDirection farmer 2/quickQuestion #There's a town full of people#There's forests, beaches, and mountains#It's like here, but colder#I live on a farm(break)emote Leo 40\\speak Leo \"People...$s\"(break)pause 400\\speak Leo \"Sounds nice.\"(break)emote Leo 8\\speak Leo \"Cold? ...I don't understand...$s\"(break)emote Leo 8\\speak Leo \"Farm? So, you're saying you grow your own walnuts? You don't have to hunt for them?$3#$b#...Wow..$3\"\\pause 500\\speak Leo \"I'm thinking... @ is smart.$h\"/pause 1500/showFrame Leo 18/playMusic ocean/pause 700/pause 1400/speak Leo \"Are... Are there... other kids?$s\"/faceDirection farmer 1/pause 500/quickQuestion #Yes#What does that matter to a bird?(break)pause 100(break)pause 100/showFrame Leo 0/pause 1000/emote Leo 28/pause 600/faceDirection Leo 0/speak Leo \"...I know I'm not actually a bird, @...$s#$b#I'm like you.$s#$b#But I don't like thinking about it...$s#$b# ...because I'm so alone.$s\"/faceDirection Leo 3/speak Leo \"With my bird family, I feel like I belong.$s\"/pause 400/faceDirection Leo 2/showFrame Leo 18/pause 400/emote Leo 28/speak Leo \"But... I don't belong.$s#$b#...I don't belong anywhere...$s\"/speed Leo 4/faceDirection farmer 0 true/shake Leo 1000/move Leo 0 -9 0/move Willy -8 0 0/emote Willy 28/speak Willy \"Poor kid...$s\"/pause 500/speak Willy \"I wonder if there's some way to help...$s\"/pause 2000/fade/viewport -1000 -1000/end invisible Leo"
+				},"When": {"EditIslandCharacters": "Full"},
+			 },
+			 {
+				"Action": "EditData",
+				"Target": "Data/Festivals/fall27",
+				"Entries": {
+					"Leo": "%{{LeoName}}{{LeoPossession}} unblinking eyes are glued to the screen. You're unable to get {{Leo_their}} attention."
+					},"When": {"EditIslandCharacters": "Full"},
+			 },
+			 {
+				"Action": "EditData",
+				"Target": "Data/Festivals/spring13",
+				"Entries": {
+			 		"Leo": "The idea of an egg hunt is a little bit weird... but I guess the eggs don't belong to any of my family members...$s#$b#Oh well, I'll join in anyway!$h",
+			 	},"When": {"EditIslandCharacters": "Full"},
+			 },
+			 {
+				"Action": "EditData",
+				"Target": "Data/Festivals/winter25",
+				"Entries": {
+			 "Leo": "{{LinusName}} feels uncomfortable about joining in, so I'm going to keep {{Linus_them}} company.#$e#We'll have our own little feast... mashed winter root and spice berry fish!$h"
+			 },"When": {"EditIslandCharacters": "Minimal"},
+			 },
+
+			 {
+				"Action": "EditData",
+				"Target": "Strings/StringsFromCSFiles",
+				"Entries": {
+					"sad_kid": "{{LeoName}}{{LeoPossession}} Song",
+					"fieldOfficeTentMusic": "Professor Snail's Radio",
+					},"When": {"EditIslandCharacters": "Full"},
+			 },
+
+			 {
+				"Action": "EditData",
+				"Target": "Strings/StringsFromMaps",
+				"Entries":
+					{		
+					"Pirates6": "They're in a total stupor...",
+					},"When": { "MiscTextEdits": "true","EditIslandCharacters": "Full"} 
+			},
+
+			{
+				"Action": "EditData",
+				"Target": "Strings/StringsFromMaps",
+				"Entries":
+					{
+						"Pirates3": "WELL-DRESSED PIRATE: *ahem*... Yar.#...#...Not convincing, huh?#*sigh*...#To tell you the truth, I don't really want to be a pirate. I'd rather grow palms.#Unfortunately, there's no money in the palm business...",
+						"Pirates4": "BLACKGULL: Yar, matey. Ye must have a keen eye to've spotted our secret cove. Yo ho!",
+						"Pirates5": "GRIM PIRATE: From yonder seas, a chilling tale, a nightmare sure to haunt your sleep...#'Twas midnight when I lost me hands... to a savage monster o' the deep...#Yar, 'tis true...#...#...#..............#..............................................#Alright, I'm just kidding. I actually lost them while trying to fish an eggshell out of the blender.#Alas... me famous cake batter days are over...",
+						"Pirates8": "BARTENDER: Oi!... Grog and tasties are fer da pirates only.",
+						"Pirates7_0": "DART PLAYER: Care for a game o' darts? You've got 20 darts to score exactly 301 points.",
+						"Pirates7_1": "DART PLAYER: How about we make things more interesting. Hit exactly 301 points within 15 darts and I'll be impressed, matey!",
+						"Pirates7_2": "DART PLAYER: Ah, good to see ya again, matey! Let's see if you can score 301 points within... 10 darts!",
+						"Pirates7_3": "DART PLAYER: Ahoy! If it isn't me matey... ol' steady-hands! How about a game o' darts for old times' sake?",
+						"Pirates7_Win_Perfect": "DART PLAYER: Well, shiver me timbers! That's a perfect game!",
+						"Pirates7_Win": "DART PLAYER: Well, sink me! That's some good throwing!",
+						"Pirates7_WinPrize": "Here's a little something for ya.",
+						"Pirates7_WinNoPrize": "Come back again any time!",
+						"Pirates7_Lose": "DART PLAYER: Yar... Better luck next time...",
+						"PirateBartender_PirateClothes": "BARTENDER: Oi! I never seen the likes o' you, before. But if ye got the pirate look, then 'ave one on me! Har Har!",
+						"PirateBartender_PirateClothes_NoMore": "BARTENDER: Back fer more, eh? Har Har! You've had enough, matey..."
+						},"When": {"EditIslandCharacters": "Full"},
+				},
+				{
+					"Action": "EditData",
+					"Target": "Data/Events/QiNutRoom",
+					"Entries": {
+							"10040609": "clubloop/7 4/farmer 7 8 0 MrQi 7 4 0/skippable/move farmer 0 -2 0/pause 3000/speak MrQi \"Well, well, well... Look who's made it to my secret walnut room.\"/pause 1000/faceDirection MrQi 1 true/pause 100/faceDirection MrQi 2/pause 1000/speak MrQi \"I'm truly impressed.#$b#Even though you only needed a fraction of the walnuts to gain full access to the island, you decided to push yourself further.#$b#Your desire to enter this secret door was so strong, that you went above and beyond to get inside.#$b#That drive is what sets you apart, kid. You've got a very special energy.\"/pause 1000/faceDirection MrQi 3 true/pause 100/faceDirection MrQi 0/pause 500/speak MrQi \"That being said...#$b#You weren't under the impression that the challenge ended here, were you?#$b#No... Hah. Hah. Hah... In fact, the challenge has just begun.\"/faceDirection MrQi 3 true/pause 40/faceDirection MrQi 2/pause 1000/faceDirection MrQi 3/speak MrQi \"On your left, you'll find a board with some very interesting opportunities.#$b#These challenges, which I've designed just for you, will push you to your very limit.\"/faceDirection MrQi 2/speak MrQi \"However, if you can successfully conquer my challenges, you'll earn an exclusive currency... I call them '{{MisterQiName}} Gems'\"/pause 400/speak MrQi \"Just don't put 'em in your mouth, kid... They're highly radioactive. Heh. heh. heh...\"/emote farmer 28/pause 500/faceDirection MrQi 1/speak MrQi \"You can use the machine on your right to trade these {{MisterQiName}} Gems for rare and powerful rewards.\"/pause 1000/faceDirection MrQi 2/speak MrQi \"Sounds interesting, doesn't it?#$b#Yes... I have a feeling someone like you will enjoy this, very much...\"/pause 400/faceDirection MrQi 1 true/pause 50/faceDirection MrQi 0/pause 500/speak MrQi \"Now, if you'll excuse me... I have important business to attend to.\"/pause 2000/end"
+					},"When": {"EditIslandCharacters": "Full,Minimal"}
+				 },
+				
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Abigail",
+					"Entries": {
+						"Resort_Leaving": "I'm gonna ask {{WillyName}} if we can take the scenic route back.",
+						"Resort_Bar": "{{GusName}} made me a dark purple refresher, to match my hair. It tastes great!$h",
+						"Resort": "Bummer... {{WillyName}} says we have to stay on the beach...$s#$b#And I brought my sword and everything...$s",
+						},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Caroline",
+					"Entries": {
+						"Resort_Entering": "{{WillyName}} gave us each a piece of {{Willy_their}} fish jerky. I'm still chewing on it.",
+						"Resort_Chair": "%{{CarolineName}} is trying to nap.",
+						"Resort_Bar": "I told {{GusName}} to surprise me, and {{Gus_they}} made an iced green tea with mango zest. How nice!$h",
+						},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Elliott",
+					"Entries": {
+						"Resort_Bar": "{{GusName}}, I'll order a round for everyone!#$b#*hic*... Oh... I don't have the G.$s#$b#Heh heh... Never mind!",
+						},"When": {"EditIslandCharacters": "Full,Minimal"}
+					},		
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Emily",
+					"Entries": {
+							"Resort_Dance": "%{{EmilyName}} is lost in the music.",	
+						},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Haley",
+					"Entries": {	
+						"Resort_Towel_3": "{{EmilyName}}{{EmilyPossession}} friend had this swimsuit shipped to me from all the way out in Zuzu City.#$e#City fashion is on a whole different level, isn't it?$h",
+						"Resort_Bar": "{{GusName}} made a cute, fruity drink just for me!$h",
+					},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Harvey",
+					"Entries": {
+						"Resort_Bar": "It's important to stay hydrated in this heat. I'm going to ask {{GusName}} if {{Gus_they}} {{Gus_have}} any coconut water!$h",
+						},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Jas",
+					"Entries": {
+							"Resort": "{{Marnie_Auncle}} {{MarnieName}} told me not to get burnt... But when I walk fast, it feels cool, so I think I'll be okay.$h",
+							},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Jodi",
+					"Entries": {
+						"Resort_Bar": "We all love it when {{GusName}} shows up.",
+						},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Lewis",
+					"Entries": {
+							"Resort_Bar": "Hehe... {{GusName}} is really in {{Gus_their}} element.",
+							"Resort_Shore": "Vacation opportunities like this could really expand the local economy!#$e",
+
+							},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Maru",
+					"Entries": {
+						"Introduction": "I'm {{MaruName}}. I've been looking forward to meeting you!",
+							"Resort_Entering": "{{WillyName}} mentioned that you helped fix the boat. Thanks for doing that!",
+							"Resort_Shore": "I wonder if {{WillyName}} would let me bring my telescope here sometime...#The sky is so clear here, I bet I could spot Pelican Town out in the horizon.#Maybe I'd even see you running around %farm Farm!",
+							},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Pam",
+					"Entries": {
+							"Resort": "Heh... {{WillyName}} gave us each a piece of {{Willy_their}} fish jerky on the ride over. Delicious!",
+							},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Pierre",
+					"Entries": {
+						"Introduction": "Hey, it's the new farmer! I'm {{PierreName}}, owner of the local general store.^Hey, it's the new farmer! I'm {{PierreName}}, owner of the local general store.#$b#If you're looking for seeds, my shop is the place to go. I'll also buy produce from you for a good price!#$e#A little agriculture could really inject new life into the local economy!",
+							"Resort_Bar": "Drink after drink... {{GusName}} must be making a killing!",
+							},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Sam",
+					"Entries": {
+							"Resort": "I bet there's some cool stuff deeper on the island.#$e#{{WillyName}} said we have to stay here, though... some kind of liability issues or something.$s",
+							"Resort_Towel": "%{{SamName}} is playing a jazzy tune on {{Sam_their}} guitar.",
+							"Resort_Towel_2": "Maybe I should learn to play the ukelele.#$e#{{AbigailName}} on the congas and {{SebastianName}} on the steel drums... 'The Pelicans of Paradise'...$s#$e#What's the matter, you look worried.$h",
+							},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Sebastian",
+					"Entries": {
+							"Resort_Shore": "You think {{WillyName}} would let me lug a jet ski out here?#$b#...Nah.$h",
+							},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Clint",
+					"Entries": {
+							"Resort_Shore_2": "I thought working a furnace would have prepared me for this heat, but I'm sweating in places I didn't know I could.$s#$e#I hope no one noticed...#$e#%{{ClintName}}{{ClintPossession}} body is glistening..."
+							},"When": {"EditIslandCharacters": "Full,Minimal"}
+				},
+				{
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Leah",
+					"Entries": {
+							"Resort_Entering": "Don't tell anyone, but {{WillyName}} let me steer the boat for a few minutes.$h",
+							"Resort_Wander": "Mmm, I bet the trees around here would make for an interesting medium to work with.#$e#Though {{WillyName}} probably wouldn't be happy with me if I dragged a bunch of logs onto {{Willy_their}} ship!$h"
+							},"When": {"EditIslandCharacters": "Full,Minimal"}
+				 },
+				 {
+					"Action": "EditData",
+					"Target": "Characters/Dialogue/Lewis",
+					"Entries": {
+							"Resort_Bar": "Hehe... {{GusName}} is really in {{Gus_their}} element.",
+							},//"When": {"EditIslandCharacters": "Full"},
+				},
+		
+		
+		
+		
+		
+		 
+		
+
+
+				
+						
+
+
+
+			 
+
+
+
+

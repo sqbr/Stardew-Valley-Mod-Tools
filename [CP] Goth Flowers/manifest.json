@@ -1,0 +1,11 @@
+{
+    "Name": "Goth Plants",
+    "Author": "sqbr",
+    "Version": "1.0.0",
+    "Description": "Makes the colours of crops grey-blue-ish gothic.",
+    "UniqueID": "Sqbr.Plants",
+    "UpdateKeys": [],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
+}

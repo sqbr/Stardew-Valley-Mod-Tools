@@ -1,0 +1,16 @@
+		 {
+			"Action": "EditData",
+			"Target": "Strings/NPCNames",
+			"Entries": {
+        			"Gunther": "{{GuntherName}}",
+        			"Morris": "{{MorrisName}}",
+        			"MisterQi": "{{MisterQiName}}",
+        			"Gil": "{{GilName}}",
+        			"OldMariner": "{{OldMarinerName}}",
+        			"Bouncer": "{{BouncerName}}",
+        			"Henchman": "{{HenchmanName}}",
+        			"Governor": "{{GovernorName}}",
+        			"Grandpa": "{{GrandpaName}}",
+        			"Birdie": "{{BirdieName}}"
+			}
+		 },

@@ -1,0 +1,48 @@
+		 {	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Entries": {
+				"Abigail": "teen/rude/outgoing/neutral/female/datable/Sebastian/Town/{{AbigailBirthday}}/Caroline 'Mom' Pierre 'Dad'/SeedShop 1 9/{{AbigailName}}",
+				"Caroline": "adult/polite/neutral/neutral/female/not-datable/Pierre/Town/{{CarolineBirthday}}/Pierre 'husband' Abigail ''/SeedShop 22 5/{{CarolineName}}",
+				"Clint": "adult/rude/shy/negative/male/not-datable/Emily/Town/{{ClintBirthday}}/Emily ''/Blacksmith 3 13/{{ClintName}}",
+				"Demetrius": "adult/polite/neutral/positive/male/not-datable/Robin/Town/{{DemetriusBirthday}}/Robin 'wife' Maru ''/ScienceHouse 19 4/{{DemetriusName}}",
+				"Willy": "adult/neutral/neutral/neutral/male/not-datable/null/Town/{{WillyBirthday}}/Elliott ''/FishShop 5 4/{{WillyName}}",
+				"Elliott": "adult/polite/neutral/neutral/male/datable/Leah/Town/{{ElliottBirthday}}/Willy ''/ElliottHouse 1 5/{{ElliottName}}",
+				"Emily": "adult/polite/outgoing/positive/female/datable/null/Town/{{EmilyBirthday}}/Haley 'sister'/HaleyHouse 16 5/{{EmilyName}}",
+				"Evelyn": "adult/polite/outgoing/positive/female/not-datable/George/Town/{{EvelynBirthday}}/George 'husband' Alex 'grandson'/JoshHouse 2 17/{{EvelynName}}",
+				"George": "adult/rude/neutral/negative/male/not-datable/Evelyn/Town/{{GeorgeBirthday}}/Evelyn 'wife' Alex 'grandson'/JoshHouse 16 22/{{GeorgeName}}",
+				"Gus": "adult/neutral/outgoing/positive/male/not-datable/null/Town/{{GusBirthday}}/Emily '' Pam ''/Saloon 18 6/{{GusName}}",
+				"Haley": "adult/rude/outgoing/neutral/female/datable/Alex/Town/{{HaleyBirthday}}/Emily 'sister'/HaleyHouse 8 7/{{HaleyName}}",
+				"Harvey": "adult/polite/shy/positive/male/datable/Maru/Town/{{HarveyBirthday}}//HarveyRoom 13 4/{{HarveyName}}",
+				"Jas": "child/neutral/shy/positive/female/not-datable/Vincent/Town/{{JasBirthday}}/Vincent ''/AnimalShop 4 6/{{JasName}}",
+				"Jodi": "adult/polite/neutral/neutral/female/not-datable/Kent/Town/{{JodiBirthday}}/Sam 'eldest_son' Vincent 'youngest_son' Kent 'husband'/SamHouse 4 5/{{JodiName}}",
+				"Alex": "adult/rude/outgoing/positive/male/datable/Haley/Town/{{AlexBirthday}}/George 'grandpa' Evelyn 'grandma'/JoshHouse 19 5/{{AlexName}}",
+				"Kent": "adult/neutral/shy/negative/male/not-datable/Jodi/Town/{{KentBirthday}}/Jodi 'wife' Sam 'eldest_son' Vincent 'youngest_boy'/SamHouse 22 5/{{KentName}}",
+				"Leah": "adult/polite/neutral/positive/female/datable/Elliott/Town/{{LeahBirthday}}//LeahHouse 3 7/{{LeahName}}",
+				"Lewis": "adult/neutral/outgoing/positive/male/not-datable/null/Town/{{LewisBirthday}}/Marnie ''/ManorHouse 8 5/{{LewisName}}",
+				"Linus": "adult/neutral/shy/positive/male/not-datable/null/Town/{{LinusBirthday}}//Tent 1 2/{{LinusName}}",
+				"Marnie": "adult/polite/outgoing/positive/female/not-datable/Lewis/Town/{{MarnieBirthday}}/Lewis '' Shane 'nephew' Jas 'niece'/AnimalShop 12 14/{{MarnieName}}",
+				"Maru": "teen/neutral/outgoing/positive/female/datable/Harvey/Town/{{MaruBirthday}}/Robin 'Mom' Demetrius 'Dad' Sebastian 'half-brother'/ScienceHouse 2 4/{{MaruName}}",
+				"Pam": "adult/rude/outgoing/negative/female/not-datable/Gus/Town/{{PamBirthday}}/Penny 'little_baby-girl' Gus ''/Trailer 15 4/{{PamName}}",
+				"Penny": "teen/polite/shy/positive/female/datable/Sam/Town/{{PennyBirthday}}/Pam 'mother'/Trailer 4 9/{{PennyName}}",
+				"Pierre": "adult/neutral/outgoing/positive/male/not-datable/Caroline/Town/{{PierreBirthday}}/Abigail 'daughter' Caroline 'wife'/SeedShop 4 17/{{PierreName}}",
+				"Robin": "adult/neutral/outgoing/positive/female/not-datable/Demetrius/Town/{{RobinBirthday}}/Demetrius 'husband' Maru 'daughter' Sebastian 'son'/ScienceHouse 21 4/{{RobinName}}",
+				"Sam": "teen/neutral/outgoing/positive/male/datable/Penny/Town/{{SamBirthday}}/Vincent 'little_brother' Jodi 'Mom' Kent 'Dad' Sebastian ''/SamHouse 22 13/{{SamName}}",
+				"Sebastian": "teen/rude/shy/negative/male/datable/Abigail/Town/{{SebastianBirthday}}/Robin 'Mom' Maru 'half-sister' Sam ''/SebastianRoom 10 9/{{SebastianName}}",
+				"Shane": "adult/rude/shy/negative/male/datable/null/Town/{{ShaneBirthday}}/Marnie 'aunt'/AnimalShop 25 6/{{ShaneName}}",
+				"Vincent": "child/neutral/outgoing/positive/male/not-datable/Jas/Town/{{VincentBirthday}}/Jas ''/SamHouse 10 23/{{VincentName}}",
+				"Sandy": "adult/neutral/outgoing/positive/female/not-datable/null/Desert/{{SandyBirthday}}/Emily ''/SandyHouse 2 5/{{SandyName}}",
+				"Krobus": "adult/polite/shy/neutral/male/not-datable/null/Other/{{KrobusBirthday}}//Sewer 31 17/{{KrobusName}}",
+      			"Marlon": "adult/polite/neutral/positive/male/not-datable/null/Other/{{MarlonBirthday}}//AdventureGuild -50 -50/{{MarlonName}}",
+        		"Dwarf": "adult/neutral/outgoing/positive/undefined/not-datable/null/Other/{{DwarfBirthday}}//Mine 43 6/{{DwarfName}}",
+				"Wizard": "adult/rude/neutral/negative/male/not-datable/null/Other/{{WizardBirthday}}//WizardHouse 3 17/{{WizardName}}"
+			}
+		 },
+		 {	
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Entries": {
+				"Leo": "child/neutral/shy/neutral/male/not-datable/Leo/Other/{{LeoBirthday}}//IslandHut 5 6/{{LeoName}}"
+			},"When": {"EditIslandCharacters": "Full"}
+		},
+		

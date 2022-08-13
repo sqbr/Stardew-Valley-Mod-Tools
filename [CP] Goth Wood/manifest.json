@@ -1,0 +1,11 @@
+{
+    "Name": "Goth Wood",
+    "Author": "sqbr",
+    "Version": "1.0.0",
+    "Description": "Makes the colours of crops grey-blue-ish gothic.",
+    "UniqueID": "Sqbr.Wood",
+    "UpdateKeys": [],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
+}

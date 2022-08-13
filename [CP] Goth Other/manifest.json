@@ -1,0 +1,11 @@
+{
+    "Name": "Goth Other",
+    "Author": "sqbr",
+    "Version": "1.0.0",
+    "Description": "Makes the colours of everything grey-blue-ish gothic.",
+    "UniqueID": "Sqbr.GothOther",
+    "UpdateKeys": [],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
+}
