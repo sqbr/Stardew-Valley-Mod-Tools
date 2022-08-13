@@ -577,7 +577,15 @@ def disposition(name,gender):
     elif name =="Sebastian":
         return "teen/rude/shy/negative/"+gender+"/datable/Abigail/Town/{{SebastianBirthday}}/Robin '{{Robin_parent}}' Maru 'half-{{Maru_sibling}}' Sam ''/SebastianRoom 10 9/{{SebastianName}}"    
     elif name =="Shane":
-        return "adult/rude/shy/negative/"+gender+"/datable/null/Town/{{ShaneBirthday}}/Marnie '{{Marnie_Auncle}}'/AnimalShop 25 6/{{ShaneName}}"            
+        return "adult/rude/shy/negative/"+gender+"/datable/null/Town/{{ShaneBirthday}}/Marnie '{{Marnie_Auncle}}'/AnimalShop 25 6/{{ShaneName}}"        
+    elif name =="Caroline": 
+        return "adult/polite/neutral/neutral/female/not-datable/Pierre/Town/{{CarolineBirthday}}/Pierre 'husband' Abigail ''/SeedShop 22 5/{{CarolineName}}"
+    elif name == "Clint": 
+        return "adult/rude/shy/negative/male/not-datable/Emily/Town/{{ClintBirthday}}/Emily ''/Blacksmith 3 13/{{ClintName}}"
+    elif name ==  "Demetrius": 
+        return "adult/polite/neutral/positive/male/not-datable/Robin/Town/{{DemetriusBirthday}}/Robin 'wife' Maru ''/ScienceHouse 19 4/{{DemetriusName}}"
+    elif name ==  "Willy": 
+        return "adult/neutral/neutral/neutral/male/not-datable/null/Town/{{WillyBirthday}}/Elliott ''/FishShop 5 4/{{WillyName}}",        
 
 
 def replace_flowers():
