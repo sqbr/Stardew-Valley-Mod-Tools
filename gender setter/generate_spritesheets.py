@@ -118,7 +118,7 @@ def make_screenshots():
             img= Image.open(start_path+current_image)
             char = img.crop((0,0,16,32))
             screenshot.paste(char,(16*i,32*j,16*(i+1),32*(j+1))) 
-    screenshot.save("beach_screenshot.png")         
+    screenshot.save("./images/beach_sprites.png")         
     width = 13
     height = 4
     screenshot = Image.new("RGBA", (16*width, 32*height))
@@ -135,7 +135,7 @@ def make_screenshots():
                 h = 32  
             char = img.crop((0,0,16,h))
             screenshot.paste(char,(16*i,32*j+(32-h),16*(i+1),32*(j+1))) 
-    screenshot.save("screenshot.png")    
+    screenshot.save("./images/sprites.png")    
 
     path = "./assets/Portraits/"
     images =sort(list_directory(path,"*.png"))
@@ -160,7 +160,7 @@ def make_screenshots():
             img= Image.open(path+current_image)
             char = img.crop((0,0,64,64))
             screenshot.paste(char,(64*i,64*j,64*(i+1),64*(j+1))) 
-    screenshot.save("beach_portraits.png")    
+    screenshot.save("./images/beach_portraits.png")    
             
     width = 14
     height = 4
@@ -174,7 +174,7 @@ def make_screenshots():
             img= Image.open(path+current_image)
             char = img.crop((0,0,64,64))
             screenshot.paste(char,(64*i,64*j,64*(i+1),64*(j+1))) 
-    screenshot.save("portraits.png")    
+    screenshot.save("./images/portraits.png")    
 
     path = "./assets/Androgynous/"
     images =sort(list_directory(path,"*.png"))
@@ -199,7 +199,7 @@ def make_screenshots():
             img= Image.open(path+current_image)
             char = img.crop((0,0,256,256))
             screenshot.paste(char,(256*i,256*j,256*(i+1),256*(j+1))) 
-    screenshot.save("beach_andro.png")    
+    screenshot.save("./images/beach_HD.png")    
             
     width = 6
     height = 4
@@ -213,7 +213,7 @@ def make_screenshots():
             img= Image.open(path+current_image)
             char = img.crop((0,0,256,256))
             screenshot.paste(char,(256*i,256*j,256*(i+1),256*(j+1))) 
-    screenshot.save("andro.png")    
+    screenshot.save("./images/HD.png")    
 
         
 #process_image("Abigail")

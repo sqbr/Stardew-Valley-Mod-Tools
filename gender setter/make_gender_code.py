@@ -9,10 +9,6 @@ from xml.etree.ElementTree import TreeBuilder
 ### To run, open a terminal/command line from within this folder and type "python make_gender_code.py"
 ###############
 
-#end_path = "../../Gender Setter/[CP] Gender Setter/"
-#end_path_images = "../../[CP] Androgynous Villagers/"
-#end_path_HD = "../../[CP] Configurable HD Portraits/"
-
 end_path = {}
 
 mode = "HD" # GS, LowRes
@@ -310,7 +306,7 @@ def create_config(current_gender,write_variant):
         content.write("  \""+name+"Images\": \""+changesprite+"\",\n")             
    
     if mode == "GS":
-        with open("./advancedtitle_config.json","r") as f:
+        with open("./other/advancedtitle_config.json","r") as f:
             data = f.readlines()
         for l in data:
             content.write(l)
@@ -767,7 +763,7 @@ def create_content():
     for name in name_list:
         content.write(initialise_variables(name))  
     if mode == "GS":
-        with open("./advancedtitle_content.json","r") as f:
+        with open("./other/advancedtitle_content.json","r") as f:
             data = f.readlines()
         for l in data:
             content.write(l)
