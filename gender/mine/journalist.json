@@ -1,0 +1,59 @@
+//Compatibility with No More War - Kent as Journalist
+
+{
+        "Action": "EditData",
+        "Target": "Characters/Dialogue/Jodi",
+        "Entries": {
+          "2_1": "My {{KentSpouse}} {{KentName}} is a journalist, working overseas. That's why {{KentThey}}{{KentRe}} not here right now.#$b#I know {{KentThey}}'ll come back safe once {{KentTheir}} assignment is over!!#$e#Need something?",
+          "winter_Thu8": "We kind of rushed into our marriage, with {{KentName}} being busy with school... I hardly got a taste of youth and freedom, and now it's too late to ever go back.$s#$e#Just don't make the same mistake.$4"
+        },
+        "When": {
+         "HasMod": "ShotFromGuns.NoMoreWarKentJournalist"
+        }
+     },
+
+     /* CHANGES FOR SAM */
+	 
+     {
+        "Action": "EditData",
+        "Target": "Characters/Dialogue/Sam",
+        "Entries": {
+          "Thu2": "My {{KentParentName}} is a journalist, covering the conflict in the Gotoro Empire. That's why {{KentThey}}{{KentRe}} not here...#$e#{{KentTheyU}}'ll come back someday.#$e#...I've heard some terrible things about the Gotoro Empire...$s",
+          "summer_Thu": "My {{KentParentName}} was telling me about the Gotoro Empire, where {{KentThey}} {{KentWere}} reporting... They sound like a ruthless bunch.",
+          "winter_Thu": "My {{KentParentName}} is a journalist, covering the conflict in the Gotoro Empire. That's why {{KentThey}}{{KentRe}} not here.#$e#{{KentTheyU}}{{KentRe}} coming back soon, though."
+        },
+        "When": {
+           "HasMod": "ShotFromGuns.NoMoreWarKentJournalist"
+        }
+     },
+
+     /* CHANGES FOR BEACH EVENTS */
+
+     {
+        "Action": "EditData",
+        "Target": "Data/Events/Beach",
+        "Fields": {
+
+          "733330/f Sam 750/w sunny/t 700 1500/z winter/y 1": {
+            38: "speak Sam \"Don't you remember how smart {{KentParentName}} is? {{KentTheyU}}'d never get in the way of a firefight! Don't you worry!$a#$b#And always remember that me and our {{JodiParentName}} are here to play with you if you ever feel lonely.\"",
+            55: "speak Sam \"To be honest, I have no idea if my {{KentParentName}} will come back... We've all read {{KentTheir}} articles. Soldiers are falling by the hundreds, and {{KentThey}}{{KentRe}} in the middle of it.$s#$b#But what am I going to say to {{VincentName}}?$7\""
+          }
+
+        },
+        "When": {
+           "HasMod": "ShotFromGuns.NoMoreWarKentJournalist"
+        }
+     },
+
+	 /* CHANGES FOR festival */
+
+     {
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring24",
+        "Entries": {
+          "Kent": "This open field... it makes me nervous.#$e#*whisper* Happy thoughts, {{KentName}}. Happy thoughts."
+        },
+        "When": {
+           "HasMod": "ShotFromGuns.NoMoreWarKentJournalist"
+        }
+     },

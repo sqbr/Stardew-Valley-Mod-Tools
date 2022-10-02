@@ -1,0 +1,11 @@
+{
+    "Name": "Weird Recolour",
+    "Author": "sqbr",
+    "Version": "1.0.0",
+    "Description": "Makes the colours of plants and dirt blueish and strange.",
+    "UniqueID": "Sqbr.WeirdRecolour",
+    "UpdateKeys": [],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
+}

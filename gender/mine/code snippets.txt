@@ -1,0 +1,12 @@
+public override void Entry(IModHelper helper) {
+  SpaceEvents.ChooseNightlyFarmEvent += this.ChooseNightEvent;
+}
+
+public ChooseNightEvent(object sender, EventArgsChooseNightlyFarmEvent e) {
+  if (e.NightEvent is null) {
+    e.NightEvent = new MyCustomNightEvent();
+  }
+}
+
+your custom event will probably derive from FarmEvent as a class
+https://stardewmodding.miraheze.org/wiki/Tips_for_Making_Events_from_a_Novice_by_LenneDalben

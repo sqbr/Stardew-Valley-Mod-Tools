@@ -1,0 +1,225 @@
+{
+   "Format": "1.27.0",
+   "Changes": [
+      {
+         "Action": "EditImage",
+         "Target": "Maps/Festivals",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/boatTunnelTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/nightSceneMaru",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/townInterior",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/springobjects",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/HarveyBalloonTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Cursors",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/daybg",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/map",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/nightbg",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/shadow",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/swimShadow",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/tailoring",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Cursors2",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/stardewPanorama",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/Flooring",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/grass",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/hoeDirt",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/hoeDirtDark",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/hoeDirtSnow",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/bushes",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Minigames/Intro",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Minigames/boatJourneyMap",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Minigames/Clouds",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+   ]
+}

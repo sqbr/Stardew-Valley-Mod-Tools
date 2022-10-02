@@ -1,0 +1,11 @@
+{
+    "Name": "Starry Blue UI",
+    "Author": "sqbr",
+    "Version": "1.0.2",
+    "Description": "Makes the colours of the user interface blue and purple.",
+    "UniqueID": "Sqbr.StarryBlueUI",
+    "UpdateKeys": ["Nexus: 13694"],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
+}

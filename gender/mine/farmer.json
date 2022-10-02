@@ -1,0 +1,323 @@
+// Changes that only relate to player gender
+
+        {
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Farmer/GenderSymbolsReplacer.png",
+            "ToArea": { "X": 129, "Y": 192, "Width": 31, "Height": 16 },
+            "LogName": "Replace Gender Symbols",
+            "When":{"ChangeFarmerGender": "true" }
+        },        
+		{
+			"Action": "EditImage",
+			"Target": "Maps/bathhouse_tiles",
+			"FromFile": "Farmer/Maps/bathhouse_tiles_M.png",
+			"LogName": "Fix Bath House Tiles",
+            "PatchMode": "Overlay",
+			"When":{"ChangeFarmerGender": "true", "PlayerGender": "Male"}
+		},  
+        {
+			"Action": "EditImage",
+			"Target": "Maps/bathhouse_tiles",
+			"FromFile": "Farmer/Maps/bathhouse_tiles_W.png",
+			"LogName": "Fix Bath House Tiles",
+            "PatchMode": "Overlay",
+			"When":{"ChangeFarmerGender": "true", "PlayerGender": "Female"}
+		},    
+
+        {"Action": "EditData",
+			"Target": "Characters/Dialogue/Abigail",
+			"Entries":{
+                "summer_Tue4": "You're an interesting {{FarmerGuy}}, @. I'm glad you moved here.$h",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/Dialogue/Alex",
+			"Entries":{
+                "Resort_Chair": "Aren't you hot in that outfit? You gotta get some ocean breeze goin'!",
+                "Tue": "The beach is a cool place to hang out and soak up some rays.#e#You gotta spend some time in the sun or else you'll get all pale.#$e#Hey, do you wanna hang out with me at the beach some time?",
+                "Fri": "Hey, what's up farmer?#e#Oh, I almost forgot! It's my day for doing push-ups!#e#Every time I do push-ups I try to do one more than last time. Pretty cool strategy, huh?",
+                "Fri8": "Hi @. You look sporty today.$h",
+                "event_box3": "...Thanks, @.#$b#You've become my best friend in the whole town... #$b#Is that embarrassing to say?$l",
+                "summer_Mon": "Hey, farmer. You've got a nice tan going.$h#$e#The more I practice this summer, the easier it'll be for me to go pro.#$e#Then you'd be able to say you knew me once. Cool, huh?",
+                "summer_Wed": "Hey farmer, I've got a question for you.#$b#$q 52/53 summer_Wed_01_old#Do you think I'll ever turn pro?#$r 52 30 summer_Wed_01_01#You're destined to be a sports legend#$r 52 0 summer_Wed_01_02#Maybe, if you practice a lot#$r 53 -50 summer_Wed_01_03#No, you'll most likely fail and become a sales clerk.",
+                "summer_Wed_01_03": "That's insane. You're just jealous that I'm talented and popular and you're not.$a#$e#Get away from me.$a",
+                "summer_Thu": "Hey, you must be getting pretty fit working on that farm all day.#$e#Maybe you'll reach my level some day. Something to look forward to, huh?#$e#Why do you have that look on your face?",
+                "fall_Wed": "Hey, can I ask you something?#$e#$q 54/55 fall_Wed_01_old#What do you think about my haircut?#$r 54 30 fall_Wed_01_01#It looks very fashionable.#$r 55 -30 fall_Wed_01_02#It looks like some kind of fungal growth.",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/Dialogue/Emily",
+			"Entries":{
+                "summer_Sun6": "Hi, @! We've become decent friends, haven't we?$h#$e#I'm glad.$h",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/Dialogue/Emily",
+			"Entries":{
+                "fall_Sat_inlaw_Alex": "Oh, hello my dear. I think of you as my own grandchild now.$h",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/Dialogue/George",
+			"Entries":{
+                "Thu": "I can't talk right now.#$e#My favorite program is on.",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+                "Tue": "Nice shoes.#$b#Are those made out of plastic?#$e#I'm bored.",
+                "winter_Sun10": "@, you look good today. #$e#...$h"
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/Dialogue/Jas",
+			"Entries":{
+                "Mon4": "Hi, {{FarmerMx}} @.#$e#It's fun to live on a farm.$h",
+                "Sat8": "You're always so nice to me, {{FarmerMx}} @.$h#$e#Grown-ups are usually mean and boring, but you're different.",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/Dialogue/Leah",
+			"Entries":{
+                "event_sculpt3": "You pig!%fork$a#$b#Get out!$l",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/Dialogue/Leah",
+			"Entries":{
+                "Mon": "I love animals, {{FarmerMx}} @. If you treat yours well I'm sure we'll become good friends!",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/MarriageDialogue",
+			"Entries":{
+                "Rainy_Night_3": "The rain makes our home seem so cozy.$h",
+                "Indoor_Night_2": "I'm glad you're home.#$e#I get lonely at night...$s#$e#...$h",
+                "Indoor_Night_Alex": "I feel exhausted... That's a good sign! It means I worked hard enough today.$h",
+                "Indoor_Night_Elliott": "#$c .5#You always smell so good after a day of hard work. Like a honeycomb drifting on a pool of spice tea.#$e#Come here, let me massage your back. You look tense.$l",
+                "Good_3": "Wow, you look really good today!$l",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/MarriageDialogueAbigail",
+			"Entries":{
+                "Rainy_Night_5": "Hey! You look like you've been hard at work. Can I help you relax?",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/MarriageDialogueAlex",
+			"Entries":{
+                "Indoor_Day_0": "Ahh... there's nothing like a good night's sleep next to my {{FarmerSpouse}}!$h",
+                "Outdoor_3": "Look at us, with our little farm. We make a cute couple.$h",
+                "Good_1": "You're gorgeous... have I told you that?$l",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/MarriageDialogueElliott",
+			"Entries":{
+                "Rainy_Night_0": "Good evening. Did you have a productive day, my dear?",
+                "Rainy_Night_2": "My skill with words is unmatched, yet I can't find the way to properly describe your allure.$l",
+                "Indoor_Night_0": "From the brightest winter star, to the shimmer of an iridium vein... nothing can compare to my beloved.",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/MarriageDialogueHarvey",
+			"Entries":{
+                "Rainy_Night_2": "You look a little soggy, dear. Why don't you warm yourself by the fire?",
+                "Good_3": "Wow, you look amazing today!",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/MarriageDialogueLeah",
+			"Entries":{
+                "Good_3": "Wow, you look full of energy today!$l",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/MarriageDialogueMaru",
+			"Entries":{
+                "Good_4": "For a while there I was considering building a robotic {{FarmerSpouse}}. But you're a lot more fun!$h",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/MarriageDialogueMaru",
+			"Entries":{
+                "Good_3": "Wow, you look amazing today! Did you do something different with your hair?$l",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/MarriageDialogueMaru",
+			"Entries":{
+                "Good_3": "Wow, you look gorgeous today! Did you do something with your hair?$l",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/Pam",
+			"Entries":{
+                "summer_Tue2": "Oh, it's @.#$e#Do you need my help or something?",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/Pam",
+			"Entries":{
+                "event_pool4": "...Oh, @. I thought you did, but I wasn't sure.$6#$b#...I'll always remember this night.$6",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/Pierre",
+			"Entries":{
+                "Mon_inlaw_Abigail": "Hello, er... my {{FarmerChild}}?$s",
+                "Thu2": "I really do appreciate your business, {{FarmerMx}} @. I've been having a harder and harder time turning a decent profit.",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+			"Target": "Characters/Sam",
+			"Entries":{
+                "event_snack1": "{{FarmerTheyU}}{{FarmerRe}} right... That's what happened.$s",
+                "event_snack3": "What!? {{FarmerTheyU}}{{FarmerRe}} lying!$a",
+                "Wed10": "Hey, @. You look like you're full of energy today!",
+            },"When":{"ChangeFarmerGender": "true" }
+        },
+        {"Action": "EditData",
+        "Target": "Characters/Sebastian",
+        "Entries":{
+            "Tue6": "I like your new boots!$h#$e#Do you want to hang out for a while?",
+            "event_garage3": "Don't worry, I'll make sure to show you the ropes before I let you do anything dangerous.$8",
+        },"When":{"ChangeFarmerGender": "true" }
+        },
+    {"Action": "EditData",
+    "Target": "Characters/Shane",
+    "Entries":{
+        "event_noLoan2": "Okay, {{FarmerMx}} Sensible...$s",
+    },"When":{"ChangeFarmerGender": "true" }
+},
+{"Action": "EditData",
+    "Target": "Characters/Vincent",
+    "Entries":{
+        "Sun": "Hi there!",
+        "Sun10": "Hi!#$e#Don't tell anyone... but you're my favorite grown-up.$h"
+    },"When":{"ChangeFarmerGender": "true" }
+},
+{"Action": "EditData",
+    "Target": "Characters/Willy",
+    "Entries":{
+        "Mon": "Ahoy there!#$b#Looks like decent weather for fishing, eh?",
+        "accept_869": "Ah... That's the perfect bait for a catfish I've been tryin' to catch!#$b#Here, let me trade you this for it. I'm not sure what it is, but it washed up on the beach not too long ago.#$b#Somethin' tells me you could use it.",
+        "FullCrabPond": "*sniff*... Ah... That old familiar scent. You've been raisin' crabs, haven't ya?#$b#Yer an angler after me own heart, @. Hah!$h#$b#Here, take this. I found it on the beach... Been savin' it fer a special occasion. It's not every day I discover a fellow crab enthusiast! [797]",
+        "MovieInvitation": "Ah... a movie. That's mighty kind of ye.#$b#I'll just finish me pipe, and head over.",
+    },"When":{"ChangeFarmerGender": "true" }
+},
+{"Action": "EditData",
+    "Target": "Data/AnimalShop",
+    "Entries":{
+        "92/e 91/i 78/t 900 1700": "jaunty/13 17/farmer 13 19 0 Marnie 13 14 2/move farmer 0 -1 0/removeQuest 21/removeItem 78/friendship Marnie 100/skippable/emote Marnie 16/speed Marnie 4/move Marnie 0 -1 2/speed Marnie 4/move Marnie 2 0 2/speed Marnie 4/move Marnie 0 3 2/move Marnie -2 0 2/pause 300/speak Marnie \"Oh! You brought the cave carrot! Thank you so much, {{FarmerMx}}. @.$h\"/pause 500/move farmer 0 -1 1/faceDirection farmer 1/pause 500/playSound woodyStep/addObject 14 17 78/showFrame 35/pause 500/showFrame 6/pause 400/faceDirection farmer 1/move Marnie 1 0 2/emote Marnie 32/speak Marnie \"This looks great... I almost want to eat it myself!$h#$b#...almost.\"/faceDirection farmer 1/pause 600/speak Marnie \"I hope it wasn't too much trouble... I really do appreciate it.\"/pause 300/removeObject 14 17/pause 400/end dialogue Marnie \"Thanks again for helping me out.$h#$e#...and my goats say 'thanks' too.\"",
+    },"When":{"ChangeFarmerGender": "true" }
+},
+{"Action": "EditData",
+    "Target": "Data/Beach",
+    "Entries":{
+        "3131209/n willyBugWadCutscene": "ocean/-2000 -2000/farmer 49 22 2/addTemporaryActor Willy 16 64 52 26 2/addCraftingRecipe Quality Bobber/skippable/specificTemporarySprite WillyWad/animate Willy false true 500 8 9 10 11/pause 1000/speak Willy \"Hehe... they love it... Look at 'em go!$h\"/pause 1000/playSound slosh/pause 500/playSound slosh/pause 500/playSound slosh/pause 500/viewport 52 24 true/pause 1000/move farmer 0 2 2/textAboveHead Willy \"Ahoy!\"/pause 2000/speak Willy \"I was just thinkin' of you!#$b#This bug meat you found is perfect!#$b#Hehe... When I said 'fresh', I didn't expect it to still be wrigglin'!#$b#But I'm not complaining! The fish love it...  Hehehe...$h\"/emote farmer 28 true/pause 300/playSound slimeHit/pause 500/playSound slimeHit/pause 500/playSound slimeHit/pause 1000/speak Willy \"As a way of saying 'thanks', I wanted to teach you an old fisherman's secret... My ol' Pappy taught me this on a fishing trip many years ago.\"/pause 500/playSound reward/message \"Learned how to craft 'Quality Bobber'\"/pause 500/speak Willy \"Using that bobber will attract higher quality fish.#$b#That means more money in yer pocket, hehe...$h\"/pause 1500/pause 300/playSound fishBite/pause 500/pause 400/playSound FishHit/animate Willy false true 100 17 18/textAboveHead Willy \"Got one!\"/shake Willy 5000/pause 200/playSound slosh/pause 200/playSound slosh/pause 220/playSound slosh/pause 160/playSound slosh/pause 200/playSound slosh/pause 220/playSound slosh/pause 160/playSound slosh/pause 200/playSound slosh/pause 220/playSound slosh/pause 160/playSound slosh/pause 200/fade/viewport -1000 -1000/end"
+    },"When":{"ChangeFarmerGender": "true" }
+},
+{"Action": "EditData",
+    "Target": "Data/Beach",
+    "Entries":{
+            "16253595/j 29/X": "distantBanjo/6 6/farmer 5 9 0 Willy -100 -100 2/skippable/move farmer 0 -1 0/pause 1000/warp Willy 4 4/playsound doorClose/pause 100/textAboveHead Willy \"Ahoy!\"/pause 500/move Willy 1 0 2/speak Willy \"Come in... make yourself at home...\"/move farmer 0 -1 0/move farmer -1 0 3/pause 1000/animate farmer true true 9999 35/playSound quickSlosh/pause 800/playSound quickSlosh/pause 800/speak Willy \"Aye... that's good stuff, there. The fish go crazy for it.#$b#Just... eh... make sure to wash yer hands good after dipping them in those juices...$s\"/speak Willy \"The aroma has been known to linger for up to seven weeks...\"/stopAnimation farmer/startJittering/jump farmer/positionOffset farmer 4 0/pause 50/positionOffset farmer 4 0/pause 50/positionOffset farmer 4 0/pause 50/positionOffset farmer 4 0/pause 50/positionOffset farmer 4 0/pause 50/positionOffset farmer 4 0/pause 50/positionOffset farmer 4 0/pause 50/positionOffset farmer 4 0/pause 50/stopJittering/pause 1000/speak Willy \"So... you been catching a lot o' fish?\"/pause 300/stopAnimation farmer/faceDirection farmer 0/pause 500/quickQuestion #Yes#No#It's too difficult...(break)emote Willy 20\\speak Willy \"Aha! An angler after me own heart...$h\"\\pause 500\\speak Willy \"You can always trust people who fish...\"\\speak Willy \"That's what me ol' Pappy used to say, at least. haha!$h#$b#Well, keep it goin'... if you can catch every fish in these waters, I've got a special prize waitin' for ye...\"(break)emote Willy 28\\speak Willy \"Not the fishin' type, eh? That's too bad...$s\"(break)emote Willy 16\\speak Willy \"Yes, it's a difficult sport... especially for a beginner.#$b#Have you tried the 'Training Rod'? I sell them right here, at a very low price.#$b#You should try using a 'Training Rod' until you get a little more experienced.\"/pause 1500/faceDirection Willy 3/emote Willy 28/quickQuestion #What's wrong?#Everything okay?(break)pause 100(break)pause 100/pause 400/speak Willy \"Aye... well, business has been tough, lately.$s#$b#It all started about the same time that old community center fell to ruin... me fish just don't sell like they used to...#$b#I've been working double-time just to make ends meet!\"/faceDirection Willy 2/pause 300/speak Willy \"No time for me own projects...$s#$b#But, if things picked back up around here, I might have the time to show ya somethin'...\"/move Willy -1 0 0/playMusic none/speak Willy \"Heh heh... yep. She's back there... an 'old friend' that's seen better days...$h\"/pause 500/emote farmer 8/pause 1000/playMusic ocean/playSound shwip/faceDirection Willy 1 true/pause 40/faceDirection Willy 2/speak Willy \"Some day... you'll see what I mean.\"/pause 2000/end"
+          },"When":{"ChangeFarmerGender": "true" }
+},
+{"Action": "EditData",
+    "Target": "Data/Beach",
+    "Entries":{
+            "Island_willy_rescue": "Are you okay? I found you washed up on the shore.$s#$b#You really had me worried... I thought you were a goner! Be a little more careful out there...$s#$b#The island can be a dangerous place.",
+          },"When":{"ChangeFarmerGender": "true" }
+},
+{"Action": "EditData",
+    "Target": "Data/mail",
+    "Entries":{
+            "passedOut1_Billed_Male": "Dear {{FarmerMx}} @,^Last night, a Joja team member found you incapacitated. A medical team was dispatched to bring you home safely.^We're glad you're okay!^^(You've been billed {0}g for this service)^^-{{MorrisName}}^Joja Customer Satisfaction Representative[#]Joja Invoice",
+            "passedOut1_Billed_Female": "Dear {{FarmerMx}} @,^Last night, a Joja team member found you incapacitated. A medical team was dispatched to bring you home safely.^We're glad you're okay!^^(You've been billed {0}g for this service)^^-{{MorrisName}}^Joja Customer Satisfaction Representative[#]Joja Invoice",
+            "passedOut1_NotBilled_Male": "Dear {{FarmerMx}} @,^Last night, a Joja team member found you incapacitated. A medical team was dispatched to bring you home safely.^We're glad you're okay!^^Since you have no money, we were obligated by law to provide this service free of charge.^^-{{MorrisName}}^Joja Customer Satisfaction Representative[#]Legally Required Notice",
+            "passedOut1_NotBilled_Female": "Dear {{FarmerMx}} @,^Last night, a Joja team member found you incapacitated. A medical team was dispatched to bring you home safely.^We're glad you're okay!^^Since you have no money, we were obligated by law to provide this service free of charge.^^-{{MorrisName}}^Joja Customer Satisfaction Representative[#]Legally Required Notice",
+
+          },"When":{"ChangeFarmerGender": "true" }
+},
+{"Action": "EditData",
+    "Target": "Strings/Characters",
+    "Entries":{
+            "Phone_Clint_Open_Rare": "Hello? Yes, yes, I'm open until 4pm. Gotta go. *click*",
+          },"When":{"ChangeFarmerGender": "true" }
+},
+{"Action": "EditData",
+    "Target": "Strings/Locations",
+    "Entries":{
+            "Beach_Mariner_Player_Male": "little minnow",
+            "Beach_Mariner_Player_Female": "little minnow",
+          },"When":{"ChangeFarmerGender": "true" }
+},
+{"Action": "EditData",
+    "Target": "Strings/Locations",
+    "Entries":{
+            "AdventureGuild_Marlon_Greeting_Male": "{{FarmerTheyU}}{{FarmerRe}} back!",
+            "AdventureGuild_Marlon_Greeting_Female": "{{FarmerTheyU}}{{FarmerRe}} back!",
+            "MensLocker_WrongGender": "That way is blocked.",
+            "WomensLocker_WrongGender": "That way is blocked.",
+          },"When":{"ChangeFarmerGender": "true" }
+},
+{"Action": "EditData",
+    "Target": "Strings/StringsFromCSFiles",
+    "Entries":{
+            "Event.cs.1014": "Hey, sorry you had to get caught up in our awkward family stuff.",
+            "Event.cs.1309": "I'm so proud of you, my dear!#$b#You've really turned the place around since we last spoke!#$b#You're a better farmer than I ever was, and you've brought great honor to the family name.#$b#I can feel it now... My spirit is finally put to rest. Bless you.",
+            "Event.cs.1318": "I'm so proud of you, my dear!#$b#You're a better farmer than I ever was, and you've brought great honor to the family name.#$b#I can feel it now... My spirit is finally put to rest. Bless you.",
+            "GrandpaStory.cs.12026": "...and for my very special grand{{FarmerChild}}:",
+            "GrandpaStory.cs.12028": "...and for my very special grand{{FarmerChild}}:",
+            "GrandpaStory.cs.12036": "When that happens, my dear, you'll be ready for this gift.",
+            "GrandpaStory.cs.12038": "When that happens, my dear, you'll be ready for this gift.",
+            "TV.cs.13128": "Ah... I sense that a new viewer has joined us. A young {{FarmerAdult}} from... Stardew Valley? Welcome, welcome!",
+            "TV.cs.13130": "Ah... I sense that a new viewer has joined us. A young {{FarmerAdult}} from... Stardew Valley? Welcome, welcome!",
+            "Utility.cs.5229": " {{FarmerThey}}{{FarmerVe}} worked hard on {{FarmerTheir}} farm, ",
+            "Utility.cs.5230": " {{FarmerThey}}{{FarmerVe}} worked hard on {{FarmerTheir}} farm, ",
+            "MultiplayerUtility.cs.12478": "{0} changed {{FarmerTheir}} name to '{1}'",
+            "MultiplayerUtility.cs.12479": "{0} changed {{FarmerTheir}} name to '{1}'",
+            "DesertTrader4_male": "The camel seems to like you. That is indeed a very good sign.",
+            "DesertTrader4_female": "The camel seems to like you. That is indeed a very good sign.",
+            "Farmer.cs.2023": "Farmer",
+            "Farmer.cs.2024": "Farmer",
+            "NPC.cs.4448": "{0}, we're going to have a baby soon.$l",
+          },"When":{"ChangeFarmerGender": "true" }
+},
+{"Action": "EditData",
+    "Target": "Strings/UI",
+    "Entries":{
+            "AskedToDance_Male": "{0} has asked you to dance with {{FarmerThem}}. Will you dance with {0}?",
+            "AskedToDance_Female": "{0} has asked you to dance with {{FarmerThem}}. Will you dance with {0}?",
+            "AskedToMarry_Male": "{0} has asked you to marry {{FarmerThem}}! Will you accept {{FarmerTheir}} offer of marriage?",
+            "AskedToMarry_Female": "{0} has asked you to marry {{FarmerThem}}! Will you accept {{FarmerTheir}} offer of marriage?",
+            "AskedToHaveBaby_Male": "{0} has asked you to have a baby with {{FarmerThem}}! Do you want to have a baby?",
+            "AskedToHaveBaby_Female": "{0} has asked you to have a baby with {{FarmerThem}}! Do you want to have a baby?",
+            "AskedToAdoptBaby_Male": "{0} has asked you to adopt a baby with {{FarmerThem}}! Do you want to have a baby?",
+            "AskedToAdoptBaby_Female": "{0} has asked you to adopt a baby with {{FarmerThem}}! Do you want to have a baby?",
+            "AskedToHaveBaby_Rejected_Male": "{0} has decided {{FarmerThey}}'d rather not have a baby at this point.",
+            "AskedToHaveBaby_Rejected_Female": "{0} has decided {{FarmerThey}}'d rather not have a baby at this point.",
+            "AskedToAdoptBaby_Rejected_Male": "{0} has decided {{FarmerThey}}'d rather not adopt a baby at the moment.",
+            "AskedToAdoptBaby_Rejected_Female": "{0} has decided {{FarmerThey}}'d rather not adopt a baby at the moment.",
+            "GivenGift_Male": "{0} is offering you {{FarmerTheir}} {1}. Will you accept it?",
+            "GivenGift_Female": "{0} is offering you {{FarmerTheir}} {1}. Will you accept it?",
+            "Chat_SoloEarned1mil_Male": "{0} has earned 1,000,000g on {{FarmerTheir}} own.",
+            "Chat_SoloEarned100k_Male": "{0} has earned 100,000g on {{FarmerTheir}} own.",
+            "Chat_SoloEarned10k_Male": "{0} has earned 10,000g on {{FarmerTheir}} own.",
+            "Chat_SoloEarned1k_Male": "{0} has earned 1,000g on {{FarmerTheir}} own.",
+            "Chat_SoloEarned1mil_Female": "{0} has earned 1,000,000g on {{FarmerTheir}} own.",
+            "Chat_SoloEarned100k_Female": "{0} has earned 100,000g on {{FarmerTheir}} own.",
+            "Chat_SoloEarned10k_Female": "{0} has earned 10,000g on {{FarmerTheir}} own.",
+            "Chat_SoloEarned1k_Female": "{0} has earned 1,000g on {{FarmerTheir}} own.",
+            "PondQuery_StatusRequestPending_Rude1_Male": "\"Oi... you with the legs! How about bringing us {1} {0}, huh?\"",
+            "PondQuery_StatusRequestPending_Rude1_Female": "\"Hey, buddy... You got {1} {0} you can send our way?\"",
+            "Chat_HouseUpgrade": "{0} has requested construction on {{FarmerTheir}} home!",
+
+ 
+          },"When":{"ChangeFarmerGender": "true" }
+},
+

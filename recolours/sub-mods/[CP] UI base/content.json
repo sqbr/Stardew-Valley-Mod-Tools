@@ -1,0 +1,152 @@
+{
+   "Format": "1.27.0",
+   "Changes": [
+      {
+         "Action": "EditImage",
+         "Target": "Maps/MenuTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/MenuTilesUncolored",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/chatBox",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/textBox",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Cursors",
+         "FromFile": "assets/{{Target}}_{{language}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/DialogBoxGreen",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/ControllerMaps",
+         "FromFile": "assets/{{Target}}_{{language}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/yellowLettersLogo",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/letterBG",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/tailoring",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/boardGameBorder",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/font_bold",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/logo",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/JunimoNote",
+         "FromFile": "assets/{{Target}}_{{language}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/LanguageButtons",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Cursors2",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Billboard",
+         "FromFile": "assets/{{Target}}_{{language}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/daybg",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/nightbg",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/SpecialOrdersBoard",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Minigames/TitleButtons",
+         "FromFile": "assets/{{Target}}_{{language}}.png",
+         "PatchMode": "Overlay"
+      },
+
+   ]
+}

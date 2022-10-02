@@ -1,0 +1,36 @@
+	//Custom sprites by talkohlooey
+	
+	{
+		"Action": "EditImage",
+		"Target": "Characters/Linus",
+		"FromFile": "assets/Characters/Variants/Linus Coat Sprites/Linus.png",
+		"When": {
+			"LinusImages": "Male Coat"
+		}
+	},
+	{
+		"Action": "EditImage",
+        "Target": "LooseSprites/BundleSprites",
+        "FromFile": "assets/Characters/Variants/Linus Coat Sprites/BundleSprites.png",
+        "ToArea": { "X": 160, "Y": 0, "Width": 32, "Height": 32 },
+		"When": {
+			"LinusImages": "Male Coat"
+		}
+    },
+    {
+        "Action": "EditImage",
+        "Target": "LooseSprites/Cursors2",
+        "FromFile": "assets/Characters/Variants/Linus Coat Sprites/Cursors2.png",
+        "ToArea": { "X": 129, "Y": 241, "Width": 14, "Height": 15 },
+		"When": {
+			"LinusImages": "Male Coat"
+		}
+    },
+	{
+		"Action": "EditImage",
+		"Target": "Characters/Pam, Characters/Pam_Beach",
+		"FromFile": "assets/Characters/Variants/Pam Young Sprites/{{TargetWithoutPath}}.png",
+		"When": {
+			"PamImages": "Female Young"
+		},
+	},

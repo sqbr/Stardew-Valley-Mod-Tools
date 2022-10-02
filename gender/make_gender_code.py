@@ -1,12 +1,33 @@
 from __future__ import print_function
 import math
 import glob
+import random
 from re import S
 from xml.etree.ElementTree import TreeBuilder
 
 ### A script to generate a mod from unpacked content
 ### To run, open a terminal/command line from within this folder and type "python make_gender_code.py"
 ###############
+
+#end_path = "../../Gender Setter/[CP] Gender Setter/"
+#end_path_images = "../../[CP] Androgynous Villagers/"
+#end_path_HD = "../../[CP] Configurable HD Portraits/"
+
+end_path = {}
+
+mode = "HD" # GS, LowRes
+
+end_path[mode] = "../../[CP] Configurable HD Portraits/"
+
+mode = "GS"
+
+end_path[mode] = "../../Gender Setter/[CP] Gender Setter/"
+
+mode = "LowRes"
+end_path[mode] = "../../[CP] Androgynous Villagers/"
+
+
+
   
 ## general data functions  
 def list_directory(directory,pattern):
@@ -43,17 +64,14 @@ def in_dictionary(dictionary, folder, name):
 def make_p_dict(pronoun, dict1,dict2):
     for k in dict2.keys():
         dict1[k] = dict2[k]
-    dict1["_they"] = pronoun.lower()    
-    for w in ["_they","_them","_their"]:    
+    dict1["They"] = pronoun.lower()    
+    for w in ["They","Them","Their"]:    
         dict1[w+"U"] = dict1[w].capitalize()
     return dict1    
 
     
 ## General data       
    
-end_path = "../../Genderiser/"
-end_path_images = "../../Androgynous Villagers/"
-
 ## Original data
 
 name_list1= ["Abigail","Alex","Birdie","Bouncer","Caroline","Charlie","Clint","Demetrius","Dwarf","Elliott","Emily","Evelyn","George","Gil","Governor","Grandpa","Gunther","Gus","Haley","Harvey","Henchman","Jas","Jodi","Kent","Krobus","Leah","Leo","Lewis","Linus","Marcello","Marlon","Marnie","Maru","MisterQi","Morris","OldMariner","Pam","Penny","Pierre",]
@@ -91,7 +109,7 @@ birthday_dict = {"Abigail": "fall 13",
   "Leo": "summer 26",
   "Lewis": "spring 7",
   "Linus": "winter 3",
-  "Marlon": "winter 19",
+  #"Marlon": "winter 19",
   "Marnie": "fall 18",
   "Maru": "summer 10",
   "Pam": "spring 18",
@@ -106,87 +124,91 @@ birthday_dict = {"Abigail": "fall 13",
   "Willy": "summer 24",
   "Wizard": "winter 17"}
 
-variables_dict = {"Child2": "_godchild", "Child3": "nibling", 
-    "GenderUC":"_They","GenderLC":"_they","PronounUC1":"_Them","PronounLC1":"_them","PronounUC2":"_Their","PronounLC2":"_their","PronounLC3":"_theirs",
-    "GenderLC2":"_adult","GenderLC3":"_guy","GenderLC4":"_kid","Child":"_child","Sibling":"_sibling","Relation":"_Auncle","ParentUC":"_Parent","ParentLC":"_parent","MarriedUC":"_Spouse","MarriedLC":"_spouse","Marital":"_Mx","Elder":"_Grandparent",}
+variables_dict = {"Child2": "Godchild", "Child3": "nibling", 
+    "GenderUC":"They","GenderLC":"They","PronounUC1":"_Them","PronounLC1":"Them","PronounUC2":"_Their","PronounLC2":"Their","PronounLC3":"Theirs",
+    "GenderLC2":"Adult","GenderLC3":"Guy","GenderLC4":"Kid","Child":"Child","Sibling":"Sibling","Relation":"_Auncle","ParentUC":"Parent","ParentLC":"Parent","MarriedUC":"Spouse","MarriedLC":"Spouse","Marital":"Mx","Elder":"_Grandparent",}
 
-nb_names_dict = {"Abigail":"Ashley","Alex":"Alex2","Birdie":"Birdie2","Bouncer":"Bouncer2","Caroline":"Cary","Charlie":"Charley","Clint":"Coby","Demetrius":"Dubaku","Dwarf":"Smoluanu","Elliott":"Eden","Emily":"Elery","Evelyn":"Evelyn2","George":"Georgie","Gil":"Gili","Governor":"Governor2","Grandpa":"Grandie","Gunther":"Greer","Gus":"Gabi","Haley":"Hadyn","Harvey":"Harper","Henchman":"Guard","Jas":"Jay","Jodi":"Joey","Kent":"Kim","Krobus":"Krobus2","Leah":"Leigh","Leo":"Lee","Lewis":"Lou","Linus":"Lucky","Marcello":"Modeste","Marlon":"Merlyn","Marnie":"Martie","Maru":"Maru2","MisterQi":"Qi","Morris":"Moran","OldMariner":"Old Mariner2","Pam":"Pat","Penny":"Pip","Pierre":"Paget","ProfessorSnail":"Professor Snail2","Robin":"Robin2","Sam":"Sam2","Sandy":"Sandy2","Sebastian":"September","Shane":"Shae","Vincent":"Vinnie","Willy":"Willie","Wizard":"Ma'akhah",}
+nb_names_dict = {"Abigail":"Ashley","Alex":"Alex","Birdie":"Birdie","Bouncer":"Bouncer","Caroline":"Cary","Charlie":"Charley","Clint":"Coby","Demetrius":"Dubaku","Dwarf":"Smoluanu","Elliott":"Eden","Emily":"Elery","Evelyn":"Evelyn","George":"Georgie","Gil":"Gili","Governor":"Governor","Grandpa":"Grandie","Gunther":"Greer","Gus":"Gabi","Haley":"Hadyn","Harvey":"Harper","Henchman":"Guard","Jas":"Jay","Jodi":"Joey","Kent":"Kim","Krobus":"Krobus","Leah":"Leigh","Leo":"Lee","Lewis":"Lou","Linus":"Lucky","Marcello":"Modeste","Marlon":"Merlyn","Marnie":"Martie","Maru":"Maru","MisterQi":"Qi","Morris":"Moran","OldMariner":"Old Mariner","Pam":"Pat","Penny":"Pip","Pierre":"Paget","ProfessorSnail":"Professor Snail","Robin":"Robin","Sam":"Sam","Sandy":"Sandy","Sebastian":"September","Shane":"Shae","Vincent":"Vinnie","Willy":"Willie","Wizard":"Morgan",}
 
 birthday_code = True
-nb_config = True
 custom_possession = False
-edit_text = True
 
 ## New data
 genders = ["Male","Female","Neutral"]
 pronouns = ["He","She","They","They (singular)","It","Xe","Fae","E"]
 singular_words = { 
-    "_are":"is",
-    "_were":"was",
-    "_have":"has",
-    "_'re":"'s",
-    "_'ve":"'s",
-    "_s":"s",
-    "_es":"es"}
+    "Are":"is",
+    "Were":"was",
+    "Have":"has",
+    "Re":"'s",
+    "Ve":"'s",
+    "S":"s",
+    "Es":"es"}
 plural_words = {
-    "_are":"are",
-    "_were":"were",
-    "_have":"have",
-    "_'re":"'re",
-    "_'ve":"'ve",
-    "_s":"",
-    "_es":""}
+    "Are":"are",
+    "Were":"were",
+    "Have":"have",
+    "Re":"'re",
+    "Ve":"'ve",
+    "S":"",
+    "Es":""}
 pronoun_words = {
-    "She": make_p_dict("She",{"_them":"her","_their":"her","_theirs":"hers","_themself":"herself"} ,singular_words),
-    "He": make_p_dict("He", {"_them":"him","_their":"his","_theirs":"his","_themself":"himself"}, singular_words),
-    "They": make_p_dict("They", {"_them":"them", "_their":"their","_theirs":"theirs","_themself":"themself"}, plural_words),
-    "They (singular)": make_p_dict("They", {"_them":"them", "_their":"their","_theirs":"theirs","_themself":"themself"},  singular_words),
-    "It": make_p_dict("It", {"_them":"it","_their":"its","_theirs":"its","_themself":"itself"}, singular_words),
-    "Xe": make_p_dict("Xe", {"_them":"xem","_their":"xyr","_theirs":"xyrs","_themself":"xemself"}, singular_words),
-    "Fae": make_p_dict("Fae", {"_them":"faer","_their":"faer","_theirs":"faers","_themself":"faerself"}, singular_words),
-    "E": make_p_dict("E", {"_them":"em","_their":"eir","_theirs":"eirs","_themself":"emself"}, singular_words),
-    "Ze": make_p_dict("Ze", {"_them":"hir","_their":"hir","_theirs":"hirs","_themself":"hirself"}, singular_words),
+    "She": make_p_dict("She",{"Them":"her","Their":"her","Theirs":"hers","Themself":"herself"} ,singular_words),
+    "He": make_p_dict("He", {"Them":"him","Their":"his","Theirs":"his","Themself":"himself"}, singular_words),
+    "They": make_p_dict("They", {"Them":"them", "Their":"their","Theirs":"theirs","Themself":"themself"}, plural_words),
+    "They (singular)": make_p_dict("They", {"Them":"them", "Their":"their","Theirs":"theirs","Themself":"themself"},  singular_words),
+    "It": make_p_dict("It", {"Them":"it","Their":"its","Theirs":"its","Themself":"itself"}, singular_words),
+    "Xe": make_p_dict("Xe", {"Them":"xem","Their":"xyr","Theirs":"xyrs","Themself":"xemself"}, singular_words),
+    "Fae": make_p_dict("Fae", {"Them":"faer","Their":"faer","Theirs":"faers","Themself":"faerself"}, singular_words),
+    "E": make_p_dict("E", {"Them":"em","Their":"eir","Theirs":"eirs","Themself":"emself"}, singular_words),
+    "Ze": make_p_dict("Ze", {"Them":"hir","Their":"hir","Theirs":"hirs","Themself":"hirself"}, singular_words),
 }
 
 gender_words = {
-    "Female": {"_adult":"woman","_guy":"girl","_kid":"girl","_child":"daughter","_sibling":"sister","_Auncle":"Aunt","_parent":"mother","_parentU":"Mom","_spouse":"wife","_spouseU":"Wife","_Mx":"Mrs.","_Grandparent":"Granny"},
-    "Male": {"_adult":"man","_guy":"guy","_kid":"boy","_child":"son","_sibling":"brother","_Auncle":"Uncle","_parent":"father","_parentU":"Dad","_spouse":"husband","_spouseU":"Husband","_Mx":"Mr.","_Grandparent":"Grandpa"},
-    "Neutral": {"_adult":"person","_guy":"person","_kid":"kid","_child":"child","_sibling":"sibling","_Auncle":"Auncle","_parent":"parent","_parentU":"Parent","_spouse":"spouse","_spouseU":"Spouse","_Mx":"Mx.","_Grandparent":"Grandie"},
+    "Female": {"Adult":"woman","Guy":"girl","Kid":"girl","Child":"daughter","Sibling":"sister","Nibling":"niece","Auncle":"aunt","AuncleU":"Aunt","Parent":"mother","ParentName":"mom","ParentU":"Mom","Spouse":"wife","SpouseU":"Wife","Mx":"Mrs.","Grandparent":"Granny"},
+    "Male": {"Adult":"man","Guy":"guy","Kid":"boy","Child":"son","Sibling":"brother","Nibling":"nephew","Auncle":"uncle","AuncleU":"Uncle","Parent":"father","ParentName":"dad","ParentU":"Dad","Spouse":"husband","SpouseU":"Husband","Mx":"Mr.","Grandparent":"Grandpa"},
+    "Neutral": {"Adult":"person","Guy":"person","Kid":"kid","Child":"child","Sibling":"sibling","Nibling":"nibling","Auncle":"auncle","AuncleU":"Auncle","Parent":"parent","ParentU":"Parent","ParentName":"parent","Spouse":"spouse","SpouseU":"Spouse","Mx":"Mx.","Grandparent":"Grandie"},
 
 }
 
-neutralparent_dict = {"Vincent_guy":"kid","Evelyn_Grandparent": "Grandie {{EvelynName}}", "George_Grandparent": "Grandie {{GeorgeName}}"}
+neutralexceptions_dict = {"VincentGuy":"kid","EvelynGrandparent": "Grandie {{EvelynName}}", "GeorgeGrandparent": "Grandie {{GeorgeName}}"}
 for name in ["Pierre", "Caroline", "Kent","Jodi","Robin","Demetrius","Evelyn",]:
-    neutralparent_dict[name+"_parent"] = "parent "+"{{"+name+"Name}}"
-    neutralparent_dict[name+"_parentU"] = "Parent "+"{{"+name+"Name}}"
+    neutralexceptions_dict[name+"ParentName"] = "parent "+"{{"+name+"Name}}"
 
 gender_exceptions = { 
-    "Female": {"Lewis_Mx": "Ms.", "Morris_Mx": "Ms.","Penny_Mx": "Miss","Birdie_guy": "lady","Governor_adult": "girl"},
-    "Male": {"Penny_Mx": "Mister", "Birdie_guy": "man", "Governor_adult": "guy"},
-    "Neutral": neutralparent_dict,
+    "Female": {"LewisMx": "Ms.", "MorrisMx": "Ms.","PennyMx": "Miss","BirdieGuy": "lady","GovernorAdult": "girl"},
+    "Male": {"PennyMx": "Mister", "BirdieGuy": "man", "GovernorAdult": "guy"},
+    "Neutral": neutralexceptions_dict
     }
 
-darker_chars = ["Marnie","Jas","Elliott","Grandpa"]
+darker_chars = ["Marnie","Jas","Elliott","Grandpa","Sandy"]
 wheelchair_chars = ["Leah"]
+islander_chars = ["Birdie","ProfessorSnail"]
+islanderchild_chars = ["Leo"]
 
+all_variants = darker_chars + wheelchair_chars + islander_chars + islanderchild_chars
 ## Data processing   
 
 def realname(name):
     #real name original of character, removes spaces and aliases
-    if nb_config:
-        return nb_names_dict[name]
-    else:    
-        if name =="MisterQi":
-            return "Mister Qi"
-        elif name =="OldMariner": 
-                return "Old Mariner"   
-        elif name =="Wizard":
-            return "Magnus"
-        else:
-            return name   
+    if name =="MisterQi":
+        return "Mister Qi"
+    elif name =="OldMariner": 
+            return "Old Mariner"   
+    elif name =="Wizard":
+        return "Magnus"
+    else:
+        return name   
 
-def artname(name):
-    #name of art file for character
+def possession(name):
+    #whetehr to use name's or name'
+    if name[len(name)-1] =='s':
+        return "'"
+    else:
+        return "'s"            
+
+def spritename(name):
+    #name of sprite art file for character
     if name =="MisterQi":
         return "MrQi"
     elif name =="OldMariner": 
@@ -198,7 +220,14 @@ def artname(name):
     elif name in ["Charlie","Gil"]:
         return "None"
     else:
-        return name    
+        return name  
+
+def portraitname(name):
+    #name of portrait art file for character
+    if name == "Gil":
+        return name
+    else:
+        return spritename(name)              
 
 def genderswap(gender):
     if gender =="Male":
@@ -208,57 +237,97 @@ def genderswap(gender):
     else:
         return gender                        
 
-def create_config():
-    #create config file
-    if edit_text:
-        path = end_path+"config.json"
-    else:
-        path = end_path_images+"config.json"    
+def create_config(current_gender,write_variant):
+    #create config file. Current_gender is what gender to write the characters as, write_variant is a boolean saying whether to write to one of the variant configs
+    path = end_path[mode]+"config.json"
+    if mode == "GS":
+        if write_variant:
+            if current_gender == "Neutral":
+                path = end_path[mode]+"/Variants/config all non-binary.json"
+            elif current_gender == "Male":
+                path = end_path[mode]+"/Variants/config all male.json"  
+            elif current_gender == "Neutral":
+                path = end_path[mode]+"/Variants/config all female.json"           
     content = open(path,"w")
     content.write("{\n")
-    if edit_text:
-        content.write("  \"EditIslandCharacters\": \"Full\",\n")
-        content.write("  \"MiscTextEdits\": \"true\",\n")
-    content.write("  \"MiscImageEdits\": \"true\",\n")
+    if current_gender == "false":
+        edit_bool = "false"
+    else:
+        edit_bool = "true"   
+    if mode == "GS":
+        content.write("  \"MiscTextEdits\": \""+edit_bool+"\",\n")  
+    content.write("  \"MiscImageEdits\": \""+edit_bool+"\",\n")
     content.write("\n")
+    if mode == "GS":
+        if current_gender in ["Neutral","Test"] :
+            content.write("  \"FarmerGender\": \"Neutral\",\n")    
+            content.write("  \"FarmerPronoun\": \"They\",\n")  
+        else:
+            content.write("  \"FarmerGender\": \"false\",\n")    
+            content.write("  \"FarmerPronoun\": \"They\",\n")   
+    content.write("\n")        
     for name in name_list:
         o_gender = orig_gender_dict[name]
-        if nb_config:
+        if current_gender =="Neutral":
+            changing_char = True 
             gender = "Neutral"
-            g_gender =o_gender
-            pronoun = "They"
-            if name in darker_chars:
-                changesprite = "Darker"
-            elif name in wheelchair_chars:
-                changesprite = "Wheelchair"  
+            pronoun = "They" 
+        elif current_gender =="Test":
+            changing_char = True 
+            gender = "Neutral"
+            pronoun = random.choice(pronouns)  
+        elif current_gender in ["Male","Female"]: 
+            gender = current_gender
+            pronoun = orig_pronoun_dict[current_gender]
+            changing_char = (current_gender !=  o_gender)  
+        else:
+            changing_char = False 
+            gender = o_gender   
+            pronoun = orig_pronoun_dict[o_gender] 
+        if changing_char:
+            if name in all_variants:
+                changesprite = "Vanilla"
+                if current_gender =="Test":
+                    if name in darker_chars:
+                        changesprite = "Darker"
+                    elif name in wheelchair_chars:
+                        if current_gender =="Test":
+                            changesprite = "Wheelchair"
+                    elif name in islanderchild_chars:
+                        changesprite = "IslanderChild"        
+                    elif name in islander_chars:
+                        changesprite = "Islander"
             else:
                 changesprite = "true"
-            new_name =  nb_names_dict[name]   
-        else:    
-            gender = o_gender
-            g_gender = o_gender
-            pronoun = orig_pronoun_dict[o_gender]
+            new_name =  nb_names_dict[name]  
+        else:   
             changesprite = "false"
             new_name = name
-        if edit_text:
+        if mode == "GS":
             content.write("  \""+name+"Name\": \""+new_name+"\",\n")    
             content.write("  \""+name+"Gender\": \""+gender+"\",\n")    
             content.write("  \""+name+"Pronoun\": \""+pronoun+"\",\n")    
-        content.write("  \""+name+"Images\":\" "+changesprite+"\",\n")             
+        content.write("  \""+name+"Images\": \""+changesprite+"\",\n")             
    
-    if edit_text:
+    if mode == "GS":
         with open("./advancedtitle_config.json","r") as f:
             data = f.readlines()
         for l in data:
             content.write(l)
-        content.write("  \"PatchOriginalWeddingArt\": \"false\",\n\n")     
+        content.write("  \"EditIslandCharacters\": \"Full\",\n")
+        content.write("  \"PatchOriginalWeddingArt\": \"false\",\n\n")   
+        if not custom_possession:  
+            content.write("  \"PossessiveS\": \"true\",\n\n")   
         for name in name_list:
             if name in birthday_dict.keys(): 
                 content.write("  \""+name+"Birthday"+"\": \""+birthday_dict[name]+"\",\n") 
             if custom_possession:
-                content.write("  \""+name+"Possession\": \""+possession_dict[name]+"\",\n")  
+                if name ==new_name:
+                    content.write("  \""+name+"Possession\": \""+possession_dict[name]+"\",\n")  
+                else:    
+                    content.write("  \""+name+"Possession\": \""+possession(new_name)+"\",\n") 
             if name in spouse_list:
-                content.write("  \""+name+"GameGender\": \""+ g_gender+"\",\n")       
+                content.write("  \""+name+"GameGender\": \""+ orig_gender_dict[name]+"\",\n")       
     content.write("\n}")            
     content.close()
 
@@ -284,31 +353,39 @@ def initialise_variables(name):
     #Lines to initialise variables for content
     o_gender = orig_gender_dict[name]
     s = ""
-    if edit_text:
+    if mode == "GS":
         s += "    \""+name+"Name\": {\"Default\": \""+realname(name)+"\"},\n"
         
         s+="    \""+name+"Gender\": {\"Default\": \""+o_gender+"\","+gender_string()+"},\n"
 
         s+="    \""+name+"Pronoun\": {\"Default\": \""+orig_pronoun_dict[o_gender]+"\","+pronoun_string()+"},\n"
-    if name in darker_chars:
-        s+="    \""+name+"Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \"Lighter,Darker,false\"},\n"
-    elif name in wheelchair_chars:    
-        s+="    \""+name+"Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \"Able-bodied, Wheelchair, false\"},\n"
+    s+="    \""+name+"Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \""
+    if name in all_variants:
+        s+="Vanilla"
+        if name in darker_chars:
+            s+=", Darker"
+        if name in wheelchair_chars:
+            s+=", Wheelchair"   
+        if name in islander_chars:
+            s+=", Islander"  
+        if name in islanderchild_chars:
+            s+=", IslanderChild,IslanderTeen"
     else:
-        s+="    \""+name+"Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \"true,false\"},\n"    
+        s+="true" 
+    s+= ", false\"},\n"                         
     s+="\n"
 
     return s
 
 def initialise_advanced(name): 
     s = ""  
-    if edit_text: 
+    if mode == "GS": 
         if name in birthday_dict.keys(): 
             s+="    \""+name+"Birthday"+"\": {\"Default\": \""+birthday_dict[name]+"\"},\n" 
         if custom_possession:
-            s+="    \""+name+"Possession\": \"'s\",\n"     
-    if name in spouse_list:
-        s+="    \""+name+"GameGender\": {\"Default\": \""+orig_gender_dict[name]+"\", \"AllowValues\": \"Male, Female\"},\n"       
+            s+="    \""+name+"Possession\":  {\"Default\": \""+possession_dict[name]+"\",\"AllowValues\": \"', 's\"},\n"     
+        if name in spouse_list:
+            s+="    \""+name+"GameGender\": {\"Default\": \""+orig_gender_dict[name]+"\", \"AllowValues\": \"Male, Female\"},\n"       
     if not s =="":
         s+="\n"
 
@@ -317,33 +394,14 @@ def initialise_advanced(name):
 def gender_variables(name):
     #Set pronoun and gender related words
     s = ""
-    for g in genders:
-        g_dict = gender_words[g]
-        for word in g_dict.keys():
-            s += "                {\"Name\": \""+name+word+"\","
-            if name+word in gender_exceptions[g].keys():
-                variable = gender_exceptions[g][name+word]
-            else:
-                variable = g_dict[word]    
-            s += "\"Value\": \""+variable+"\",\"When\": { \""+name+"Gender\": \""+g+"\" }},\n"
-        if name == "Elliott": 
-            s += "                {\"Name\": \"ElliottLetter\", \"Value\": \""+g_dict["_spouse"]+"\"," 
-            s += "\"When\": { \""+name+"Gender\": \""+g+"\" }},\n"     
-        elif name =="Shane":
-            s += "                {\"Name\": \"Shane_godchild\", \"Value\": \"god"+g_dict["_child"]+"\"," 
-            s += "\"When\": { \""+name+"Gender\": \""+g+"\" }},\n" 
-    s+="\n"
-    for p in pronouns:
-        g_dict = pronoun_words[p]
-        for word in g_dict.keys():
-            variable = g_dict[word]  
-            s += "                {\"Name\": \""+name+word+"\", \"Value\": \""+variable+"\", \"When\": { \""+name+"Pronoun\": \""+p+"\" }},\n"
-          
-    if name =="Shane":
-            s += "                {\"Name\": \"Shane_nibling\", \"Value\": \"niece\", \"When\": { \"ShaneGender\": \"Female\" }},\n"
-            s += "                {\"Name\": \"Shane_nibling\", \"Value\": \"nephew\", \"When\": { \"ShaneGender\": \"Male\" }},\n"     
-    if custom_possession!=True:
-        s+="                {\"Name\": \""+name+"Possession\", \"Value\":\"'s\"},\n"          
+    g_dict = gender_words["Neutral"]
+    for word in g_dict.keys():
+        s += "                {\"Name\": \""+name+word+"\", \"Value\": \"{{sqbr.getGS/"+name+word+"}}\"},\n"
+    g_dict = pronoun_words["They"]
+    for word in g_dict.keys():  
+        s += "                {\"Name\": \""+name+word+"\", \"Value\": \"{{sqbr.getGS/"+name+word+"}}\"},\n"               
+    if custom_possession!=True and name !="Farmer":
+        s += "                {\"Name\": \""+name+"Possession\", \"Value\": \"{{sqbr.getGS/"+name+"Possession}}\"},\n"  
     s+="\n"
     return s
 
@@ -398,10 +456,10 @@ def image_pair_pos(name, location1, location2, extra,x1, y1, x2,y2,w, h):
     s+=image_end(name,extra)
     return s    
 
-def image_line_spouse(name,extra):
+def image_lineSpouse(name,extra):
     #name of spouse, any extra properties like "Wheelchair"
     o_gender = orig_gender_dict[name]
-    art_name = artname(name)
+    art_name = spritename(name)
     location = "Characters/"+art_name
     if extra =="":
         e_string =""
@@ -425,30 +483,47 @@ def image_line_spouse(name,extra):
 def image_code(name):  
     #all image replacements for character called name
     s = ""
-    art_name = artname(name)
+    art_name = spritename(name)
     if art_name == "None":
         s+=""
     else:
         location = "Characters/"+art_name
-        if name in spouse_list:
+        if name in spouse_list and mode == "GS":
             #need gendered variants
-            s+= image_line_spouse(name,"")
+            s+= image_lineSpouse(name,"")
             if name in darker_chars:
-                s+=image_line_spouse(name,"Darker")
+                s+=image_lineSpouse(name,"Darker")
             elif name in wheelchair_chars:    
-                s+=image_line_spouse(name,"Wheelchair")
-        else:    
-            s+=image_line(name,location,"")
+                s+=image_lineSpouse(name,"Wheelchair")
+        else: 
+            if name =="Kent":
+                s+=image_line_pos(name,location,"", 0, 0, 64, 160) #for compatibility with Kent does the dishes  
+            else:       
+                s+=image_line(name,location,"")
             if name in darker_chars:
                 s+=image_line(name,location, "Darker")
+            if name in wheelchair_chars:    
+                s+=image_line(name,location,"Wheelchair")    
+            if name in islander_chars:    
+                s+=image_line(name,location,"Islander")  
+            if name in islanderchild_chars:    
+                s+=image_line(name,location,"IslanderChild") 
+                s+=image_line(name,location,"IslanderTeen")          
 
-        s+=image_line(name,"Portraits/"+art_name,"")   
+        if name not in ["Marcello","OldMariner"]:
+            s+=image_line(name,"Portraits/"+art_name,"")   
         if name in darker_chars:
-            s+=image_line(name,"Portraits/"+art_name,"Darker")   
+            s+=image_line(name,"Portraits/"+art_name,"Darker") 
+        if name in islanderchild_chars:    
+            s+=image_line(name,"Portraits/"+art_name,"IslanderChild") 
+            s+=image_line(name,"Portraits/"+art_name,"IslanderTeen")
+        elif name in islander_chars:    
+            s+=image_line(name,"Portraits/"+art_name,"Islander")       
 
         if name in beach_bodies:
             s+=image_line(name,"Characters/"+art_name+"_Beach","")
-            s+=image_line(name,"Portraits/"+art_name+"_Beach","")
+            if name not in ["Lewis","Demetrius"]:
+                s+=image_line(name,"Portraits/"+art_name+"_Beach","")
             if name in darker_chars:
                 s+=image_line(name,"Characters/"+art_name+"_Beach", "Darker")
                 s+=image_line(name,"Portraits/"+art_name+"_Beach", "Darker")
@@ -463,6 +538,8 @@ def image_code(name):
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 54, 117,54,117,9, 9)       
     elif name =="Elliott":
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","Darker", 99, 99,99,99,9, 9)  
+    elif name =="Emily":
+        s+=image_pair_pos(name, "LooseSprites/JunimoNote","Other/emojis","", 448, 212,96,0,32, 32)      
     elif name =="Gil":
         s+=image_line(name,"Portraits/Gil","")   
         s+=image_pair_pos(name, "Maps/townInterior", "Gil/townInterior","",176, 624,0,0, 32, 64) 
@@ -490,10 +567,11 @@ def image_code(name):
         s+=image_pair_pos(name, "Maps/MovieTheaterJoja_TileSheet", "Other/MovieTheater_TileSheet","",208,192,208,192, 16,32)  
         s+=image_pair_pos(name, "Maps/MovieTheaterJoja_TileSheet_international", "Other/MovieTheater_TileSheet","",208,192,208,192, 16,32)          
     elif name =="Gus":
-        s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 18, 117,18,117,9, 9)  
+        s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 18, 117,18,117,9, 9) 
+        s+=image_pair_pos(name, "LooseSprites/JunimoNote","Other/emojis","", 352, 212,0,0,32, 32)  
     elif name =="Haley":
         s+=image_pair(name, "LooseSprites/CowPhotos","Haley/CowPhotos","")
-        s+=image_pair(name, "LooseSprites/CowPhotosWinter","Haley/CowPhotoWinters","")
+        s+=image_pair(name, "LooseSprites/CowPhotosWinter","Haley/CowPhotoWinter","")
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 36, 99,36,99,9, 9)  
     elif name =="Harvey":
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 90, 99,90,99,9, 9)      
@@ -503,6 +581,9 @@ def image_code(name):
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","Darker", 108, 108,108,108,9, 9)
     elif name =="Jodi":
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 45, 108,45,108,9, 9)  
+    elif name =="Krobus":     
+        s+=image_line(name,"Portraits/Krobus_Trenchcoat","")   
+        s+=image_line_pos(name,"Characters/KrobusRaven","",0,0,160,32)      
     elif name =="Lewis":
         s+=image_line_pos(name,"Characters/ClothesTherapyCharacters","", 0, 32, 64, 32)  
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 54, 108,54,108,9, 9)  
@@ -513,8 +594,12 @@ def image_code(name):
         s+=image_pair_pos(name, "TileSheets/SecretNotesImages","MarnieJas/SecretNotesImages","Darker", 146, 89, 16,24,18, 28)   
         s+=image_pair_pos(name, "LooseSprites/Cursors","MarnieJas/Cursors_Marnie","", 557, 1424,0,0,62, 28)    
         s+=image_pair_pos(name, "LooseSprites/Cursors","MarnieJas/Cursors_Marnie","Darker", 557, 1424,0,0,62, 28) 
+        s+=image_pair_pos(name, "LooseSprites/Cursors","MarnieJas/Marnie_Paintings","", 0, 1925,0,0,50, 47)   
+        s+=image_pair_pos(name, "LooseSprites/Cursors","MarnieJas/Marnie_Paintings","Darker", 0, 1925,0,0,50, 47)   
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 0, 108,0,108,9, 9)  
-        s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","Darker", 0, 108,0,108,9, 9)           
+        s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","Darker", 0, 108,0,108,9, 9)    
+        s+=image_pair_pos(name, "LooseSprites/JunimoNote","Other/emojis","", 480, 212,128,0,32, 32) 
+        s+=image_pair_pos(name, "LooseSprites/JunimoNote","Other/emojis","Darker", 480, 212,128,0,32, 32)        
     elif name =="Maru":     
         s+=image_line(name,"Portraits/Maru_Hospital","") 
         s+=image_line(name,"Characters/Maru_Hospital","") 
@@ -538,30 +623,37 @@ def image_code(name):
     elif name =="Willy":
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 81, 108,81,108,9, 9)
     elif name =="Wizard":
-        s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 90, 108,90,108,9, 9)                   
-    return s
+        s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 90, 108,90,108,9, 9)  
+        s+=image_pair_pos(name, "LooseSprites/JunimoNote","Other/emojis","", 416, 212,64,0,32, 32)  
+        s+=image_line_pos(name,"Characters/KrobusRaven","",0,64,160,104)                    
+    return s    
 
 def image_code_background(): 
     s=image_pair_pos("other", "LooseSprites/Cursors2", "Other/Cursors2_fairy","",208, 256,0,0, 48, 64)  #fairy
     s+=image_pair_pos("other", "LooseSprites/Cursors", "Other/Cursors_witch","",276, 1885,0,0, 44, 61) #witch
     s+=image_pair_pos("other", "Minigames/jojacorps", "Other/jojacorps","",0, 420,0,420, 264, 179) #farmer face
     s+=image_pair_pos("other", "Minigames/jojacorps", "Other/jojacorps","",0, 600,0,600, 1200, 200) #computers
+    #s+=image_pair_pos("other", "Minigames/jojacorps", "Other/jojacorps","",642, 246,0,0, 61, 28) #paintings
+    #s+=image_pair_pos("other", "Minigames/jojacorps", "Other/jojacorps","",642, 7,0,0, 61, 28) #paintings
     s+=image_line("other","Characters/Toddler","")   #toddlers
     s+=image_line("other","Characters/Toddler_girl","")   
     s+=image_line("other","Characters/Toddler_dark","") 
     s+=image_line("other","Characters/Toddler_girl_dark","")   
+    s+=image_pair("other","Characters/LeahExFemale","Characters/LeahEx","")
+    s+=image_pair("other","Characters/LeahExMale","Characters/LeahEx","")
     return s
 
 
 def disposition(name,gender):
+    gender=gender.lower()
     if name =="Abigail":
-        return "teen/rude/outgoing/neutral/"+gender+"/datable/Sebastian/Town/{{AbigailBirthday}}/Caroline '{{Caroline_parent}}' Pierre '{{Pierre_parent}}'/SeedShop 1 9/{{AbigailName}}"
+        return "teen/rude/outgoing/neutral/"+gender+"/datable/Sebastian/Town/{{AbigailBirthday}}/Caroline '{{CarolineParent}}' Pierre '{{PierreParent}}'/SeedShop 1 9/{{AbigailName}}"
     elif name =="Elliott":
         return "adult/polite/neutral/neutral/"+gender+"/datable/Leah/Town/{{ElliottBirthday}}/Willy ''/ElliottHouse 1 5/{{ElliottName}}"
     elif name =="Emily":
-        return "adult/polite/outgoing/positive/"+gender+"/datable/null/Town/{{EmilyBirthday}}/Haley '{{Haley_sibling}}'/HaleyHouse 16 5/{{EmilyName}}"   
+        return "adult/polite/outgoing/positive/"+gender+"/datable/null/Town/{{EmilyBirthday}}/Haley '{{HaleySibling}}'/HaleyHouse 16 5/{{EmilyName}}"   
     elif name =="Haley":
-        return "adult/rude/outgoing/neutral/"+gender+"/datable/Alex/Town/{{HaleyBirthday}}/Emily '{{Emily_sibling}}'/HaleyHouse 8 7/{{HaleyName}}"
+        return "adult/rude/outgoing/neutral/"+gender+"/datable/Alex/Town/{{HaleyBirthday}}/Emily '{{EmilySibling}}'/HaleyHouse 8 7/{{HaleyName}}"
     elif name =="Harvey":
         return "adult/polite/shy/positive/"+gender+"/datable/Maru/Town/{{HarveyBirthday}}//HarveyRoom 13 4/{{HarveyName}}"      
     elif name =="Alex":
@@ -569,31 +661,72 @@ def disposition(name,gender):
     elif name =="Leah":
         return "adult/polite/neutral/positive/"+gender+"/datable/Elliott/Town/{{LeahBirthday}}//LeahHouse 3 7/{{LeahName}}"    
     elif name =="Maru":
-        return "teen/neutral/outgoing/positive/"+gender+"/datable/Harvey/Town/{{MaruBirthday}}/Robin '{{Robin_parent}}' Demetrius '{{Demetrius_parent}}' Sebastian 'half-{{Sebastian_sibling}}'/ScienceHouse 2 4/{{MaruName}}"
+        return "teen/neutral/outgoing/positive/"+gender+"/datable/Harvey/Town/{{MaruBirthday}}/Robin '{{RobinParent}}' Demetrius '{{DemetriusParent}}' Sebastian 'half-{{SebastianSibling}}'/ScienceHouse 2 4/{{MaruName}}"
     elif name =="Penny":
-        return "teen/polite/shy/positive/"+gender+"/datable/Sam/Town/{{PennyBirthday}}/Pam '{{Pam_parent}}'/Trailer 4 9/{{PennyName}}"      
+        return "teen/polite/shy/positive/"+gender+"/datable/Sam/Town/{{PennyBirthday}}/Pam '{{PamParent}}'/Trailer 4 9/{{PennyName}}"      
     elif name =="Sam":
-        return "teen/neutral/outgoing/positive/"+gender+"/datable/Penny/Town/{{SamBirthday}}/Vincent 'little {{Vincent_sibling}}' Jodi '{{Jodi_parent}}' Kent '{{Kent_parent}}' Sebastian ''/SamHouse 22 13/{{SamName}}"
+        return "teen/neutral/outgoing/positive/"+gender+"/datable/Penny/Town/{{SamBirthday}}/Vincent 'little {{VincentSibling}}' Jodi '{{JodiParent}}' Kent '{{KentParent}}' Sebastian ''/SamHouse 22 13/{{SamName}}"
     elif name =="Sebastian":
-        return "teen/rude/shy/negative/"+gender+"/datable/Abigail/Town/{{SebastianBirthday}}/Robin '{{Robin_parent}}' Maru 'half-{{Maru_sibling}}' Sam ''/SebastianRoom 10 9/{{SebastianName}}"    
+        return "teen/rude/shy/negative/"+gender+"/datable/Abigail/Town/{{SebastianBirthday}}/Robin '{{RobinParent}}' Maru 'half-{{MaruSibling}}' Sam ''/SebastianRoom 10 9/{{SebastianName}}"    
     elif name =="Shane":
-        return "adult/rude/shy/negative/"+gender+"/datable/null/Town/{{ShaneBirthday}}/Marnie '{{Marnie_Auncle}}'/AnimalShop 25 6/{{ShaneName}}"        
+        return "adult/rude/shy/negative/"+gender+"/datable/null/Town/{{ShaneBirthday}}/Marnie '{{MarnieAuncleU}}'/AnimalShop 25 6/{{ShaneName}}"        
     elif name =="Caroline": 
-        return "adult/polite/neutral/neutral/female/not-datable/Pierre/Town/{{CarolineBirthday}}/Pierre 'husband' Abigail ''/SeedShop 22 5/{{CarolineName}}"
+        return "adult/polite/neutral/neutral/female/not-datable/Pierre/Town/{{CarolineBirthday}}/Pierre '{{PierreSpouse}}' Abigail ''/SeedShop 22 5/{{CarolineName}}"
     elif name == "Clint": 
         return "adult/rude/shy/negative/male/not-datable/Emily/Town/{{ClintBirthday}}/Emily ''/Blacksmith 3 13/{{ClintName}}"
     elif name ==  "Demetrius": 
-        return "adult/polite/neutral/positive/male/not-datable/Robin/Town/{{DemetriusBirthday}}/Robin 'wife' Maru ''/ScienceHouse 19 4/{{DemetriusName}}"
+        return "adult/polite/neutral/positive/male/not-datable/Robin/Town/{{DemetriusBirthday}}/Robin '{{RobinSpouse}}' Maru ''/ScienceHouse 19 4/{{DemetriusName}}"
     elif name ==  "Willy": 
-        return "adult/neutral/neutral/neutral/male/not-datable/null/Town/{{WillyBirthday}}/Elliott ''/FishShop 5 4/{{WillyName}}",        
+        return "adult/neutral/neutral/neutral/male/not-datable/null/Town/{{WillyBirthday}}/Elliott ''/FishShop 5 4/{{WillyName}}"
+    elif name == "Evelyn": 
+        return "adult/polite/outgoing/positive/female/not-datable/George/Town/{{EvelynBirthday}}/George '{{GeorgeSpouse}}' Alex 'grand{{AlexChild}}'/JoshHouse 2 17/{{EvelynName}}"
+    elif name =="George": 
+       return "adult/rude/neutral/negative/male/not-datable/Evelyn/Town/{{GeorgeBirthday}}/Evelyn '{{EvelynSpouse}}' Alex 'grand{{AlexChild}}'/JoshHouse 16 22/{{GeorgeName}}"
+    elif name =="Gus": 
+       return "adult/neutral/outgoing/positive/male/not-datable/null/Town/{{GusBirthday}}/Emily '' Pam ''/Saloon 18 6/{{GusName}}"
+    elif name =="Jas": 
+       return "child/neutral/shy/positive/female/not-datable/Vincent/Town/{{JasBirthday}}/Vincent ''/AnimalShop 4 6/{{JasName}}"
+    elif name =="Jodi": 
+       return "adult/polite/neutral/neutral/female/not-datable/Kent/Town/{{JodiBirthday}}/Sam '{{SamChild}}' Vincent '{{VincentChild}}' Kent 'husband'/SamHouse 4 5/{{JodiName}}"
+    elif name =="Kent": 
+       return "adult/neutral/shy/negative/male/not-datable/Jodi/Town/{{KentBirthday}}/Jodi 'wife' Sam '{{SamChild}}' Vincent '{{VincentChild}}'/SamHouse 22 5/{{KentName}}"
+    elif name =="Leo": 
+       return  "child/neutral/shy/neutral/male/not-datable/Leo/Other/{{LeoBirthday}}//IslandHut 5 6/{{LeoName}}"
+    elif name =="Lewis": 
+       return "adult/neutral/outgoing/positive/male/not-datable/null/Town/{{LewisBirthday}}/Marnie ''/ManorHouse 8 5/{{LewisName}}"
+    elif name =="Linus": 
+       return "adult/neutral/shy/positive/male/not-datable/null/Town/{{LinusBirthday}}//Tent 1 2/{{LinusName}}"
+    elif name =="Marnie": 
+       return "adult/polite/outgoing/positive/female/not-datable/Lewis/Town/{{MarnieBirthday}}/Lewis '' Shane '{{ShaneNibling}}' Jas '{{JasNibling}}'/AnimalShop 12 14/{{MarnieName}}"
+    elif name == "Pam": 
+       return "adult/rude/outgoing/negative/female/not-datable/Gus/Town/{{PamBirthday}}/Penny '{{PennyChild}}' Gus ''/Trailer 15 4/{{PamName}}"
+    elif name == "Pierre": 
+       return "adult/neutral/outgoing/positive/male/not-datable/Caroline/Town/{{PierreBirthday}}/Abigail '{{AbigailChild}}' Caroline '{{CarolineSpouse}}'/SeedShop 4 17/{{PierreName}}"
+    elif name =="Robin": 
+       return "adult/neutral/outgoing/positive/female/not-datable/Demetrius/Town/{{RobinBirthday}}/Demetrius '{{DemetriusSpouse}}' Maru '{{MaruChild}}' Sebastian '{{SebastianChild}}'/ScienceHouse 21 4/{{RobinName}}"
+    elif name == "Vincent": 
+       return "child/neutral/outgoing/positive/male/not-datable/Jas/Town/{{VincentBirthday}}/Jas ''/SamHouse 10 23/{{VincentName}}"
+    elif name =="Sandy": 
+       return "adult/neutral/outgoing/positive/female/not-datable/null/Desert/{{SandyBirthday}}/Emily ''/SandyHouse 2 5/{{SandyName}}"
+    elif name =="Krobus": 
+       return "adult/polite/shy/neutral/male/not-datable/null/Other/{{KrobusBirthday}}//Sewer 31 17/{{KrobusName}}"
+    elif name == "Marlon": 
+        return "adult/neutral/outgoing/neutral/male/not-datable/Marnie/Town///AdventureGuild 5 11/{{MarlonName}}",
+    elif name == "Dwarf": 
+       return "adult/neutral/outgoing/positive/undefined/not-datable/null/Other/{{DwarfBirthday}}//Mine 43 6/{{DwarfName}}"
+    elif name =="Wizard": 
+       return "adult/rude/neutral/negative/male/not-datable/null/Other/{{WizardBirthday}}//WizardHouse 3 17/{{WizardName}}"
 
-
-def replace_flowers():
+def dance_wedding():
     s = "\n"
     for name in spouse_list:
         o_gender =  orig_gender_dict[name]
+        if o_gender =="Male":
+            Y = "288"
+        else:
+            Y = "384"
         s += "             {\"Action\": \"EditImage\",\"Target\": \"Characters/"+name+"\","
-        s += "\"FromFile\": \"assets/Wedding/"+name+"_Wedding.png\",\"ToArea\": { \"X\": 0, \"Y\": 288, \"Width\": 48, \"Height\": 32 },"
+        s += "\"FromFile\": \"assets/Wedding/"+name+"_Wedding.png\",\"ToArea\": { \"X\": 0, \"Y\": "+Y+", \"Width\": 48, \"Height\": 32 },"
         s += "\"When\": { \""+name+"GameGender\": \""+genderswap(o_gender)+"\", \"DayEvent\": \"wedding\",\""+name+"Images\":\"false\", \"PatchOriginalWeddingArt\":\"true\"}},"
         s+="\n"
         s+= "             {\"Action\": \"EditData\",\"Target\": \"Data/NPCDispositions\",\"Update\": \"OnLocationChange\","
@@ -622,49 +755,280 @@ def wedding_code():
 
 def create_content():
     # Create content.json
-    if edit_text:
-        path = end_path+"content.json"
-    else:
-        path = end_path_images+"content.json"  
+    path = end_path[mode]+"content.json"  
     content = open(path,"w")
-    content.write("{\n    \"Format\": \"1.23\",\n    \"ConfigSchema\":\n {\n")
-    if edit_text:
-            content.write("    \"EditIslandCharacters\": { \"AllowValues\": \"Full, Minimal, None\",\"Default\": \"Full\"},\n")
-            content.write("    \"MiscTextEdits\": { \"AllowValues\": \"true, false\",\"Default\": \"true\"},\n")
-    content.write("    \"MiscImageEdits\": { \"AllowValues\": \"true, false\",\"Default\": \"true\"},\n\n")
+    content.write("{\n    \"Format\": \"1.27.0\",\n    \"ConfigSchema\":\n {\n")
+    if mode == "GS":
+            content.write("    \"MiscTextEdits\": { \"AllowValues\": \"true, false\",\"Default\": \"false\"},\n")
+    content.write("    \"MiscImageEdits\": { \"AllowValues\": \"true, false\",\"Default\": \"false\"},\n\n")
+    if mode == "GS":
+        content.write("    \"FarmerGender\":{ \"AllowValues\": \"false,Male, Female, Neutral\",\"Default\": \"false\"},\n")
+        content.write("    \"FarmerPronoun\": {\"Default\": \"They\","+pronoun_string()+"},\n\n")
     for name in name_list:
         content.write(initialise_variables(name))  
-    if edit_text:
+    if mode == "GS":
         with open("./advancedtitle_content.json","r") as f:
             data = f.readlines()
         for l in data:
             content.write(l)
-        content.write("    \"PatchOriginalWeddingArt\": { \"AllowValues\": \"true, false\",\"Default\": \"false\"},\n\n")    
+        content.write("    \"EditIslandCharacters\": { \"AllowValues\": \"Full, Minimal, None\",\"Default\": \"Full\"},\n")    
+        content.write("    \"PatchOriginalWeddingArt\": { \"AllowValues\": \"true, false\",\"Default\": \"false\"},\n\n") 
+        content.write("    \"PossessiveS\": { \"AllowValues\": \"true, false\",\"Default\": \"true\"},\n\n")  
         for name in name_list:
             content.write(initialise_advanced(name))      
     content.write("    },\n")        
     content.write("    \"DynamicTokens\": [\n")         
-    if edit_text:
+    if mode == "GS":
+        content.write("                {\"Name\": \"ChangeFarmerGender\", \"Value\":\"true\"},\n")
+        content.write("                {\"Name\": \"ChangeFarmerGender\", \"Value\":\"false\",\"When\":{\"FarmerGender\": \"false\"}},\n")   
+        content.write("                {\"Name\": \"ChangeFarmerGender\", \"Value\":\"false\",\"When\":{\"HasMod |contains=Hana.GenderNeutralityMod\": true}},\n")    
+        content.write(gender_variables("Farmer"))  
         for name in name_list:
             content.write(gender_variables(name))  
+
     content.write("    ],\n")  
     content.write("	\"Changes\": [\n")  
     for name in name_list:
         content.write(image_code(name))     
     content.write(image_code_background())     
-    if edit_text:
-        with open("./mine/birthday_disposition.json","r") as f:
-            content.write(f.read())
+    if mode == "GS":
+        content.write("\n         {\n")
+        content.write("			\"Action\": \"EditData\",\n")
+        content.write("			\"Target\": \"Data/NPCDispositions\",\n")
+        content.write("			\"Entries\": {\n")
+        for name in name_list:
+            if name in birthday_dict.keys() and name !="Leo": #has a birthday and disposition
+                content.write("				\""+name+"\":\""+disposition(name,orig_gender_dict[name])+"\",\n")
+        content.write("			}},\n")
+        content.write("             {\"Action\": \"EditData\",\"Target\": \"Data/NPCDispositions\",\"Entries\": {\n")
+        content.write("				\"Leo\":\""+disposition("Leo","male")+"\"\n")
+        content.write("			},\"When\": {\"EditIslandCharacters\": \"Full\"}},\n")
         with open("./mine/change_names.json","r") as f:
             content.write(f.read())	
-        content.write(replace_flowers())	       
+        content.write(dance_wedding())	
+        with open("./mine/farmer.json","r") as f:
+            content.write(f.read())	         
         with open("./mine/dialogue_objects.json","r") as f:
             content.write(f.read())	  
         with open("./mine/my_dialogue_fixes.json","r") as f:
-            content.write(f.read())	      
+            content.write(f.read())	  
+        #with open("./mine/MoviesReactions.json","r") as f:
+        #    content.write(f.read())	     
+        with open("./mine/diverse_island.json","r") as f:
+            content.write(f.read())	          
+        with open("./mine/dammitclint.json","r") as f:
+            content.write(f.read())	          
+        with open("./mine/journalist.json","r") as f:
+            content.write(f.read())	    
+        with open("./mine/mymods.json","r") as f:
+            content.write(f.read())	                       
         content.write(wedding_code())            
     content.write("	]\n}") 
     content.close()   
+
+###### HD code
+# 
+
+other_HDlist = ["AnsweringMachine", "Bear"]    
+
+def HD_variant_code(name,variant):
+    #code for variant HD portrait
+    if variant =="None":
+        base_location = "Mods/HDPortraits/"
+    else:
+        base_location = "Mods/SqbrHDPortraits/"    
+    beach_code = ""
+    if name not in ["Lewis","Demetrius"] and name in beach_bodies and (name,variant) !=("Emily","LongSleeved"):
+        beach_code =", "+base_location
+        beach_code+=name+"_Beach"
+    middle = "			\"Target\":\""+base_location+portraitname(name) + beach_code + "\",\n"     
+    if variant =="None":
+        s = "        {\n			\"Action\":\"Load\",\n"
+        s+=middle
+        s+="			\"FromFile\":\"assets/base.json\",\n"
+        s+= " 			\"When\": {\""+name+"Images|contains=false\": \"false\"}\n        },\n\n"      
+    else:    
+        test_string = variant
+        if variant == "Female":
+            location = "Portraits/Genderbent/"
+            middle_string = "			\"Target\":\""+base_location+portraitname(name)+ "\",\n" 
+        elif variant == "Androgynous":
+           location = "Portraits/Androgynous/"   
+           middle_string = middle      
+        else:
+            middle_string = middle  
+            if variant in ["Young","Coat","LongSleeved", "Shaved"]:
+                location = "Portraits/Variants/"+variant + "/"
+                test_string = orig_gender_dict[name]+ " "+ variant
+            else:    
+                test_string = "Androgynous "+ variant
+                location = "Portraits/Androgynous/Variants/" +variant + "/"     
+        s = "        {\n			\"Action\":\"EditImage\",\n"
+        s+=middle_string
+        s+="			\"FromFile\":\"assets/" + location+ "{{TargetWithoutPath}}.png\",\n"
+        s+= " 			\"When\": {\""+name+"Images\": \""+test_string+"\"}\n        },\n\n" 
+    return s   
+
+def sprite_variant_code(name,variant):
+    #code for variant character sprite
+    base_location = "Characters/"    
+    beach_code = ""
+    if name not in ["Lewis","Demetrius"] and name in beach_bodies and (name,variant) !=("Emily","LongSleeved"):
+        beach_code =", "+base_location
+        beach_code+=name+"_Beach"
+    middle = "			\"Target\":\""+base_location+spritename(name) + beach_code + "\",\n"        
+    test_string = variant
+    if variant == "Female": #do  not have these images
+        location = "Characters/Genderbent/"
+        middle_string = "			\"Target\":\""+base_location+spritename(name)+ "\",\n" 
+    elif variant == "Androgynous":
+        location = "Characters/Androgynous/"
+        middle_string = middle      
+    else:
+        middle_string = middle  
+        if variant in ["Young","Coat"]:
+            location = "Characters/Variants/"+variant + "/"
+            test_string = orig_gender_dict[name]+ " "+ variant 
+        else:    
+            test_string = "Androgynous "+ variant 
+            location = "Characters/Androgynous/Variants/" +variant + "/"     
+    s = "        {\n			\"Action\":\"EditImage\",\n"
+    s+=middle_string
+    s+="			\"FromFile\":\"assets/" + location+ "{{TargetWithoutPath}}.png\",\n"
+    s+= " 			\"When\": {\""+name+"Images\": \""+test_string+"\"}\n        },\n\n" 
+    return s     
+
+def create_hd():
+    #create config file. Current_gender is what gender to write the characters as, write_variant is a boolean saying whether to write to one of the variant configs
+    
+    #config file
+    path = end_path[mode]+"config.json" 
+    content = open(path,"w")
+    content.write("{\n")
+    #content.write("  \"MatchSprites\": \"true\",\n")      
+    for name in name_list:
+        content.write("  \""+name+"Images\": \""+orig_gender_dict[name] +"\",\n")   
+    for name in other_HDlist:   
+        content.write("  \""+name+"Images\": \"Vanilla\",\n")                 
+    content.write("\n}")            
+    content.close()   
+
+    #content.json
+
+    path = end_path[mode]+"content.json" 
+    content = open(path,"w")   
+    content.write("{\n    \"Format\": \"1.27.0\",\n    \"ConfigSchema\":\n {\n")  
+    content.write("    \"Genderbent Bachelors Beach\": {\n")
+    content.write("    	\"AllowValues\": \"RedK1rby, Classic\",\n")
+    content.write("    	\"Default\": \"RedK1rby\",\n")
+    content.write("    	\"Description\": \"Choose between RedK1rby-style beach portraits or the classic ones for Bachelors switched to Female.\",")
+    content.write("},\n\n")
+    #content.write("    \"MatchSprites\": {\"Default\": \""+"true"+"\",\"AllowValues\": \"true, false\"},\n\n")
+    variants_dict = {"Harvey": ["Shaved"],"Emily": ["LongSleeved"], "Pam": ["Young"], "Linus": ["Coat"],"Wizard": ["Young"]}
+    genderswap_list = ["Alex","Elliott","Harvey","Sam", "Shane","Sebastian","Wizard","Willy"]
+    androgynous_list = ["Abigail","Alex","Elliott","Emily","Haley","Harvey","Leah","Maru","Penny","Sam","Sebastian","Shane"]
+    
+    for name in other_HDlist:
+        s="    \""+name+"Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \""
+        s+= "false, Vanilla"
+        s+= "\"},\n\n"  
+        content.write(s)
+    
+    for name in name_list:
+        s="    \""+name+"Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \""
+        s+= "false, "
+        s+= orig_gender_dict[name] 
+        if name in variants_dict.keys():
+            for variant in variants_dict[name]:
+                s+=", "+ orig_gender_dict[name] + " "+ variant    
+        if name in genderswap_list:
+            s+=", Female"
+        if name in androgynous_list:
+            s+=", Androgynous"    
+            if name in darker_chars:
+                s+=", Androgynous Darker"
+            if name in wheelchair_chars:
+                s+=", Androgynous Wheelchair"   
+            if name in islander_chars:
+                s+=", Androgynous Islander"  
+            if name in islanderchild_chars:
+                s+=", Androgynous Islander Child, Androgynous Islander Teen"
+        s+= "\"},\n\n"  
+        content.write(s)        
+    content.write("    },\n")        
+    content.write("	\"Changes\": [\n") 
+    portrait_list = ["Gil"]
+    beach_list = []
+    extras = {"Maru":"Maru_Hospital","Krobus": "Krobus_Trenchcoat"}
+    for name in name_list:
+        if name not in ["Marcello","OldMariner"] and portraitname(name)!="None":
+            portrait_list.append(name)
+            if name not in ["Lewis","Demetrius"] and name in beach_bodies:
+                beach_list.append(name)
+
+    name_string = "\"" 
+    for name in portrait_list + other_HDlist:
+        name_string+= "Mods/sqbrHDPortraits/"+portraitname(name) + ", "
+        if name in extras.keys():
+            name_string+= "Mods/sqbrHDPortraits/"+extras[name] + ", "
+    for name in beach_list:
+        name_string+= "Mods/sqbrHDPortraits/"+portraitname(name) + "_beach, "
+    name_string += "\",\n"   
+    content.write("        {\n			\"Action\":\"Load\",\n")
+    content.write("			\"Target\":"+ name_string)
+    content.write("			\"FromFile\":\"assets/Portraits/{{TargetWithoutPath}}.png\"\n")
+    content.write("        },\n\n")      
+    name_string = "\"" 
+    for name in portrait_list + other_HDlist:
+        name_string+= "Mods/HDPortraits/"+portraitname(name) + ", "
+        if name in extras.keys():
+            name_string+= "Mods/HDPortraits/"+extras[name] + ", "
+    for name in beach_list:
+        name_string+= "Mods/HDPortraits/"+portraitname(name) + "_Beach, "    
+    name_string += "\",\n"   
+    content.write("        {\n			\"Action\":\"EditData\",\n")
+    content.write("			\"Target\":"+ name_string)
+    content.write("			\"Entries\": {\n")
+    content.write("	    		\"Portrait\":\"Mods/sqbrHDPortraits/{{TargetWithoutPath}}\"\n")
+    content.write("			}\n")
+    content.write("        },\n\n")  
+    for name in other_HDlist:
+        content.write(HD_variant_code(name,"None"))
+    for name in portrait_list:
+        content.write(HD_variant_code(name,"None")) 
+    for name in variants_dict.keys():
+        for variant in variants_dict[name]:
+            content.write(HD_variant_code(name,variant))
+    for name in genderswap_list:
+        content.write(HD_variant_code(name,"Female"))   
+        if name in beach_bodies:
+            content.write("        {\n			\"Action\":\"EditImage\",\n")
+            content.write("			\"Target\":\"Mods/SqbrHDPortraits/"+portraitname(name) + "_Beach\",\n")     
+            content.write("			\"FromFile\":\"assets/Portraits/Genderbent/Classic/"+ name+"_Beach.png\",\n")
+            content.write(" 			\"When\": {\""+name+"Images\": \"Female\", \"Genderbent Bachelors Beach\": \"Classic\"}\n        },\n\n")  
+    for name in androgynous_list:
+        content.write(HD_variant_code(name,"Androgynous"))   
+        content.write(sprite_variant_code(name,"Androgynous"))   
+        if name in darker_chars:
+            content.write(HD_variant_code(name,"Darker"))   
+            content.write(sprite_variant_code(name,"Darker"))    
+        if name in wheelchair_chars:
+            content.write(sprite_variant_code(name,"Wheelchair"))                    
+    with open("./mine/HD sprite code.json","r") as f:
+            content.write(f.read())	                
+    content.write("	]\n}") 
+    content.close() 
+
+
        
-create_config() 
+mode = "GS"
+create_config("Neutral",True) 
+create_config("Male",True) 
+create_config("Female",True) 
+create_config("Test",False) 
 create_content()
+mode = "LowRes"
+create_config("Neutral",False) 
+create_content()
+mode = "HD"
+create_hd()
