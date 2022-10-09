@@ -177,12 +177,12 @@ gender_exceptions = {
     "Neutral": neutralexceptions_dict
     }
 
-darker_chars = ["Marnie","Jas","Elliott","Grandpa","Sandy"]
+darker_chars = ["Marnie","Jas","Elliott","Grandpa","Sandy","Caroline","Leo","Birdie","ProfessorSnail"]
 wheelchair_chars = ["Leah"]
-islander_chars = ["Birdie","ProfessorSnail"]
-islanderchild_chars = ["Leo"]
+islander_chars = ["Birdie","ProfessorSnail","Leo"]
+#islanderchild_chars = ["Leo"]
 
-all_variants = darker_chars + wheelchair_chars + islander_chars + islanderchild_chars
+all_variants = darker_chars + wheelchair_chars + islander_chars 
 ## Data processing   
 
 def realname(name):
@@ -289,8 +289,8 @@ def create_config(current_gender,write_variant):
                     elif name in wheelchair_chars:
                         if current_gender =="Test":
                             changesprite = "Wheelchair"
-                    elif name in islanderchild_chars:
-                        changesprite = "IslanderChild"        
+                    #elif name in islanderchild_chars:
+                        #changesprite = "IslanderChild"        
                     elif name in islander_chars:
                         changesprite = "Islander"
             else:
@@ -364,8 +364,8 @@ def initialise_variables(name):
             s+=", Wheelchair"   
         if name in islander_chars:
             s+=", Islander"  
-        if name in islanderchild_chars:
-            s+=", IslanderChild,IslanderTeen"
+        #if name in islanderchild_chars:
+        #    s+=", IslanderChild,IslanderTeen"
     else:
         s+="true" 
     s+= ", false\"},\n"                         
@@ -502,17 +502,17 @@ def image_code(name):
                 s+=image_line(name,location,"Wheelchair")    
             if name in islander_chars:    
                 s+=image_line(name,location,"Islander")  
-            if name in islanderchild_chars:    
-                s+=image_line(name,location,"IslanderChild") 
-                s+=image_line(name,location,"IslanderTeen")          
+            #if name in islanderchild_chars:    
+            #    s+=image_line(name,location,"IslanderChild") 
+            #    s+=image_line(name,location,"IslanderTeen")          
 
         if name not in ["Marcello","OldMariner"]:
             s+=image_line(name,"Portraits/"+art_name,"")   
         if name in darker_chars:
             s+=image_line(name,"Portraits/"+art_name,"Darker") 
-        if name in islanderchild_chars:    
-            s+=image_line(name,"Portraits/"+art_name,"IslanderChild") 
-            s+=image_line(name,"Portraits/"+art_name,"IslanderTeen")
+        #if name in islanderchild_chars:    
+        #    s+=image_line(name,"Portraits/"+art_name,"IslanderChild") 
+        #    s+=image_line(name,"Portraits/"+art_name,"IslanderTeen")
         elif name in islander_chars:    
             s+=image_line(name,"Portraits/"+art_name,"Islander")       
 
@@ -850,7 +850,11 @@ def HD_variant_code(name,variant):
             middle_string = "			\"Target\":\""+base_location+portraitname(name)+ "\",\n" 
         elif variant == "Androgynous":
            location = "Portraits/Androgynous/"   
-           middle_string = middle      
+           middle_string = middle  
+        elif variant == "Wheelchair":   #portrait the same as androgynous
+            location = "Portraits/Androgynous/"   
+            middle_string = middle      
+            test_string = "Androgynous "+ variant
         else:
             middle_string = middle  
             if variant in ["Young","Coat","LongSleeved", "Shaved"]:
@@ -903,7 +907,7 @@ def create_hd():
     content.write("{\n")
     #content.write("  \"MatchSprites\": \"true\",\n")      
     for name in name_list:
-        content.write("  \""+name+"Images\": \""+orig_gender_dict[name] +"\",\n")   
+        content.write("  \""+name+"Images\": \""+ orig_gender_dict[name] +"\",\n")   
     for name in other_HDlist:   
         content.write("  \""+name+"Images\": \"Vanilla\",\n")                 
     content.write("\n}")            
@@ -922,13 +926,6 @@ def create_hd():
     #content.write("    \"MatchSprites\": {\"Default\": \""+"true"+"\",\"AllowValues\": \"true, false\"},\n\n")
     variants_dict = {"Harvey": ["Shaved"],"Emily": ["LongSleeved"], "Pam": ["Young"], "Linus": ["Coat"],"Wizard": ["Young"]}
     genderswap_list = ["Alex","Elliott","Harvey","Sam", "Shane","Sebastian","Wizard","Willy"]
-    androgynous_list = ["Abigail","Alex","Elliott","Emily","Haley","Harvey","Leah","Maru","Penny","Sam","Sebastian","Shane"]
-    
-    for name in other_HDlist:
-        s="    \""+name+"Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \""
-        s+= "false, Vanilla"
-        s+= "\"},\n\n"  
-        content.write(s)
     
     for name in name_list:
         s="    \""+name+"Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \""
@@ -939,25 +936,29 @@ def create_hd():
                 s+=", "+ orig_gender_dict[name] + " "+ variant    
         if name in genderswap_list:
             s+=", Female"
-        if name in androgynous_list:
-            s+=", Androgynous"    
-            if name in darker_chars:
-                s+=", Androgynous Darker"
-            if name in wheelchair_chars:
-                s+=", Androgynous Wheelchair"   
-            if name in islander_chars:
-                s+=", Androgynous Islander"  
-            if name in islanderchild_chars:
-                s+=", Androgynous Islander Child, Androgynous Islander Teen"
+        s+=", Androgynous"    
+        if name in darker_chars:
+            s+=", Androgynous Darker"
+        if name in wheelchair_chars:
+            s+=", Androgynous Wheelchair"   
+        if name in islander_chars:
+            s+=", Androgynous Islander"  
         s+= "\"},\n\n"  
-        content.write(s)        
+        content.write(s)   
+
+    for name in other_HDlist:
+        s="    \""+name+"Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \""
+        s+= "false, Vanilla"
+        s+= "\"},\n\n"  
+        content.write(s)
+                 
     content.write("    },\n")        
     content.write("	\"Changes\": [\n") 
     portrait_list = ["Gil"]
     beach_list = []
     extras = {"Maru":"Maru_Hospital","Krobus": "Krobus_Trenchcoat"}
     for name in name_list:
-        if name not in ["Marcello","OldMariner"] and portraitname(name)!="None":
+        if name not in ["Marcello","OldMariner","Charlie"] and portraitname(name)!="None":
             portrait_list.append(name)
             if name not in ["Lewis","Demetrius"] and name in beach_bodies:
                 beach_list.append(name)
@@ -1002,14 +1003,18 @@ def create_hd():
             content.write("			\"Target\":\"Mods/SqbrHDPortraits/"+portraitname(name) + "_Beach\",\n")     
             content.write("			\"FromFile\":\"assets/Portraits/Genderbent/Classic/"+ name+"_Beach.png\",\n")
             content.write(" 			\"When\": {\""+name+"Images\": \"Female\", \"Genderbent Bachelors Beach\": \"Classic\"}\n        },\n\n")  
-    for name in androgynous_list:
+    for name in portrait_list:
         content.write(HD_variant_code(name,"Androgynous"))   
         content.write(sprite_variant_code(name,"Androgynous"))   
         if name in darker_chars:
             content.write(HD_variant_code(name,"Darker"))   
             content.write(sprite_variant_code(name,"Darker"))    
         if name in wheelchair_chars:
-            content.write(sprite_variant_code(name,"Wheelchair"))                    
+            content.write(HD_variant_code(name,"Wheelchair"))  
+            content.write(sprite_variant_code(name,"Wheelchair"))  
+        if name in islander_chars:
+            content.write(HD_variant_code(name,"Islander"))   
+            content.write(sprite_variant_code(name,"Islander"))                        
     with open("./mine/HD sprite code.json","r") as f:
             content.write(f.read())	                
     content.write("	]\n}") 

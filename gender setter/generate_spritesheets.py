@@ -1,4 +1,5 @@
 from __future__ import print_function
+from fileinput import filename
 import sys
 import math
 from PIL import Image
@@ -94,6 +95,101 @@ def process_image(name,o_gender):
         save_string = name+"_m"   
     img.save(end_path+save_string+".png")  
 
+def make_screenshot(width, height, filename,  filepath, filelist, isBeach, image_type):
+
+    if image_type == "HD":
+        image_height = 256
+        image_width = 256
+    elif image_type == "sprites":
+        image_height = 32
+        image_width = 16    
+    else:
+        image_height = 64
+        image_width = 64 
+
+    screenshot = Image.new("RGBA", (image_width*width, image_height*height))
+    for i in range(width):
+        for j in range(height):
+            current = j*width+i
+            if current > len(filelist) - 1:
+                break
+            current_image = filelist[current] 
+            img= Image.open(filepath+current_image)
+            h = image_height
+            if image_type == "sprites":
+                if (current_image in ["Krobus.png","Dwarf.png"]):
+                    h = 24
+            corner = img.crop((0,0,image_width,h))
+            screenshot.paste(corner,(image_width*i,image_height*j+(image_height-h),image_width*(i+1),image_height*(j+1))) 
+    save_name = "./images/"
+    if isBeach:
+       save_name+= "beach_"   
+    save_name += filename
+    save_name+= image_type
+    save_name += ".png"           
+    screenshot.save(save_name)   
+
+def make_comparison_screenshot(filename,  filepath, image_type):
+
+    darker_images = set_folders(filepath+"Variants/Darker/")
+    wheelchair_images = set_folders(filepath+"Variants/Wheelchair")
+    islander_images = set_folders(filepath+"Variants/Islander")
+    
+    if image_type == "HD":
+        image_height = 256
+        image_width = 256
+    elif image_type == "sprites":
+        image_height = 32
+        image_width = 16  
+        wheelchair_images = [["Leah_Beach.png"],["Leah.png"]]  
+    else:
+        image_height = 64
+        image_width = 64 
+
+    image_lists = [list(set(darker_images[0]+ wheelchair_images[0] + islander_images[0])), list(set(darker_images[1]+ wheelchair_images[1] + islander_images[1]))]                
+
+    for n in range(1):
+        current_list = image_lists[n]
+        screenshot = Image.new("RGBA", (image_width*4, image_height*len(current_list)+1))
+
+        for j in range(len(current_list)-1):
+            i = 0
+            current_image = current_list[j]  
+            img= Image.open(filepath+current_image)  
+            corner = img.crop((0,0,image_width,image_height)) 
+            screenshot.paste(corner,(image_width*i,image_height*j,image_width*(i+1),image_height*(j+1))) 
+            for variant in ["Darker","Islander","Wheelchair"]:
+                if current_image in set_folders(filepath+"Variants/"+variant+"/")[n]:
+                    i+=1
+                    img= Image.open(filepath+"Variants/"+variant+"/"+current_image)  
+                    corner = img.crop((0,0,image_width,image_height)) 
+                    screenshot.paste(corner,(image_width*i,image_height*j,image_width*(i+1),image_height*(j+1))) 
+                
+        save_name = "./images/" 
+        save_name += "compare_"  
+        save_name += ["beach_",""][n]
+        save_name += filename
+        save_name+= image_type
+        save_name += ".png"           
+        screenshot.save(save_name) 
+        suffix = "" 
+
+
+
+def set_folders(path): 
+    images =sort(list_directory(path,"*.png"))  #all images in path
+    print("images "+str(len(images)))   
+    beach_items = []
+    non_beach = []
+    for i in images:
+        if i.count("Beach")>0:
+            beach_items.append(i)
+        else:
+            if i in possible_names:
+                non_beach.append(i)   
+    return [beach_items,non_beach]                  
+
+
 def make_screenshots():
     images =sort(list_directory("./assets/Characters/","*.png"))  #all images in Characters
     #24 beach, 76 non-beach
@@ -105,37 +201,12 @@ def make_screenshots():
             beach_items.append(i)
         else:
             if i in possible_names and i.count("Grandpa")==0:
-                non_beach.append(i)                
-    width = 12
-    height = 2
-    screenshot = Image.new("RGBA", (16*width, 32*height))
-    for i in range(width):
-        for j in range(height):
-            current = j*width+i
-            if current > (len(beach_items)-1):
-                break
-            current_image = beach_items[current] 
-            img= Image.open(start_path+current_image)
-            char = img.crop((0,0,16,32))
-            screenshot.paste(char,(16*i,32*j,16*(i+1),32*(j+1))) 
-    screenshot.save("./images/beach_sprites.png")         
-    width = 13
-    height = 4
-    screenshot = Image.new("RGBA", (16*width, 32*height))
-    for i in range(width):
-        for j in range(height):
-            current = j*width+i
-            if current > (len(non_beach)-1):
-                break
-            current_image = non_beach[current] 
-            img= Image.open(start_path+current_image)
-            if current_image in ["Krobus.png","Dwarf.png"]:
-                h = 24
-            else:
-                h = 32  
-            char = img.crop((0,0,16,h))
-            screenshot.paste(char,(16*i,32*j+(32-h),16*(i+1),32*(j+1))) 
-    screenshot.save("./images/sprites.png")    
+                non_beach.append(i)                  
+
+    make_screenshot(width =12, height =2, filename = "", filepath = start_path, filelist = beach_items, isBeach = True, image_type = "sprites")        
+            
+    make_screenshot(width =13, height =4, filename = "", filepath = start_path, filelist = non_beach, isBeach = False, image_type = "sprites")        
+ 
 
     path = "./assets/Portraits/"
     images =sort(list_directory(path,"*.png"))
@@ -147,74 +218,30 @@ def make_screenshots():
             beach_items.append(i)
         else:
             if i in possible_names:
-                non_beach.append(i)   
-    width = 7
-    height = 3
-    screenshot = Image.new("RGBA", (64*width, 64*height))
-    for i in range(width):
-        for j in range(height):
-            current = j*width+i
-            if current > (len(beach_items)-1):
-                break
-            current_image = beach_items[current] 
-            img= Image.open(path+current_image)
-            char = img.crop((0,0,64,64))
-            screenshot.paste(char,(64*i,64*j,64*(i+1),64*(j+1))) 
-    screenshot.save("./images/beach_portraits.png")    
+                non_beach.append(i)     
+
+    make_screenshot(width =7, height =3, filename = "", filepath = path, filelist = beach_items, isBeach = True, image_type = "portraits")        
             
-    width = 14
-    height = 4
-    screenshot = Image.new("RGBA", (64*width, 64*height))
-    for i in range(width):
-        for j in range(height):
-            current = j*width+i
-            if current > (len(non_beach)-1):
-                break
-            current_image = non_beach[current] 
-            img= Image.open(path+current_image)
-            char = img.crop((0,0,64,64))
-            screenshot.paste(char,(64*i,64*j,64*(i+1),64*(j+1))) 
-    screenshot.save("./images/portraits.png")    
+    make_screenshot(width =14, height =4, filename = "", filepath = path, filelist = non_beach, isBeach = False, image_type = "portraits")        
+
 
     path = "./assets/Androgynous/"
-    images =sort(list_directory(path,"*.png"))
-    print("images "+str(len(images)))    
-    non_beach = []
-    beach_items = []
-    for i in images:
-        if i.count("Beach")>0:
-            beach_items.append(i)
-        else:
-            if i in possible_names:
-                non_beach.append(i)   
-    width = 6
-    height = 4
-    screenshot = Image.new("RGBA", (256*width, 256*height))
-    for i in range(width):
-        for j in range(height):
-            current = j*width+i
-            if current > (len(beach_items)-1):
-                break
-            current_image = beach_items[current] 
-            img= Image.open(path+current_image)
-            char = img.crop((0,0,256,256))
-            screenshot.paste(char,(256*i,256*j,256*(i+1),256*(j+1))) 
-    screenshot.save("./images/beach_HD.png")    
-            
-    width = 6
-    height = 4
-    screenshot = Image.new("RGBA", (256*width, 256*height))
-    for i in range(width):
-        for j in range(height):
-            current = j*width+i
-            if current > (len(non_beach)-1):
-                break
-            current_image = non_beach[current] 
-            img= Image.open(path+current_image)
-            char = img.crop((0,0,256,256))
-            screenshot.paste(char,(256*i,256*j,256*(i+1),256*(j+1))) 
-    screenshot.save("./images/HD.png")    
+    [beach_items,non_beach] = set_folders(path)
 
+    make_screenshot(width =6, height =5, filename = "", filepath = path, filelist = beach_items, isBeach = True, image_type = "HD")        
+            
+    make_screenshot(width =14, height =4, filename = "", filepath = path, filelist = non_beach, isBeach = False, image_type = "HD")   
+
+    make_comparison_screenshot(filename = "", filepath = path, image_type = "HD")   
+        
+    path = "./assets/Characters/Androgynous/"   
+    [beach_items,non_beach] = set_folders(path) 
+
+    make_screenshot(width =12, height =2, filename = "", filepath = path, filelist = beach_items, isBeach = True, image_type = "sprites")        
+            
+    make_screenshot(width =13, height =4, filename = "", filepath = path, filelist = non_beach, isBeach = False, image_type = "sprites")        
+      
+    make_comparison_screenshot(filename = "", filepath = path, image_type = "sprites")   
         
 #process_image("Abigail")
 make_screenshots()
