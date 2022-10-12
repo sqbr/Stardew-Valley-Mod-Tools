@@ -9,20 +9,17 @@ from xml.etree.ElementTree import TreeBuilder
 ### To run, open a terminal/command line from within this folder and type "python make_gender_code.py"
 ###############
 
-end_path = {}
-
-mode = "HD" # GS, LowRes
-
-end_path[mode] = "../../[CP] Configurable HD Portraits/"
-
-mode = "GS"
-
-end_path[mode] = "../../Gender Setter/[CP] Gender Setter/"
-
-mode = "LowRes"
-end_path[mode] = "../../[CP] Androgynous Villagers/"
-
-
+def end_path():
+    if isHD:
+        if isGS:
+            return "../../Gender Setter HD/[CP] Gender Setter/"
+        else:
+            return "../../[CP] Configurable HD Portraits/"   
+    else:
+        if isGS:
+            return "../../Gender Setter/[CP] Gender Setter/"
+        else:
+            return "../../[CP] Androgynous Villagers/" 
 
   
 ## general data functions  
@@ -72,9 +69,22 @@ def make_p_dict(pronoun, dict1,dict2):
 
 name_list1= ["Abigail","Alex","Birdie","Bouncer","Caroline","Charlie","Clint","Demetrius","Dwarf","Elliott","Emily","Evelyn","George","Gil","Governor","Grandpa","Gunther","Gus","Haley","Harvey","Henchman","Jas","Jodi","Kent","Krobus","Leah","Leo","Lewis","Linus","Marcello","Marlon","Marnie","Maru","MisterQi","Morris","OldMariner","Pam","Penny","Pierre",]
 name_list2= ["Robin","Sam","Sandy","Sebastian","Shane","Vincent","Willy","Wizard",]
-beach_bodies = ["Abigail","Alex","Caroline","Clint","Demetrius","Elliott","Emily","Haley","Harvey","Jodi","Leah","Lewis","Marnie","Maru","Pam","Penny","Pierre","Robin","Sam","Sebastian","Shane"]
+
+name_list = name_list1 + ["ProfessorSnail"]+name_list2
+
+beach_bodies = ["Abigail","Alex","Caroline","Clint","Elliott","Emily","Haley","Harvey","Jodi","Leah","Marnie","Maru","Pam","Penny","Pierre","Robin","Sam","Sebastian","Shane"]
 spouse_list = ["Abigail","Alex","Elliott","Emily","Haley","Harvey","Leah","Maru","Penny","Sam","Sebastian","Shane"]
 
+no_portrait_list = ["Marcello","OldMariner"]
+portrait_list = ["Gil"]
+
+for name in name_list:
+    if name not in no_portrait_list and name !="Charlie":
+        portrait_list.append(name)
+
+other_portraits = ["AnsweringMachine", "Bear"]   
+
+extras = {"Maru":"Maru_Hospital", "Krobus": "Krobus_Trenchcoat"}
 possession_dict= {"ProfessorSnail": "'s","Abigail":"'s","Alex":"'s","Birdie":"'s","Bouncer":"'s","Caroline":"'s","Charlie":"'s","Clint":"'s","Demetrius":"'","Dwarf":"'s","Elliott":"'s","Emily":"'s","Evelyn":"'s","George":"'s","Gil":"'s","Governor":"'s","Grandpa":"'s","Gunther":"'s","Gus":"'","Haley":"'s","Harvey":"'s","Henchman":"'s","Jas":"'","Jodi":"'s","Kent":"'s","Krobus":"'","Leah":"'s","Leo":"'s","Lewis":"'","Linus":"'","Marcello":"'s","Marlon":"'s","Marnie":"'s","Maru":"'s","MisterQi":"'s","Morris":"'","OldMariner":"'s","Pam":"'s","Penny":"'s","Pierre":"'s","Robin":"'s","Sam":"'s","Sandy":"'s","Sebastian":"'s","Shane":"'s","Vincent":"'s","Willy":"'s","Wizard":"'",}
 orig_gender_dict = {"ProfessorSnail": "Male","Abigail":"Female","Alex":"Male","Birdie":"Female","Bouncer":"Male","Caroline":"Female","Charlie":"Female","Clint":"Male","Demetrius":"Male","Dwarf":"Male","Elliott":"Male","Emily":"Female","Evelyn":"Female","George":"Male","Gil":"Male","Governor":"Male","Grandpa":"Male","Gunther":"Male","Gus":"Male","Haley":"Female","Harvey":"Male","Henchman":"Male","Jas":"Female","Jodi":"Female","Kent":"Male","Krobus":"Male","Leah":"Female","Leo":"Male","Lewis":"Male","Linus":"Male","Marcello":"Male","Marlon":"Male","Marnie":"Female","Maru":"Female","MisterQi":"Male","Morris":"Male","OldMariner":"Male","Pam":"Female","Penny":"Female","Pierre":"Male","Robin":"Female","Sam":"Male","Sandy":"Female","Sebastian":"Male","Shane":"Male","Vincent":"Male","Willy":"Male","Wizard":"Male",}
 orig_pronoun_dict ={
@@ -82,7 +92,7 @@ orig_pronoun_dict ={
     "Female": "She",
 }
 
-name_list = name_list1 + ["ProfessorSnail"]+name_list2
+
 
 birthday_dict = {"Abigail": "fall 13",
   "Alex": "summer 13",
@@ -125,6 +135,10 @@ variables_dict = {"Child2": "Godchild", "Child3": "nibling",
     "GenderLC2":"Adult","GenderLC3":"Guy","GenderLC4":"Kid","Child":"Child","Sibling":"Sibling","Relation":"_Auncle","ParentUC":"Parent","ParentLC":"Parent","MarriedUC":"Spouse","MarriedLC":"Spouse","Marital":"Mx","Elder":"_Grandparent",}
 
 nb_names_dict = {"Abigail":"Ashley","Alex":"Alex","Birdie":"Birdie","Bouncer":"Bouncer","Caroline":"Cary","Charlie":"Charley","Clint":"Coby","Demetrius":"Dubaku","Dwarf":"Smoluanu","Elliott":"Eden","Emily":"Elery","Evelyn":"Evelyn","George":"Georgie","Gil":"Gili","Governor":"Governor","Grandpa":"Grandie","Gunther":"Greer","Gus":"Gabi","Haley":"Hadyn","Harvey":"Harper","Henchman":"Guard","Jas":"Jay","Jodi":"Joey","Kent":"Kim","Krobus":"Krobus","Leah":"Leigh","Leo":"Lee","Lewis":"Lou","Linus":"Lucky","Marcello":"Modeste","Marlon":"Merlyn","Marnie":"Martie","Maru":"Maru","MisterQi":"Qi","Morris":"Moran","OldMariner":"Old Mariner","Pam":"Pat","Penny":"Pip","Pierre":"Paget","ProfessorSnail":"Professor Snail","Robin":"Robin","Sam":"Sam","Sandy":"Sandy","Sebastian":"September","Shane":"Shae","Vincent":"Vinnie","Willy":"Willie","Wizard":"Morgan",}
+
+variants_dict = {"Harvey": ["Shaved"],"Emily": ["LongSleeved"], "Pam": ["Young"], "Linus": ["Coat"],"Wizard": ["Young"]}
+genderswap_list = ["Alex","Elliott","Harvey","Sam", "Shane","Sebastian","Wizard","Willy"]
+   
 
 birthday_code = True
 custom_possession = False
@@ -180,7 +194,6 @@ gender_exceptions = {
 darker_chars = ["Marnie","Jas","Elliott","Grandpa","Sandy","Caroline","Leo","Birdie","ProfessorSnail"]
 wheelchair_chars = ["Leah"]
 islander_chars = ["Birdie","ProfessorSnail","Leo"]
-#islanderchild_chars = ["Leo"]
 
 all_variants = darker_chars + wheelchair_chars + islander_chars 
 ## Data processing   
@@ -223,7 +236,13 @@ def portraitname(name):
     if name == "Gil":
         return name
     else:
-        return spritename(name)              
+        return spritename(name)        
+
+def artname(name, type):
+    if type =="sprite":
+        return spritename(name)   
+    else:
+        return portraitname(name)
 
 def genderswap(gender):
     if gender =="Male":
@@ -233,97 +252,125 @@ def genderswap(gender):
     else:
         return gender                        
 
-def create_config(current_gender,write_variant):
+def create_config(current_gender):
     #create config file. Current_gender is what gender to write the characters as, write_variant is a boolean saying whether to write to one of the variant configs
-    path = end_path[mode]+"config.json"
-    if mode == "GS":
-        if write_variant:
-            if current_gender == "Neutral":
-                path = end_path[mode]+"/Variants/config all non-binary.json"
-            elif current_gender == "Male":
-                path = end_path[mode]+"/Variants/config all male.json"  
-            elif current_gender == "Neutral":
-                path = end_path[mode]+"/Variants/config all female.json"           
+    path = end_path()+"config.json"
+    if isGS:
+        if current_gender == "Neutral":
+            path = end_path()+"/Variants/config all non-binary.json"
+        elif current_gender == "Male":
+            path = end_path()+"/Variants/config all male.json"  
+        elif current_gender == "Female":
+            path = end_path()+"/Variants/config all female.json"               
     content = open(path,"w")
     content.write("{\n")
-    if current_gender == "false":
+    if isHD:
+        content.write("  \"Genderbent Bachelors\": \"Classic Portraits Androgynous Sprites\",\n")   
+    if current_gender == "None":
         edit_bool = "false"
     else:
         edit_bool = "true"   
-    if mode == "GS":
-        content.write("  \"MiscTextEdits\": \""+edit_bool+"\",\n")  
-    content.write("  \"MiscImageEdits\": \""+edit_bool+"\",\n")
+    if isGS:
+        content.write("  \"Misc Text Edits\": \""+edit_bool+"\",\n")  
+    content.write("  \"Misc Image Edits\": \""+edit_bool+"\",\n")
     content.write("\n")
-    if mode == "GS":
+    if isGS:
         if current_gender in ["Neutral","Test"] :
-            content.write("  \"FarmerGender\": \"Neutral\",\n")    
-            content.write("  \"FarmerPronoun\": \"They\",\n")  
+            content.write("  \"Farmer Gender\": \"Neutral\",\n")    
+            content.write("  \"Farmer Pronoun\": \"They\",\n")  
         else:
-            content.write("  \"FarmerGender\": \"false\",\n")    
-            content.write("  \"FarmerPronoun\": \"They\",\n")   
+            content.write("  \"Farmer Gender\": \"false\",\n")    
+            content.write("  \"Farmer Pronoun\": \"They\",\n")   
     content.write("\n")        
     for name in name_list:
+
         o_gender = orig_gender_dict[name]
+
+        changing_char = False 
+        gender = o_gender   
+        pronoun = orig_pronoun_dict[o_gender] 
+        if isHD:
+                changesprite =  orig_gender_dict[name]
+        else:
+                changesprite = "false"
+        new_name = name
+        
         if current_gender =="Neutral":
-            changing_char = True 
             gender = "Neutral"
             pronoun = "They" 
+            new_name =  nb_names_dict[name]  
+            if isHD:
+                changesprite = "Androgynous"
+            else:
+               changing_char = True       
         elif current_gender =="Test":
-            changing_char = True 
             gender = "Neutral"
             pronoun = random.choice(pronouns)  
+            new_name =  nb_names_dict[name]  
+            if name in darker_chars:
+                changesprite = "Darker"
+            elif name in wheelchair_chars:
+                changesprite = "Wheelchair"       
+            elif name in islander_chars:
+                changesprite = "Islander"
+            else:
+                changesprite = "true" 
+            if isHD:
+                if changesprite=="true":
+                   changesprite = "Androgynous"     
+                else:    
+                    changesprite = "Androgynous "+ changesprite  
         elif current_gender in ["Male","Female"]: 
             gender = current_gender
             pronoun = orig_pronoun_dict[current_gender]
-            changing_char = (current_gender !=  o_gender)  
-        else:
-            changing_char = False 
-            gender = o_gender   
-            pronoun = orig_pronoun_dict[o_gender] 
-        if changing_char:
+            if (current_gender !=  o_gender):
+                new_name =  nb_names_dict[name]   
+                if isHD:
+                    if  name in genderswap_list:
+                        changesprite = current_gender
+                    else:
+                       changesprite = "Androgynous"    
+                else:
+                    changing_char = True  
+
+        if changing_char: #not HD, not doing a test
             if name in all_variants:
                 changesprite = "Vanilla"
-                if current_gender =="Test":
-                    if name in darker_chars:
-                        changesprite = "Darker"
-                    elif name in wheelchair_chars:
-                        if current_gender =="Test":
-                            changesprite = "Wheelchair"
-                    #elif name in islanderchild_chars:
-                        #changesprite = "IslanderChild"        
-                    elif name in islander_chars:
-                        changesprite = "Islander"
             else:
                 changesprite = "true"
             new_name =  nb_names_dict[name]  
-        else:   
-            changesprite = "false"
-            new_name = name
-        if mode == "GS":
-            content.write("  \""+name+"Name\": \""+new_name+"\",\n")    
-            content.write("  \""+name+"Gender\": \""+gender+"\",\n")    
-            content.write("  \""+name+"Pronoun\": \""+pronoun+"\",\n")    
-        content.write("  \""+name+"Images\": \""+changesprite+"\",\n")             
+            
+        if isGS:
+            content.write("  \""+name+" Name\": \""+new_name+"\",\n")    
+            content.write("  \""+name+" Gender\": \""+gender+"\",\n")    
+            content.write("  \""+name+" Pronoun\": \""+pronoun+"\",\n")    
+        if name != "Charlie":    
+            content.write("  \""+name+" Images\": \""+changesprite+"\",\n")  
+    for name in other_portraits:
+        if isHD:
+            content.write("  \""+name+" Images\": \"true\",\n")      
+        else:
+            content.write("  \""+name+" Images\": \"false\",\n")                 
    
-    if mode == "GS":
+    if isGS:
         with open("./other/advancedtitle_config.json","r") as f:
             data = f.readlines()
         for l in data:
             content.write(l)
-        content.write("  \"EditIslandCharacters\": \"Full\",\n")
-        content.write("  \"PatchOriginalWeddingArt\": \"false\",\n\n")   
+        content.write("  \"Edit Island Characters\": \"Full\",\n")
+        content.write("  \"Patch Original Wedding Art\": \"false\",\n\n")   
         if not custom_possession:  
-            content.write("  \"PossessiveS\": \"true\",\n\n")   
+            content.write("  \"Possessive S\": \"true\",\n\n")   
         for name in name_list:
             if name in birthday_dict.keys(): 
-                content.write("  \""+name+"Birthday"+"\": \""+birthday_dict[name]+"\",\n") 
+                content.write("  \""+name+" Birthday"+"\": \""+birthday_dict[name]+"\",\n") 
             if custom_possession:
                 if name ==new_name:
-                    content.write("  \""+name+"Possession\": \""+possession_dict[name]+"\",\n")  
+                    content.write("  \""+name+" Possession\": \""+possession_dict[name]+"\",\n")  
                 else:    
-                    content.write("  \""+name+"Possession\": \""+possession(new_name)+"\",\n") 
+                    content.write("  \""+name+" Possession\": \""+possession(new_name)+"\",\n") 
             if name in spouse_list:
-                content.write("  \""+name+"GameGender\": \""+ orig_gender_dict[name]+"\",\n")       
+                content.write("  \""+name+" GameGender\": \""+ orig_gender_dict[name]+"\",\n")       
     content.write("\n}")            
     content.close()
 
@@ -349,25 +396,38 @@ def initialise_variables(name):
     #Lines to initialise variables for content
     o_gender = orig_gender_dict[name]
     s = ""
-    if mode == "GS":
-        s += "    \""+name+"Name\": {\"Default\": \""+realname(name)+"\"},\n"
+    if isGS:
+        s += "    \""+name+" Name\": {\"Default\": \""+realname(name)+"\"},\n"
         
-        s+="    \""+name+"Gender\": {\"Default\": \""+o_gender+"\","+gender_string()+"},\n"
+        s+="    \""+name+" Gender\": {\"Default\": \""+o_gender+"\","+gender_string()+"},\n"
 
-        s+="    \""+name+"Pronoun\": {\"Default\": \""+orig_pronoun_dict[o_gender]+"\","+pronoun_string()+"},\n"
-    s+="    \""+name+"Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \""
-    if name in all_variants:
-        s+="Vanilla"
+        s+="    \""+name+" Pronoun\": {\"Default\": \""+orig_pronoun_dict[o_gender]+"\","+pronoun_string()+"},\n"
+    s+="    \""+name+" Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \""
+    if isHD:
+        s+= orig_gender_dict[name] 
+        if name in variants_dict.keys():
+            for variant in variants_dict[name]:
+                s+=", "+ orig_gender_dict[name] + " "+ variant    
+        if name in genderswap_list:
+            s+=", Female"
+        s+=", Androgynous"    
         if name in darker_chars:
-            s+=", Darker"
+            s+=", Androgynous Darker"
         if name in wheelchair_chars:
-            s+=", Wheelchair"   
+            s+=", Androgynous Wheelchair"   
         if name in islander_chars:
-            s+=", Islander"  
-        #if name in islanderchild_chars:
-        #    s+=", IslanderChild,IslanderTeen"
-    else:
-        s+="true" 
+            s+=", Androgynous Islander"  
+    else:    
+        if name in all_variants:
+            s+="Vanilla"
+            if name in darker_chars:
+                s+=", Darker"
+            if name in wheelchair_chars:
+                s+=", Wheelchair"   
+            if name in islander_chars:
+                s+=", Islander"  
+        else:
+            s+="true" 
     s+= ", false\"},\n"                         
     s+="\n"
 
@@ -375,13 +435,13 @@ def initialise_variables(name):
 
 def initialise_advanced(name): 
     s = ""  
-    if mode == "GS": 
+    if isGS: 
         if name in birthday_dict.keys(): 
-            s+="    \""+name+"Birthday"+"\": {\"Default\": \""+birthday_dict[name]+"\"},\n" 
+            s+="    \""+name+" Birthday"+"\": {\"Default\": \""+birthday_dict[name]+"\"},\n" 
         if custom_possession:
-            s+="    \""+name+"Possession\":  {\"Default\": \""+possession_dict[name]+"\",\"AllowValues\": \"', 's\"},\n"     
+            s+="    \""+name+" Possession\":  {\"Default\": \""+possession_dict[name]+"\",\"AllowValues\": \"', 's\"},\n"     
         if name in spouse_list:
-            s+="    \""+name+"GameGender\": {\"Default\": \""+orig_gender_dict[name]+"\", \"AllowValues\": \"Male, Female\"},\n"       
+            s+="    \""+name+" GameGender\": {\"Default\": \""+orig_gender_dict[name]+"\", \"AllowValues\": \"Male, Female\"},\n"       
     if not s =="":
         s+="\n"
 
@@ -397,47 +457,75 @@ def gender_variables(name):
     for word in g_dict.keys():  
         s += "                {\"Name\": \""+name+word+"\", \"Value\": \"{{sqbr.getGS/"+name+word+"}}\"},\n"               
     if custom_possession!=True and name !="Farmer":
-        s += "                {\"Name\": \""+name+"Possession\", \"Value\": \"{{sqbr.getGS/"+name+"Possession}}\"},\n"  
+        s += "                {\"Name\": \""+name+" Possession\", \"Value\": \"{{sqbr.getGS/"+name+" Possession}}\"},\n"  
     s+="\n"
     return s
 
-def image_start(location,extra):
-    #at the start of an image block
-    if extra =="":
-        return "		 {\"Action\": \"EditImage\",\"Target\": \"" + location+"\",\"FromFile\": \"assets/{{Target}}.png\","
-    else:
-        return "		 {\"Action\": \"EditImage\",\"Target\": \"" + location+"\",\"FromFile\": \"assets/"+location+"_"+extra+".png\","
+def image_start(name, type, variant):
+    #at the start of an image block 
 
-def image_end(name,extra):
+    s= "		{\"Action\": \"EditImage\","
+    if type =="sprite":
+        location = "Characters/"
+    elif isHD:
+        if variant =="setup":
+            location = "Mods/HDPortraits/" 
+            s = "        {\"Action\":\"Load\","   
+        else:    
+            location = "Mods/talkohSeasonal/"     
+    else:
+        location = "Portraits/"       
+        
+
+    extra_code = ""
+    if name in beach_bodies and variant!="Female" and (name,variant) !=("Emily","LongSleeved"):
+        extra_code =", "+location
+        extra_code+=name+"_Beach"
+    if name in extras.keys():
+        extra_code =", "+location
+        extra_code+=extras[name]  
+    s+= "\"Target\":\""+location+artname(name, type) + extra_code + "\","     
+    return s
+
+def image_middle_basic(name, type,variant):
+    if isHD and type !="sprite": 
+        return "\"FromFile\": \""+location(variant, type)+"{{TargetWithoutPath}}.png\","
+    else:
+        return "\"FromFile\": \""+location(variant, type)+"{{TargetWithoutPath}}.png\","    
+
+def image_end(name, type,variant):
     #at the end of an image block
     if name =="other":
-        return "\"When\": {\"MiscImageEdits\": \"true\"}},\n"
+        return "\"When\": {\"Misc Image Edits\": \"true\"}},\n"
     else:    
         s = "\"When\": {"
-        if extra !="":
-            s+="\""+name+"Images\": \""+extra+"\""  
+        if variant !="":
+            s+="\""+name+" Images\": \""+test_variable(name, variant, type)+"\""  
         else:
-            s+="\""+name+"Images|contains=false\": \"false\""    
+            s+="\""+name+" Images|contains=false\": \"false\""    
         s+="}},\n"
         return s
 
-def image_line(name, location,extra):
+def image_line(name, type,variant):
     #code to replace image at location
-    return image_start(location,extra) +image_end(name,extra)
+    if artname(name, type)=="":
+        return ""
+    else:
+        return image_start(name, type,variant) +image_middle_basic(name, type,variant)+image_end(name, type,variant)
 
 
-def image_line_pos(name, location, extra,x, y, w, h):
+def image_line_pos(name, type,variant,x, y, w, h):
     #code to replace image at location in a given box
-    s =image_start(location,"")
+    s =image_start(name, type,variant)
     pos_string ="{ \"X\": "+str(x)+", \"Y\": "+str(y)+", \"Width\": "+str(w)+", \"Height\": "+str(h)+" }" 
     s+="\"FromArea\": "+pos_string+",\"ToArea\":  "+pos_string+","
-    s+=image_end(name,extra)
+    s+=image_middle_basic(name, type,variant)+image_end(name, type,variant)
     return s
 
-def image_pair(name, location1, location2,extra):
+def image_pair(name, location1, location2,variant):
     #code to replace image at location in a given box
     s ="		 {\"Action\": \"EditImage\",\"Target\": \"" + location1+"\",\"FromFile\": \"assets/"+location2+".png\","
-    s+=image_end(name,extra)
+    s+=image_middle_basic(name, type,variant)+image_end(name, type,variant)
     return s    
 
 def image_pair_pos(name, location1, location2, extra,x1, y1, x2,y2,w, h):
@@ -459,24 +547,24 @@ def image_lineSpouse(name,extra):
     location = "Characters/"+art_name
     if extra =="":
         e_string =""
-        e_var = "\""+name+"Images|contains=false\": \"false\""
+        e_var = "\""+name+" Images|contains=false\": \"false\""
     else:
         e_string ="_"+extra 
-        e_var = "\""+name+"Images\": \""+extra+"\""  
+        e_var = "\""+name+" Images\": \""+extra+"\""  
     s="		 {\"Action\": \"EditImage\",\"Target\": \"" + location+"\",\"FromFile\": \"assets/Characters/"+art_name+e_string+".png\","
     s+="\"When\": {"+e_var+"}},\n"
     s+="		 {\"Action\": \"EditImage\",\"Target\": \"" + location+"\",\"FromFile\": \"assets/Characters/"+art_name+e_string+".png\","
     s+="\"FromArea\": { \"X\": 0, \"Y\": 288, \"Width\": 48, \"Height\": 32 }," 
     s+="\"ToArea\": { \"X\": 0, \"Y\": 384, \"Width\": 48, \"Height\": 32 }," 
-    s+="\"When\": {\""+name+"GameGender\": \""+genderswap(o_gender)+"\", \"DayEvent|contains=flower dance\": \"false\","+e_var+"}},\n"    
+    s+="\"When\": {\""+name+" GameGender\": \""+genderswap(o_gender)+"\", \"DayEvent|contains=flower dance\": \"false\","+e_var+"}},\n"    
     if not name in ["Maru","Haley"]: #have shorter sprite sheets
         s+="		 {\"Action\": \"EditImage\",\"Target\": \"" + location+"\",\"FromFile\": \"assets/Characters/"+art_name+e_string+".png\","
         s+="\"FromArea\": { \"X\": 0, \"Y\": 384, \"Width\": 48, \"Height\": 32 }," 
         s+="\"ToArea\": { \"X\": 0, \"Y\": 288, \"Width\": 48, \"Height\": 32 }," 
-        s+="\"When\": {\""+name+"GameGender\": \""+genderswap(o_gender)+"\", \"DayEvent|contains=flower dance\": \"false\","+e_var+"}},\n"   
+        s+="\"When\": {\""+name+" GameGender\": \""+genderswap(o_gender)+"\", \"DayEvent|contains=flower dance\": \"false\","+e_var+"}},\n"   
     return s
 
-def image_code(name):  
+def image_code_old(name):  
     #all image replacements for character called name
     s = ""
     art_name = spritename(name)
@@ -484,7 +572,7 @@ def image_code(name):
         s+=""
     else:
         location = "Characters/"+art_name
-        if name in spouse_list and mode == "GS":
+        if name in spouse_list and isGS:
             #need gendered variants
             s+= image_lineSpouse(name,"")
             if name in darker_chars:
@@ -501,18 +589,12 @@ def image_code(name):
             if name in wheelchair_chars:    
                 s+=image_line(name,location,"Wheelchair")    
             if name in islander_chars:    
-                s+=image_line(name,location,"Islander")  
-            #if name in islanderchild_chars:    
-            #    s+=image_line(name,location,"IslanderChild") 
-            #    s+=image_line(name,location,"IslanderTeen")          
+                s+=image_line(name,location,"Islander")         
 
         if name not in ["Marcello","OldMariner"]:
             s+=image_line(name,"Portraits/"+art_name,"")   
         if name in darker_chars:
             s+=image_line(name,"Portraits/"+art_name,"Darker") 
-        #if name in islanderchild_chars:    
-        #    s+=image_line(name,"Portraits/"+art_name,"IslanderChild") 
-        #    s+=image_line(name,"Portraits/"+art_name,"IslanderTeen")
         elif name in islander_chars:    
             s+=image_line(name,"Portraits/"+art_name,"Islander")       
 
@@ -723,10 +805,10 @@ def dance_wedding():
             Y = "384"
         s += "             {\"Action\": \"EditImage\",\"Target\": \"Characters/"+name+"\","
         s += "\"FromFile\": \"assets/Wedding/"+name+"_Wedding.png\",\"ToArea\": { \"X\": 0, \"Y\": "+Y+", \"Width\": 48, \"Height\": 32 },"
-        s += "\"When\": { \""+name+"GameGender\": \""+genderswap(o_gender)+"\", \"DayEvent\": \"wedding\",\""+name+"Images\":\"false\", \"PatchOriginalWeddingArt\":\"true\"}},"
+        s += "\"When\": { \""+name+" GameGender\": \""+genderswap(o_gender)+"\", \"DayEvent\": \"wedding\",\""+name+" Images\":\"false\", \"Patch Original Wedding Art\":\"true\"}},"
         s+="\n"
         s+= "             {\"Action\": \"EditData\",\"Target\": \"Data/NPCDispositions\",\"Update\": \"OnLocationChange\","
-        s+="\"When\": { \""+name+"GameGender\": \""+genderswap(o_gender)+"\",\"DayEvent|contains=flower dance\": \"false\"},"
+        s+="\"When\": { \""+name+" GameGender\": \""+genderswap(o_gender)+"\",\"DayEvent|contains=flower dance\": \"false\"},"
         s+="\"Entries\": {\""+name+"\":\""+disposition(name,genderswap(o_gender))+"\"}},"
         s+="\n\n"
     s+="             {\"Action\": \"EditData\",\"Target\": \"Strings/Locations\",\n"
@@ -750,44 +832,64 @@ def wedding_code():
     return s
 
 def create_content():
-    # Create content.json
-    path = end_path[mode]+"content.json"  
+    # Config
+    path = end_path()+"content.json"  
     content = open(path,"w")
     content.write("{\n    \"Format\": \"1.27.0\",\n    \"ConfigSchema\":\n {\n")
-    if mode == "GS":
-            content.write("    \"MiscTextEdits\": { \"AllowValues\": \"true, false\",\"Default\": \"false\"},\n")
-    content.write("    \"MiscImageEdits\": { \"AllowValues\": \"true, false\",\"Default\": \"false\"},\n\n")
-    if mode == "GS":
-        content.write("    \"FarmerGender\":{ \"AllowValues\": \"false,Male, Female, Neutral\",\"Default\": \"false\"},\n")
-        content.write("    \"FarmerPronoun\": {\"Default\": \"They\","+pronoun_string()+"},\n\n")
+    if isGS:
+            content.write("    \"Misc Text Edits\": { \"AllowValues\": \"true, false\",\"Default\": \"false\"},\n")
+    content.write("    \"Misc Image Edits\": { \"AllowValues\": \"true, false\",\"Default\": \"false\"},\n\n")
+    if isGS:
+        content.write("    \"Farmer Gender\":{ \"AllowValues\": \"false,Male, Female, Neutral\",\"Default\": \"false\"},\n")
+        content.write("    \"Farmer Pronoun\": {\"Default\": \"They\","+pronoun_string()+"},\n\n")
+    if isHD:
+        content.write("    \"Genderbent Bachelors\": {\n")
+        content.write("    	\"AllowValues\": \"Classic Portraits Androgynous Sprites, RedK1rby Portraits No Sprites, Classic Portraits No Sprites\",\n")
+        content.write("    	\"Default\": \"Classic Portraits Androgynous Sprites\",\n")
+        content.write("    	\"Description\": \"Choose between RedK1rby-style beach portraits or the classic ones for Bachelors switched to Female.\"\n")
+        content.write("    },\n\n")
+        
     for name in name_list:
         content.write(initialise_variables(name))  
-    if mode == "GS":
+    for name in other_portraits:
+        if isHD:
+            content.write("    \""+name+" Images\": {\"Default\": \""+"true"+"\",\"AllowValues\": \"false, true\"},\n\n")  
+        else:
+            content.write("    \""+name+" Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \"false, true\"},\n\n")  
+    if isGS:
         with open("./other/advancedtitle_content.json","r") as f:
             data = f.readlines()
         for l in data:
             content.write(l)
-        content.write("    \"EditIslandCharacters\": { \"AllowValues\": \"Full, Minimal, None\",\"Default\": \"Full\"},\n")    
-        content.write("    \"PatchOriginalWeddingArt\": { \"AllowValues\": \"true, false\",\"Default\": \"false\"},\n\n") 
-        content.write("    \"PossessiveS\": { \"AllowValues\": \"true, false\",\"Default\": \"true\"},\n\n")  
+        content.write("    \"Edit Island Characters\": { \"AllowValues\": \"Full, Minimal, None\",\"Default\": \"Full\"},\n")    
+        content.write("    \"Patch Original Wedding Art\": { \"AllowValues\": \"true, false\",\"Default\": \"false\"},\n\n") 
+        content.write("    \"Possessive S\": { \"AllowValues\": \"true, false\",\"Default\": \"true\"},\n\n")  
         for name in name_list:
             content.write(initialise_advanced(name))      
-    content.write("    },\n")        
+    content.write("    },\n")  
+
+    #Dynamic Tokens      
     content.write("    \"DynamicTokens\": [\n")         
-    if mode == "GS":
+    if isGS:
         content.write("                {\"Name\": \"ChangeFarmerGender\", \"Value\":\"true\"},\n")
-        content.write("                {\"Name\": \"ChangeFarmerGender\", \"Value\":\"false\",\"When\":{\"FarmerGender\": \"false\"}},\n")   
+        content.write("                {\"Name\": \"ChangeFarmerGender\", \"Value\":\"false\",\"When\":{\"Farmer Gender\": \"false\"}},\n")   
         content.write("                {\"Name\": \"ChangeFarmerGender\", \"Value\":\"false\",\"When\":{\"HasMod |contains=Hana.GenderNeutralityMod\": true}},\n")    
         content.write(gender_variables("Farmer"))  
         for name in name_list:
             content.write(gender_variables(name))  
-
     content.write("    ],\n")  
+
+    #Changes
     content.write("	\"Changes\": [\n")  
-    for name in name_list:
-        content.write(image_code(name))     
-    content.write(image_code_background())     
-    if mode == "GS":
+    if isHD:
+        content.write(hd_setup())
+    content.write(create_image_code())
+    if isHD:
+        content.write(hd_extra_portraits())
+    
+  
+    #content.write(image_code_background())     
+    if isGS:
         content.write("\n         {\n")
         content.write("			\"Action\": \"EditData\",\n")
         content.write("			\"Target\": \"Data/NPCDispositions\",\n")
@@ -798,7 +900,7 @@ def create_content():
         content.write("			}},\n")
         content.write("             {\"Action\": \"EditData\",\"Target\": \"Data/NPCDispositions\",\"Entries\": {\n")
         content.write("				\"Leo\":\""+disposition("Leo","male")+"\"\n")
-        content.write("			},\"When\": {\"EditIslandCharacters\": \"Full\"}},\n")
+        content.write("			},\"When\": {\"Edit Island Characters\": \"Full\"}},\n")
         with open("./mine/change_names.json","r") as f:
             content.write(f.read())	
         content.write(dance_wedding())	
@@ -822,27 +924,197 @@ def create_content():
     content.write("	]\n}") 
     content.close()   
 
-###### HD code
+###### image code
 # 
 
-other_HDlist = ["AnsweringMachine", "Bear"]    
+def test_variable(name, variant, type):
+    # for When "(name) Image" : "test_variable(variant, type)"
+    # type = portrait, sprite
+    # variant = Darker etc
 
-def HD_variant_code(name,variant):
+    if isHD:
+        if variant in ["Young","Coat","LongSleeved", "Shaved"]:
+            return orig_gender_dict[name]+ " "+ variant
+        elif variant in ["Female","Androgynous"]:
+            return variant  
+        else:    
+            return "Androgynous "+ variant  
+    else:
+            return variant                  
+
+
+def location(variant, type):
+    #location of the image we're using 
+    v_string = ""
+    if variant != "":
+        v_string = "Variants/" + variant + "/"
+        if isHD:
+            if variant in ["Darker","Islander","Wheelchair"]:
+                v_string = "Androgynous/Variants/"+ variant + "/"
+            elif variant =="Androgynous":
+                 v_string = "Androgynous/"    
+            elif variant == "Female":
+                v_string = "Genderbent/"     
+    if type == "sprite":
+        return "assets/Characters/"+v_string 
+    else:    
+       return "assets/Portraits/"+v_string 
+
+
+def hd_extra_portraits():
+    s = ""
+    for name in portrait_list:
+        s+= image_line(name, "portrait", "Androgynous")       
+        s+="\n"
+    for name in variants_dict.keys():
+        for variant in variants_dict[name]:
+            s+= image_line(name, "portrait", variant)   
+    for name in genderswap_list:
+        s+= image_line(name, "portrait", "Female") 
+        if name in beach_bodies:
+            s+="        {\n			\"Action\":\"EditImage\",\n"
+            s+="			\"Target\":\"Mods/talkohSeasonal/"+portraitname(name) + "_Beach\",\n"
+            s+="			\"FromFile\":\"assets/Portraits/Genderbent/Classic/"+ name+"_Beach.png\",\n"
+            s+=" 			\"When\": {\""+name+" Images\": \"Female\", \"Genderbent Bachelors|contains=Classic\": true}\n        },\n\n"
+            
+            s+="        {\n			\"Action\":\"EditImage\",\n"
+            s+="			\"Target\":\"Characters/"+spritename(name) + ", Characters/"+spritename(name)+"_Beach\",\n"     
+            s+="			\"FromFile\":\"assets/Characters/Androgynous/{{TargetWithoutPath}}.png\",\n"
+            s+=" 			\"When\": {\""+name+" Images\": \"Female\", \"Genderbent Bachelors\": \"Classic Portraits Androgynous Sprites\"}\n        },\n\n" 
+            s+="\n"    
+    return s 
+ 
+def hd_setup():
+    s = ""
+    name_string = "\""
+    for name in portrait_list + other_portraits:
+        name_string+= "Mods/talkohSeasonal/"+portraitname(name) + ", "
+        if name in extras.keys():
+            name_string+= "Mods/talkohSeasonal/"+extras[name] + ", "
+    for name in beach_bodies:
+        name_string+= "Mods/talkohSeasonal/"+portraitname(name) + "_Beach, "
+    name_string += "\",\n"   
+    s+="        {\n			\"Action\":\"Load\",\n"
+    s+="			\"Target\":"+ name_string
+    s+="			\"FromFile\":\"assets/Portraits/{{TargetWithoutPath}}.png\",\n"
+    s+="			\"When\" :{\"HasMod |contains=talkohlooeys.SeasonalPortraits\": false}\n"
+    s+="        },\n\n" 
+    
+    for name in portrait_list:
+        s += image_start(name, "portrait", "setup")
+        s+="\"FromFile\":\"assets/base.json\","
+        s+= "\"When\": {\""+name+" Images|contains=false\": \"false\",\"HasMod |contains=talkohlooeys.SeasonalPortraits\": false}},\n"  
+    
+    name_string = "\"" 
+    for name in portrait_list + other_portraits:
+        name_string+= "Mods/HDPortraits/"+portraitname(name) + ", "
+        if name in extras.keys():
+            name_string+= "Mods/HDPortraits/"+extras[name] + ", "
+    for name in beach_bodies:
+        name_string+= "Mods/HDPortraits/"+portraitname(name) + "_Beach, "    
+    name_string += "\",\n"   
+    s+="        {\n			\"Action\":\"EditData\",\n"
+    s+="			\"Target\":"+ name_string
+    s+="			\"Entries\": {\n"
+    s+="	    		\"Portrait\":\"Mods/talkohSeasonal/{{TargetWithoutPath}}\"\n"
+    s+="			},\n"
+    s+="			\"When\" :{\"HasMod |contains=talkohlooeys.SeasonalPortraits\": false}\n"
+    s+="        },\n\n"
+    return s
+
+def create_image_code(): 
+    s = ""
+    for name in other_portraits:
+        s+= image_line(name, "portrait", "")   
+        s+="\n"    
+    for name in portrait_list:
+        s+= image_line(name, "portrait", "")  
+        if isHD:
+            s+= image_line(name, "sprite", "Androgynous") 
+        else:    
+            s+= image_line(name, "sprite", "")   
+        if name in darker_chars:
+            s+= image_line(name, "portrait", "Darker")  
+            s+= image_line(name, "sprite", "Darker")      
+        if name in wheelchair_chars: 
+            s+= image_line(name, "sprite", "Wheelchair")  
+        if name in islander_chars:
+            s+= image_line(name, "portrait", "Islander")  
+            s+= image_line(name, "sprite", "Islander")   
+        s+="\n"             
+    for name in no_portrait_list:   
+        if isHD: 
+            s+= image_line(name, "sprite", "Androgynous") 
+        else:
+            s+= image_line(name, "sprite", "")    
+        s+="\n"         
+    return s
+
+       
+isGS = True
+for isHD in [True, False]:
+    for g in ["Male", "Female", "Neutral", "Test"]:
+        create_config(g) 
+isGS = False
+for isHD in [True, False]:
+    create_config("None")
+
+for isGS in [True, False]:
+    for isHD in [True, False]:
+        create_content()
+
+#create_content(False, False)
+
+#create_hd(False)
+
+##########OLD
+
+def sprite_variant_code(name,variant):
+    #code for variant character sprite
+    base_location = "Characters/"    
+    beach_code = ""
+    if name in beach_bodies and (name,variant) !=("Emily","LongSleeved"):
+        beach_code =", "+base_location
+        beach_code+=name+"_Beach"
+    middle = "			\"Target\":\""+base_location+spritename(name) + beach_code + "\",\n"        
+    test_string = variant
+    if variant == "Female": #do  not have these images
+        location = "Characters/Genderbent/"
+        middle_string = "			\"Target\":\""+base_location+spritename(name)+ "\",\n" 
+    elif variant == "Androgynous":
+        location = "Characters/Androgynous/"
+        middle_string = middle      
+    else:
+        middle_string = middle  
+        if variant in ["Young","Coat"]:
+            location = "Characters/Variants/"+variant + "/"
+            test_string = orig_gender_dict[name]+ " "+ variant 
+        else:    
+            test_string = "Androgynous "+ variant 
+            location = "Characters/Androgynous/Variants/" +variant + "/"     
+    s = "        {\n			\"Action\":\"EditImage\",\n"
+    s+=middle_string
+    s+="			\"FromFile\":\"assets/" + location+ "{{TargetWithoutPath}}.png\",\n"
+    s+= " 			\"When\": {\""+name+" Images\": \""+test_string+"\"}\n        },\n\n" 
+    return s    
+
+
+def HD_variant_code_old(name,variant):
     #code for variant HD portrait
-    if variant =="None":
+    if variant =="":
         base_location = "Mods/HDPortraits/"
     else:
-        base_location = "Mods/SqbrHDPortraits/"    
+        base_location = "Mods/talkohSeasonal/"    
     beach_code = ""
-    if name not in ["Lewis","Demetrius"] and name in beach_bodies and (name,variant) !=("Emily","LongSleeved"):
+    if name in beach_bodies and (name,variant) !=("Emily","LongSleeved"):
         beach_code =", "+base_location
         beach_code+=name+"_Beach"
     middle = "			\"Target\":\""+base_location+portraitname(name) + beach_code + "\",\n"     
-    if variant =="None":
+    if variant =="":
         s = "        {\n			\"Action\":\"Load\",\n"
         s+=middle
         s+="			\"FromFile\":\"assets/base.json\",\n"
-        s+= " 			\"When\": {\""+name+"Images|contains=false\": \"false\"}\n        },\n\n"      
+        s+= " 			\"When\": {\""+name+" Images|contains=false\": \"false\",\"HasMod |contains=talkohlooeys.SeasonalPortraits\": false}\n        },\n\n"      
     else:    
         test_string = variant
         if variant == "Female":
@@ -866,170 +1138,5 @@ def HD_variant_code(name,variant):
         s = "        {\n			\"Action\":\"EditImage\",\n"
         s+=middle_string
         s+="			\"FromFile\":\"assets/" + location+ "{{TargetWithoutPath}}.png\",\n"
-        s+= " 			\"When\": {\""+name+"Images\": \""+test_string+"\"}\n        },\n\n" 
-    return s   
-
-def sprite_variant_code(name,variant):
-    #code for variant character sprite
-    base_location = "Characters/"    
-    beach_code = ""
-    if name not in ["Lewis","Demetrius"] and name in beach_bodies and (name,variant) !=("Emily","LongSleeved"):
-        beach_code =", "+base_location
-        beach_code+=name+"_Beach"
-    middle = "			\"Target\":\""+base_location+spritename(name) + beach_code + "\",\n"        
-    test_string = variant
-    if variant == "Female": #do  not have these images
-        location = "Characters/Genderbent/"
-        middle_string = "			\"Target\":\""+base_location+spritename(name)+ "\",\n" 
-    elif variant == "Androgynous":
-        location = "Characters/Androgynous/"
-        middle_string = middle      
-    else:
-        middle_string = middle  
-        if variant in ["Young","Coat"]:
-            location = "Characters/Variants/"+variant + "/"
-            test_string = orig_gender_dict[name]+ " "+ variant 
-        else:    
-            test_string = "Androgynous "+ variant 
-            location = "Characters/Androgynous/Variants/" +variant + "/"     
-    s = "        {\n			\"Action\":\"EditImage\",\n"
-    s+=middle_string
-    s+="			\"FromFile\":\"assets/" + location+ "{{TargetWithoutPath}}.png\",\n"
-    s+= " 			\"When\": {\""+name+"Images\": \""+test_string+"\"}\n        },\n\n" 
-    return s     
-
-def create_hd():
-    #create config file. Current_gender is what gender to write the characters as, write_variant is a boolean saying whether to write to one of the variant configs
-    
-    #config file
-    path = end_path[mode]+"config.json" 
-    content = open(path,"w")
-    content.write("{\n")
-    #content.write("  \"MatchSprites\": \"true\",\n")      
-    for name in name_list:
-        content.write("  \""+name+"Images\": \""+ orig_gender_dict[name] +"\",\n")   
-    for name in other_HDlist:   
-        content.write("  \""+name+"Images\": \"Vanilla\",\n")                 
-    content.write("\n}")            
-    content.close()   
-
-    #content.json
-
-    path = end_path[mode]+"content.json" 
-    content = open(path,"w")   
-    content.write("{\n    \"Format\": \"1.27.0\",\n    \"ConfigSchema\":\n {\n")  
-    content.write("    \"Genderbent Bachelors Beach\": {\n")
-    content.write("    	\"AllowValues\": \"RedK1rby, Classic\",\n")
-    content.write("    	\"Default\": \"RedK1rby\",\n")
-    content.write("    	\"Description\": \"Choose between RedK1rby-style beach portraits or the classic ones for Bachelors switched to Female.\",")
-    content.write("},\n\n")
-    #content.write("    \"MatchSprites\": {\"Default\": \""+"true"+"\",\"AllowValues\": \"true, false\"},\n\n")
-    variants_dict = {"Harvey": ["Shaved"],"Emily": ["LongSleeved"], "Pam": ["Young"], "Linus": ["Coat"],"Wizard": ["Young"]}
-    genderswap_list = ["Alex","Elliott","Harvey","Sam", "Shane","Sebastian","Wizard","Willy"]
-    
-    for name in name_list:
-        s="    \""+name+"Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \""
-        s+= "false, "
-        s+= orig_gender_dict[name] 
-        if name in variants_dict.keys():
-            for variant in variants_dict[name]:
-                s+=", "+ orig_gender_dict[name] + " "+ variant    
-        if name in genderswap_list:
-            s+=", Female"
-        s+=", Androgynous"    
-        if name in darker_chars:
-            s+=", Androgynous Darker"
-        if name in wheelchair_chars:
-            s+=", Androgynous Wheelchair"   
-        if name in islander_chars:
-            s+=", Androgynous Islander"  
-        s+= "\"},\n\n"  
-        content.write(s)   
-
-    for name in other_HDlist:
-        s="    \""+name+"Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \""
-        s+= "false, Vanilla"
-        s+= "\"},\n\n"  
-        content.write(s)
-                 
-    content.write("    },\n")        
-    content.write("	\"Changes\": [\n") 
-    portrait_list = ["Gil"]
-    beach_list = []
-    extras = {"Maru":"Maru_Hospital","Krobus": "Krobus_Trenchcoat"}
-    for name in name_list:
-        if name not in ["Marcello","OldMariner","Charlie"] and portraitname(name)!="None":
-            portrait_list.append(name)
-            if name not in ["Lewis","Demetrius"] and name in beach_bodies:
-                beach_list.append(name)
-
-    name_string = "\"" 
-    for name in portrait_list + other_HDlist:
-        name_string+= "Mods/sqbrHDPortraits/"+portraitname(name) + ", "
-        if name in extras.keys():
-            name_string+= "Mods/sqbrHDPortraits/"+extras[name] + ", "
-    for name in beach_list:
-        name_string+= "Mods/sqbrHDPortraits/"+portraitname(name) + "_beach, "
-    name_string += "\",\n"   
-    content.write("        {\n			\"Action\":\"Load\",\n")
-    content.write("			\"Target\":"+ name_string)
-    content.write("			\"FromFile\":\"assets/Portraits/{{TargetWithoutPath}}.png\"\n")
-    content.write("        },\n\n")      
-    name_string = "\"" 
-    for name in portrait_list + other_HDlist:
-        name_string+= "Mods/HDPortraits/"+portraitname(name) + ", "
-        if name in extras.keys():
-            name_string+= "Mods/HDPortraits/"+extras[name] + ", "
-    for name in beach_list:
-        name_string+= "Mods/HDPortraits/"+portraitname(name) + "_Beach, "    
-    name_string += "\",\n"   
-    content.write("        {\n			\"Action\":\"EditData\",\n")
-    content.write("			\"Target\":"+ name_string)
-    content.write("			\"Entries\": {\n")
-    content.write("	    		\"Portrait\":\"Mods/sqbrHDPortraits/{{TargetWithoutPath}}\"\n")
-    content.write("			}\n")
-    content.write("        },\n\n")  
-    for name in other_HDlist:
-        content.write(HD_variant_code(name,"None"))
-    for name in portrait_list:
-        content.write(HD_variant_code(name,"None")) 
-    for name in variants_dict.keys():
-        for variant in variants_dict[name]:
-            content.write(HD_variant_code(name,variant))
-    for name in genderswap_list:
-        content.write(HD_variant_code(name,"Female"))   
-        if name in beach_bodies:
-            content.write("        {\n			\"Action\":\"EditImage\",\n")
-            content.write("			\"Target\":\"Mods/SqbrHDPortraits/"+portraitname(name) + "_Beach\",\n")     
-            content.write("			\"FromFile\":\"assets/Portraits/Genderbent/Classic/"+ name+"_Beach.png\",\n")
-            content.write(" 			\"When\": {\""+name+"Images\": \"Female\", \"Genderbent Bachelors Beach\": \"Classic\"}\n        },\n\n")  
-    for name in portrait_list:
-        content.write(HD_variant_code(name,"Androgynous"))   
-        content.write(sprite_variant_code(name,"Androgynous"))   
-        if name in darker_chars:
-            content.write(HD_variant_code(name,"Darker"))   
-            content.write(sprite_variant_code(name,"Darker"))    
-        if name in wheelchair_chars:
-            content.write(HD_variant_code(name,"Wheelchair"))  
-            content.write(sprite_variant_code(name,"Wheelchair"))  
-        if name in islander_chars:
-            content.write(HD_variant_code(name,"Islander"))   
-            content.write(sprite_variant_code(name,"Islander"))                        
-    with open("./mine/HD sprite code.json","r") as f:
-            content.write(f.read())	                
-    content.write("	]\n}") 
-    content.close() 
-
-
-       
-mode = "GS"
-create_config("Neutral",True) 
-create_config("Male",True) 
-create_config("Female",True) 
-create_config("Test",False) 
-create_content()
-mode = "LowRes"
-create_config("Neutral",False) 
-create_content()
-mode = "HD"
-create_hd()
+        s+= " 			\"When\": {\""+name+" Images\": \""+test_string+"\"}\n        },\n\n" 
+    return s       

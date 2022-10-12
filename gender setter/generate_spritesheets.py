@@ -47,16 +47,27 @@ def in_dictionary(dictionary, folder, name):
 spouse_list = ["Abigail","Alex","Elliott","Emily","Haley","Harvey","Leah","Maru","Penny","Sam","Sebastian","Shane"]
 orig_gender_dict = {"ProfessorSnail": "Male","Abigail":"Female","Alex":"Male","Birdie":"Female","Bouncer":"Male","Caroline":"Female","Charlie":"Female","Clint":"Male","Demetrius":"Male","Dwarf":"Male","Elliott":"Male","Emily":"Female","Evelyn":"Female","George":"Male","Gil":"Male","Governor":"Male","Grandpa":"Male","Gunther":"Male","Gus":"Male","Haley":"Female","Harvey":"Male","Henchman":"Male","Jas":"Female","Jodi":"Female","Kent":"Male","Krobus":"Male","Leah":"Female","Leo":"Male","Lewis":"Male","Linus":"Male","Marcello":"Male","Marlon":"Male","Marnie":"Female","Maru":"Female","MisterQi":"Male","Morris":"Male","OldMariner":"Male","Pam":"Female","Penny":"Female","Pierre":"Male","Robin":"Female","Sam":"Male","Sandy":"Female","Sebastian":"Male","Shane":"Male","Vincent":"Male","Willy":"Male","Wizard":"Male",}
 
-name_list1= ["Abigail","Alex","Birdie","Caroline","Charlie","Clint","Demetrius","Dwarf", "Elliott","Emily","Evelyn","George","Gil","Governor","Grandpa","Gunther","Gus","Haley","Harvey","Henchman","Jas","Jodi","Kent","Leah","Leo","Lewis","Linus","Krobus", "Marcello","Marlon","Marnie","Maru","MrQi","Morris","OldMariner","Pam","Penny","Pierre",]
+name_list1= ["Abigail","Alex","Birdie","Bouncer", "Caroline","Clint","Demetrius","Dwarf", "Elliott","Emily","Evelyn","George","Governor","Gunther","Gus","Haley","Harvey","Henchman","Jas","Jodi","Kent","Leah","Lewis","Linus","Krobus", "Marcello","Marlon","Marnie","Maru","MrQi","Morris","Mariner","Pam","Penny","Pierre",]
 name_list2= ["Robin","Sam","Sandy","Sebastian","Shane","Vincent","Willy","Wizard",]
-name_list = name_list1 + ["ProfessorSnail","ParrotBoy","SafariGuy"]+name_list2
-possible_names = []
-for name in name_list:
-    for e in ["", "_Darker", "_Wheelchair","_Islander", "_IslanderChild"]:
-        possible_names.append(name+e+".png")
+name_list = name_list1 + ["ParrotBoy","SafariGuy"]+name_list2
+beach_bodies = ["Abigail","Alex","Caroline","Clint","Elliott","Emily","Haley","Harvey","Jodi","Leah","Marnie","Maru","Pam","Penny","Pierre","Robin","Sam","Sebastian","Shane"]
 
-start_path = "../../Gender Setter/[CP] Gender Setter/assets/Characters/"
+darker_chars = ["Marnie","Jas","Elliott","Grandpa","Sandy","Caroline","ParrotBoy","Birdie","SafariGuy"]
+wheelchair_chars = ["Leah"]
+islander_chars = ["Birdie","SafariGuy","ParrotBoy"]
+
+start_path = "../../Gender Setter/[CP] Gender Setter/assets/"
 end_path = "../../Gender Setter/[CP] Gender Setter/Variants/Characters/"
+
+no_portrait_list = ["Bear","LeahEx","Marcello","Mariner","KrobusRaven","ClothesTherapyCharacters","Shane_JojaMart","Toddler","Toddler_girl_dark","Toddler_dark","Toddler_girl","Baby","WeddingOutfits","Baby_dark","SeaMonsterKrobus","Gourmand",]
+
+portrait_list = ["Gil","Maru_Hospital", "Krobus_Trenchcoat","Grandpa"]
+
+for name in name_list:
+    if name not in no_portrait_list:
+        portrait_list.append(name)
+        
+other_portraits = ["AnsweringMachine", ]          
 ## Data processing  
 
 def genderswap(gender):
@@ -68,6 +79,7 @@ def genderswap(gender):
         return gender    
        
 def process_folder():
+    #outdated
     for name in spouse_list:
         o_gender = orig_gender_dict[name]
         process_image(name,o_gender)
@@ -79,7 +91,7 @@ def process_folder():
         process_image(name+"_Wheelchair",o_gender)        
 
 def process_image(name,o_gender):
-    img = Image.open(start_path+name+".png")
+    img = Image.open(start_path+"Characters/"+name+".png")
 
     box1 = (0,288,47,319)
     cut1 = img.crop(box1)
@@ -95,7 +107,7 @@ def process_image(name,o_gender):
         save_string = name+"_m"   
     img.save(end_path+save_string+".png")  
 
-def make_screenshot(width, height, filename,  filepath, filelist, isBeach, image_type):
+def make_screenshot(width, height, filepath, isBeach, image_type):
 
     if image_type == "HD":
         image_height = 256
@@ -107,6 +119,14 @@ def make_screenshot(width, height, filename,  filepath, filelist, isBeach, image
         image_height = 64
         image_width = 64 
 
+    if isBeach:
+        filelist = beach_bodies
+    elif image_type == "sprites":
+        filelist = name_list
+    else:
+        filelist = portrait_list         
+
+
     screenshot = Image.new("RGBA", (image_width*width, image_height*height))
     for i in range(width):
         for j in range(height):
@@ -114,26 +134,23 @@ def make_screenshot(width, height, filename,  filepath, filelist, isBeach, image
             if current > len(filelist) - 1:
                 break
             current_image = filelist[current] 
-            img= Image.open(filepath+current_image)
+            if isBeach:
+                current_image+="_Beach"
+            img= Image.open(filepath+current_image+".png")
             h = image_height
             if image_type == "sprites":
-                if (current_image in ["Krobus.png","Dwarf.png"]):
+                if (current_image in ["Krobus","Dwarf"]):
                     h = 24
             corner = img.crop((0,0,image_width,h))
             screenshot.paste(corner,(image_width*i,image_height*j+(image_height-h),image_width*(i+1),image_height*(j+1))) 
     save_name = "./images/"
-    if isBeach:
-       save_name+= "beach_"   
-    save_name += filename
     save_name+= image_type
+    if isBeach:
+       save_name+= "_beach"   
     save_name += ".png"           
     screenshot.save(save_name)   
 
-def make_comparison_screenshot(filename,  filepath, image_type):
-
-    darker_images = set_folders(filepath+"Variants/Darker/")
-    wheelchair_images = set_folders(filepath+"Variants/Wheelchair")
-    islander_images = set_folders(filepath+"Variants/Islander")
+def make_comparison_screenshot(filepath, image_type):
     
     if image_type == "HD":
         image_height = 256
@@ -141,38 +158,51 @@ def make_comparison_screenshot(filename,  filepath, image_type):
     elif image_type == "sprites":
         image_height = 32
         image_width = 16  
-        wheelchair_images = [["Leah_Beach.png"],["Leah.png"]]  
     else:
         image_height = 64
         image_width = 64 
 
-    image_lists = [list(set(darker_images[0]+ wheelchair_images[0] + islander_images[0])), list(set(darker_images[1]+ wheelchair_images[1] + islander_images[1]))]                
+    image_lists = [darker_chars,islander_chars]
+    all_variants = darker_chars
+    variant_list = ["Darker","Islander"]
+    if image_type == "sprites":
+        image_lists = [darker_chars,islander_chars, wheelchair_chars]
+        variant_list += ["Wheelchair"] 
+        all_variants = darker_chars+ wheelchair_chars
+    #print(str(all_variants))
 
-    for n in range(1):
-        current_list = image_lists[n]
-        screenshot = Image.new("RGBA", (image_width*4, image_height*len(current_list)+1))
+    suffix = ""
 
-        for j in range(len(current_list)-1):
+    for n in range(2):#beach or non beach
+        screenshot = Image.new("RGBA", (image_width*4, image_height*len(all_variants)+1))
+
+        for j in range(len(all_variants)):
             i = 0
-            current_image = current_list[j]  
-            img= Image.open(filepath+current_image)  
+            current_image = all_variants[j]  
+            #print(current_image)
+            image_string =filepath+current_image 
+            img= Image.open(image_string+suffix+".png")  
             corner = img.crop((0,0,image_width,image_height)) 
             screenshot.paste(corner,(image_width*i,image_height*j,image_width*(i+1),image_height*(j+1))) 
-            for variant in ["Darker","Islander","Wheelchair"]:
-                if current_image in set_folders(filepath+"Variants/"+variant+"/")[n]:
+            for v in range(len(variant_list)): #which variant
+                #print("V: "+str(v)+" vlist " + str(image_lists[v]))
+                if current_image in image_lists[v]:
                     i+=1
-                    img= Image.open(filepath+"Variants/"+variant+"/"+current_image)  
+                    img= Image.open(filepath+"Variants/"+variant_list[v]+"/"+current_image+suffix+".png")  
                     corner = img.crop((0,0,image_width,image_height)) 
                     screenshot.paste(corner,(image_width*i,image_height*j,image_width*(i+1),image_height*(j+1))) 
                 
         save_name = "./images/" 
         save_name += "compare_"  
-        save_name += ["beach_",""][n]
-        save_name += filename
         save_name+= image_type
+        save_name += ["","_beach"][n]
         save_name += ".png"           
         screenshot.save(save_name) 
-        suffix = "" 
+
+        #setup for next loop, over beach images
+        all_variants = list(set(all_variants) & set(beach_bodies))
+        #print(str(all_variants)) 
+        suffix = "_Beach"
 
 
 
@@ -185,66 +215,105 @@ def set_folders(path):
         if i.count("Beach")>0:
             beach_items.append(i)
         else:
-            if i in possible_names:
-                non_beach.append(i)   
+            non_beach.append(i)   
     return [beach_items,non_beach]                  
 
 
 def make_screenshots():
-    images =sort(list_directory("./assets/Characters/","*.png"))  #all images in Characters
-    #24 beach, 76 non-beach
-    print("images "+str(len(images)))   
-    beach_items = []
-    non_beach = []
-    for i in images:
-        if i.count("Beach")>0:
-            beach_items.append(i)
-        else:
-            if i in possible_names and i.count("Grandpa")==0:
-                non_beach.append(i)                  
-
-    make_screenshot(width =12, height =2, filename = "", filepath = start_path, filelist = beach_items, isBeach = True, image_type = "sprites")        
+    path = "../../Gender Setter/[CP] Gender Setter/assets/Portraits/"
+    
+    make_screenshot(width =7, height =3, filepath = path, isBeach = True, image_type = "portraits")        
             
-    make_screenshot(width =13, height =4, filename = "", filepath = start_path, filelist = non_beach, isBeach = False, image_type = "sprites")        
- 
+    make_screenshot(width =14, height =4, filepath = path, isBeach = False, image_type = "portraits")        
 
-    path = "./assets/Portraits/"
-    images =sort(list_directory(path,"*.png"))
-    print("images "+str(len(images)))    
-    non_beach = []
-    beach_items = []
-    for i in images:
-        if i.count("Beach")>0:
-            beach_items.append(i)
-        else:
-            if i in possible_names:
-                non_beach.append(i)     
+    make_comparison_screenshot(filepath = path, image_type = "portraits")   
 
-    make_screenshot(width =7, height =3, filename = "", filepath = path, filelist = beach_items, isBeach = True, image_type = "portraits")        
+    path = "../../[CP] Configurable HD Portraits/assets/Portraits/Androgynous/"
+
+    make_screenshot(width =6, height =5, filepath = path, isBeach = True, image_type = "HD")        
             
-    make_screenshot(width =14, height =4, filename = "", filepath = path, filelist = non_beach, isBeach = False, image_type = "portraits")        
+    make_screenshot(width =14, height =4, filepath = path, isBeach = False, image_type = "HD")   
 
-
-    path = "./assets/Androgynous/"
-    [beach_items,non_beach] = set_folders(path)
-
-    make_screenshot(width =6, height =5, filename = "", filepath = path, filelist = beach_items, isBeach = True, image_type = "HD")        
-            
-    make_screenshot(width =14, height =4, filename = "", filepath = path, filelist = non_beach, isBeach = False, image_type = "HD")   
-
-    make_comparison_screenshot(filename = "", filepath = path, image_type = "HD")   
+    make_comparison_screenshot(filepath = path, image_type = "HD")   
         
-    path = "./assets/Characters/Androgynous/"   
-    [beach_items,non_beach] = set_folders(path) 
+    path = "../../Gender Setter/[CP] Gender Setter/assets/Characters/"
 
-    make_screenshot(width =12, height =2, filename = "", filepath = path, filelist = beach_items, isBeach = True, image_type = "sprites")        
+    make_screenshot(width =12, height =2, filepath = path, isBeach = True, image_type = "sprites")        
             
-    make_screenshot(width =13, height =4, filename = "", filepath = path, filelist = non_beach, isBeach = False, image_type = "sprites")        
+    make_screenshot(width =13, height =4, filepath = path, isBeach = False, image_type = "sprites")        
       
-    make_comparison_screenshot(filename = "", filepath = path, image_type = "sprites")   
+    make_comparison_screenshot(filepath = path, image_type = "sprites")   
+
+def copy_image(name, start, end):
+    img= Image.open(start+name+".png") 
+    img.save(end+name+".png")      
+
+def location(variant, type):
+    #location of the image we're using 
+    v_string = ""
+    if variant != "":
+        v_string = "Variants/" + variant + "/"
+        if isHD:
+            if variant in ["Darker","Islander","Wheelchair"]:
+                v_string = "Androgynous/Variants/"+ variant + "/"
+            elif variant =="Androgynous":
+                 v_string = "Androgynous/"         
+    if type == "sprite":
+        return "assets/Characters/"+v_string 
+    else:    
+       return "assets/Portraits/"+v_string     
+
+def copy_image_line(name, type,variant):
+    if type =="sprite" and name=="Gil":
+        return
+    start= "../../Gender Setter/[CP] Gender Setter/"
+    if isHD:
+        if type =="portrait":
+            start= "../../Gender Setter HD/[CP] Gender Setter/"
+        end= "../../[CP] Configurable HD Portraits/"
+    else:  
+        end= "../../[CP] Androgynous Villagers/"  
+    if type =="sprite" and isHD:
+        full_start = start+"assets/Characters/"
+        if variant !="Androgynous":
+            full_start += "Variants/"+variant + "/"
+    else:       
+        full_start = start+location(variant, type)
+    copy_image(name, full_start, end+location(variant, type))
+    if name in beach_bodies:
+        copy_image(name+"_Beach", full_start, end+location(variant, type))
+
+def transfer_images():
+    for name in other_portraits:
+        if not isHD:
+            copy_image_line(name, "portrait", "")     
+    for name in portrait_list:
+        if isHD:
+            copy_image_line(name, "sprite", "Androgynous")
+            copy_image_line(name, "portrait", "Androgynous")   
+        else:    
+            copy_image_line(name, "sprite", "")   
+            copy_image_line(name, "portrait", "")   
+        if name in darker_chars:
+            copy_image_line(name, "portrait", "Darker") 
+            copy_image_line(name, "sprite", "Darker")      
+        if name in wheelchair_chars:
+            copy_image_line(name, "sprite", "Wheelchair") 
+        if name in islander_chars:
+            copy_image_line(name, "portrait", "Islander")  
+            copy_image_line(name, "sprite", "Islander")               
+    for name in no_portrait_list:   
+        if isHD: 
+            copy_image_line(name, "sprite", "Androgynous")
+        else:
+            copy_image_line(name, "sprite", "")        
         
+
 #process_image("Abigail")
 make_screenshots()
+
+for isHD in [True,False]:
+    transfer_images()
 #process_folder()
 
  
