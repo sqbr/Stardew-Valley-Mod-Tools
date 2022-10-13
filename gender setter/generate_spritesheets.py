@@ -220,7 +220,7 @@ def set_folders(path):
 
 
 def make_screenshots():
-    path = "../../Gender Setter/[CP] Gender Setter/assets/Portraits/"
+    path = "../../Gender Setter/[CP] Gender Setter/Androgynous/Portraits/"
     
     make_screenshot(width =7, height =3, filepath = path, isBeach = True, image_type = "portraits")        
             
@@ -228,7 +228,7 @@ def make_screenshots():
 
     make_comparison_screenshot(filepath = path, image_type = "portraits")   
 
-    path = "../../[CP] Configurable HD Portraits/assets/Portraits/Androgynous/"
+    path = "../../[CP] Configurable HD Portraits/Androgynous/Portraits/"
 
     make_screenshot(width =6, height =5, filepath = path, isBeach = True, image_type = "HD")        
             
@@ -236,7 +236,7 @@ def make_screenshots():
 
     make_comparison_screenshot(filepath = path, image_type = "HD")   
         
-    path = "../../Gender Setter/[CP] Gender Setter/assets/Characters/"
+    path = "../../Gender Setter/[CP] Gender Setter/Androgynous/Characters/"
 
     make_screenshot(width =12, height =2, filepath = path, isBeach = True, image_type = "sprites")        
             
@@ -250,50 +250,46 @@ def copy_image(name, start, end):
 
 def location(variant, type):
     #location of the image we're using 
-    v_string = ""
-    if variant != "":
-        v_string = "Variants/" + variant + "/"
-        if isHD:
-            if variant in ["Darker","Islander","Wheelchair"]:
-                v_string = "Androgynous/Variants/"+ variant + "/"
-            elif variant =="Androgynous":
-                 v_string = "Androgynous/"         
-    if type == "sprite":
-        return "assets/Characters/"+v_string 
-    else:    
-       return "assets/Portraits/"+v_string     
+    if variant =="":
+            if type == "sprite":
+                return "Characters/"
+            else:
+                return "Portraits/"
+    else:
+            if type == "sprite":
+                return "Characters/Variants/"+ variant + "/"
+            else:
+                return "Portraits/Variants/"+ variant + "/"     
 
 def copy_image_line(name, type,variant):
     if type =="sprite" and name=="Gil":
         return
-    start= "../../Gender Setter/[CP] Gender Setter/"
-    if isHD:
-        if type =="portrait":
-            start= "../../Gender Setter HD/[CP] Gender Setter/"
-        end= "../../[CP] Configurable HD Portraits/"
-    else:  
-        end= "../../[CP] Androgynous Villagers/"  
-    if type =="sprite" and isHD:
-        full_start = start+"assets/Characters/"
-        if variant !="Androgynous":
-            full_start += "Variants/"+variant + "/"
-    else:       
-        full_start = start+location(variant, type)
+    (start, end) = locations(type)
+    full_start = start+location(variant, type)
     copy_image(name, full_start, end+location(variant, type))
     if name in beach_bodies:
         copy_image(name+"_Beach", full_start, end+location(variant, type))
 
-def transfer_images():
-    for name in other_portraits:
-        if not isHD:
-            copy_image_line(name, "portrait", "")     
+def locations(type):
+    start= "../../Gender Setter/[CP] Gender Setter/Androgynous/"
+    if isHD:
+        if type =="portrait":
+            start= "../../Gender Setter HD/[CP] Gender Setter/Androgynous/"
+        end= "../../[CP] Configurable HD Portraits/Androgynous/"
+    else:  
+        end= "../../[CP] Androgynous Villagers/Androgynous/"  
+    return (start, end)    
+
+def transfer_folder(location, list):
+    (start, end) = locations("sprite")
+    for image in list:
+        copy_image(image, start+location, end+location)       
+
+def transfer_images():   
+    #this is so inefficient it's embarassing, shh
     for name in portrait_list:
-        if isHD:
-            copy_image_line(name, "sprite", "Androgynous")
-            copy_image_line(name, "portrait", "Androgynous")   
-        else:    
-            copy_image_line(name, "sprite", "")   
-            copy_image_line(name, "portrait", "")   
+        copy_image_line(name, "sprite", "")   
+        copy_image_line(name, "portrait", "")   
         if name in darker_chars:
             copy_image_line(name, "portrait", "Darker") 
             copy_image_line(name, "sprite", "Darker")      
@@ -303,10 +299,13 @@ def transfer_images():
             copy_image_line(name, "portrait", "Islander")  
             copy_image_line(name, "sprite", "Islander")               
     for name in no_portrait_list:   
-        if isHD: 
-            copy_image_line(name, "sprite", "Androgynous")
-        else:
-            copy_image_line(name, "sprite", "")        
+        copy_image_line(name, "sprite", "")    
+    transfer_folder("Gil/", ["towninterior"])     
+    transfer_folder("Grandpa/", ["Cursors_Darker", "Cursors", "Cursors2_Darker", "Cursors2","jojacorps_Darker","jojacorps"])          
+    transfer_folder("Haley/", ["cowPhotosWinter","cowPhotos"])  
+    transfer_folder("MarnieJas/", ["Cursors_Marnie_Darker", "Cursors_Marnie","Marnie_Paintings_Darker","Marnie_Paintings","SecretNotesImages_Darker","SecretNotesImages"])   
+    transfer_folder("Other/", ["Cursors_witch","Cursors2_fairy","emojis_darker","emojis","Gourmand_EDGI","IslandTrader","jojacorps","JunimoNote_Darker","JunimoNote","MovieTheater_TileSheet"]) 
+    transfer_folder("Wedding/", [name+"_Wedding" for name in spouse_list] )        
         
 
 #process_image("Abigail")

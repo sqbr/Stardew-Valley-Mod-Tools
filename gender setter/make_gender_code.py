@@ -470,7 +470,7 @@ def image_start(name, type, variant):
     elif isHD:
         if variant =="setup":
             location = "Mods/HDPortraits/" 
-            s = "        {\"Action\":\"Load\","   
+            s = "		{\"Action\":\"Load\","   
         else:    
             location = "Mods/talkohSeasonal/"     
     else:
@@ -488,19 +488,19 @@ def image_start(name, type, variant):
     return s
 
 def image_middle_basic(name, type,variant):
-    if isHD and type !="sprite": 
-        return "\"FromFile\": \""+location(variant, type)+"{{TargetWithoutPath}}.png\","
-    else:
-        return "\"FromFile\": \""+location(variant, type)+"{{TargetWithoutPath}}.png\","    
+    return "\"FromFile\": \""+location(variant, type)+"{{TargetWithoutPath}}.png\"," 
 
-def image_end(name, type,variant):
+def image_middle_location(name, location):       
+    return "\"FromFile\": \"Androgynous/"+location+"/"+name+".png\"," 
+
+def image_end(name, variant):
     #at the end of an image block
     if name =="other":
         return "\"When\": {\"Misc Image Edits\": \"true\"}},\n"
     else:    
         s = "\"When\": {"
         if variant !="":
-            s+="\""+name+" Images\": \""+test_variable(name, variant, type)+"\""  
+            s+="\""+name+" Images\": \""+test_variable(name, variant)+"\""  
         else:
             s+="\""+name+" Images|contains=false\": \"false\""    
         s+="}},\n"
@@ -511,115 +511,85 @@ def image_line(name, type,variant):
     if artname(name, type)=="":
         return ""
     else:
-        return image_start(name, type,variant) +image_middle_basic(name, type,variant)+image_end(name, type,variant)
+        return image_start(name, type,variant) +image_middle_basic(name, type,variant)+image_end(name, variant)
 
+def image_line_other(name):
+    return image_start(name, "sprite", "") +image_middle_basic(name,  "sprite", "")+image_end("other","")
 
 def image_line_pos(name, type,variant,x, y, w, h):
     #code to replace image at location in a given box
     s =image_start(name, type,variant)
     pos_string ="{ \"X\": "+str(x)+", \"Y\": "+str(y)+", \"Width\": "+str(w)+", \"Height\": "+str(h)+" }" 
     s+="\"FromArea\": "+pos_string+",\"ToArea\":  "+pos_string+","
-    s+=image_middle_basic(name, type,variant)+image_end(name, type,variant)
+    s+=image_middle_basic(name, type,variant)+image_end(name, variant)
     return s
+
+def image_line_pos_loc(name, location, type, variant,x, y, w, h):
+    #code to replace image at location in a given box
+    s ="		{\"Action\": \"EditImage\",\"Target\":\""+location + "\","  
+    pos_string ="{ \"X\": "+str(x)+", \"Y\": "+str(y)+", \"Width\": "+str(w)+", \"Height\": "+str(h)+" }" 
+    s+="\"FromArea\": "+pos_string+",\"ToArea\":  "+pos_string+","
+    s+= "\"FromFile\": \"Androgynous/"+location+".png\"," 
+    s+=image_end(name, variant)
+    return s    
 
 def image_pair(name, location1, location2,variant):
     #code to replace image at location in a given box
-    s ="		 {\"Action\": \"EditImage\",\"Target\": \"" + location1+"\",\"FromFile\": \"assets/"+location2+".png\","
-    s+=image_middle_basic(name, type,variant)+image_end(name, type,variant)
+    s ="		{\"Action\": \"EditImage\",\"Target\": \"" + location1+"\","
+    s+=image_middle_location(name, location2)+image_end(name, variant)
     return s    
 
-def image_pair_pos(name, location1, location2, extra,x1, y1, x2,y2,w, h):
+def image_pair_pos(name, location1, location2, variant,x1, y1, x2,y2,w, h):
     #code to replace image at location in a given box
-    if extra =="":
+    if variant =="":
         location = location2
     else:
-        location = location2+"_"+extra    
-    s ="		 {\"Action\": \"EditImage\",\"Target\": \"" + location1+"\",\"FromFile\": \"assets/"+location+".png\","
+        location = location2+"_"+variant    
+    s ="		{\"Action\": \"EditImage\",\"Target\": \"" + location1+"\","
+    s+= "\"FromFile\": \"Androgynous/"+location+".png\"," 
     s+="\"FromArea\": { \"X\": "+str(x2)+", \"Y\": "+str(y2)+", \"Width\": "+str(w)+", \"Height\": "+str(h)+" }," 
     s+="\"ToArea\": { \"X\": "+str(x1)+", \"Y\": "+str(y1)+", \"Width\": "+str(w)+", \"Height\": "+str(h)+" }," 
-    s+=image_end(name,extra)
+    s+=image_end(name, variant)
     return s    
 
-def image_lineSpouse(name,extra):
+def image_lineSpouse(name,variant):
     #name of spouse, any extra properties like "Wheelchair"
     o_gender = orig_gender_dict[name]
-    art_name = spritename(name)
-    location = "Characters/"+art_name
-    if extra =="":
-        e_string =""
-        e_var = "\""+name+" Images|contains=false\": \"false\""
+
+    start = "		{\"Action\": \"EditImage\",""\"Target\":\"Characters/"+spritename(name) + "\","  
+    if variant !="":
+            end_variable="\""+name+" Images\": \""+test_variable(name, variant)+"\""  
     else:
-        e_string ="_"+extra 
-        e_var = "\""+name+" Images\": \""+extra+"\""  
-    s="		 {\"Action\": \"EditImage\",\"Target\": \"" + location+"\",\"FromFile\": \"assets/Characters/"+art_name+e_string+".png\","
-    s+="\"When\": {"+e_var+"}},\n"
-    s+="		 {\"Action\": \"EditImage\",\"Target\": \"" + location+"\",\"FromFile\": \"assets/Characters/"+art_name+e_string+".png\","
+            end_variable="\""+name+" Images|contains=false\": \"false\""    
+    test_string = "\"When\": {\""+name+" GameGender\": \""+genderswap(o_gender)+"\", \"DayEvent|contains=flower dance\": \"false\","+end_variable+"}},\n"  
+    s = start + image_middle_basic(name, "sprite",variant)   
     s+="\"FromArea\": { \"X\": 0, \"Y\": 288, \"Width\": 48, \"Height\": 32 }," 
     s+="\"ToArea\": { \"X\": 0, \"Y\": 384, \"Width\": 48, \"Height\": 32 }," 
-    s+="\"When\": {\""+name+" GameGender\": \""+genderswap(o_gender)+"\", \"DayEvent|contains=flower dance\": \"false\","+e_var+"}},\n"    
+    s+= test_string 
     if not name in ["Maru","Haley"]: #have shorter sprite sheets
-        s+="		 {\"Action\": \"EditImage\",\"Target\": \"" + location+"\",\"FromFile\": \"assets/Characters/"+art_name+e_string+".png\","
+        s+=start + image_middle_basic(name, "sprite",variant)
         s+="\"FromArea\": { \"X\": 0, \"Y\": 384, \"Width\": 48, \"Height\": 32 }," 
         s+="\"ToArea\": { \"X\": 0, \"Y\": 288, \"Width\": 48, \"Height\": 32 }," 
-        s+="\"When\": {\""+name+" GameGender\": \""+genderswap(o_gender)+"\", \"DayEvent|contains=flower dance\": \"false\","+e_var+"}},\n"   
+        s+=test_string     
     return s
 
-def image_code_old(name):  
+def extra_sprites(name):  
     #all image replacements for character called name
     s = ""
-    art_name = spritename(name)
-    if art_name == "None":
-        s+=""
-    else:
-        location = "Characters/"+art_name
-        if name in spouse_list and isGS:
-            #need gendered variants
-            s+= image_lineSpouse(name,"")
-            if name in darker_chars:
-                s+=image_lineSpouse(name,"Darker")
-            elif name in wheelchair_chars:    
-                s+=image_lineSpouse(name,"Wheelchair")
-        else: 
-            if name =="Kent":
-                s+=image_line_pos(name,location,"", 0, 0, 64, 160) #for compatibility with Kent does the dishes  
-            else:       
-                s+=image_line(name,location,"")
-            if name in darker_chars:
-                s+=image_line(name,location, "Darker")
-            if name in wheelchair_chars:    
-                s+=image_line(name,location,"Wheelchair")    
-            if name in islander_chars:    
-                s+=image_line(name,location,"Islander")         
-
-        if name not in ["Marcello","OldMariner"]:
-            s+=image_line(name,"Portraits/"+art_name,"")   
-        if name in darker_chars:
-            s+=image_line(name,"Portraits/"+art_name,"Darker") 
-        elif name in islander_chars:    
-            s+=image_line(name,"Portraits/"+art_name,"Islander")       
-
-        if name in beach_bodies:
-            s+=image_line(name,"Characters/"+art_name+"_Beach","")
-            if name not in ["Lewis","Demetrius"]:
-                s+=image_line(name,"Portraits/"+art_name+"_Beach","")
-            if name in darker_chars:
-                s+=image_line(name,"Characters/"+art_name+"_Beach", "Darker")
-                s+=image_line(name,"Portraits/"+art_name+"_Beach", "Darker")
     if name =="Abigail":
-        s+=image_line_pos(name, "Characters/ClothesTherapyCharacters","", 0, 32, 64, 32)   
-        s+=image_line_pos(name, "Characters/ClothesTherapyCharacters","", 0, 160, 16, 32) 
+        s+=image_line_pos_loc(name, "Characters/ClothesTherapyCharacters","sprite", "", 0, 32, 64, 32)   
+        s+=image_line_pos_loc(name, "Characters/ClothesTherapyCharacters","sprite","", 0, 160, 16, 32) 
     elif name =="Caroline":
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 9, 108,9,108,9, 9)    
     elif name =="Clint":
-        s+=image_line_pos(name,"Characters/ClothesTherapyCharacters","", 0, 64, 64, 32)  
-        s+=image_line_pos(name,"Characters/ClothesTherapyCharacters","", 32, 160, 32, 32) 
+        s+=image_line_pos_loc(name,"Characters/ClothesTherapyCharacters","sprite","", 0, 64, 64, 32)  
+        s+=image_line_pos_loc(name,"Characters/ClothesTherapyCharacters","sprite","", 32, 160, 32, 32) 
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 54, 117,54,117,9, 9)       
     elif name =="Elliott":
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","Darker", 99, 99,99,99,9, 9)  
     elif name =="Emily":
         s+=image_pair_pos(name, "LooseSprites/JunimoNote","Other/emojis","", 448, 212,96,0,32, 32)      
     elif name =="Gil":
-        s+=image_line(name,"Portraits/Gil","")   
         s+=image_pair_pos(name, "Maps/townInterior", "Gil/townInterior","",176, 624,0,0, 32, 64) 
         s+=image_pair_pos(name, "Maps/townInterior", "Gil/townInterior","",207, 656, 32,32,32, 32)  
         s+=image_pair_pos(name, "Maps/MovieTheater_TileSheet", "Other/MovieTheater_TileSheet","",224, 208,224, 208, 32, 48) 
@@ -660,10 +630,9 @@ def image_code_old(name):
     elif name =="Jodi":
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 45, 108,45,108,9, 9)  
     elif name =="Krobus":     
-        s+=image_line(name,"Portraits/Krobus_Trenchcoat","")   
-        s+=image_line_pos(name,"Characters/KrobusRaven","",0,0,160,32)      
+        s+=image_line_pos_loc(name,"Characters/KrobusRaven","sprite","",0,0,160,32)      
     elif name =="Lewis":
-        s+=image_line_pos(name,"Characters/ClothesTherapyCharacters","", 0, 32, 64, 32)  
+        s+=image_line_pos_loc(name,"Characters/ClothesTherapyCharacters","sprite","", 0, 32, 64, 32)  
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 54, 108,54,108,9, 9)  
     elif name =="Linus":
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 63, 108,63,108,9, 9)                        
@@ -678,9 +647,6 @@ def image_code_old(name):
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","Darker", 0, 108,0,108,9, 9)    
         s+=image_pair_pos(name, "LooseSprites/JunimoNote","Other/emojis","", 480, 212,128,0,32, 32) 
         s+=image_pair_pos(name, "LooseSprites/JunimoNote","Other/emojis","Darker", 480, 212,128,0,32, 32)        
-    elif name =="Maru":     
-        s+=image_line(name,"Portraits/Maru_Hospital","") 
-        s+=image_line(name,"Characters/Maru_Hospital","") 
     elif name =="Marcello": 
         s+=image_pair_pos(name, "Maps/MovieTheater_TileSheet", "Other/MovieTheater_TileSheet","",16,192,16,192, 16,32)  
         s+=image_pair_pos(name, "Maps/MovieTheaterJoja_TileSheet", "Other/MovieTheater_TileSheet","",16,192,16,192, 16,32)  
@@ -693,18 +659,18 @@ def image_code_old(name):
     elif name =="Pam":
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 36, 108,36,108,9, 9)     
     elif name =="Robin":
-        s+=image_line_pos(name,"Characters/ClothesTherapyCharacters","", 0, 96, 64, 32) 
-        s+=image_line_pos(name,"Characters/ClothesTherapyCharacters","", 16, 160, 16, 32)         
+        s+=image_line_pos_loc(name,"Characters/ClothesTherapyCharacters","sprite","", 0, 96, 64, 32) 
+        s+=image_line_pos_loc(name,"Characters/ClothesTherapyCharacters","sprite","", 16, 160, 16, 32)         
     elif name =="Shane":
-        s+=image_line_pos(name, "Characters/ClothesTherapyCharacters","", 0, 0, 64, 32)  
-        s+=image_line_pos(name, "Characters/ClothesTherapyCharacters","", 0, 0, 64, 32)  
+        s+=image_line_pos_loc(name, "Characters/ClothesTherapyCharacters","sprite","", 0, 0, 64, 32)  
+        s+=image_line_pos_loc(name, "Characters/ClothesTherapyCharacters","sprite","", 0, 0, 64, 32)  
     elif name =="Willy":
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 81, 108,81,108,9, 9)
     elif name =="Wizard":
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 90, 108,90,108,9, 9)  
         s+=image_pair_pos(name, "LooseSprites/JunimoNote","Other/emojis","", 416, 212,64,0,32, 32)  
-        s+=image_line_pos(name,"Characters/KrobusRaven","",0,64,160,104)                    
-    return s    
+        s+=image_line_pos_loc(name,"Characters/KrobusRaven","sprite","",0,64,160,104)                    
+    return s      
 
 def image_code_background(): 
     s=image_pair_pos("other", "LooseSprites/Cursors2", "Other/Cursors2_fairy","",208, 256,0,0, 48, 64)  #fairy
@@ -712,11 +678,11 @@ def image_code_background():
     s+=image_pair_pos("other", "Minigames/jojacorps", "Other/jojacorps","",0, 420,0,420, 264, 179) #farmer face
     s+=image_pair_pos("other", "Minigames/jojacorps", "Other/jojacorps","",0, 600,0,600, 1200, 200) #computers
     #s+=image_pair_pos("other", "Minigames/jojacorps", "Other/jojacorps","",642, 246,0,0, 61, 28) #paintings
-    #s+=image_pair_pos("other", "Minigames/jojacorps", "Other/jojacorps","",642, 7,0,0, 61, 28) #paintings
-    s+=image_line("other","Characters/Toddler","")   #toddlers
-    s+=image_line("other","Characters/Toddler_girl","")   
-    s+=image_line("other","Characters/Toddler_dark","") 
-    s+=image_line("other","Characters/Toddler_girl_dark","")   
+    #s+=image_pair_pos("other", "Minigames/jojacorps", "Other/jojacorps","",642, 7,0,0, 61, 28) #paintings 
+    image_line_other("Toddler") #toddlers
+    image_line_other("Toddler_girl")
+    image_line_other("Toddler_girl_dark")
+    image_line_other("Toddler_dark")
     s+=image_pair("other","Characters/LeahExFemale","Characters/LeahEx","")
     s+=image_pair("other","Characters/LeahExMale","Characters/LeahEx","")
     return s
@@ -803,15 +769,15 @@ def dance_wedding():
             Y = "288"
         else:
             Y = "384"
-        s += "             {\"Action\": \"EditImage\",\"Target\": \"Characters/"+name+"\","
+        s += "		{\"Action\": \"EditImage\",\"Target\": \"Characters/"+name+"\","
         s += "\"FromFile\": \"assets/Wedding/"+name+"_Wedding.png\",\"ToArea\": { \"X\": 0, \"Y\": "+Y+", \"Width\": 48, \"Height\": 32 },"
         s += "\"When\": { \""+name+" GameGender\": \""+genderswap(o_gender)+"\", \"DayEvent\": \"wedding\",\""+name+" Images\":\"false\", \"Patch Original Wedding Art\":\"true\"}},"
         s+="\n"
-        s+= "             {\"Action\": \"EditData\",\"Target\": \"Data/NPCDispositions\",\"Update\": \"OnLocationChange\","
+        s+= "		{\"Action\": \"EditData\",\"Target\": \"Data/NPCDispositions\",\"Update\": \"OnLocationChange\","
         s+="\"When\": { \""+name+" GameGender\": \""+genderswap(o_gender)+"\",\"DayEvent|contains=flower dance\": \"false\"},"
         s+="\"Entries\": {\""+name+"\":\""+disposition(name,genderswap(o_gender))+"\"}},"
         s+="\n\n"
-    s+="             {\"Action\": \"EditData\",\"Target\": \"Strings/Locations\",\n"
+    s+="		{\"Action\": \"EditData\",\"Target\": \"Strings/Locations\",\n"
     s+="             \"Entries\": {\n"
     s+="        			\"DoorUnlock_NotFriend_Male\": \"You're not good enough friends with {0} to enter their bedroom.\",\n"
     s+="        			\"DoorUnlock_NotFriend_Female\": \"You're not good enough friends with {0} to enter their bedroom.\",\n"
@@ -887,10 +853,9 @@ def create_content():
     if isHD:
         content.write(hd_extra_portraits())
     
-  
-    #content.write(image_code_background())     
+    content.write(image_code_background())     
     if isGS:
-        content.write("\n         {\n")
+        content.write("\n		{\n")
         content.write("			\"Action\": \"EditData\",\n")
         content.write("			\"Target\": \"Data/NPCDispositions\",\n")
         content.write("			\"Entries\": {\n")
@@ -898,7 +863,7 @@ def create_content():
             if name in birthday_dict.keys() and name !="Leo": #has a birthday and disposition
                 content.write("				\""+name+"\":\""+disposition(name,orig_gender_dict[name])+"\",\n")
         content.write("			}},\n")
-        content.write("             {\"Action\": \"EditData\",\"Target\": \"Data/NPCDispositions\",\"Entries\": {\n")
+        content.write("		{\"Action\": \"EditData\",\"Target\": \"Data/NPCDispositions\",\"Entries\": {\n")
         content.write("				\"Leo\":\""+disposition("Leo","male")+"\"\n")
         content.write("			},\"When\": {\"Edit Island Characters\": \"Full\"}},\n")
         with open("./mine/change_names.json","r") as f:
@@ -927,8 +892,8 @@ def create_content():
 ###### image code
 # 
 
-def test_variable(name, variant, type):
-    # for When "(name) Image" : "test_variable(variant, type)"
+def test_variable(name, variant):
+    # for When "(name) Image" : "test_variable(name, variant)"
     # type = portrait, sprite
     # variant = Darker etc
 
@@ -945,21 +910,45 @@ def test_variable(name, variant, type):
 
 def location(variant, type):
     #location of the image we're using 
-    v_string = ""
-    if variant != "":
-        v_string = "Variants/" + variant + "/"
-        if isHD:
-            if variant in ["Darker","Islander","Wheelchair"]:
-                v_string = "Androgynous/Variants/"+ variant + "/"
-            elif variant =="Androgynous":
-                 v_string = "Androgynous/"    
-            elif variant == "Female":
-                v_string = "Genderbent/"     
-    if type == "sprite":
-        return "assets/Characters/"+v_string 
-    else:    
-       return "assets/Portraits/"+v_string 
 
+    if isHD:
+        if variant =="":
+            if type == "sprite":
+                return "assets/Characters/"
+            else:
+                return "assets/Portraits/"
+        elif variant in ["Young","Coat","LongSleeved", "Shaved"]:
+            if type == "sprite":
+                return "assets/Characters/Variants/"+ variant + "/"
+            else:
+                return "assets/Portraits/Variants/"+ variant + "/"
+        elif variant =="Female":
+            if type == "sprite":
+                return "assets/Characters/Genderbent/" #this should never happen currently
+            else:
+                return "assets/Portraits/Genderbent/"
+
+        elif variant =="Androgynous":
+            if type == "sprite":
+                return "Androgynous/Characters/"
+            else:
+                return "Androgynous/Portraits/"
+        else:
+            if type == "sprite":
+                return "Androgynous/Characters/Variants/"+ variant + "/"
+            else:
+                return "Androgynous/Portraits/Variants/"+ variant + "/"
+    else:       
+        if variant =="":
+            if type == "sprite":
+                return "Androgynous/Characters/"
+            else:
+                return "Androgynous/Portraits/"
+        else:
+            if type == "sprite":
+                return "Androgynous/Characters/Variants/"+ variant + "/"
+            else:
+                return "Androgynous/Portraits/Variants/"+ variant + "/"     
 
 def hd_extra_portraits():
     s = ""
@@ -979,7 +968,7 @@ def hd_extra_portraits():
             
             s+="        {\n			\"Action\":\"EditImage\",\n"
             s+="			\"Target\":\"Characters/"+spritename(name) + ", Characters/"+spritename(name)+"_Beach\",\n"     
-            s+="			\"FromFile\":\"assets/Characters/Androgynous/{{TargetWithoutPath}}.png\",\n"
+            s+="			\"FromFile\":\"Androgynous/Characters/{{TargetWithoutPath}}.png\",\n"
             s+=" 			\"When\": {\""+name+" Images\": \"Female\", \"Genderbent Bachelors\": \"Classic Portraits Androgynous Sprites\"}\n        },\n\n" 
             s+="\n"    
     return s 
@@ -1030,9 +1019,15 @@ def create_image_code():
     for name in portrait_list:
         s+= image_line(name, "portrait", "")  
         if isHD:
-            s+= image_line(name, "sprite", "Androgynous") 
+            if name =="Kent":
+                s+=image_line_pos(name,"sprite", "Androgynous", 0, 0, 64, 160) #for compatibility with Kent does the dishes  
+            else:
+                s+= image_line(name, "sprite", "Androgynous") 
         else:    
-            s+= image_line(name, "sprite", "")   
+            if name =="Kent":
+                s+=image_line_pos(name,"sprite","", 0, 0, 64, 160) #for compatibility with Kent does the dishes  
+            else:    
+                s+= image_line(name, "sprite", "")   
         if name in darker_chars:
             s+= image_line(name, "portrait", "Darker")  
             s+= image_line(name, "sprite", "Darker")      
@@ -1047,7 +1042,20 @@ def create_image_code():
             s+= image_line(name, "sprite", "Androgynous") 
         else:
             s+= image_line(name, "sprite", "")    
-        s+="\n"         
+        s+="\n" 
+    if isGS:
+            for name in spouse_list:
+                s+= image_lineSpouse(name,"")
+                if name in darker_chars:
+                    s+=image_lineSpouse(name,"Darker")
+                elif name in wheelchair_chars:    
+                    s+=image_lineSpouse(name,"Wheelchair")      
+                s+="\n"         
+    for name in portrait_list + no_portrait_list:
+        e=extra_sprites(name) 
+        if e!="":
+            s+=e 
+            s+="\n"                
     return s
 
        
@@ -1067,76 +1075,4 @@ for isGS in [True, False]:
 
 #create_hd(False)
 
-##########OLD
-
-def sprite_variant_code(name,variant):
-    #code for variant character sprite
-    base_location = "Characters/"    
-    beach_code = ""
-    if name in beach_bodies and (name,variant) !=("Emily","LongSleeved"):
-        beach_code =", "+base_location
-        beach_code+=name+"_Beach"
-    middle = "			\"Target\":\""+base_location+spritename(name) + beach_code + "\",\n"        
-    test_string = variant
-    if variant == "Female": #do  not have these images
-        location = "Characters/Genderbent/"
-        middle_string = "			\"Target\":\""+base_location+spritename(name)+ "\",\n" 
-    elif variant == "Androgynous":
-        location = "Characters/Androgynous/"
-        middle_string = middle      
-    else:
-        middle_string = middle  
-        if variant in ["Young","Coat"]:
-            location = "Characters/Variants/"+variant + "/"
-            test_string = orig_gender_dict[name]+ " "+ variant 
-        else:    
-            test_string = "Androgynous "+ variant 
-            location = "Characters/Androgynous/Variants/" +variant + "/"     
-    s = "        {\n			\"Action\":\"EditImage\",\n"
-    s+=middle_string
-    s+="			\"FromFile\":\"assets/" + location+ "{{TargetWithoutPath}}.png\",\n"
-    s+= " 			\"When\": {\""+name+" Images\": \""+test_string+"\"}\n        },\n\n" 
-    return s    
-
-
-def HD_variant_code_old(name,variant):
-    #code for variant HD portrait
-    if variant =="":
-        base_location = "Mods/HDPortraits/"
-    else:
-        base_location = "Mods/talkohSeasonal/"    
-    beach_code = ""
-    if name in beach_bodies and (name,variant) !=("Emily","LongSleeved"):
-        beach_code =", "+base_location
-        beach_code+=name+"_Beach"
-    middle = "			\"Target\":\""+base_location+portraitname(name) + beach_code + "\",\n"     
-    if variant =="":
-        s = "        {\n			\"Action\":\"Load\",\n"
-        s+=middle
-        s+="			\"FromFile\":\"assets/base.json\",\n"
-        s+= " 			\"When\": {\""+name+" Images|contains=false\": \"false\",\"HasMod |contains=talkohlooeys.SeasonalPortraits\": false}\n        },\n\n"      
-    else:    
-        test_string = variant
-        if variant == "Female":
-            location = "Portraits/Genderbent/"
-            middle_string = "			\"Target\":\""+base_location+portraitname(name)+ "\",\n" 
-        elif variant == "Androgynous":
-           location = "Portraits/Androgynous/"   
-           middle_string = middle  
-        elif variant == "Wheelchair":   #portrait the same as androgynous
-            location = "Portraits/Androgynous/"   
-            middle_string = middle      
-            test_string = "Androgynous "+ variant
-        else:
-            middle_string = middle  
-            if variant in ["Young","Coat","LongSleeved", "Shaved"]:
-                location = "Portraits/Variants/"+variant + "/"
-                test_string = orig_gender_dict[name]+ " "+ variant
-            else:    
-                test_string = "Androgynous "+ variant
-                location = "Portraits/Androgynous/Variants/" +variant + "/"     
-        s = "        {\n			\"Action\":\"EditImage\",\n"
-        s+=middle_string
-        s+="			\"FromFile\":\"assets/" + location+ "{{TargetWithoutPath}}.png\",\n"
-        s+= " 			\"When\": {\""+name+" Images\": \""+test_string+"\"}\n        },\n\n" 
-    return s       
+   
