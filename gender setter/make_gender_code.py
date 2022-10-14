@@ -185,9 +185,9 @@ gender_words = {
 
 }
 
-neutralexceptions_dict = {"VincentGuy":"kid","EvelynGrandparent": "Grandie {{EvelynName}}", "GeorgeGrandparent": "Grandie {{GeorgeName}}"}
+neutralexceptions_dict = {"VincentGuy":"kid","EvelynGrandparent": "Grandie {{Evelyn Name}}", "GeorgeGrandparent": "Grandie {{George Name}}"}
 for name in ["Pierre", "Caroline", "Kent","Jodi","Robin","Demetrius","Evelyn",]:
-    neutralexceptions_dict[name+"ParentName"] = "parent "+"{{"+name+"Name}}"
+    neutralexceptions_dict[name+"ParentName"] = "parent "+"{{"+name+" Name}}"
 
 gender_exceptions = { 
     "Female": {"LewisMx": "Ms.", "MorrisMx": "Ms.","PennyMx": "Miss","BirdieGuy": "lady","GovernorAdult": "girl"},
@@ -461,8 +461,13 @@ def gender_variables(name):
     g_dict = pronoun_words["They"]
     for word in g_dict.keys():  
         s += "                {\"Name\": \""+name+word+"\", \"Value\": \"{{sqbr.getGS/"+name+word+"}}\"},\n"               
-    if custom_possession!=True and name !="Farmer":
-        s += "                {\"Name\": \""+name+" Possession\", \"Value\": \"{{sqbr.getGS/"+name+" Possession}}\"},\n"  
+    word_list = ["Pronoun", "Gender"]
+    if name !="Farmer":
+        word_list.append("Name") 
+        if custom_possession!=True:
+            s += "                {\"Name\": \""+name+"Possession\", \"Value\": \"{{sqbr.getGS/"+name+"Possession}}\"},\n" 
+    for word in word_list:
+        s += "                {\"Name\": \""+name+word+"\", \"Value\": \"{{" +name+" "+word+"}}\"},\n"      
     s+="\n"
     return s
 
@@ -741,75 +746,75 @@ def image_code_background():
 def disposition(name,gender):
     gender=gender.lower()
     if name =="Abigail":
-        return "teen/rude/outgoing/neutral/"+gender+"/datable/Sebastian/Town/{{AbigailBirthday}}/Caroline '{{CarolineParent}}' Pierre '{{PierreParent}}'/SeedShop 1 9/{{AbigailName}}"
+        return "teen/rude/outgoing/neutral/"+gender+"/datable/Sebastian/Town/{{AbigailBirthday}}/Caroline '{{CarolineParent}}' Pierre '{{PierreParent}}'/SeedShop 1 9/{{Abigail Name}}"
     elif name =="Elliott":
-        return "adult/polite/neutral/neutral/"+gender+"/datable/Leah/Town/{{ElliottBirthday}}/Willy ''/ElliottHouse 1 5/{{ElliottName}}"
+        return "adult/polite/neutral/neutral/"+gender+"/datable/Leah/Town/{{ElliottBirthday}}/Willy ''/ElliottHouse 1 5/{{Elliott Name}}"
     elif name =="Emily":
-        return "adult/polite/outgoing/positive/"+gender+"/datable/null/Town/{{EmilyBirthday}}/Haley '{{HaleySibling}}'/HaleyHouse 16 5/{{EmilyName}}"   
+        return "adult/polite/outgoing/positive/"+gender+"/datable/null/Town/{{EmilyBirthday}}/Haley '{{HaleySibling}}'/HaleyHouse 16 5/{{Emily Name}}"   
     elif name =="Haley":
-        return "adult/rude/outgoing/neutral/"+gender+"/datable/Alex/Town/{{HaleyBirthday}}/Emily '{{EmilySibling}}'/HaleyHouse 8 7/{{HaleyName}}"
+        return "adult/rude/outgoing/neutral/"+gender+"/datable/Alex/Town/{{HaleyBirthday}}/Emily '{{EmilySibling}}'/HaleyHouse 8 7/{{Haley Name}}"
     elif name =="Harvey":
-        return "adult/polite/shy/positive/"+gender+"/datable/Maru/Town/{{HarveyBirthday}}//HarveyRoom 13 4/{{HarveyName}}"      
+        return "adult/polite/shy/positive/"+gender+"/datable/Maru/Town/{{HarveyBirthday}}//HarveyRoom 13 4/{{Harvey Name}}"      
     elif name =="Alex":
-        return "adult/rude/outgoing/positive/"+gender+"/datable/Haley/Town/{{AlexBirthday}}/George 'grandie {{GeorgeName}}' Evelyn 'grandie {{EvelynName}}'/JoshHouse 19 5/{{AlexName}}"
+        return "adult/rude/outgoing/positive/"+gender+"/datable/Haley/Town/{{AlexBirthday}}/George 'grandie {{George Name}}' Evelyn 'grandie {{Evelyn Name}}'/JoshHouse 19 5/{{Alex Name}}"
     elif name =="Leah":
-        return "adult/polite/neutral/positive/"+gender+"/datable/Elliott/Town/{{LeahBirthday}}//LeahHouse 3 7/{{LeahName}}"    
+        return "adult/polite/neutral/positive/"+gender+"/datable/Elliott/Town/{{LeahBirthday}}//LeahHouse 3 7/{{Leah Name}}"    
     elif name =="Maru":
-        return "teen/neutral/outgoing/positive/"+gender+"/datable/Harvey/Town/{{MaruBirthday}}/Robin '{{RobinParent}}' Demetrius '{{DemetriusParent}}' Sebastian 'half-{{SebastianSibling}}'/ScienceHouse 2 4/{{MaruName}}"
+        return "teen/neutral/outgoing/positive/"+gender+"/datable/Harvey/Town/{{MaruBirthday}}/Robin '{{RobinParent}}' Demetrius '{{DemetriusParent}}' Sebastian 'half-{{SebastianSibling}}'/ScienceHouse 2 4/{{Maru Name}}"
     elif name =="Penny":
-        return "teen/polite/shy/positive/"+gender+"/datable/Sam/Town/{{PennyBirthday}}/Pam '{{PamParent}}'/Trailer 4 9/{{PennyName}}"      
+        return "teen/polite/shy/positive/"+gender+"/datable/Sam/Town/{{PennyBirthday}}/Pam '{{PamParent}}'/Trailer 4 9/{{Penny Name}}"      
     elif name =="Sam":
-        return "teen/neutral/outgoing/positive/"+gender+"/datable/Penny/Town/{{SamBirthday}}/Vincent 'little {{VincentSibling}}' Jodi '{{JodiParent}}' Kent '{{KentParent}}' Sebastian ''/SamHouse 22 13/{{SamName}}"
+        return "teen/neutral/outgoing/positive/"+gender+"/datable/Penny/Town/{{SamBirthday}}/Vincent 'little {{VincentSibling}}' Jodi '{{JodiParent}}' Kent '{{KentParent}}' Sebastian ''/SamHouse 22 13/{{Sam Name}}"
     elif name =="Sebastian":
-        return "teen/rude/shy/negative/"+gender+"/datable/Abigail/Town/{{SebastianBirthday}}/Robin '{{RobinParent}}' Maru 'half-{{MaruSibling}}' Sam ''/SebastianRoom 10 9/{{SebastianName}}"    
+        return "teen/rude/shy/negative/"+gender+"/datable/Abigail/Town/{{SebastianBirthday}}/Robin '{{RobinParent}}' Maru 'half-{{MaruSibling}}' Sam ''/SebastianRoom 10 9/{{Sebastian Name}}"    
     elif name =="Shane":
-        return "adult/rude/shy/negative/"+gender+"/datable/null/Town/{{ShaneBirthday}}/Marnie '{{MarnieAuncleU}}'/AnimalShop 25 6/{{ShaneName}}"        
+        return "adult/rude/shy/negative/"+gender+"/datable/null/Town/{{ShaneBirthday}}/Marnie '{{MarnieAuncleU}}'/AnimalShop 25 6/{{Shane Name}}"        
     elif name =="Caroline": 
-        return "adult/polite/neutral/neutral/female/not-datable/Pierre/Town/{{CarolineBirthday}}/Pierre '{{PierreSpouse}}' Abigail ''/SeedShop 22 5/{{CarolineName}}"
+        return "adult/polite/neutral/neutral/female/not-datable/Pierre/Town/{{CarolineBirthday}}/Pierre '{{PierreSpouse}}' Abigail ''/SeedShop 22 5/{{Caroline Name}}"
     elif name == "Clint": 
-        return "adult/rude/shy/negative/male/not-datable/Emily/Town/{{ClintBirthday}}/Emily ''/Blacksmith 3 13/{{ClintName}}"
+        return "adult/rude/shy/negative/male/not-datable/Emily/Town/{{ClintBirthday}}/Emily ''/Blacksmith 3 13/{{Clint Name}}"
     elif name ==  "Demetrius": 
-        return "adult/polite/neutral/positive/male/not-datable/Robin/Town/{{DemetriusBirthday}}/Robin '{{RobinSpouse}}' Maru ''/ScienceHouse 19 4/{{DemetriusName}}"
+        return "adult/polite/neutral/positive/male/not-datable/Robin/Town/{{DemetriusBirthday}}/Robin '{{RobinSpouse}}' Maru ''/ScienceHouse 19 4/{{Demetrius Name}}"
     elif name ==  "Willy": 
-        return "adult/neutral/neutral/neutral/male/not-datable/null/Town/{{WillyBirthday}}/Elliott ''/FishShop 5 4/{{WillyName}}"
+        return "adult/neutral/neutral/neutral/male/not-datable/null/Town/{{WillyBirthday}}/Elliott ''/FishShop 5 4/{{Willy Name}}"
     elif name == "Evelyn": 
-        return "adult/polite/outgoing/positive/female/not-datable/George/Town/{{EvelynBirthday}}/George '{{GeorgeSpouse}}' Alex 'grand{{AlexChild}}'/JoshHouse 2 17/{{EvelynName}}"
+        return "adult/polite/outgoing/positive/female/not-datable/George/Town/{{EvelynBirthday}}/George '{{GeorgeSpouse}}' Alex 'grand{{AlexChild}}'/JoshHouse 2 17/{{Evelyn Name}}"
     elif name =="George": 
-       return "adult/rude/neutral/negative/male/not-datable/Evelyn/Town/{{GeorgeBirthday}}/Evelyn '{{EvelynSpouse}}' Alex 'grand{{AlexChild}}'/JoshHouse 16 22/{{GeorgeName}}"
+       return "adult/rude/neutral/negative/male/not-datable/Evelyn/Town/{{GeorgeBirthday}}/Evelyn '{{EvelynSpouse}}' Alex 'grand{{AlexChild}}'/JoshHouse 16 22/{{George Name}}"
     elif name =="Gus": 
-       return "adult/neutral/outgoing/positive/male/not-datable/null/Town/{{GusBirthday}}/Emily '' Pam ''/Saloon 18 6/{{GusName}}"
+       return "adult/neutral/outgoing/positive/male/not-datable/null/Town/{{GusBirthday}}/Emily '' Pam ''/Saloon 18 6/{{Gus Name}}"
     elif name =="Jas": 
-       return "child/neutral/shy/positive/female/not-datable/Vincent/Town/{{JasBirthday}}/Vincent ''/AnimalShop 4 6/{{JasName}}"
+       return "child/neutral/shy/positive/female/not-datable/Vincent/Town/{{JasBirthday}}/Vincent ''/AnimalShop 4 6/{{Jas Name}}"
     elif name =="Jodi": 
-       return "adult/polite/neutral/neutral/female/not-datable/Kent/Town/{{JodiBirthday}}/Sam '{{SamChild}}' Vincent '{{VincentChild}}' Kent 'husband'/SamHouse 4 5/{{JodiName}}"
+       return "adult/polite/neutral/neutral/female/not-datable/Kent/Town/{{JodiBirthday}}/Sam '{{SamChild}}' Vincent '{{VincentChild}}' Kent 'husband'/SamHouse 4 5/{{Jodi Name}}"
     elif name =="Kent": 
-       return "adult/neutral/shy/negative/male/not-datable/Jodi/Town/{{KentBirthday}}/Jodi 'wife' Sam '{{SamChild}}' Vincent '{{VincentChild}}'/SamHouse 22 5/{{KentName}}"
+       return "adult/neutral/shy/negative/male/not-datable/Jodi/Town/{{KentBirthday}}/Jodi 'wife' Sam '{{SamChild}}' Vincent '{{VincentChild}}'/SamHouse 22 5/{{Kent Name}}"
     elif name =="Leo": 
-       return  "child/neutral/shy/neutral/male/not-datable/Leo/Other/{{LeoBirthday}}//IslandHut 5 6/{{LeoName}}"
+       return  "child/neutral/shy/neutral/male/not-datable/Leo/Other/{{LeoBirthday}}//IslandHut 5 6/{{Leo Name}}"
     elif name =="Lewis": 
-       return "adult/neutral/outgoing/positive/male/not-datable/null/Town/{{LewisBirthday}}/Marnie ''/ManorHouse 8 5/{{LewisName}}"
+       return "adult/neutral/outgoing/positive/male/not-datable/null/Town/{{LewisBirthday}}/Marnie ''/ManorHouse 8 5/{{Lewis Name}}"
     elif name =="Linus": 
-       return "adult/neutral/shy/positive/male/not-datable/null/Town/{{LinusBirthday}}//Tent 1 2/{{LinusName}}"
+       return "adult/neutral/shy/positive/male/not-datable/null/Town/{{LinusBirthday}}//Tent 1 2/{{Linus Name}}"
     elif name =="Marnie": 
-       return "adult/polite/outgoing/positive/female/not-datable/Lewis/Town/{{MarnieBirthday}}/Lewis '' Shane '{{ShaneNibling}}' Jas '{{JasNibling}}'/AnimalShop 12 14/{{MarnieName}}"
+       return "adult/polite/outgoing/positive/female/not-datable/Lewis/Town/{{MarnieBirthday}}/Lewis '' Shane '{{ShaneNibling}}' Jas '{{JasNibling}}'/AnimalShop 12 14/{{Marnie Name}}"
     elif name == "Pam": 
-       return "adult/rude/outgoing/negative/female/not-datable/Gus/Town/{{PamBirthday}}/Penny '{{PennyChild}}' Gus ''/Trailer 15 4/{{PamName}}"
+       return "adult/rude/outgoing/negative/female/not-datable/Gus/Town/{{PamBirthday}}/Penny '{{PennyChild}}' Gus ''/Trailer 15 4/{{Pam Name}}"
     elif name == "Pierre": 
-       return "adult/neutral/outgoing/positive/male/not-datable/Caroline/Town/{{PierreBirthday}}/Abigail '{{AbigailChild}}' Caroline '{{CarolineSpouse}}'/SeedShop 4 17/{{PierreName}}"
+       return "adult/neutral/outgoing/positive/male/not-datable/Caroline/Town/{{PierreBirthday}}/Abigail '{{AbigailChild}}' Caroline '{{CarolineSpouse}}'/SeedShop 4 17/{{Pierre Name}}"
     elif name =="Robin": 
-       return "adult/neutral/outgoing/positive/female/not-datable/Demetrius/Town/{{RobinBirthday}}/Demetrius '{{DemetriusSpouse}}' Maru '{{MaruChild}}' Sebastian '{{SebastianChild}}'/ScienceHouse 21 4/{{RobinName}}"
+       return "adult/neutral/outgoing/positive/female/not-datable/Demetrius/Town/{{RobinBirthday}}/Demetrius '{{DemetriusSpouse}}' Maru '{{MaruChild}}' Sebastian '{{SebastianChild}}'/ScienceHouse 21 4/{{Robin Name}}"
     elif name == "Vincent": 
-       return "child/neutral/outgoing/positive/male/not-datable/Jas/Town/{{VincentBirthday}}/Jas ''/SamHouse 10 23/{{VincentName}}"
+       return "child/neutral/outgoing/positive/male/not-datable/Jas/Town/{{VincentBirthday}}/Jas ''/SamHouse 10 23/{{Vincent Name}}"
     elif name =="Sandy": 
-       return "adult/neutral/outgoing/positive/female/not-datable/null/Desert/{{SandyBirthday}}/Emily ''/SandyHouse 2 5/{{SandyName}}"
+       return "adult/neutral/outgoing/positive/female/not-datable/null/Desert/{{SandyBirthday}}/Emily ''/SandyHouse 2 5/{{Sandy Name}}"
     elif name =="Krobus": 
-       return "adult/polite/shy/neutral/male/not-datable/null/Other/{{KrobusBirthday}}//Sewer 31 17/{{KrobusName}}"
+       return "adult/polite/shy/neutral/male/not-datable/null/Other/{{KrobusBirthday}}//Sewer 31 17/{{Krobus Name}}"
     elif name == "Marlon": 
-        return "adult/neutral/outgoing/neutral/male/not-datable/Marnie/Town///AdventureGuild 5 11/{{MarlonName}}",
+        return "adult/neutral/outgoing/neutral/male/not-datable/Marnie/Town///AdventureGuild 5 11/{{Marlon Name}}",
     elif name == "Dwarf": 
-       return "adult/neutral/outgoing/positive/undefined/not-datable/null/Other/{{DwarfBirthday}}//Mine 43 6/{{DwarfName}}"
+       return "adult/neutral/outgoing/positive/undefined/not-datable/null/Other/{{DwarfBirthday}}//Mine 43 6/{{Dwarf Name}}"
     elif name =="Wizard": 
-       return "adult/rude/neutral/negative/male/not-datable/null/Other/{{WizardBirthday}}//WizardHouse 3 17/{{WizardName}}"
+       return "adult/rude/neutral/negative/male/not-datable/null/Other/{{WizardBirthday}}//WizardHouse 3 17/{{Wizard Name}}"
 
 def dance_wedding():
     s = "\n"
