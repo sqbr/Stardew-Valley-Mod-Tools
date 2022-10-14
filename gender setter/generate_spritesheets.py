@@ -47,9 +47,9 @@ def in_dictionary(dictionary, folder, name):
 spouse_list = ["Abigail","Alex","Elliott","Emily","Haley","Harvey","Leah","Maru","Penny","Sam","Sebastian","Shane"]
 orig_gender_dict = {"ProfessorSnail": "Male","Abigail":"Female","Alex":"Male","Birdie":"Female","Bouncer":"Male","Caroline":"Female","Charlie":"Female","Clint":"Male","Demetrius":"Male","Dwarf":"Male","Elliott":"Male","Emily":"Female","Evelyn":"Female","George":"Male","Gil":"Male","Governor":"Male","Grandpa":"Male","Gunther":"Male","Gus":"Male","Haley":"Female","Harvey":"Male","Henchman":"Male","Jas":"Female","Jodi":"Female","Kent":"Male","Krobus":"Male","Leah":"Female","Leo":"Male","Lewis":"Male","Linus":"Male","Marcello":"Male","Marlon":"Male","Marnie":"Female","Maru":"Female","MisterQi":"Male","Morris":"Male","OldMariner":"Male","Pam":"Female","Penny":"Female","Pierre":"Male","Robin":"Female","Sam":"Male","Sandy":"Female","Sebastian":"Male","Shane":"Male","Vincent":"Male","Willy":"Male","Wizard":"Male",}
 
-name_list1= ["Abigail","Alex","Birdie","Bouncer", "Caroline","Clint","Demetrius","Dwarf", "Elliott","Emily","Evelyn","George","Governor","Gunther","Gus","Haley","Harvey","Henchman","Jas","Jodi","Kent","Leah","Lewis","Linus","Krobus", "Marcello","Marlon","Marnie","Maru","MrQi","Morris","Mariner","Pam","Penny","Pierre",]
+name_list1= ["Abigail","Alex","Bear", "Birdie","Bouncer", "Caroline","Clint","Demetrius","Dwarf", "Elliott","Emily","Evelyn","George","Governor","Gunther","Gus","Haley","Harvey","Henchman","Jas","Jodi","Kent","Leah","Lewis","Linus","Krobus", "Marcello","Marlon","Marnie","Maru","MrQi","Morris","Mariner","Pam","Penny","Pierre",]
 name_list2= ["Robin","Sam","Sandy","Sebastian","Shane","Vincent","Willy","Wizard",]
-name_list = name_list1 + ["ParrotBoy","SafariGuy"]+name_list2
+sprite_list = sorted(name_list1 + ["ParrotBoy","SafariGuy","Maru_Hospital","Grandpa","Krobus_Trenchcoat"]+name_list2)
 beach_bodies = ["Abigail","Alex","Caroline","Clint","Elliott","Emily","Haley","Harvey","Jodi","Leah","Marnie","Maru","Pam","Penny","Pierre","Robin","Sam","Sebastian","Shane"]
 
 darker_chars = ["Marnie","Jas","Elliott","Grandpa","Sandy","Caroline","ParrotBoy","Birdie","SafariGuy"]
@@ -59,15 +59,15 @@ islander_chars = ["Birdie","SafariGuy","ParrotBoy"]
 start_path = "../../Gender Setter/[CP] Gender Setter/assets/"
 end_path = "../../Gender Setter/[CP] Gender Setter/Variants/Characters/"
 
-no_portrait_list = ["Bear","LeahEx","Marcello","Mariner","KrobusRaven","ClothesTherapyCharacters","Shane_JojaMart","Toddler","Toddler_girl_dark","Toddler_dark","Toddler_girl","Baby","WeddingOutfits","Baby_dark","SeaMonsterKrobus","Gourmand",]
+no_portrait_list = ["LeahEx","Marcello","Mariner","KrobusRaven","ClothesTherapyCharacters","Shane_JojaMart","Toddler","Toddler_girl_dark","Toddler_dark","Toddler_girl","Baby","WeddingOutfits","Baby_dark","SeaMonsterKrobus","Gourmand",]
 
-portrait_list = ["Gil","Maru_Hospital", "Krobus_Trenchcoat","Grandpa"]
+no_sprite_list = ["Gil","AnsweringMachine",] 
+portrait_list = no_sprite_list 
 
-for name in name_list:
+for name in sprite_list:
     if name not in no_portrait_list:
         portrait_list.append(name)
-        
-other_portraits = ["AnsweringMachine", ]          
+               
 ## Data processing  
 
 def genderswap(gender):
@@ -122,7 +122,7 @@ def make_screenshot(width, height, filepath, isBeach, image_type):
     if isBeach:
         filelist = beach_bodies
     elif image_type == "sprites":
-        filelist = name_list
+        filelist = sprite_list
     else:
         filelist = portrait_list         
 
@@ -262,7 +262,7 @@ def location(variant, type):
                 return "Portraits/Variants/"+ variant + "/"     
 
 def copy_image_line(name, type,variant):
-    if type =="sprite" and name=="Gil":
+    if type =="sprite" and name in no_sprite_list:
         return
     (start, end) = locations(type)
     full_start = start+location(variant, type)

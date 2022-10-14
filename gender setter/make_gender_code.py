@@ -70,20 +70,24 @@ def make_p_dict(pronoun, dict1,dict2):
 name_list1= ["Abigail","Alex","Birdie","Bouncer","Caroline","Charlie","Clint","Demetrius","Dwarf","Elliott","Emily","Evelyn","George","Gil","Governor","Grandpa","Gunther","Gus","Haley","Harvey","Henchman","Jas","Jodi","Kent","Krobus","Leah","Leo","Lewis","Linus","Marcello","Marlon","Marnie","Maru","MisterQi","Morris","OldMariner","Pam","Penny","Pierre",]
 name_list2= ["Robin","Sam","Sandy","Sebastian","Shane","Vincent","Willy","Wizard",]
 
-name_list = name_list1 + ["ProfessorSnail"]+name_list2
+name_list = name_list1 + ["ProfessorSnail"]+name_list2 #for pronouns etc
+
+sprite_list = sorted(name_list + ["Bear"])
+sprite_list.remove("Gil")
 
 beach_bodies = ["Abigail","Alex","Caroline","Clint","Elliott","Emily","Haley","Harvey","Jodi","Leah","Marnie","Maru","Pam","Penny","Pierre","Robin","Sam","Sebastian","Shane"]
 spouse_list = ["Abigail","Alex","Elliott","Emily","Haley","Harvey","Leah","Maru","Penny","Sam","Sebastian","Shane"]
 
 no_portrait_list = ["Marcello","OldMariner"]
-portrait_list = ["Gil"]
+other_portraits = ["Bear", "AnsweringMachine"]
 
-for name in name_list:
+portrait_list = ["AnsweringMachine"]
+
+for name in sprite_list:
     if name not in no_portrait_list and name !="Charlie":
         portrait_list.append(name)
 
-other_portraits = ["AnsweringMachine", "Bear"]   
-
+portrait_list = sorted(portrait_list)
 extras = {"Maru":"Maru_Hospital", "Krobus": "Krobus_Trenchcoat"}
 possession_dict= {"ProfessorSnail": "'s","Abigail":"'s","Alex":"'s","Birdie":"'s","Bouncer":"'s","Caroline":"'s","Charlie":"'s","Clint":"'s","Demetrius":"'","Dwarf":"'s","Elliott":"'s","Emily":"'s","Evelyn":"'s","George":"'s","Gil":"'s","Governor":"'s","Grandpa":"'s","Gunther":"'s","Gus":"'","Haley":"'s","Harvey":"'s","Henchman":"'s","Jas":"'","Jodi":"'s","Kent":"'s","Krobus":"'","Leah":"'s","Leo":"'s","Lewis":"'","Linus":"'","Marcello":"'s","Marlon":"'s","Marnie":"'s","Maru":"'s","MisterQi":"'s","Morris":"'","OldMariner":"'s","Pam":"'s","Penny":"'s","Pierre":"'s","Robin":"'s","Sam":"'s","Sandy":"'s","Sebastian":"'s","Shane":"'s","Vincent":"'s","Willy":"'s","Wizard":"'",}
 orig_gender_dict = {"ProfessorSnail": "Male","Abigail":"Female","Alex":"Male","Birdie":"Female","Bouncer":"Male","Caroline":"Female","Charlie":"Female","Clint":"Male","Demetrius":"Male","Dwarf":"Male","Elliott":"Male","Emily":"Female","Evelyn":"Female","George":"Male","Gil":"Male","Governor":"Male","Grandpa":"Male","Gunther":"Male","Gus":"Male","Haley":"Female","Harvey":"Male","Henchman":"Male","Jas":"Female","Jodi":"Female","Kent":"Male","Krobus":"Male","Leah":"Female","Leo":"Male","Lewis":"Male","Linus":"Male","Marcello":"Male","Marlon":"Male","Marnie":"Female","Maru":"Female","MisterQi":"Male","Morris":"Male","OldMariner":"Male","Pam":"Female","Penny":"Female","Pierre":"Male","Robin":"Female","Sam":"Male","Sandy":"Female","Sebastian":"Male","Shane":"Male","Vincent":"Male","Willy":"Male","Wizard":"Male",}
@@ -348,7 +352,7 @@ def create_config(current_gender):
             content.write("  \""+name+" Images\": \""+changesprite+"\",\n")  
     for name in other_portraits:
         if isHD:
-            content.write("  \""+name+" Images\": \"true\",\n")      
+            content.write("  \""+name+" Images\": \"Vanilla\",\n")      
         else:
             content.write("  \""+name+" Images\": \"false\",\n")                 
    
@@ -402,8 +406,8 @@ def initialise_variables(name):
         s+="    \""+name+" Gender\": {\"Default\": \""+o_gender+"\","+gender_string()+"},\n"
 
         s+="    \""+name+" Pronoun\": {\"Default\": \""+orig_pronoun_dict[o_gender]+"\","+pronoun_string()+"},\n"
-    s+="    \""+name+" Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \""
     if isHD:
+        s+="    \""+name+" Images\": {\"Default\": \""+orig_gender_dict[name]+"\",\"AllowValues\": \""
         s+= orig_gender_dict[name] 
         if name in variants_dict.keys():
             for variant in variants_dict[name]:
@@ -417,7 +421,8 @@ def initialise_variables(name):
             s+=", Androgynous Wheelchair"   
         if name in islander_chars:
             s+=", Androgynous Islander"  
-    else:    
+    else:   
+        s+="    \""+name+" Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \"" 
         if name in all_variants:
             s+="Vanilla"
             if name in darker_chars:
@@ -461,6 +466,56 @@ def gender_variables(name):
     s+="\n"
     return s
 
+
+##Talkoh specific
+
+def image_start_talkoh(name, type, variant):
+    #at the start of an image block 
+
+    s= "		{\"Action\": \"EditImage\","
+    if type =="sprite":
+        location = "Characters/"
+    else:
+        if variant =="setup":
+            location = "Mods/HDPortraits/" 
+            s = "		{\"Action\":\"Load\","   
+        else:    
+            location = "Mods/talkohSeasonal/"     
+
+    extra_code = ""
+    if name in beach_bodies and variant!="Female" and (name,variant) !=("Emily","LongSleeved"):
+        extra_code =", "+location
+        extra_code+=name+"_Beach"
+    if name in extras.keys():
+        extra_code =", "+location
+        extra_code+=extras[name]  
+    s+= "\"Target\":\""+location+artname(name, type) + extra_code + "\","     
+    return s       
+
+def image_middle_talkoh(name, type,variant):
+    return "\"FromFile\": \""+location_talkoh(variant, type)+"{{TargetWithoutPath}}.png\"," 
+
+def image_end_talkoh(name, variant):
+    #at the end of an image block
+    if name =="other":
+        return "\"When\": {\"Misc Image Edits\": \"true\"}},\n"
+    else:    
+        s = "\"When\": {"
+        if variant !="":
+            s+="\""+name+" Images\": \""+test_variable_talkoh(name, variant)+"\""  
+        else:
+            s+="\""+name+" Images|contains=false\": \"false\""    
+        s+="}},\n"
+        return s
+
+def image_line_talkoh(name, type,variant):
+    if artname(name, type)=="":
+        return ""
+    else:
+        return image_start_talkoh(name, type,variant) +image_middle_talkoh(name, type,variant)+image_end_talkoh(name, variant)    
+
+## Androgynous
+
 def image_start(name, type, variant):
     #at the start of an image block 
 
@@ -468,17 +523,12 @@ def image_start(name, type, variant):
     if type =="sprite":
         location = "Characters/"
     elif isHD:
-        if variant =="setup":
-            location = "Mods/HDPortraits/" 
-            s = "		{\"Action\":\"Load\","   
-        else:    
-            location = "Mods/talkohSeasonal/"     
+        location = "Mods/talkohSeasonal/"     
     else:
         location = "Portraits/"       
         
-
     extra_code = ""
-    if name in beach_bodies and variant!="Female" and (name,variant) !=("Emily","LongSleeved"):
+    if name in beach_bodies:
         extra_code =", "+location
         extra_code+=name+"_Beach"
     if name in extras.keys():
@@ -494,12 +544,12 @@ def image_middle_location(name, location):
     return "\"FromFile\": \"Androgynous/"+location+"/"+name+".png\"," 
 
 def image_end(name, variant):
-    #at the end of an image block
+    #at the end of an image block 
     if name =="other":
         return "\"When\": {\"Misc Image Edits\": \"true\"}},\n"
     else:    
         s = "\"When\": {"
-        if variant !="":
+        if variant !="" or isHD:
             s+="\""+name+" Images\": \""+test_variable(name, variant)+"\""  
         else:
             s+="\""+name+" Images|contains=false\": \"false\""    
@@ -679,10 +729,10 @@ def image_code_background():
     s+=image_pair_pos("other", "Minigames/jojacorps", "Other/jojacorps","",0, 600,0,600, 1200, 200) #computers
     #s+=image_pair_pos("other", "Minigames/jojacorps", "Other/jojacorps","",642, 246,0,0, 61, 28) #paintings
     #s+=image_pair_pos("other", "Minigames/jojacorps", "Other/jojacorps","",642, 7,0,0, 61, 28) #paintings 
-    image_line_other("Toddler") #toddlers
-    image_line_other("Toddler_girl")
-    image_line_other("Toddler_girl_dark")
-    image_line_other("Toddler_dark")
+    s+=image_line_other("Toddler") #toddlers
+    s+=image_line_other("Toddler_girl")
+    s+=image_line_other("Toddler_girl_dark")
+    s+=image_line_other("Toddler_dark")
     s+=image_pair("other","Characters/LeahExFemale","Characters/LeahEx","")
     s+=image_pair("other","Characters/LeahExMale","Characters/LeahEx","")
     return s
@@ -819,7 +869,7 @@ def create_content():
         content.write(initialise_variables(name))  
     for name in other_portraits:
         if isHD:
-            content.write("    \""+name+" Images\": {\"Default\": \""+"true"+"\",\"AllowValues\": \"false, true\"},\n\n")  
+            content.write("    \""+name+" Images\": {\"Default\": \""+"Vanilla"+"\",\"AllowValues\": \"false, Vanilla, Androgynous\"},\n\n")  
         else:
             content.write("    \""+name+" Images\": {\"Default\": \""+"false"+"\",\"AllowValues\": \"false, true\"},\n\n")  
     if isGS:
@@ -898,68 +948,65 @@ def test_variable(name, variant):
     # variant = Darker etc
 
     if isHD:
-        if variant in ["Young","Coat","LongSleeved", "Shaved"]:
-            return orig_gender_dict[name]+ " "+ variant
-        elif variant in ["Female","Androgynous"]:
-            return variant  
-        else:    
+        if variant =="":
+            return "Androgynous"
+        else:
             return "Androgynous "+ variant  
     else:
-            return variant                  
+            return variant     
+
+def test_variable_talkoh(name, variant):
+    # for When "(name) Image" : "test_variable(name, variant)"
+    # type = portrait, sprite
+    # variant = Darker etc
+    if variant in ["Young","Coat","LongSleeved", "Shaved"]:
+        return orig_gender_dict[name]+ " "+ variant
+    else:
+        return variant                              
 
 
 def location(variant, type):
     #location of the image we're using 
 
-    if isHD:
-        if variant =="":
-            if type == "sprite":
-                return "assets/Characters/"
-            else:
-                return "assets/Portraits/"
-        elif variant in ["Young","Coat","LongSleeved", "Shaved"]:
-            if type == "sprite":
-                return "assets/Characters/Variants/"+ variant + "/"
-            else:
-                return "assets/Portraits/Variants/"+ variant + "/"
-        elif variant =="Female":
-            if type == "sprite":
-                return "assets/Characters/Genderbent/" #this should never happen currently
-            else:
-                return "assets/Portraits/Genderbent/"
+    if variant =="":
+        if type == "sprite":
+            return "Androgynous/Characters/"
+        else:
+            return "Androgynous/Portraits/"
+    else:
+        if type == "sprite":
+            return "Androgynous/Characters/Variants/"+ variant + "/"
+        else:
+            return "Androgynous/Portraits/Variants/"+ variant + "/"     
 
-        elif variant =="Androgynous":
-            if type == "sprite":
-                return "Androgynous/Characters/"
-            else:
-                return "Androgynous/Portraits/"
+def location_talkoh(variant, type):
+    #location of the image we're using 
+
+    if variant =="":
+        if type == "sprite":
+            return "assets/Characters/"
         else:
-            if type == "sprite":
-                return "Androgynous/Characters/Variants/"+ variant + "/"
-            else:
-                return "Androgynous/Portraits/Variants/"+ variant + "/"
-    else:       
-        if variant =="":
-            if type == "sprite":
-                return "Androgynous/Characters/"
-            else:
-                return "Androgynous/Portraits/"
+            return "assets/Portraits/"
+    elif variant in ["Young","Coat","LongSleeved", "Shaved"]:
+        if type == "sprite":
+            return "assets/Characters/Variants/"+ variant + "/"
         else:
-            if type == "sprite":
-                return "Androgynous/Characters/Variants/"+ variant + "/"
-            else:
-                return "Androgynous/Portraits/Variants/"+ variant + "/"     
+            return "assets/Portraits/Variants/"+ variant + "/"
+    elif variant =="Female":
+        if type == "sprite":
+            return "assets/Characters/Genderbent/" #this should never happen currently
+        else:
+            return "assets/Portraits/Genderbent/"
+    else:
+        print("Error, unknown variant: "+variant)        
 
 def hd_extra_portraits():
     s = ""
-    for name in portrait_list:
-        s+= image_line(name, "portrait", "Androgynous")       
-        s+="\n"
     for name in variants_dict.keys():
         for variant in variants_dict[name]:
-            s+= image_line(name, "portrait", variant)   
+            s+= image_line_talkoh(name, "portrait", variant)   
     for name in genderswap_list:
-        s+= image_line(name, "portrait", "Female") 
+        s+= image_line_talkoh(name, "portrait", "Female") 
         if name in beach_bodies:
             s+="        {\n			\"Action\":\"EditImage\",\n"
             s+="			\"Target\":\"Mods/talkohSeasonal/"+portraitname(name) + "_Beach\",\n"
@@ -990,7 +1037,7 @@ def hd_setup():
     s+="        },\n\n" 
     
     for name in portrait_list:
-        s += image_start(name, "portrait", "setup")
+        s += image_start_talkoh(name, "portrait", "setup")
         s+="\"FromFile\":\"assets/base.json\","
         s+= "\"When\": {\""+name+" Images|contains=false\": \"false\",\"HasMod |contains=talkohlooeys.SeasonalPortraits\": false}},\n"  
     
@@ -1009,6 +1056,9 @@ def hd_setup():
     s+="			},\n"
     s+="			\"When\" :{\"HasMod |contains=talkohlooeys.SeasonalPortraits\": false}\n"
     s+="        },\n\n"
+    # for name in portrait_list:
+    #     s+= image_line_talkoh(name, "portrait", "")       
+    #     s+="\n"
     return s
 
 def create_image_code(): 
@@ -1018,15 +1068,9 @@ def create_image_code():
         s+="\n"    
     for name in portrait_list:
         s+= image_line(name, "portrait", "")  
-        if isHD:
-            if name =="Kent":
-                s+=image_line_pos(name,"sprite", "Androgynous", 0, 0, 64, 160) #for compatibility with Kent does the dishes  
-            else:
-                s+= image_line(name, "sprite", "Androgynous") 
-        else:    
-            if name =="Kent":
+        if name =="Kent":
                 s+=image_line_pos(name,"sprite","", 0, 0, 64, 160) #for compatibility with Kent does the dishes  
-            else:    
+        else:    
                 s+= image_line(name, "sprite", "")   
         if name in darker_chars:
             s+= image_line(name, "portrait", "Darker")  
@@ -1038,10 +1082,7 @@ def create_image_code():
             s+= image_line(name, "sprite", "Islander")   
         s+="\n"             
     for name in no_portrait_list:   
-        if isHD: 
-            s+= image_line(name, "sprite", "Androgynous") 
-        else:
-            s+= image_line(name, "sprite", "")    
+        s+= image_line(name, "sprite", "")    
         s+="\n" 
     if isGS:
             for name in spouse_list:
@@ -1058,7 +1099,6 @@ def create_image_code():
             s+="\n"                
     return s
 
-       
 isGS = True
 for isHD in [True, False]:
     for g in ["Male", "Female", "Neutral", "Test"]:
