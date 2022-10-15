@@ -47,9 +47,9 @@ def in_dictionary(dictionary, folder, name):
 spouse_list = ["Abigail","Alex","Elliott","Emily","Haley","Harvey","Leah","Maru","Penny","Sam","Sebastian","Shane"]
 orig_gender_dict = {"ProfessorSnail": "Male","Abigail":"Female","Alex":"Male","Birdie":"Female","Bouncer":"Male","Caroline":"Female","Charlie":"Female","Clint":"Male","Demetrius":"Male","Dwarf":"Male","Elliott":"Male","Emily":"Female","Evelyn":"Female","George":"Male","Gil":"Male","Governor":"Male","Grandpa":"Male","Gunther":"Male","Gus":"Male","Haley":"Female","Harvey":"Male","Henchman":"Male","Jas":"Female","Jodi":"Female","Kent":"Male","Krobus":"Male","Leah":"Female","Leo":"Male","Lewis":"Male","Linus":"Male","Marcello":"Male","Marlon":"Male","Marnie":"Female","Maru":"Female","MisterQi":"Male","Morris":"Male","OldMariner":"Male","Pam":"Female","Penny":"Female","Pierre":"Male","Robin":"Female","Sam":"Male","Sandy":"Female","Sebastian":"Male","Shane":"Male","Vincent":"Male","Willy":"Male","Wizard":"Male",}
 
-name_list1= ["Abigail","Alex","Bear", "Birdie","Bouncer", "Caroline","Clint","Demetrius","Dwarf", "Elliott","Emily","Evelyn","George","Governor","Gunther","Gus","Haley","Harvey","Henchman","Jas","Jodi","Kent","Leah","Lewis","Linus","Krobus", "Marcello","Marlon","Marnie","Maru","MrQi","Morris","Mariner","Pam","Penny","Pierre",]
+name_list1= ["Abigail","Alex", "Birdie", "Caroline","Clint","Demetrius","Dwarf", "Elliott","Emily","Evelyn","George","Governor","Gunther","Gus","Haley","Harvey","Henchman","Jas","Jodi","Kent","Leah","Lewis","Linus","Krobus", "Marcello","Marlon","Marnie","Maru","MrQi","Morris","Mariner","Pam","Penny","Pierre",]
 name_list2= ["Robin","Sam","Sandy","Sebastian","Shane","Vincent","Willy","Wizard",]
-sprite_list = sorted(name_list1 + ["ParrotBoy","SafariGuy","Maru_Hospital","Grandpa","Krobus_Trenchcoat"]+name_list2)
+sprite_list = sorted(name_list1 + ["ParrotBoy","SafariGuy","Maru_Hospital","Krobus_Trenchcoat"]+name_list2)
 beach_bodies = ["Abigail","Alex","Caroline","Clint","Elliott","Emily","Haley","Harvey","Jodi","Leah","Marnie","Maru","Pam","Penny","Pierre","Robin","Sam","Sebastian","Shane"]
 
 darker_chars = ["Marnie","Jas","Elliott","Grandpa","Sandy","Caroline","ParrotBoy","Birdie","SafariGuy"]
@@ -61,7 +61,7 @@ end_path = "../../Gender Setter/[CP] Gender Setter/Variants/Characters/"
 
 no_portrait_list = ["LeahEx","Marcello","Mariner","KrobusRaven","ClothesTherapyCharacters","Shane_JojaMart","Toddler","Toddler_girl_dark","Toddler_dark","Toddler_girl","Baby","WeddingOutfits","Baby_dark","SeaMonsterKrobus","Gourmand",]
 
-no_sprite_list = ["Gil","AnsweringMachine",] 
+no_sprite_list = ["Gil","Grandpa",] 
 portrait_list = no_sprite_list 
 
 for name in sprite_list:
@@ -139,7 +139,7 @@ def make_screenshot(width, height, filepath, isBeach, image_type):
             img= Image.open(filepath+current_image+".png")
             h = image_height
             if image_type == "sprites":
-                if (current_image in ["Krobus","Dwarf"]):
+                if (current_image in ["Krobus","Dwarf","Krobus_Trenchcoat"]):
                     h = 24
             corner = img.crop((0,0,image_width,h))
             screenshot.paste(corner,(image_width*i,image_height*j+(image_height-h),image_width*(i+1),image_height*(j+1))) 

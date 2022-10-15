@@ -2,7 +2,7 @@
 {
     "Action": "EditImage",
     "Target": "Characters/Gourmand",
-    "FromFile": "assets/Other/Gourmand_EDGI.png",
+    "FromFile": "Androgynous/Other/Gourmand_EDGI.png",
     "When": {
         "HasMod": "gwenynnefydd.diversegingerisland",  "EditIslandCharacters": "Full","MiscImageEdits": "true"
     }

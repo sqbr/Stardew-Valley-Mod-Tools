@@ -718,7 +718,7 @@
 				"Action": "EditImage",
 				"Target": "Maps/island_tilesheet_1",
 				"PatchMode": "Replace",
-				"FromFile": "assets/Other/IslandTrader.png",
+				"FromFile": "Androgynous/Other/IslandTrader.png",
 				"ToArea": { "X": 256, "Y": 992, "Width": 144, "Height": 48 },
 				"When": {"EditIslandCharacters": "Full","MiscImageEdits": "true"}
 			 },
