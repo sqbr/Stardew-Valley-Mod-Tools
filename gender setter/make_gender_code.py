@@ -269,7 +269,7 @@ def create_config(current_gender):
     content = open(path,"w")
     content.write("{\n")
     if isHD:
-        content.write("  \"Genderbent Bachelors\": \"Classic Portraits Androgynous Sprites\",\n")   
+        content.write("  \"Genderbent Bachelors\": \"Classic\",\n")   
     if current_gender == "None":
         edit_bool = "false"
     else:
@@ -411,9 +411,12 @@ def initialise_variables(name):
         s+= orig_gender_dict[name] 
         if name in variants_dict.keys():
             for variant in variants_dict[name]:
-                s+=", "+ orig_gender_dict[name] + " "+ variant    
+                if name =="Wizard" and variant =="Young":
+                    s+=", Male Young (no sprites), Male Young (androgynous sprites)" 
+                else:    
+                    s+=", "+ orig_gender_dict[name] + " "+ variant    
         if name in genderswap_list:
-            s+=", Female"
+            s+=", Female (no sprites), Female (androgynous sprites)"
         s+=", Androgynous"    
         if name in darker_chars:
             s+=", Androgynous Darker"
@@ -480,7 +483,7 @@ def image_start_talkoh(name, type, variant):
             location = "Mods/talkohSeasonal/"     
 
     extra_code = ""
-    if name in beach_bodies and variant!="Female" and (name,variant) !=("Emily","LongSleeved"):
+    if name in beach_bodies and (name,variant) !=("Emily","LongSleeved"):
         extra_code =", "+location
         extra_code+=name+"_Beach"
     if name in extras.keys():
@@ -492,13 +495,17 @@ def image_start_talkoh(name, type, variant):
 def image_middle_talkoh(name, type,variant):
     return "\"FromFile\": \""+location_talkoh(variant, type)+"{{TargetWithoutPath}}.png\"," 
 
-def image_end_talkoh(name, variant):
+def image_end_talkoh(name, type, variant):
     #at the end of an image block
     if name =="other":
         return "\"When\": {\"MiscImageEdits\": \"true\"}},\n"
     else:    
         s = "\"When\": {"
-        if variant !="":
+        if variant =="Female":
+            s+="\""+name+"FemalePortrait\": true"    
+        elif variant =="Young" and name =="Wizard":
+            s+="\"WizardYoungPortrait\": true"       
+        elif variant !="":
             s+="\""+name+"Images\": \""+test_variable_talkoh(name, variant)+"\""  
         else:
             s+="\""+name+"Images|contains=false\": \"false\""    
@@ -509,7 +516,7 @@ def image_line_talkoh(name, type,variant):
     if artname(name, type)=="":
         return ""
     else:
-        return image_start_talkoh(name, type,variant) +image_middle_talkoh(name, type,variant)+image_end_talkoh(name, variant)    
+        return image_start_talkoh(name, type,variant) +image_middle_talkoh(name, type,variant)+image_end_talkoh(name, type, variant)    
 
 ## Androgynous
 
@@ -540,13 +547,15 @@ def image_middle_basic(name, type,variant):
 def image_middle_location(name, location):       
     return "\"FromFile\": \"Androgynous/"+location+"/"+name+".png\"," 
 
-def image_end(name, variant):
+def image_end(name, type, variant):
     #at the end of an image block 
     if name =="other":
         return "\"When\": {\"MiscImageEdits\": \"true\"}},\n"
     else:    
         s = "\"When\": {"
-        if variant !="" or isHD:
+        if isHD and type =="sprite" and variant =="" and name in genderswap_list:
+            s+="\""+name+"AndrogynousSprite\": true"
+        elif variant !="" or isHD:
             s+="\""+name+"Images\": \""+test_variable(name, variant)+"\""  
         else:
             s+="\""+name+"Images|contains=false\": \"false\""    
@@ -558,17 +567,17 @@ def image_line(name, type,variant):
     if artname(name, type)=="":
         return ""
     else:
-        return image_start(name, type,variant) +image_middle_basic(name, type,variant)+image_end(name, variant)
+        return image_start(name, type,variant) +image_middle_basic(name, type,variant)+image_end(name, type, variant)
 
 def image_line_other(name):
-    return image_start(name, "sprite", "") +image_middle_basic(name,  "sprite", "")+image_end("other","")
+    return image_start(name, "sprite", "") +image_middle_basic(name,  "sprite", "")+image_end("other","sprite", "")
 
 def image_line_pos(name, type,variant,x, y, w, h):
     #code to replace image at location in a given box
     s =image_start(name, type,variant)
     pos_string ="{ \"X\": "+str(x)+", \"Y\": "+str(y)+", \"Width\": "+str(w)+", \"Height\": "+str(h)+" }" 
     s+="\"FromArea\": "+pos_string+",\"ToArea\":  "+pos_string+","
-    s+=image_middle_basic(name, type,variant)+image_end(name, variant)
+    s+=image_middle_basic(name, type,variant)+image_end(name, type, variant)
     return s
 
 def image_line_pos_loc(name, location, type, variant,x, y, w, h):
@@ -577,13 +586,13 @@ def image_line_pos_loc(name, location, type, variant,x, y, w, h):
     pos_string ="{ \"X\": "+str(x)+", \"Y\": "+str(y)+", \"Width\": "+str(w)+", \"Height\": "+str(h)+" }" 
     s+="\"FromArea\": "+pos_string+",\"ToArea\":  "+pos_string+","
     s+= "\"FromFile\": \"Androgynous/"+location+".png\"," 
-    s+=image_end(name, variant)
+    s+=image_end(name, type, variant)
     return s    
 
 def image_pair(name, location1, location2,variant):
     #code to replace image at location in a given box
     s ="		{\"Action\": \"EditImage\",\"Target\": \"" + location1+"\","
-    s+=image_middle_location(name, location2)+image_end(name, variant)
+    s+=image_middle_location(name, location2)+image_end(name, "sprite", variant)
     return s    
 
 def image_pair_pos(name, location1, location2, variant,x1, y1, x2,y2,w, h):
@@ -596,7 +605,7 @@ def image_pair_pos(name, location1, location2, variant,x1, y1, x2,y2,w, h):
     s+= "\"FromFile\": \"Androgynous/"+location+".png\"," 
     s+="\"FromArea\": { \"X\": "+str(x2)+", \"Y\": "+str(y2)+", \"Width\": "+str(w)+", \"Height\": "+str(h)+" }," 
     s+="\"ToArea\": { \"X\": "+str(x1)+", \"Y\": "+str(y1)+", \"Width\": "+str(w)+", \"Height\": "+str(h)+" }," 
-    s+=image_end(name, variant)
+    s+=image_end(name, "sprite", variant)
     return s    
 
 def image_lineSpouse(name,variant):
@@ -857,8 +866,8 @@ def create_content():
         content.write("    \"FarmerPronoun\": {\"Default\": \"They\","+pronoun_string()+"},\n\n")
     if isHD:
         content.write("    \"Genderbent Bachelors\": {\n")
-        content.write("    	\"AllowValues\": \"Classic Portraits Androgynous Sprites, RedK1rby Portraits No Sprites, Classic Portraits No Sprites\",\n")
-        content.write("    	\"Default\": \"Classic Portraits Androgynous Sprites\",\n")
+        content.write("    	\"AllowValues\": \"Classic, RedK1rby\",\n")
+        content.write("    	\"Default\": \"Classic\",\n")
         content.write("    	\"Description\": \"Choose between RedK1rby-style beach portraits or the classic ones for Bachelors switched to Female.\"\n")
         content.write("    },\n\n")
         
@@ -882,7 +891,18 @@ def create_content():
     content.write("    },\n")  
 
     #Dynamic Tokens      
-    content.write("    \"DynamicTokens\": [\n")         
+    content.write("    \"DynamicTokens\": [\n")   
+    for name in genderswap_list:
+        content.write("                {\"Name\": \""+name+"FemalePortrait\", \"Value\":\"false\"},\n")   
+        content.write("                {\"Name\": \""+name+"FemalePortrait\", \"Value\":\"true\",\"When\":{\""+name+"Images\": \"Female (no sprites)\"}},\n") 
+        content.write("                {\"Name\": \""+name+"FemalePortrait\", \"Value\":\"true\",\"When\":{\""+name+"Images\": \"Female (androgynous sprites)\"}},\n") 
+        content.write("                {\"Name\": \""+name+"AndrogynousSprite\", \"Value\":\"false\"},\n")   
+        content.write("                {\"Name\": \""+name+"AndrogynousSprite\", \"Value\":\"true\",\"When\":{\""+name+"Images\": \"Androgynous\"}},\n") 
+        content.write("                {\"Name\": \""+name+"AndrogynousSprite\", \"Value\":\"true\",\"When\":{\""+name+"Images\": \"Female (androgynous sprites)\"}},\n")     
+    content.write("                {\"Name\": \"WizardYoungPortrait\", \"Value\":\"false\"},\n")   
+    content.write("                {\"Name\": \"WizardYoungPortrait\", \"Value\":\"true\",\"When\":{\"WizardImages\": \"Male Young (no sprites)\"}},\n") 
+    content.write("                {\"Name\": \"WizardYoungPortrait\", \"Value\":\"true\",\"When\":{\"WizardImages\": \"Male Young (androgynous sprites)\"}},\n")          
+    content.write("                {\"Name\": \"WizardAndrogynousSprite\", \"Value\":\"true\",\"When\":{\"WizardImages\": \"Male Young (androgynous sprites)\"}},\n")                   
     if isGS:
         content.write("                {\"Name\": \"ChangeFarmerGender\", \"Value\":\"true\"},\n")
         content.write("                {\"Name\": \"ChangeFarmerGender\", \"Value\":\"false\",\"When\":{\"FarmerGender\": \"false\"}},\n")   
@@ -957,7 +977,7 @@ def test_variable_talkoh(name, variant):
     # type = portrait, sprite
     # variant = Darker etc
     if variant in ["Young","Coat","LongSleeved", "Shaved"]:
-        return orig_gender_dict[name]+ " "+ variant
+        return orig_gender_dict[name]+ " "+ variant    
     else:
         return variant                              
 
@@ -989,9 +1009,9 @@ def location_talkoh(variant, type):
             return "assets/Characters/Variants/"+ variant + "/"
         else:
             return "assets/Portraits/Variants/"+ variant + "/"
-    elif variant =="Female":
+    elif variant.count("Female")>0:
         if type == "sprite":
-            return "assets/Characters/Genderbent/" #this should never happen currently
+            return "Androgynous/Characters" 
         else:
             return "assets/Portraits/Genderbent/"
     else:
@@ -1002,19 +1022,30 @@ def hd_extra_portraits():
     for name in variants_dict.keys():
         for variant in variants_dict[name]:
             s+= image_line_talkoh(name, "portrait", variant)   
+    s+= image_line_talkoh("Linus", "sprite", "Coat")
+    s+= image_line_talkoh("Pam", "sprite", "Young")   
+    # s+="        {\n			\"Action\":\"EditImage\",\n"
+    # s+="			\"Target\":\"Characters/Wizard\",\n"     
+    # s+="			\"FromFile\":\"Androgynous/Characters/{{TargetWithoutPath}}.png\",\n"
+    # s+=" 			\"When\": {\"WizardImages\": \"Male Young (androgynous sprites)\"}\n        },\n\n" 
+    # s+="\n"         
     for name in genderswap_list:
         s+= image_line_talkoh(name, "portrait", "Female") 
+        # s+="        {\n			\"Action\":\"EditImage\",\n"
+        # s+="			\"Target\":\"Characters/"+spritename(name) 
+        # if name in beach_bodies:
+        #     s+= ", Characters/"+spritename(name)+"_Beach"
+        # s+="\",\n"     
+        # s+="			\"FromFile\":\"Androgynous/Characters/{{TargetWithoutPath}}.png\",\n"
+        # s+=" 			\"When\": {\""+name+"Images\": \"Female (androgynous sprites)\"}\n        },\n\n" 
+        # s+="\n"   
         if name in beach_bodies:
             s+="        {\n			\"Action\":\"EditImage\",\n"
             s+="			\"Target\":\"Mods/talkohSeasonal/"+portraitname(name) + "_Beach\",\n"
             s+="			\"FromFile\":\"assets/Portraits/Genderbent/Classic/"+ name+"_Beach.png\",\n"
-            s+=" 			\"When\": {\""+name+"Images\": \"Female\", \"Genderbent Bachelors|contains=Classic\": true}\n        },\n\n"
+            s+=" 			\"When\": {\""+name+"FemalePortrait\": true,  \"Genderbent Bachelors\": \"Classic\"}\n        },\n\n"
             
-            s+="        {\n			\"Action\":\"EditImage\",\n"
-            s+="			\"Target\":\"Characters/"+spritename(name) + ", Characters/"+spritename(name)+"_Beach\",\n"     
-            s+="			\"FromFile\":\"Androgynous/Characters/{{TargetWithoutPath}}.png\",\n"
-            s+=" 			\"When\": {\""+name+"Images\": \"Female\", \"Genderbent Bachelors\": \"Classic Portraits Androgynous Sprites\"}\n        },\n\n" 
-            s+="\n"    
+             
     return s 
  
 def hd_setup():
@@ -1053,9 +1084,6 @@ def hd_setup():
     s+="			},\n"
     s+="			\"When\" :{\"HasMod |contains=talkohlooeys.SeasonalPortraits\": false}\n"
     s+="        },\n\n"
-    # for name in portrait_list:
-    #     s+= image_line_talkoh(name, "portrait", "")       
-    #     s+="\n"
     return s
 
 def create_image_code(): 

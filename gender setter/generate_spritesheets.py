@@ -232,7 +232,7 @@ def make_screenshots():
 
     make_screenshot(width =6, height =5, filepath = path, isBeach = True, image_type = "HD")        
             
-    make_screenshot(width =14, height =4, filepath = path, isBeach = False, image_type = "HD")   
+    make_screenshot(width =12, height =4, filepath = path, isBeach = False, image_type = "HD")   
 
     make_comparison_screenshot(filepath = path, image_type = "HD")   
         
