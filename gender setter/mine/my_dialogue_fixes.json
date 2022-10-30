@@ -1,6 +1,13 @@
 		//These changes are by sqbr
 		{
 			"Action": "EditData",
+			"Target": "Characters/Dialogue/Abigail",
+			"Entries":
+				{
+					"spring_23": "Well, tomorrow is the flower dance. Dancing is alright, but they make me wear this stupid outfit ...$s",				}
+		},
+		{
+			"Action": "EditData",
 			"Target": "Characters/Dialogue/Evelyn",
 			"Entries":
 				{
@@ -103,7 +110,8 @@
 			"Action": "EditData",
 			"Target": "Characters/Dialogue/Wizard",
 			"Entries": {
-				"Thu10": "You musn't tell anyone... but I have reason to believe that one of the locals has been influenced by my magic into becoming something...not quite human.#$e#I could be mistaken... but while rare, it does happen.",
+				"Thu10": "You musn't tell anyone... but I have reason to believe that at least one local resident has been influenced by the ambient magic in this region into becoming something...not quite human.#$e#I could be mistaken... but while rare, it does happen, especially when a child is exposed in utero.",
+				"Fri6": "I was married, long ago. After my {{WitchSpouse}} and I broke up, {{WitchThey}} began flying around the countryside, cursing everything {{WitchThey}} saw.#$e#It's not a very mature way to express one's anger.",		
 				 }
 		},
 		{
@@ -135,12 +143,35 @@
 		},
 		{
 			"Action": "EditData",
+			"Target": "Data/Events/Railroad",
+			"Entries": {"529952/C": "WizardSong/54 36/Wizard 54 36 0 farmer 50 40 1/addQuest 28/skippable/move farmer 1 0 0/move farmer 0 -4 1/faceDirection Wizard 3 true/move farmer 1 0 1/pause 800/faceDirection Wizard 0/pause 600/emote Wizard 40/pause 500
+			/speak Wizard \"Ah... @. I've been waiting for you.\"/pause 800/faceDirection Wizard 3/pause 400/faceDirection Wizard 0/pause 400
+			/speak Wizard \"Have I ever told you I used to be married?\"/pause 800/faceDirection Wizard 3 true/pause 50/faceDirection Wizard 2/pause 800/showFrame Wizard 18/pause 800
+			/speak Wizard \"Strange, I know... for a {{WizardAdult}} like me. But it's true.\"/pause 500/showFrame Wizard 0/pause 800/faceDirection Wizard 3
+			/speak Wizard \"My {{WitchSpouse}} and I were together for many years, , until... until I made a mistake that drove {{WitchThem}} away.\"/pause 400/faceDirection Wizard 0
+			/speak Wizard \"And now you can see my lost love flying around the countryside, cursing everything in {{WitchTheir}} path...\"/pause 1000
+			/speak Wizard \"When I found out, I sealed this passage to {{WitchTheir}} home... fearing that an innocent villager might fall prey to {{WitchTheir}} dark magic.\"/move Wizard -1 0 3
+			/speak Wizard \"But now, it must be unsealed... for when we separated, {{WitchThey}} took my magic ink!#$b#I need that magic ink back!$h#$b#I would do this myself, but I... I can't see {{WitchThem}} again. That's why I need your help.\"/move Wizard 1 0 0
+			/speak Wizard \"In order to unseal this passage, you'll need a dark talisman. Talk to {{KrobusName}}, in the sewer... {{KrobusThey}} should know where to find one.\"/pause 500/faceDirection Wizard 3
+			/speak Wizard \"I'm counting on you... if you can retrieve my magic ink I promise I'll make it worth your while... Now go!\"/pause 500/faceDirection Wizard 2/pause 500/showFrame Wizard 16/pause 500/playSound wand/warp Wizard -3000 -3000/specificTemporarySprite wizardWarp2/faceDirection farmer 2 true/showFrame farmer 94/pause 3000/showFrame farmer 0/specificTemporarySprite witchFlyby/pause 4000/end"
+			}
+			},
+		{
+			"Action": "EditData",
 			"Target": "Data/Events/Town",
 			"Entries":
 				{
 					"15389722/j 57": "springtown/62 93/farmer 54 94 1 Lewis 62 94 0 Robin 64 93 3/skippable/move farmer 6 0 1 true/animate Robin false true 100 24 25 26 27 27 27 27 27 27 27 27/pause 200/playSound crafting/pause 1200/playSound crafting/pause 1200/playSound crafting/pause 1200/playSound crafting/pause 500/stopAnimation Robin/faceDirection Lewis 3/speak Lewis \"Ah, hello there, @. You showed up at the perfect time.$h\"/pause 500/emote farmer 8/move farmer 1 0 0 true/faceDirection Lewis 0/pause 200/speak Lewis \"It's our new 'Special Orders' board.#$b#{{RobinName}} and I built it from scratch.$h\"/pause 500/speak Robin \"Um... {{LewisName}}? All you did was hold the nails.\"/pause 300/showFrame Lewis 26/playSound slimedead/jump Lewis/shake Lewis 1000/pause 1300/showFrame Lewis 12/faceDirection farmer 1/faceDirection Lewis 3/speak Lewis \"*Ahem*... Ignore {{RobinThem}}.$5\"/pause 400/faceDirection Lewis 0/speak Lewis \"Now, let me explain...\"/showFrame Lewis 20/speak Lewis \"You see... with %farm Farm back in business, the local economy has really been picking up.#$b#As a result, some of the local townsfolk have been asking me for a way to source local ingredients for their businesses or personal projects.\"/pause 200/showFrame Lewis 8/faceDirection Lewis 0/speak Lewis \"So, {{RobinName}} and I came up with the idea of a new 'Special Orders' board, where people can post bigger jobs than would make sense for the old billboard outside {{PierreName}}{{PierrePossession}}.\"/faceDirection farmer 0/pause 500/faceDirection Robin 3/move Robin 0 1 3/speak Robin \"Yeah... for example, I plan on requesting some hardwood for a bed I want to make.$h#$b#I won't put you on the spot, but if you want to help me out you can just accept the job from this board.#$b#Who knows, maybe if the bed turns out well I'll start selling them in my shop!$h\"/faceDirection farmer 1/quickQuestion #I look forward to helping!#Heh... I dunno... we'll see...(break)faceDirection Lewis 3\\speak Lewis \"I thought so! I wouldn't expect anything less from you, @.\"\\emote Robin 20\\speak Robin \"So, can we say that you're... --On Board--?$4\"\\pause 400\\showFrame Lewis 27\\shake Lewis 200\\pause 400\\textAboveHead Lewis \"*groan*\"\\animate Robin false true 150 32 33\\pause 1200\\showFrame Lewis 0\\faceDirection Lewis 3\\speak Lewis \"Well, I'm sure you're busy, so we won't keep you away from your work any longer.#$b#As always, I appreciate your willingness to contribute!$h#$b#Take care, @.\"(break)faceDirection Lewis 3\\emote Lewis 28\\speak Lewis \"Huh... I wouldn't expect such a tepid response from you, @. I'm disappointed.$s\"\\pause 400\\speak Robin \"It's fine, {{LewisName}}... there's no pressure to help out.$5#$b#Maybe I can get {{SebastianName}} to help. {{SebastianTheyU}} could use some work away from the computer.\"\\playMusic none\\pause 500\\speak Lewis \"Hmmph... Well, we're done here, {{RobinName}}.$u#$b#...Wouldn't want to waste any more of @'s precious 'me' time.$u\"\\faceDirection Lewis 1(break)/pause 2000/end"
 				},
 		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/WizardHouse",
+			"Entries": {
+					"418172/n hasPickedUpMagicInk": "WizardSong/2 14/farmer 3 14 3 Wizard 1 14 1/skippable/pause 1000/speak Wizard \"You've found my ink! Excellent.\"/move Wizard 1 0 1/pause 1000/speak Wizard \"Er...\"/faceDirection Wizard 2/pause 500/showFrame Wizard 18/pause 500/speak Wizard \"Did you... happen to see my {{WitchSpouse}}?#$b#No? Well, what about the house...?#$b#Does it look like {{WitchThey}} live{{WitchS}} alone? Or...$h\"/pause 500/showFrame Wizard 0/emote Wizard 12/pause 500/faceDirection Wizard 3/pause 500/speak Wizard \"...Actually, don't tell me... I don't want to know.\"/pause 500/pause 500/faceDirection Wizard 2/pause 500/speak Wizard \"Anyway... you must be wondering about your reward. Here...\"/move Wizard -1 0 1/pause 800/faceDirection Wizard 2/pause 1000/showFrame Wizard 16/pause 800/specificTemporarySprite arcaneBook/playSound fireball/shake Wizard 500/pause 4000/faceDirection farmer 0/faceDirection Wizard 1/faceDirection Wizard 0/pause 500/speak Wizard \"It's a book of summoning.#$b#The arcane potential is immense... but I'll make it simple for you.#$b#By using this book, you can summon magic buildings directly to your farm.#$b#I think you'll find it useful.\"/pause 500/faceDirection farmer 3/faceDirection Wizard 1/speak Wizard \"Oh, I almost forgot to say... ahem... Thank you.\"/pause 1000/emote farmer 32/pause 800/end"
+			}
+			},
+	
 		{
 			"Action": "EditData",
 			"Target": "Data/ExtraDialogue",
@@ -166,7 +197,7 @@
 					{
 						"128": "SecretLostItem/.../.../.../Abigail 191 100 129/-1/0/-1/false/That necklace! Where did you find it?$7#$b#Well, thanks for bringing it to me, @. My parents will never know...$h",
   						"129": "SecretLostItem/.../.../.../Caroline 191 50 128/-1/0/-1/false/What's this? My old necklace?$s#$b#That's strange, I didn't even notice it was missing... Well, thanks for bringing it back, @.$h",
-						"27": "Basic/Goblin Problem/There's a goblin blocking the path to the witch's hut. There must be some way to get the guard to move... Perhaps I should seek out more information on Goblins./Gain entrance to the witch's hut./-1/-1/0/-1/true",
+						"27": "Basic/Goblin Problem/There's a goblin blocking the path to the wizard's ex's hut. There must be some way to get the guard to move... Perhaps I should seek out more information on Goblins./Gain entrance to the wizard's ex's hut./-1/-1/0/-1/true",
 					},
 			},
 			{
@@ -286,30 +317,12 @@
 
 			{
 				"Action": "EditData",
-				"Target": "Characters/Dialogue/Caroline",
-				"Entries": {
-					"Introduction": "Hello! You must be @, the new farmer. I'm {{CarolineName}}.#$e#My {{PierreSpouse}} and I run the general store here. And have you met my {{AbigailChild}}, {{AbigailName}}? {{AbigailTheyU}} {{AbigailAre}} the pale one with the purple hair.",
-					"Thu": "#$1 Caroline1#{{PierreName}} may be the face of the store, but I do a lot of work behind the scenes.#$e#Hmmm... it's tax time soon.#$e#Better make sure {{PierreName}} has given me all {{PierreTheir}} reciepts.",
-					"Sat6": "#$1 Caroline12#When we first moved here, I took a while to settle down... I wasn't ready for the grind of helping run the store.#$e#Life with {{PierreName}} isn't always easy... but {{PierreThey}} {{PierreAre}} a good person. {{PierreTheyU}} {{PierreAre}} ambitious, but {{PierreThey}} always put{{PierreS}} {{PierreTheir}} family first.",
-
-
-					},"When": {"MiscTextEdits": "true"},
-			},	
-			{
-				"Action": "EditData",
 				"Target": "Characters/Dialogue/Clint",
 				"Entries": {
 					"Mon": "Yep. I'm a blacksmith.#$e#My mother was also a blacksmith.#$e#My grandfather was a blacksmith as well.$u#$q 9/9 Mon_old#I bet you can't guess what my great-grandfather was...#$r 9 30 Mon_9#A blacksmith.#$r 9 50 Mon_clown#A silly clown.#$r 9 -50 Mon_rude#A sarcastic jerk.",
 						},"When": {"MiscTextEdits": "true"},
 			},
-			{
-				"Action": "EditData",
-				"Target": "Characters/Dialogue/George",
-				"Entries": {
-					"Wed8": "Maybe I could play catch with {{AlexName}}.",
-					"Tue10": "I shouldn't get so down about things.#$e#I should just be happy that I'm alive.$h",
-						},"When": {"MiscTextEdits": "true"},
-			},
+			
 			{
 				"Action": "EditData",
 				"Target": "Characters/Dialogue/Jas",
@@ -317,56 +330,7 @@
 					"Fri2": "Do you like my outfit?",
 						},"When": {"MiscTextEdits": "true"},
 			},
-			{
-				"Action": "EditData",
-				"Target": "Characters/Dialogue/Penny",
-				"Entries": {
-					"event_mail1": "Thank you...$l#$b#But I'm sorry, {{GeorgeMx}} Mullner. You're right, it was rude not to ask.$s",
-					"event_mail2": "You're right.$l#$b#I'm sorry, {{GeorgeMx}} Mullner. It was rude not to ask.$s",
-					"Tue4": "$d bus#Maybe now that my {{PamParent}} has {{PamTheir}} bus driving job back, I can start saving more money to move out. Things are looking a little brighter.|I'm trying to save money from my tutoring job, but it's hard with my {{PamParent}} out of work.$s",
-					},"When": {"MiscTextEdits": "true"},
-			 },
 			
-			{
-				"Action": "EditData",
-				"Target": "Characters/Dialogue/Pierre",
-				"Entries": {
-					"Introduction": "Hey, the new farmer! I'm {{PierreName}}, my {{CarolineSpouse}} and I run the general store, though I'm the one you'll see behind the counter.#$b#If you're looking for seeds, our shop is the place to go. We'll also buy produce from you for a good price!#$e#A little agriculture could really inject new life into the local economy!",
-					"cc_Complete": "This is a dream-come-true! You can't begin to imagine how much stress JojaMart was causing me.#$e#For a small town like this, one store is enough! There's too much social pressure for us to overcharge, anyway.",
-  					"joja_Begin": "This is a sad day for Pelican Town... The stronger Joja becomes, the closer we move toward bankruptcy. We might have to sell the shop soon...$s",
-					"Sun": "#$1 pierreBlue#*sigh*... I've got those behind-the-counter blues...$k$s#$e#I wish I could go for a walk, but {{CarolineName}} is busy and {{AbigailName}} is no good with customers.#$e#I've heard the flowers are in bloom and the air smells great...$s",
-					"Thu2": "We really do appreciate your business, @. We've been having a harder and harder time turning a decent profit.",
-					"Fri": "#$1 pierreJoja#Business has been slow since Joja moved into town. It's hard to compete with their selection.$k$s#$e#Hi there. Is your farm doing well?#$e#Maybe a few of our seeds will spruce things up.",
-					"Sat": "If you find any wild produce, we'll take it off your hands for a reasonable price.",
-					"Wed6": "#$1 pierre1#*sigh*... No matter how well the business does, it's never enough to satisfy my desire for success. What's wrong with me? Maybe I'm just bored with domestic life.$s#$e#Some day we're going to open a new shop in the city and make a killing.#$e#Unfortunately, business is so slow we can hardly save any money...$s",
-					"fall_Fri": "#$1 pierreMEGA#My dream is to keep opening new stores until we become extremely wealthy. hehehe.$k#$e#Hi there. Is your farm still doing well?#$e#Maybe a few of our seeds will spruce things up.$h",
-					},"When": {"MiscTextEdits": "true"},
-			},	
-			{
-				"Action": "EditData",
-				"Target": "Characters/Dialogue/rainy",
-				"Entries": {
-					"Evelyn": "When I woke up I heard dripping from somewhere... I think the roof might be leaking.$s#$e#Maybe I should ask {{AlexName}} to take a look.",
-					},"When": {"MiscTextEdits": "true"},
-			 },
-			{
-				"Action": "EditData",
-				"Target": "Characters/Dialogue/Shane",
-				"Entries": {
-					"Resort_Entering": "Buh... this sun is too bright. Glad I'm wearing shades.",
-					"Resort_Bar": "Phew... feels good to have a cold drink...#$e",
-					"Wed4": "$d Joja#*sigh* ...Every day is the same. Stocking those horrible shelves, going to the saloon, tossing and turning all night.$s|I hated my job at JojaMart, but now that I'm unemployed I don't know what to do with myself.$s",
-					"Fri4": "$d Joja#What's the point of life if all you do is work?|{{MarnieName}}'s letting me pay my rent by helping out with the animals. At least it beats working at Joja.",
-					"Sat4": "$d Joja#I'm renting my room from {{MarnieName}} at a really good price. It's small but I can't complain.|If I could reset my life maybe I'd start a chicken farm. Only free-range eggs of course.",
-				  },"When": {"MiscTextEdits": "true"},
-			},	
-			{
-				"Action": "EditData",
-				"Target": "Characters/Dialogue/Wizard",
-				"Entries": {
-					"Fri6": "I was married, long ago. After my {{WizardSpouse}} and I split, {{WizardThey}} began flying around the countryside, cursing everything {{WizardThey}} saw.#$e#It's not a very mature way to express one's anger.",				 
-					 },"When": {"MiscTextEdits": "true"},
-			},	
 			{
 				"Action": "EditData",
 				"Target": "Data/Events/BoatTunnel",
@@ -380,309 +344,27 @@
 						/speak Willy \"Volcanic islands full of strange parrots, they say...\"/pause 400/quickQuestion #I'd like to help#Nah, I'll pass...(break)emote Willy 32\\speak Willy \"Aye... I thought you would.$h\"\\speak Willy \"I'll leave this door unlocked for ya... you can come drop off the materials whenever you like.\"(break)emote Willy 28\\speak Willy \"Alright, suit yourself...$s#$b#If you have a change of heart, you can always come back and help out. I'll leave this door unlocked, anyhow.\"/pause 2000/end"
 					},"When": {"MiscTextEdits": "true"},
 			},	
-			{
-				"Action": "EditData",
-				"Target": "Data/Events/Forest",
-				"Entries": {
-					"fieldTripEnd": "pause 400/emote Penny 40
-					/speak Penny \"Well, that's probably enough for today. You two run along and play.\"/speed Jas 4/move Jas 0 3 1/speed Jas 4/move Jas 9 0 3 true/faceDirection Vincent 2 true/jump Vincent/pause 800/speed Vincent 4/move Vincent 0 3 1 false/speed Vincent 4/move Vincent 9 0 1/pause 500/faceDirection Vincent 2/faceDirection Jas 2/faceDirection Penny 1/faceDirection farmer 3
-					/speak Penny \"It's a lot of work to take care of these kids...$u#$b#But I don't really mind. I enjoy seeing them learn... and hopefully I can help them grow up to be good people.\"/faceDirection Penny 2/pause 500/faceDirection Penny 1
-					/speak Penny \"$q -1 null#Would you ever want to be a parent, @?
-					#$r -1 0 event_speaker_kids1#I haven't really thought about it.
-					#$r -1 20 event_speaker_kids2#Absolutely. I want a big family.
-					#$r -1 20 event_speaker_kids3#I guess so. It's a natural urge.
-					#$r -1 10 event_speaker_kids4#No, I don't think I'd be good at it.
-					#$r -1 -10 event_speaker_kids5#No, the world's crowded enough already.
-					#$r -1 -10 event_speaker_kids6#No, I don't want to be tied down with a family.\"/viewport move 1 0 10000/pause 7000/stopMusic/globalFade/viewport -2000 -2000
-					/speak Penny \"I definitely want a family one day. But for that to happen, my life is going to have to change...$k#$b#Anyway, I'm glad you showed up, @. I think the kids had a great time.$h\"/end dialogue Penny \"Thanks for making my field trip a success today.\"",
-
-				},"When": {"MiscTextEdits": "true"},
-			},			
-
-			{
-				"Action": "EditData",
-				"Target": "Data/Events/JoshHouse",
-				"Entries": {
-					"18/f George 1500/p George": "sadpiano/17 17/farmer 10 19 1 George 18 17 0/skippable/emote George 12
-					/speak George \"Nnnnggghh....I just can't reach it!$u#$b#Why did {{EvelynName}} put it soo high up...$s\"/move farmer 4 0 0/move farmer 0 -2 0/move farmer 3 0 0/pause 500/showFrame 15/pause 500/pause 500/playSound Ship/pause 500/stopAnimation farmer/faceDirection farmer 1/faceDirection George 3/showFrame 35/pause 500/playSound coin/pause 300/stopAnimation farmer/pause 500
-					/speak George \"Hey! I was getting that myself!\"/pause 800/speed George 1/faceDirection George 2/pause 500/move George 0 1 2/faceDirection farmer 2/pause 1000
-					/speak George \"Thirty years it's been, and I still can't deal with people treating me like I'm weak. $s#$b#I used to be a coal miner, strong and able. We were near the end of our shift, but there was one last seam that needed to be broken up.#$b#I went in there aiming to set off a stick of dynamite, but my foot slipped into a crack and I dropped it. The dynamite exploded on impact.\"
-					/pause 800/speak George \"The next thing I remember, I was laying in the hospital... and they told me I'd never walk again.$s#$b#I got used to the chair pretty quick. But I've never gotten used the way people look at me when I'm in it. \"/faceDirection George 3
-					/speak George \"So there you have it. You probably figured I was just too old to walk.#$b#Well I'll have you know that I'm not as frail as you think! My arms are as strong as oaks!\"/faceDirection George 2
-					/speak George \"...or at least, they used to be. Now I'm old, I really am weak, just like everyone always thought.#$b#But maybe it's time I got used to that, too.\"/move farmer 0 1 1/pause 1700
-					/speak George \"You've been very nice to me. I appreciate that.#$b#When you're old, you start to forget that anyone cares about you.\"/pause 800/faceDirection George 3/pause 1000/end",
-					"56/f Harvey 500/p George": "jaunty/16 18/farmer 9 24 0 George 16 18 1 Harvey 15 18 1/skippable/move farmer 0 -4 1/move farmer 1 0 1
-					/speak Harvey \"Okay, {{GeorgeName}}. I want you take a deep breath for me.\"/pause 700
-					/speak Harvey \"Mmhmm... turn around, please.\"/pause 300/faceDirection George 2/faceDirection George 3
-					/speak Harvey \"{{GeorgeName}}, I'll be honest with you. You need to make some changes in your lifestyle if you want to stay healthy.#$b#I'd like you to reduce your sodium intake, and try to do more stretches.\"
-					/emote George 12/speak George \"Hmmph... I know what's best for me. Who do you think you are, telling me how to live my life?\"/pause 500
-					/speak Harvey \"I'm your doctor, {{GeorgeName}}. That's who I am...#$b#And I went to school for 8 years to learn how to help people stay healthy.#$b#If you have a specific problem with any of my advice we can discuss it, but if it's just that you don't like being told what to do...\"/move farmer 0 -1 1/move farmer 5 0 0/faceDirection Harvey 2 true/faceDirection George 2
-					/speak Harvey \"Oh!#$b#I'm sorry, but you shouldn't be here... these check-ups are supposed to be private.\"/faceDirection farmer 3
-					/speak George \"Not so fast! I'd like to get a second opinion from this youngster.\"/faceDirection farmer 1
-					/speak Harvey \"Very well...\"/speak Harvey \"$q 84 null#@, what do you think {{GeorgeName}} should do?
-					#$r 84 40 event_george1#{{GeorgeName}} should follow Dr. {{HarveyName}}{{HarveyPossession}} advice.
-					#$r 85 -40 event_george2#{{GeorgeName}} should follow {{GeorgeTheir}} gut.\"/faceDirection Harvey 1/faceDirection George 2/emote George 28
-					/speak George \"Fine. I'll do what you say, doctor.\"/pause 500/faceDirection Harvey 2
-					/speak Harvey \"$p 84#Thanks for respecting my judgement, @. I appreciate it.$h|I'm glad {{GeorgeName}} was too sensible to listen to you, @.\"/end"
-
-				},"When": {"MiscTextEdits": "true"},
-			 },
-			 {
-				"Action": "EditData",
-				"Target": "Data/Events/Railroad",
-				"Entries": {
-					"6/f Maru 500/p Maru": "breezy/20 19/farmer 9 20 1 Maru 22 20 1 Demetrius 19 18 0 Robin 13 6 0 Sebastian -100 -100 2/skippable/move farmer 7 0 1/faceDirection Maru 3/faceDirection Demetrius 3
-					/speak Maru \"Oh, hello there!\"/move farmer 1 0 1
-					/speak Maru \"My {{DemetriusParentName}} and I are just testing some soil samples.\"/pause 800/emote farmer 40
-					/speak Maru \"Don't be shy! We could use a hand, actually.$h\"/move farmer 4 0 1/faceDirection Demetrius 2
-					/speak Maru \"Could you watch this beaker for me? I'm gonna grab the last batch of samples.#$b#I'll be right back.\"/pause 400/move farmer 0 -1 1/move farmer 1 0 1/faceDirection Demetrius 0/speed Maru 4/move Maru -16 0 3/speed Maru 4/move Maru 0 3 2/move Maru 0 1 2/warp Maru -100 -100/playSound doorClose/faceDirection Demetrius 2
-					/speak Demetrius \"Thanks for helping out, @.\"/faceDirection farmer 3/pause 500/faceDirection Demetrius 0/faceDirection farmer 1/pause 1000
-					/speak Demetrius \"{{MaruName}}{{MaruPossession}} a good kid. But not everyone can see that.\"/pause 500/faceDirection Demetrius 2/stopMusic/pause 800
-					/speak Demetrius \"I've noticed the two of you getting close, and I was wondering...are you friends?'?$k\"/pause 400/faceDirection farmer 3/emote farmer 8/faceDirection Demetrius 0
-					/speak Demetrius \"If you're not, I can make you a checklist of reasons you should be.$h\"/playSound doorClose/warp Maru 6 24/playMusic kindadumbautumn/move Maru 0 -4 1/emote farmer 40 true/move Maru 3 0 1/faceDirection farmer 1 true/move Maru 8 0 1
-					/speak Maru \"Hey, sorry about that. I hope you found something to talk about while I was gone.\"/faceDirection farmer 3/faceDirection Demetrius 3/pause 500
-					/speak Demetrius \"...I was just telling @ about the soil samples we're testing.\"/pause 500/faceDirection Demetrius 2
-					/speak Demetrius \"$q 15933 null#Right, @?
-					#$r 15933 10 Event_Lab_Silence#(Say nothing)
-					#$r 15933 -100 Event_Lab_Rat#{{DemetriusTheyU}} want{{DemetriusS}} me to be your friend.\"/fork DadWeird/pause 500
-					/speak Maru \"Okay! Here, @... let me show you how to use the equipment.\"/move Maru 4 0 1/faceDirection Demetrius 2/move Maru 0 1 1/move Maru 1 0 0/faceDirection farmer 2/pause 500/end Maru1",
-					"DadWeird": "speak Maru \"Hey! I can make my own friends, thank you!$a\"/pause 500/faceDirection Demetrius 2/emote Demetrius 28
-					/speak Demetrius \"Okay, okay... sorry, sweetie.$5#$b#I know you can. And I shouldn't have lied about it.$s\"/faceDirection Demetrius 0/pause 300/emote Maru 28/move Maru 2 0 0
-					/speak Maru \"That's okay. I understand.#$b#We should get back to work before these samples crystallize.\"/faceDirection Demetrius 2/emote Demetrius 32/move Maru 3 0 1/faceDirection Demetrius 0/faceDirection farmer 1/end Maru1",
-
-					},"When": {"MiscTextEdits": "true"},
-			 },
-			 {
-				"Action": "EditData",
-				"Target": "Data/Events/Railroad",
-				"Entries": {"529952/C": "WizardSong/54 36/Wizard 54 36 0 farmer 50 40 1/addQuest 28/skippable/move farmer 1 0 0/move farmer 0 -4 1/faceDirection Wizard 3 true/move farmer 1 0 1/pause 800/faceDirection Wizard 0/pause 600/emote Wizard 40/pause 500
-				/speak Wizard \"Ah... @. I've been waiting for you.\"/pause 800/faceDirection Wizard 3/pause 400/faceDirection Wizard 0/pause 400
-				/speak Wizard \"Have I ever told you I used to be married?\"/pause 800/faceDirection Wizard 3 true/pause 50/faceDirection Wizard 2/pause 800/showFrame Wizard 18/pause 800
-				/speak Wizard \"Strange, I know... for a {{WizardAdult}} like me. But it's true.\"/pause 500/showFrame Wizard 0/pause 800/faceDirection Wizard 3
-				/speak Wizard \"We were together for many years, until... until I made a mistake that drove {{WizardThem}} away.\"/pause 400/faceDirection Wizard 0
-				/speak Wizard \"And now you can see my lost love flying around the countryside, cursing everything in {{WizardTheir}} path...\"/pause 1000
-				/speak Wizard \"When I found out, I sealed this passage to {{WizardTheir}} home... fearing that an innocent villager might fall prey to {{WizardTheir}} dark magic.\"/move Wizard -1 0 3
-				/speak Wizard \"But now, it must be unsealed... for when we separated, {{WizardThey}} took my magic ink!#$b#I need that magic ink back!$h#$b#I would do this myself, but I... I can't see {{WizardThem}} again. That's why I need your help.\"/move Wizard 1 0 0
-				/speak Wizard \"In order to unseal this passage, you'll need a dark talisman. Talk to {{KrobusName}}, in the sewer... {{KrobusThey}} should know where to find one.\"/pause 500/faceDirection Wizard 3
-				/speak Wizard \"I'm counting on you... if you can retrieve my magic ink I promise I'll make it worth your while... Now go!\"/pause 500/faceDirection Wizard 2/pause 500/showFrame Wizard 16/pause 500/playSound wand/warp Wizard -3000 -3000/specificTemporarySprite wizardWarp2/faceDirection farmer 2 true/showFrame farmer 94/pause 3000/showFrame farmer 0/specificTemporarySprite witchFlyby/pause 4000/end"
-				},"When": {"MiscTextEdits": "true"},
-			 },
-				
-			 {
-				"Action": "EditData",
-				"Target": "Data/Events/Town",
-				"Entries": {
-					"34/f Penny 500/t 900 1400/w sunny": "50s/49 64/farmer 43 64 1 Penny 59 69 1 George 49 64 0 Gus 37 70 3 Abigail -100 -100 2/skippable/pause 700/emote George 28/pause 500
-					/speak George \"*Sigh*... How am I going to reach that letter in the back?$s\"
-					/move Penny -3 0 0/move Penny 0 -5 3/move Penny -3 0 3/emote Penny 16/pause 300/speed Penny 4/move Penny -3 0 3/faceDirection George 1/pause 400/showFrame Penny 20/pause 400
-					/speak Penny \"Here, let me help you, {{GeorgeMx}} {{GeorgeName}}!\"
-					/pause 400/speed Penny 2/move Penny 0 1 3/move Penny -2 0 0/move Penny 0 -1 1/positionOffset Penny 2 0/pause 50/showFrame Penny 5/positionOffset Penny 2 0/pause 50/showFrame Penny 4/positionOffset Penny 2 0/pause 50/showFrame Penny 5/positionOffset Penny 2 0/pause 50/showFrame Penny 4/showFrame Penny 21/move George 1 0 1 true/emote George 16/positionOffset Penny 2 0/pause 50/showFrame Penny 22/positionOffset Penny 2 0/pause 50/faceDirection Penny 1/move Penny 1 0 1/pause 400/faceDirection Penny 0/playSound openBox/pause 600/faceDirection George 3/faceDirection Penny 1
-					/speak Penny \"There you go!$h\"/pause 300/emote George 12
-					/speak George \"Don't you know it's incredibly rude to move someone around without permission?$u#$b#How would you feel if someone moved your legs without asking, hmm?\"
-					/move farmer 5 0 1/pause 200/faceDirection George 3/emote George 8/faceDirection Penny 3
-					/speak Penny \"$q 71 null#@? You were watching us?
-					#$r 71 10 event_mail1#I was. You meant well, {{PennyName}}.
-					#$r 71 0 event_mail2#I was. You should've known to ask first.
-					#$r 71 -10 event_mail3#So what if I was?\"
-					/pause 400/faceDirection George 2/pause 800/showFrame George 16/pause 500/emote George 28/pause 1000/faceDirection Penny 1
-					/speak George \"*sigh*...No, no... I'm sorry. I shouldn't have gotten so angry.$s\"/pause 500/faceDirection George 3/pause 400
-					/speak George \"You meant well. And I did need the help.\"/pause 400
-					/speak Penny \"That's okay, {{GeorgeMx}} {{GeorgeName}}. I understand. \"/warp Abigail 44 1/pause 500/move Abigail 0 8 2 true/move George 7 0 0 false/pause 550/move Abigail -18 0 2 true/warp George -1 -1/playSound doorClose/pause 600/emote Penny 28/pause 700/faceDirection Penny 3/playMusic spring_day_ambient/pause 600
-					/speak Penny \"$q -1 null#It must be difficult to grow old...$u
-					#$r -1 0 event_old1#I'd rather not think about it.
-					#$r -1 0 event_old2#It's just a different part of life.
-					#$r -1 0 event_old3#That's why we should respect our elders.
-					#$r -1 0 event_old4#I'd rather die young...\"
-					/pause 500/emote Penny 40/faceDirection Penny 2/pause 500/faceDirection Penny 3
-					/speak Penny \"Well, it was interesting talking to you, @. I should go.$u\"/showFrame Penny 20/pause 500/showFrame Penny 12/pause 900/move Penny 6 0 2 true/globalFade/viewport -1000 -1000/end",
-        			
-				},"When": {"MiscTextEdits": "true"},
-			},	
-			{
-				"Action": "EditData",
-				"Target": "Data/Events/Trailer_Big",
-				"Entries": {
-					"503180/f Pam 2250/A pamHouseUpgrade/A pamHouseUpgradeAnonymous/Hn pamHouseUpgrade": "shaneTheme/-1000 -1000/farmer 18 11 1 Pam 25 9 1/skippable/specificTemporarySprite pamYobaStatue/viewport 25 9 true/move farmer 6 0 1/move farmer 0 -1 1/faceDirection Pam 2/pause 300
-					/speak Pam \"Hey, kid...\"/faceDirection Pam 1/pause 500
-					/speak Pam \"You caught me prayin'...\"/pause 500/move farmer 3 0 0/move farmer 0 -1 3/pause 500
-					/speak Pam \"This here's my new 'Sign Of The Vessel' statue.#$b#...Ordered it from Joja.com with free 2-day shipping. Don't tell Pierre.\"/pause 1000/faceDirection Pam 2/pause 400/faceDirection Pam 3/pause 500/faceDirection Pam 2/pause 500/faceDirection Pam 1
-					/speak Pam \"...I've been settling in to the new house. It's really a great place. Feels like home already. I really do appreciate this new comfort.$h\"/pause 500/faceDirection Pam 2/pause 1000/showFrame Pam 25/pause 1000/animate Pam false true 250 26 27/pause 400/emote farmer 8/pause 500
-					/textAboveHead Pam \"Oh, Sorry...\"/pause 1000/stopAnimation Pam/pause 950
-					/speak Pam \"*sniff*... It's just...$s#$b#...I should be so happy...$s\"/showFrame Pam 0/faceDirection Pam 1
-					/speak Pam \"...But I haven't been able to cut back on the beer... I haven't changed at all...$s\"/pause 500/emote farmer 28/pause 500
-					/speak Pam \"For a long time, now... I've felt like there's something missing from my life, @... $s#$b#I always thought it was about money... Just bein' poor... ya know? So I figured gettin' this house would solve everything. But ...it didn't.$s#$b#So that's... That's why I ordered this statue. Prayin'...it helps me get my head right, you know? Helps remind me what's important.\"/pause 1000
-					/question fork0 \"Say something to {{PamName}}:#I'm glad you're feeling hopeful#This won't save you.\"/fork positive/friendship Pam -1000/pause 500/speak Pam \"That ain't funny! ...I pour my heart out to you and that's how you respond? What in the void is wrong with you?$u\"/faceDirection Pam 3/shake Pam 10000/emote Pam 12/pause 1000/speak Pam \"I don't care what you say... I'm going to change! Now get out.$4\"/pause 1000/move farmer 0 1 3/move farmer -6 0 3 true/end",
-					"positive": "pause 100/emote farmer 56/pause 500/speak Pam \"Me too. Well, look at me! I'm gettin' real sappy in my old age, aren't I?  ...hehehe.$h\"/pause 1000/move Pam 0 1 1/move Pam 2 0 0/faceDirection farmer 2/viewport move 1 0 7000/textAboveHead Pam \"Thanks for lendin' an ear, kid\"/pause 5000/end"
-				},"When": {"MiscTextEdits": "true"},
-			 },
-			{
-				"Action": "EditData",
-				"Target": "Data/Events/WizardHouse",
-				"Entries": {
-						"418172/n hasPickedUpMagicInk": "WizardSong/2 14/farmer 3 14 3 Wizard 1 14 1/skippable/pause 1000/speak Wizard \"You've found my ink! Excellent.\"/move Wizard 1 0 1/pause 1000/speak Wizard \"Er...\"/faceDirection Wizard 2/pause 500/showFrame Wizard 18/pause 500/speak Wizard \"Did you... happen to see my {{WizardSpouse}}?#$b#No? Well, what about the house...?#$b#Does it look like {{WizardThey}} live{{WizardS}} alone? Or...$h\"/pause 500/showFrame Wizard 0/emote Wizard 12/pause 500/faceDirection Wizard 3/pause 500/speak Wizard \"...Actually, don't tell me... I don't want to know.\"/pause 500/pause 500/faceDirection Wizard 2/pause 500/speak Wizard \"Anyway... you must be wondering about your reward. Here...\"/move Wizard -1 0 1/pause 800/faceDirection Wizard 2/pause 1000/showFrame Wizard 16/pause 800/specificTemporarySprite arcaneBook/playSound fireball/shake Wizard 500/pause 4000/faceDirection farmer 0/faceDirection Wizard 1/faceDirection Wizard 0/pause 500/speak Wizard \"It's a book of summoning.#$b#The arcane potential is immense... but I'll make it simple for you.#$b#By using this book, you can summon magic buildings directly to your farm.#$b#I think you'll find it useful.\"/pause 500/faceDirection farmer 3/faceDirection Wizard 1/speak Wizard \"Oh, I almost forgot to say... ahem... Thank you.\"/pause 1000/emote farmer 32/pause 800/end"
-				},"When": {"MiscTextEdits": "true"},
-			 },
-			{
-				"Action": "EditData",
-				"Target": "Data/Festivals/fall16",
-				"Entries": {
-					"Pierre": "Our store carries the very finest quality products in the whole valley. Please, inspect our grange display closely and see for yourself!",
-        			"Caroline": "{{PierreName}} is very serious about our grange display. {{PierreTheyU}} {{PierreHave}} been getting me to set aside the best-looking produce for weeks in preparation.#$e#Hey, best of luck to you if you enter!",
-
-				},"When": {"MiscTextEdits": "true"},
-			},		
-
-			{
-				"Action": "EditData",
-				"Target": "Data/mail",
-				"Entries": {
-					"fertilizers": "Dear neighbor,^I hope you are feeling settled in your new home. I am writing to let you know that our store is now selling fertilizers! Why don't you swing by and see if you can afford a few dozen boxes or so?  ^   -{{PierreName}}[#]{{PierreName}}{{PierrePossession}} Fertilizers",
-        			"fertilizers2": "Dear @,^We are now selling higher quality fertilizers, as well as new crop selections! See you soon. ^   -{{PierreName}}[#]{{PierreName}}{{PierrePossession}} High Quality Fertilizers",
-					},"When": {"MiscTextEdits": "true"},
-			},	
-			{
-				"Action": "EditData",
-				"Target": "Data/Movies",
-				"Entries": {
-					"spring_movie_0": {
-						"ID": null,
-						"SheetIndex": 0,
-						"Title": "The Brave Little Sapling",
-						"Description": "An animated family comedy about a little sprout on a magical adventure to become a tree!",
-						"Tags": [
-						  "family",
-						  "comedy"
-						],
-						"Scenes": [
-						  {
-							"Image": 0,
-							"Music": "sweet",
-							"Sound": "",
-							"MessageDelay": 1000,
-							"Script": "",
-							"Text": "The Brave Little Sapling",
-							"Shake": false,
-							"ResponsePoint": null,
-							"ID": "spring0_0"
-						  },
-						  {
-							"Image": 1,
-							"Music": "",
-							"Sound": "",
-							"MessageDelay": 500,
-							"Script": "",
-							"Text": "The brave little sapling is leaving it's home. It hesitates for a moment and turns around, knowing it won't be back for a long time...",
-							"Shake": false,
-							"ResponsePoint": null,
-							"ID": "spring0_1"
-						  },
-						  {
-							"Image": 6,
-							"Music": "",
-							"Sound": "",
-							"MessageDelay": 500,
-							"Script": "/playSound dustMeep/pause 200/playSound dustMeep/pause 300/playSound dustMeep/pause 100/playSound dustMeep/pause 200/playSound dustMeep",
-							"Text": "The other saplings of the grove are gathered at the edge of town, excitedly waving their twigs goodbye...!",
-							"Shake": false,
-							"ResponsePoint": "sprout_leave",
-							"ID": "spring0_2"
-						  },
-						  {
-							"Image": 2,
-							"Music": "rain",
-							"Sound": "",
-							"MessageDelay": 500,
-							"Script": "",
-							"Text": "Oh no! Out of nowhere, it starts raining...! The little sapling goes into a sprint as thunderclouds loom overhead...",
-							"Shake": false,
-							"ResponsePoint": "",
-							"ID": "spring0_3"
-						  },
-						  {
-							"Image": 3,
-							"Music": "",
-							"Sound": "thunder",
-							"MessageDelay": 1000,
-							"Script": "",
-							"Text": "Fearing for it's life, and demoralized by the relentless downpour, the brave little sapling begins to lose hope...",
-							"Shake": false,
-							"ResponsePoint": "",
-							"ID": "spring0_4"
-						  },
-						  {
-							"Image": 4,
-							"Music": "echos",
-							"Sound": "",
-							"MessageDelay": 500,
-							"Script": "",
-							"Text": "...But what's this...? The sapling feels a tingling on the top of it's head... ",
-							"Shake": false,
-							"ResponsePoint": null,
-							"ID": "spring0_5"
-						  },
-						  {
-							"Image": 5,
-							"Music": "",
-							"Sound": "",
-							"MessageDelay": 500,
-							"Script": "/playSound coin/pause 1000/message \"Perhaps a little rain was what it needed to begin its journey into becoming a tree!\"",
-							"Text": "",
-							"Shake": false,
-							"ResponsePoint": "",
-							"ID": "spring0_6"
-						  },
-						  {
-							"Image": 7,
-							"Music": "",
-							"Sound": "",
-							"MessageDelay": 2000,
-							"Script": "",
-							"Text": "Farewell, little buddy!",
-							"Shake": false,
-							"ResponsePoint": null,
-							"ID": "spring0_7"
-						  }
-						]
-				}},"When": {"MiscTextEdits": "true"},
-			},	
+			
 			{
 				"Action": "EditData",
 				"Target": "Data/Notes",
 				"Entries":
 					{
-						"3": "The Fishing Master, Act I: \nTex: Gordy, how do you catch so many fish? For me, it takes forever!\nGordy: You must make the choice to become a true fishing master... and over time your fishing speed will increase!\nTex: So you're saying that improving my fishing skill will make me fish faster?\nGordy:Correct. One day you may even learn the secret to creating your very own bobbers, improving your mastery even more. Now, begone!",
-						"14": "The Fishing Master, Act II: \nTex: Gordy, tell me your best fishing's story.\nGordy: *deep sigh*...I've caught a lot of big fish in my time...And some that are very rare and difficult...But there was one that I struggled to catch for three days and three nights\nGordy: I call this fish... 'The Legend'. It was a huge beast... And the harder I tugged on the line, the harder it tugged back. I let my guard down for a moment and it snapped my boat in two. I've never fished since.\nTex: Do you think anyone will ever catch him?\nGordy: Hmm... If this person were a master at fishing, and caught all other rare fish first, and made sure they ate the correct kind of food... then maybe. Above all you've got to have respect for the water, my child.\nTex:...your...child? Do you mean... you're...\n ...m...mother?\nGordy: Yes, my child.\n\n**Dramatic Music as the curtains fall**",
+						3: "The Fishing Master, Act I: \nTex: Gordy, how do you catch so many fish? For me, it takes forever!\nGordy: You must make the choice to become a true fishing master... and over time your fishing speed will increase!\nTex: So you're saying that improving my fishing skill will make me fish faster?\nGordy:Correct. One day you may even learn the secret to creating your very own bobbers, improving your mastery even more. Now, begone!",
+						14: "The Fishing Master, Act II: \nTex: Gordy, tell me your best fishing's story.\nGordy: *deep sigh*...I've caught a lot of big fish in my time...And some that are very rare and difficult...But there was one that I struggled to catch for three days and three nights\nGordy: I call this fish... 'The Legend'. It was a huge beast... And the harder I tugged on the line, the harder it tugged back. I let my guard down for a moment and it snapped my boat in two. I've never fished since.\nTex: Do you think anyone will ever catch him?\nGordy: Hmm... If this person were a master at fishing, and caught all other rare fish first, and made sure they ate the correct kind of food... then maybe. Above all you've got to have respect for the water, my child.\nTex:...your...child? Do you mean... you're...\n ...m...mother?\nGordy: Yes, my child.\n\n**Dramatic Music as the curtains fall**",
 					},
 					"When": { "MiscTextEdits": "true"} 
 			},
 
-			 {
-				"Action": "EditData",
-				"Target": "Data/Quests",
-				"Entries":
-					{
-						"27": "Basic/Goblin Problem/There's a goblin blocking the path to the wizard's ex's hut. There must be some way to get the guard to move... Perhaps I should seek out more information on Goblins./Gain entrance to the wizard's ex's hut./-1/-1/0/-1/true",
-					},"When": {"MiscTextEdits": "true"},
-			},
 			{
 				"Action": "EditData",
 				"Target": "Data/SecretNotes",
 				"Entries":
 					{
-						"1011": "Day 37^^When I was a child of ten years old, my parents gave me a glow ring and a magnet ring. They've never left my fingers since.^^However, when I was standing on top of the volcano... a strange idea came over me.^^I took my two rings, and cast them into the forge.^^Lo and behold! They combined into one!^^Now I've got one glowing magnet ring... I hope my parents don't mind, rest their souls..."
+						1011: "Day 37^^When I was a child of ten years old, my parents gave me a glow ring and a magnet ring. They've never left my fingers since.^^However, when I was standing on top of the volcano... a strange idea came over me.^^I took my two rings, and cast them into the forge.^^Lo and behold! They combined into one!^^Now I've got one glowing magnet ring... I hope my parents don't mind, rest their souls..."
 					},"When": {"MiscTextEdits": "true"},
 			},
-			{
-				"Action": "EditData",
-				"Target": "Strings/Characters",
-				"Entries": {
-					"Phone_Pierre_Open": "{{PierreName}}{{PierrePossession}} General Store! Oh, hello, @! Yes, we're open until 5pm today. Please come by for great deals on seeds and produce! Goodbye. *click*",
-        			"Phone_Pierre_Open_Rare": "{{AbigailName}}! Your guinea pig is loose again! Come here *right now* and take care of this! $3#$b#Oh! Uh... Hello? Thank you for calling. Y... Yes, we're open until 5PM. Goodbye. *click*$4",
-        			"Phone_Pierre_Closed": "Thank you for calling {{PierreName}}{{PierrePossession}} General Store. We're closed at the moment, but our hours are 9AM to 5PM. See you then! *beep*",
-        			"Phone_Pierre_Festival": "Thank you for calling {{PierreName}}{{PierrePossession}} General Store. We're closed today in observance of the festival. *beep*",        
-
-					},"When": {"MiscTextEdits": "true"},
-				},		
+			
 				{
 					"Action": "EditData",
 					"Target": "Strings/Locations",

@@ -718,18 +718,18 @@ def create_code(folder, sprite_name):
         code+="         \"FromFile\": \"assets/{{Target}}_{{language}}.png\",\n"
     else:
         code+="         \"FromFile\": \"assets/{{Target}}.png\",\n"
-    if short_name =="Cursors" and mode =="UIrecolour": # cut into pieces for custom cursors 
-        finalcode =code
-        finalcode += area_string(0,0,150,25)
-        finalcode+="         \"When\":{\"EditCursor\": \"true\"},\n"   
-        finalcode += codeend
-        finalcode +=code
-        finalcode += area_string(150,0,554,25)
-        finalcode += codeend
-        finalcode +=code
-        finalcode += area_string(0,25,704,2231)
-        finalcode += codeend
-        return finalcode 
+    # if short_name =="Cursors" and mode =="UIrecolour": # cut into pieces for custom cursors. Broken.  
+    #     finalcode =code
+    #     finalcode += area_string(0,0,150,25)
+    #     finalcode+="         \"When\":{\"EditCursor\": \"true\"},\n"   
+    #     finalcode += codeend
+    #     finalcode +=code
+    #     finalcode += area_string(150,0,554,25)
+    #     finalcode += codeend
+    #     finalcode +=code
+    #     finalcode += area_string(0,25,704,2231)
+    #     finalcode += codeend
+    #     return finalcode 
     if in_dictionary(files_onIsland, folder,sprite_name) and not (mode in UI_list):
              code+="         \"When\":{\n"
              code+="             \"LocationContext\": \"Valley\",\"LocationName | contains=Desert\": \"false\"\n"
@@ -950,20 +950,20 @@ process_rainbow()
 
 ##Create the submods for Weird Recolour
 
-mode = "ground"
-process_folder()
-mode = "plants"
-process_folder()
-mode = "fall"
-process_folder()
-mode = "wood"
-process_folder()
-mode = "flowers"
-process_folder()
+# mode = "ground"
+# process_folder()
+# mode = "plants"
+# process_folder()
+# mode = "fall"
+# process_folder()
+# mode = "wood"
+# process_folder()
+# mode = "flowers"
+# process_folder()
 
 ##Putting everything together for the Weird Recolour mod
-final_mode = "recolour"
-process_folder_recolour(["ground","wood","plants","fall","flowers"])
+#final_mode = "recolour"
+#process_folder_recolour(["ground","wood","plants","fall","flowers"])
 
 ##Create the submods for Starry Blue UI mod
 #mode = "UIbase"
@@ -972,5 +972,5 @@ process_folder_recolour(["ground","wood","plants","fall","flowers"])
 #process_folder()
 
 ##Put together Starry Blue UI
-#final_mode = "UIrecolour"
-#process_folder_recolour(["UIbase","UIframe"])
+final_mode = "UIrecolour"
+process_folder_recolour(["UIbase","UIframe"])

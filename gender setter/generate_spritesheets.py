@@ -62,7 +62,7 @@ end_path = "../../Gender Setter/[CP] Gender Setter/Variants/Characters/"
 no_portrait_list = ["LeahEx","Marcello","Mariner","KrobusRaven","ClothesTherapyCharacters","Shane_JojaMart","Toddler","Toddler_girl_dark","Toddler_dark","Toddler_girl","Baby","WeddingOutfits","Baby_dark","SeaMonsterKrobus","Gourmand",]
 
 no_sprite_list = ["Gil","Grandpa",] 
-portrait_list = no_sprite_list 
+portrait_list = ["Gil","Grandpa",] 
 
 for name in sprite_list:
     if name not in no_portrait_list:
@@ -262,7 +262,7 @@ def location(variant, type):
                 return "Portraits/Variants/"+ variant + "/"     
 
 def copy_image_line(name, type,variant):
-    if type =="sprite" and name in no_sprite_list:
+    if type =="sprite" and (name in no_sprite_list):
         return
     (start, end) = locations(type)
     full_start = start+location(variant, type)

@@ -36,24 +36,6 @@
          "Action": "EditImage",
          "Target": "LooseSprites/Cursors",
          "FromFile": "assets/{{Target}}_{{language}}.png",
-         "FromArea": { "X": 0, "Y": 0, "Width": 150, "Height": 25 },"ToArea":  { "X": 0, "Y": 0, "Width": 150, "Height": 25 },
-         "When":{"EditCursor": "true"},
-         "PatchMode": "Overlay"
-      },
-
-      {
-         "Action": "EditImage",
-         "Target": "LooseSprites/Cursors",
-         "FromFile": "assets/{{Target}}_{{language}}.png",
-         "FromArea": { "X": 150, "Y": 0, "Width": 554, "Height": 25 },"ToArea":  { "X": 150, "Y": 0, "Width": 554, "Height": 25 },
-         "PatchMode": "Overlay"
-      },
-
-      {
-         "Action": "EditImage",
-         "Target": "LooseSprites/Cursors",
-         "FromFile": "assets/{{Target}}_{{language}}.png",
-         "FromArea": { "X": 0, "Y": 25, "Width": 704, "Height": 2231 },"ToArea":  { "X": 0, "Y": 25, "Width": 704, "Height": 2231 },
          "PatchMode": "Overlay"
       },
 
