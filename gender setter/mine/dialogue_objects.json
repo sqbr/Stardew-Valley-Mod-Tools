@@ -2309,9 +2309,9 @@
 		 },
 		 {
 			"Action": "EditData",
-			"Target": "Data/BigCraftablesInformation",
+			"Target": "Strings/BigCraftables",
 			"Entries": {
-        			"164": "Solid Gold Lewis/0/-300/Crafting -9/Mayor's secret project./true/true/0/Solid Gold {{LewisName}}"
+				"SolidGoldLewis_Name": "Solid Gold {{LewisName}}",
 			}
 		 },
 		 {
@@ -2323,10 +2323,11 @@
 		 },
 		 {
 			"Action": "EditData",
-			"Target": "Data/ClothingInformation",
+			"Target": "Strings/Shirts",
 			"Entries": {
-        			"1127": "{{EmilyName}}{{EmilyPossession}} Magic Shirt/{{EmilyName}}{{EmilyPossession}} Magic Shirt/Made with love by {{EmilyName}}. Colored with all-natural dye!/127/-1/50/255 235 203/false/Shirt"
-			}
+				"EmilysMagicShirt_Name": "{{EmilyName}}{{EmilyPossession}} Magic Shirt",
+				"EmilysMagicShirt_Description": "Made with love by {{EmilyName}}. Colored with all-natural dye!",
+						  }
 		 },
 		 {
 			"Action": "EditData",
@@ -2394,32 +2395,37 @@
 		 },
 		 {
 			"Action": "EditData",
-			"Target": "Data/weapons",
+			"Target": "Strings/Weapons",
 			"Entries": {
-        			"25": "{{AlexName}}{{AlexPossession}} Bat/The sweet spot is dented from {{AlexName}}{{AlexPossession}} famous Grand Slam./1/3/1/-8/0/0/2/-1/-1/0/.02/3",
-        			"30": "{{SamName}}{{SamPossession}} Old Guitar/It's seen better days./1/3/1/-6/0/0/2/-1/-1/0/.02/3",
-        			"35": "{{ElliottName}}{{ElliottPossession}} Pencil/{{ElliottName}} used this to write {{ElliottTheir}} book. It's sharp!/1/3/1/308/0/0/1/-1/-1/0/.02/3",
-        			"36": "{{MaruName}}{{MaruPossession}} Wrench/A big, metal wrench. It smells like {{MaruName}}./1/3/1/308/0/0/2/-1/-1/0/.02/3",
-        			"37": "{{HarveyName}}{{HarveyPossession}} Mallet/It brings back memories of {{HarveyName}}{{HarveyPossession}} clinic./1/3/1/308/0/0/2/-1/-1/0/.02/3",
-        			"38": "{{PennyName}}{{PennyPossession}} Fryer/{{PennyName}}{{PennyPossession}} favorite frying pan. There's some rubbery gunk stuck to the inside./1/3/1/308/0/0/2/-1/-1/0/.02/3",
-        			"39": "{{LeahName}}{{LeahPossession}} Whittler/{{LeahName}}{{LeahPossession}} favorite tool for shaping driftwood./1/3/1/308/0/0/1/-1/-1/0/.02/3",
-        			"40": "{{AbigailName}}{{AbigailPossession}} Planchette/It's made from fine marblewood./1/3/1/308/0/0/1/-1/-1/0/.02/3",
-        			"41": "{{SebastianName}}{{SebastianPossession}} Lost Mace/One of {{SebastianName}}{{SebastianPossession}} medieval replicas./1/3/1/308/0/0/2/-1/-1/0/.02/3",
-        			"42": "{{HaleyName}}{{HaleyPossession}} Iron/It's searing hot and smells like {{HaleyName}}{{HaleyPossession}} hair./1/3/1/308/0/0/0/-1/-1/0/.02/3",
-        			"114": "{{RobinName}}{{RobinPossession}} Axe/Carpenter's axe that's also a decent weapon./28/40/1/-8/0/0/2/-1/-1/0/.02/3",
-        			"115": "{{AbigailName}}{{AbigailPossession}} Sword/A decent sword./24/31/1/0/8/0/3/-1/-1/0/.02/3"
+				"AlexsBat_Name": "{{AlexName}}{{AlexPossession}}",
+  				"AlexsBat_Description": "The sweet spot is dented from {{AlexName}}{{AlexPossession}} famous Grand Slam.",
+				"SamsOldGuitar_Name": "{{SamName}}{{SamPossession}} Old Guitar",
+				"ElliottsPencil_Name": "{{ElliottName}}{{ElliottPossession}} Pencil",
+  				"ElliottsPencil_Description": "{{ElliottName}} used this to write {{ElliottTheir}} book. It's sharp!",
+				"MarusWrench_Name": "{{MaruName}}{{MaruPossession}} Wrench",
+				"MarusWrench_Description": "A big, metal wrench. It smells like {{MaruName}}.",
+				"HarveysMallet_Name": "{{HarveyName}}{{HarveyPossession}} Mallet",
+  				"HarveysMallet_Description": "It brings back memories of {{HarveyName}}{{HarveyPossession}} clinic.",
+				"PennysFryer_Name": "{{PennyName}}{{PennyPossession}} Fryer",
+				"PennysFryer_Description": "{{PennyName}}{{PennyPossession}} favorite frying pan. There's some rubbery gunk stuck to the inside.",
+				"LeahsWhittler_Name": "{{LeahName}}{{LeahPossession}} Whittler",
+				"LeahsWhittler_Description": "{{LeahName}}{{LeahPossession}} favorite tool for shaping driftwood.",
+				"AbbysPlanchette_Name": "{{AbigailName}}{{AbigailPossession}} Planchette",
+				"SebsLostMace_Name": "{{SebastianName}}{{SebastianPossession}} Lost Mace",
+				"SebsLostMace_Description": "One of {{SebastianName}}{{SebastianPossession}} medieval replicas.",
+				"HaleysIron_Name": "{{HaleyName}}{{HaleyPossession}} Iron",
+				"HaleysIron_Description": "It's searing hot and smells like {{HaleyName}}{{HaleyPossession}} hair.",
 			}
 		},
 		{
 			"Action": "EditData",
-			"Target": "Data/ObjectInformation",
+			"Target": "Strings/Objects",
 			"Entries": {
-        			"730": "Lobster Bisque/205/90/Cooking -7/Lobster Bisque/This delicate soup is a secret family recipe of {{WillyName}}{{WillyPossession}}./food/0 3 0 0 0 0 0 50 0 0 0/1440",
-        			"858": "{{MisterQiName}} Gem/250/-300/Basic/{{MisterQiName}} Gem/A special currency honored by {{MisterQiName}}.",
-        			"889": "{{MisterQiName}} Fruit/1/1/Basic -79/{{MisterQiName}} Fruit/{{MisterQiName}} has challenged you to ship 500 of these strange melons.",
-        			"890": "{{MisterQiName}} Bean/1/-300/Seeds -74/{{MisterQiName}} Bean/Plant these in any season. Water every day to produce a {{MisterQiName}} Fruit. Takes 4 days to mature.",
-        			"892": "Warp Totem: {{MisterQiName}}{{MisterQiPossession}} Arena/20/-300/Crafting/Warp Totem: {{MisterQiName}}{{MisterQiPossession}} Arena/Warp to {{MisterQiName}}{{MisterQiPossession}} Arena. Be prepared for a challenge!.",
-        			"917": "{{MisterQiName}} Seasoning/200/-300/Basic/{{MisterQiName}} Seasoning/Just a dash will elevate any dish to extraordinary heights. Automatically applied when cooking."
+				"LobsterBisque_Description":"This delicate soup is a secret family recipe of {{WillyName}}{{WillyPossession}}.",
+  				"QiFruit_Description": "{{MisterQiName}} has challenged you to ship 500 of these strange melons.",
+  				"QiGem_Description": "A special currency honored by {{MisterQiName}}.",
+				"WarpTotemQisArena_Name": "Warp Totem: {{MisterQiName}}'s Arena",
+				"WarpTotemQisArena_Description": "Warp to {{MisterQiName}}'s Arena. Be prepared for a challenge!.",
 			}
 		},
 					 {

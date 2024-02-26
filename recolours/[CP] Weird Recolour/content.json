@@ -1,64 +1,6 @@
 {
-   "Format": "1.27.0",
+   "Format": "2.0.0",
    "Changes": [
-      {
-         "Action": "EditImage",
-         "Target": "Maps/Festivals",
-         "FromFile": "assets/{{Target}}.png",
-         "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
-         },
-         "Update": "OnLocationChange",
-         "PatchMode": "Overlay"
-      },
-
-      {
-         "Action": "EditImage",
-         "Target": "Maps/boatTunnelTiles",
-         "FromFile": "assets/{{Target}}.png",
-         "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
-         },
-         "Update": "OnLocationChange",
-         "PatchMode": "Overlay"
-      },
-
-      {
-         "Action": "EditImage",
-         "Target": "Maps/nightSceneMaru",
-         "FromFile": "assets/{{Target}}.png",
-         "PatchMode": "Overlay"
-      },
-
-      {
-         "Action": "EditImage",
-         "Target": "Maps/townInterior",
-         "FromFile": "assets/{{Target}}.png",
-         "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
-         },
-         "Update": "OnLocationChange",
-         "PatchMode": "Overlay"
-      },
-
-      {
-         "Action": "EditImage",
-         "Target": "Maps/springobjects",
-         "FromFile": "assets/{{Target}}.png",
-         "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
-         },
-         "Update": "OnLocationChange",
-         "PatchMode": "Overlay"
-      },
-
-      {
-         "Action": "EditImage",
-         "Target": "Maps/HarveyBalloonTiles",
-         "FromFile": "assets/{{Target}}.png",
-         "PatchMode": "Overlay"
-      },
-
       {
          "Action": "EditImage",
          "Target": "LooseSprites/Cursors",
@@ -71,7 +13,7 @@
          "Target": "LooseSprites/daybg",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -89,7 +31,7 @@
          "Target": "LooseSprites/nightbg",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -100,7 +42,7 @@
          "Target": "LooseSprites/shadow",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -111,7 +53,7 @@
          "Target": "LooseSprites/swimShadow",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -140,10 +82,346 @@
 
       {
          "Action": "EditImage",
+         "Target": "Maps/Festivals",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/boatTunnelTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_beach",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_monsterGraveTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_outdoorsTileSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_outdoorsTileSheet2",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_town",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/nightSceneMaru",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_BusStop",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_beach",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_monsterGraveTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_outdoorsTileSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_outdoorsTileSheet2",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_town",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/summer_beach",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/summer_monsterGraveTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/summer_outdoorsTileSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/summer_outdoorsTileSheet2",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/summer_town",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/townInterior",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/winter_beach",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/winter_monsterGraveTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/winter_outdoorsTileSheet",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/winter_outdoorsTileSheet2",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/winter_town",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/summer_island_tilesheet_1",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/spring_island_tilesheet_1",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/winter_island_tilesheet_1",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/fall_island_tilesheet_1",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/springobjects",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/HarveyBalloonTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
          "Target": "TerrainFeatures/Flooring",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/Flooring_winter",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -161,7 +439,7 @@
          "Target": "TerrainFeatures/hoeDirt",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -172,7 +450,7 @@
          "Target": "TerrainFeatures/hoeDirtDark",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -183,7 +461,7 @@
          "Target": "TerrainFeatures/hoeDirtSnow",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -191,12 +469,106 @@
 
       {
          "Action": "EditImage",
-         "Target": "TileSheets/bushes",
+         "Target": "TerrainFeatures/tree1_fall",
          "FromFile": "assets/{{Target}}.png",
-         "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
-         },
-         "Update": "OnLocationChange",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree1_spring",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree1_summer",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree1_winter",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree2_fall",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree2_spring",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree2_summer",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree2_winter",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree3_fall",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree3_spring",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree3_winter",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree8_fall",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree8_spring",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/tree8_summer",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TerrainFeatures/mushroom_tree",
+         "FromFile": "assets/{{Target}}.png",
          "PatchMode": "Overlay"
       },
 
@@ -218,6 +590,17 @@
          "Action": "EditImage",
          "Target": "Minigames/Clouds",
          "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "TileSheets/bushes",
+         "FromFile": "assets/{{Target}}.png",
+         "When":{
+             "LocationContext": "Default"
+         },
+         "Update": "OnLocationChange",
          "PatchMode": "Overlay"
       },
 

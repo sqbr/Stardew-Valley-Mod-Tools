@@ -6,7 +6,7 @@
          "Target": "Maps/spring_town",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -17,7 +17,7 @@
          "Target": "Maps/summer_town",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -28,7 +28,7 @@
          "Target": "Maps/fall_town",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -39,7 +39,7 @@
          "Target": "Maps/springobjects",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -50,7 +50,7 @@
          "Target": "Maps/fall_outdoorsTileSheet",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -68,7 +68,7 @@
          "Target": "Maps/summer_outdoorsTileSheet",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -79,7 +79,7 @@
          "Target": "TileSheets/bushes",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"

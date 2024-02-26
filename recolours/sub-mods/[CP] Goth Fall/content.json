@@ -6,7 +6,7 @@
          "Target": "Maps/fall_outdoorsTileSheet",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -17,7 +17,7 @@
          "Target": "Maps/fall_town",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -28,7 +28,7 @@
          "Target": "Maps/fall_beach",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -67,7 +67,7 @@
          "Target": "TileSheets/bushes",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley","LocationName | contains=Desert": "false"
+             "LocationContext": "Default"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"

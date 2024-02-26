@@ -144,7 +144,7 @@ variants_dict = {"Harvey": ["Shaved"],"Emily": ["LongSleeved"], "Pam": ["Young"]
 genderswap_list = ["Alex","Elliott","Harvey","Sam", "Shane","Sebastian","Wizard","Willy"]
    
 
-birthday_code = True
+birthday_code = False
 custom_possession = False
 
 ## New data
@@ -374,8 +374,9 @@ def create_config(current_gender):
         if not custom_possession:  
             content.write("  \"PossessiveS\": \"true\",\n\n")   
         for name in name_list:
-            if name in birthday_dict.keys(): 
-                content.write("  \""+name+"Birthday"+"\": \""+birthday_dict[name]+"\",\n") 
+            if birthday_code:
+                if name in birthday_dict.keys(): 
+                    content.write("  \""+name+"Birthday"+"\": \""+birthday_dict[name]+"\",\n") 
             if custom_possession:
                 if name ==new_name:
                     content.write("  \""+name+"Possession\": \""+possession_dict[name]+"\",\n")  
@@ -455,8 +456,9 @@ def initialise_variables(name):
 def initialise_advanced(name): 
     s = ""  
     if isGS: 
-        if name in birthday_dict.keys(): 
-            s+="    \""+name+"Birthday"+"\": {\"Default\": \""+birthday_dict[name]+"\"},\n" 
+        if birthday_code:
+            if name in birthday_dict.keys(): 
+                s+="    \""+name+"Birthday"+"\": {\"Default\": \""+birthday_dict[name]+"\"},\n" 
         if custom_possession:
             s+="    \""+name+"Possession\":  {\"Default\": \""+possession_dict[name]+"\",\"AllowValues\": \"', 's\"},\n"     
         if name in spouse_list:
@@ -469,7 +471,8 @@ def initialise_advanced(name):
 def gender_variables(name):
     #Set pronoun and gender related words
     s = ""
-    for word in gender_words["Neutral"].keys()+pronoun_words["They"].keys():
+    combined = [x for x in gender_words["Neutral"].keys()]+ [x for x in pronoun_words["They"].keys()]
+    for word in combined:
         s += "                {\"Name\": \""+name+word+"\", \"Value\": \"{{sqbr.getGS/"+name+word+"}}\"},\n"           
     if name !="Farmer":
         if custom_possession!=True:
@@ -505,13 +508,36 @@ def image_start_talkoh(name, type, variant):
     s+= "\"Target\":\""+location+artname(name, type) + extra_code + "\","     
     return s       
 
+def image_start_talkoh2(name, type, variant):
+    #at the start of an image block 
+
+    s= "		{\"Action\": \"EditImage\","
+    if type =="sprite":
+        location = "Characters/"
+    else:
+        if variant =="setup":
+            location = "Mods/HDPortraits/" 
+            s = "		{\"Action\":\"Load\","   
+        else:    
+            location = "Mods/talkohPortraits/"     
+
+    extra_code = ""
+    if name in beach_bodies and (name,variant) !=("Emily","LongSleeved"):
+        extra_code =", "+location
+        extra_code+=name+"_Beach"
+    if name in extras.keys():
+        extra_code =", "+location
+        extra_code+=extras[name]  
+    s+= "\"Target\":\""+location+artname(name, type) + extra_code + "\","     
+    return s           
+
 def image_middle_talkoh(name, type,variant):
     return "\"FromFile\": \""+location_talkoh(variant, type)+"{{TargetWithoutPath}}.png\"," 
 
 def image_end_talkoh(name, type, variant):
     #at the end of an image block
     if name =="other":
-        return "\"When\": {\"MiscImageEdits\": \"true\"}},\n"
+        return "\"When\": {\"MiscImageEdits\": \"true\",\"HasMod |contains=talkohlooeys.HiResPortraits\": false}},\n"
     else:    
         s = "\"When\": {"
         if variant =="Female":
@@ -521,15 +547,38 @@ def image_end_talkoh(name, type, variant):
         elif variant !="":
             s+="\""+name+"Images\": \""+test_variable_talkoh(name, variant)+"\""  
         else:
-            s+="\""+name+"Images|contains=false\": \"false\""    
+            s+="\""+name+"Images|contains=false\": \"false\",\"HasMod |contains=talkohlooeys.HiResPortraits\": false"    
         s+="}},\n"
         return s
+
+def image_end_talkoh2(name, type, variant):
+    #at the end of an image block
+    if name =="other":
+        return "\"When\": {\"MiscImageEdits\": \"true\",\"HasMod |contains=talkohlooeys.HiResPortraits\": true}},\n"
+    else:    
+        s = "\"When\": {"
+        if variant =="Female":
+            s+="\""+name+"FemalePortrait\": true"    
+        elif variant =="Young" and name =="Wizard":
+            s+="\"WizardYoungPortrait\": true"       
+        elif variant !="":
+            s+="\""+name+"Images\": \""+test_variable_talkoh(name, variant)+"\""  
+        else:
+            s+="\""+name+"Images|contains=false\": \"false\",\"HasMod |contains=talkohlooeys.HiResPortraits\": true"    
+        s+="}},\n"
+        return s        
 
 def image_line_talkoh(name, type,variant):
     if artname(name, type)=="":
         return ""
     else:
         return image_start_talkoh(name, type,variant) +image_middle_talkoh(name, type,variant)+image_end_talkoh(name, type, variant)    
+
+def image_line_talkoh2(name, type,variant):
+    if artname(name, type)=="":
+        return ""
+    else:
+        return image_start_talkoh2(name, type,variant) +image_middle_talkoh(name, type,variant)+image_end_talkoh2(name, type, variant)    
 
 ## Androgynous
 
@@ -563,7 +612,10 @@ def image_middle_location(name, location):
 def image_end(name, type, variant):
     #at the end of an image block 
     if name =="other":
-        return "\"When\": {\"MiscImageEdits\": \"true\"}},\n"
+        if isHD:
+            return "\"When\": {\"MiscImageEdits\": \"true\",\"HasMod |contains=talkohlooeys.HiResPortraits\": false}},\n"
+        else:
+            return "\"When\": {\"MiscImageEdits\": \"true\"}},\n"    
     else:    
         s = "\"When\": {"
         if isHD and type =="sprite" and variant =="" and name in genderswap_list:
@@ -571,7 +623,9 @@ def image_end(name, type, variant):
         elif variant !="" or isHD:
             s+="\""+name+"Images\": \""+test_variable(name, variant)+"\""  
         else:
-            s+="\""+name+"Images|contains=false\": \"false\""    
+            s+="\""+name+"Images|contains=false\": \"false\""  
+        if isHD:
+            s+=",\"HasMod |contains=talkohlooeys.HiResPortraits\": false"      
         s+="}},\n"
         return s
 
@@ -760,53 +814,49 @@ def image_code_background():
 def set_disposition(name):
     relationships = ""
     if name =="Abigail":
-        relationships = "Caroline '{{CarolineParent}}' Pierre '{{PierreParent}}'"
+        relationships = "\"Caroline\": \"{{CarolineParent}}\", \"Pierre\": \"{{PierreParent}}\""
     elif name =="Emily":
-        relationships = "Haley '{{HaleySibling}}'"  
+        relationships = "\"Haley\": \"{{HaleySibling}}\""  
     elif name =="Alex":
-        relationships = "George 'grandie {{GeorgeName}}' Evelyn 'grandie {{EvelynName}}'"
+        relationships = "\"George\": \"grandie {{GeorgeName}}\", \"Evelyn\": \"grandie {{EvelynName}}\""
     elif name =="Maru":
-        relationships = "Robin '{{RobinParent}}' Demetrius '{{DemetriusParent}}' Sebastian 'half-{{SebastianSibling}}'"  
+        relationships = "\"Robin\": \"{{RobinParent}}\", \"Demetrius\": \"{{DemetriusParent}}\", \"Sebastian\": \"half-{{SebastianSibling}}\""  
     elif name =="Penny":
-        relationships = "Pam '{{PamParent}}'"  
+        relationships = "\"Pam\": \"{{PamParent}}\""  
     elif name =="Sam":
-        relationships = "Vincent 'little {{VincentSibling}}' Jodi '{{JodiParent}}' Kent '{{KentParent}}' Sebastian ''"  
+        relationships = "\"Vincent\": \"little {{VincentSibling}}\", \"Jodi\": \"{{JodiParent}}\", Kent\": \"{{KentParent}}\""  
     elif name =="Sebastian":
-        relationships = "Robin '{{RobinParent}}' Maru 'half-{{MaruSibling}}' Sam ''"  
+        relationships = "\"Robin\": \"{{RobinParent}}\", \"Maru\": \"half-{{MaruSibling}}\""  
     elif name =="Shane":
-        relationships = "Marnie '{{MarnieAuncleU}}'"  
+        relationships = "\"Marnie\": \"{{MarnieAuncleU}}\""  
     elif name =="Caroline": 
-        relationships = "Pierre '{{PierreSpouse}}' Abigail ''"   
+        relationships = "\"Pierre\": \"{{PierreSpouse}}\""   
     elif name == "Demetrius": 
-        relationships = "Robin '{{RobinSpouse}}' Maru ''"  
+        relationships = "\"Robin\": \"{{RobinSpouse}}\""  
     elif name =="Evelyn": 
-        relationships = "George '{{GeorgeSpouse}}' Alex 'grand{{AlexChild}}'"  
+        relationships = "\"George\": \"{{GeorgeSpouse}}\", \"Alex\": \"grand{{AlexChild}}\""  
     elif name =="George": 
-        relationships = "Evelyn '{{EvelynSpouse}}' Alex 'grand{{AlexChild}}'"   
+        relationships = "\"Evelyn\": \"{{EvelynSpouse}}\", \"Alex\": \"grand{{AlexChild}}\""   
     elif name =="Jodi": 
-        relationships = "Sam '{{SamChild}}' Vincent '{{VincentChild}}' Kent 'husband'"  
+        relationships = "\"Sam\": \"{{SamChild}}\", \"Vincent\": \"{{VincentChild}}\", \"Kent\" \"{{KentSpouse}}\""  
     elif name =="Kent": 
-        relationships = "Jodi 'wife' Sam '{{SamChild}}' Vincent '{{VincentChild}}'"       
+        relationships = "\"Jodi\": \"{{JodiSpouse}}\", \"Sam\": \"{{SamChild}}\", \"Vincent\": \"{{VincentChild}}\""       
     elif name =="Marnie": 
-        relationships = "Lewis '' Shane '{{ShaneNibling}}' Jas '{{JasNibling}}'"  
+        relationships = "\"Shane\": \"{{ShaneNibling}}\", \"Jas\": \"{{JasNibling}}\""  
     elif name =="Pam": 
-        relationships = "Penny '{{PennyChild}}' Gus ''"  
+        relationships = "\"Penny\": \"{{PennyChild}}\""  
     elif name =="Pierre": 
-        relationships = "Abigail '{{AbigailChild}}' Caroline '{{CarolineSpouse}}'"  
+        relationships = "\"Abigail\": \"{{AbigailChild}}\", \"Caroline\": \"{{CarolineSpouse}}\""  
     elif name =="Robin": 
-        relationships = "Demetrius '{{DemetriusSpouse}}' Maru '{{MaruChild}}' Sebastian '{{SebastianChild}}'"                           
+        relationships = "\"Demetrius\": \"{{DemetriusSpouse}}\", \"Maru\": \"{{MaruChild}}\", \"Sebastian\": \"{{SebastianChild}}\""                           
 
-    s = "		{\"Action\": \"EditData\",\"Target\": \"Data/NPCDispositions\","
-    s+="\"Fields\": {\""+name+"\": {"
-    s+="4: \""+orig_gender_dict[name].lower()+"\"," #setting gender
-    s+="8: \"{{"+name+"Birthday}}\","
+    s = "		{\"Action\": \"EditData\",\"Target\": \"Data/Characters\","
+    s+="\"TargetField\": [\""+name+"\"],\n"
+    s+="\"Entries\": {\n"
+    s+="\"Gender\": "+str(genders.index(orig_gender_dict[name]))+",\n" 
     if relationships!="":
-        s+="9: \""+relationships+"\","
-    if name =="Wizard": 
-        s+="11: \"{{"+name+"Title}}\""
-    else:       
-        s+="11: \"{{"+name+"Name}}\""
-    s+="}}"
+        s+="\"FriendsAndFamily\": {"+relationships+"},\n"
+    s+="}"
     if name =="Leo":
         s+=",\"When\": {\"EditIslandCharacters\": \"Full\"}"
     s+="},\n"
@@ -851,7 +901,7 @@ def create_content():
     # Config
     path = end_path()+"content.json"  
     content = open(path,"w")
-    content.write("{\n    \"Format\": \"1.27.0\",\n    \"ConfigSchema\":\n {\n")
+    content.write("{\n    \"Format\": \"2.0.0\",\n    \"ConfigSchema\":\n {\n")
     if isGS:
             content.write("    \"MiscTextEdits\": { \"AllowValues\": \"true, false\",\"Default\": \"false\"},\n")
     content.write("    \"MiscImageEdits\": { \"AllowValues\": \"true, false\",\"Default\": \"false\"},\n\n")
@@ -1009,6 +1059,7 @@ def hd_extra_portraits():
     for name in variants_dict.keys():
         for variant in variants_dict[name]:
             s+= image_line_talkoh(name, "portrait", variant)   
+            s+= image_line_talkoh2(name, "portrait", variant)   
     s+= image_line_talkoh("Linus", "sprite", "Coat")
     s+="        {\"Action\": \"EditImage\",\"Target\": \"LooseSprites/BundleSprites\",\"FromFile\": \"assets/Characters/Variants/Coat/BundleSprites.png\",\"ToArea\": { \"X\": 160, \"Y\": 0, \"Width\": 32, \"Height\": 32 },\"When\": {\"LinusImages\": \"Male Coat\"}},\n"
     s+="        {\"Action\": \"EditImage\",\"Target\": \"LooseSprites/Cursors2\",\"FromFile\": \"assets/Characters/Variants/Coat/Cursors2.png\",\"ToArea\": { \"X\": 129, \"Y\": 241, \"Width\": 14, \"Height\": 15 },\"When\": {\"LinusImages\": \"Male Coat\"}},\n\n"
@@ -1018,14 +1069,17 @@ def hd_extra_portraits():
         if name in beach_bodies:
             s+="        {\"Action\": \"EditImage\",\"Target\":\"Mods/talkohSeasonal/"+portraitname(name) + "_Beach\","
             s+="\"FromFile\":\"assets/Portraits/Genderbent/Classic/"+ name+"_Beach.png\","
-            s+="\"When\": {\""+name+"FemalePortrait\": true,  \"Genderbent Bachelors\": \"Classic\"}},\n"
+            s+="\"When\": {\""+name+"FemalePortrait\": true,  \"Genderbent Bachelors\": \"Classic\",\"HasMod |contains=talkohlooeys.HiResPortraits\": false}},\n"
+            s+="        {\"Action\": \"EditImage\",\"Target\":\"Mods/talkohPortraits/"+portraitname(name) + "_Beach\","
+            s+="\"FromFile\":\"assets/Portraits/Genderbent/Classic/"+ name+"_Beach.png\","
+            s+="\"When\": {\""+name+"FemalePortrait\": true,  \"Genderbent Bachelors\": \"Classic\",\"HasMod |contains=talkohlooeys.HiResPortraits\": true}},\n"
         s+="\n"    
     return s 
  
 def hd_setup():
     s = ""
     for name in portrait_list + other_portraits:
-        end_string = "\"When\": {\""+name+"Images|contains=false\": \"false\",\"HasMod |contains=talkohlooeys.SeasonalPortraits\": false}},\n"  
+        end_string = "\"When\": {\""+name+"Images|contains=false\": \"false\",\"HasMod |contains=talkohlooeys.SeasonalPortraits\": false,\"HasMod |contains=talkohlooeys.HiResPortraits\": false}},\n"  
         name_string= "\"Mods/talkohSeasonal/"+portraitname(name) 
         if name in extras.keys():
             name_string+= ", Mods/talkohSeasonal/"+extras[name] 
@@ -1090,7 +1144,7 @@ def create_image_code():
     return s
 
 def token_line(name, word):
-    return "    {\"Name\": \""+name+word+"\", \"Value\": \"{{sqbr.getGS/"+name+word+"}}\", \"When\": {\"HasMod|contains=sqbr.getGS\" :\"true\"}},\n"
+    return "    {\"Name\": \""+name+word+"\", \"Value\":: \"{{sqbr.getGS/"+name+word+"}}\", \"When\": {\"HasMod|contains=sqbr.getGS\" :\"true\"}},\n"
 
 def create_tokens():
     #list of tokens for use within other mods referencing Gender Setter

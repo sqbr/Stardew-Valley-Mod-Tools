@@ -732,7 +732,7 @@ def create_code(folder, sprite_name):
     #     return finalcode 
     if in_dictionary(files_onIsland, folder,sprite_name) and not (mode in UI_list):
              code+="         \"When\":{\n"
-             code+="             \"LocationContext\": \"Valley\",\"LocationName | contains=Desert\": \"false\"\n"
+             code+="             \"LocationContext\": \"Default\"\n"
              code+="         },\n"   
              code+="         \"Update\": \"OnLocationChange\",\n" 
     code+=codeend  
@@ -901,7 +901,7 @@ def process_folder_recolour(mode_list):
     content = open(end_path[final_mode]+"content.json","w")
     print("writing to "+end_path[final_mode])
     content.write("{\n")
-    content.write("   \"Format\": \"1.27.0\",\n")
+    content.write("   \"Format\": \"2.0.0\",\n")
     if final_mode =="UIrecolour":
         content.write("    \"ConfigSchema\":{\n")
         content.write("    \"EditCursor\": { \"AllowValues\": \"true, false\",\"Default\": \"true\"},\n")
@@ -925,7 +925,7 @@ def process_folder_recolour(mode_list):
     for folder in have_image.keys():
         for sprite_name in have_image[folder]:
             split_name = sprite_name.split("_")
-            if len(split_name) ==1 or sprite_name =="font_bold.png":
+            if (len(split_name) ==1) or (final_mode != "UIrecolour") or (sprite_name =="font_bold.png"):
                 content.write(create_code(folder, sprite_name))    
     if final_mode == "UIrecolour":
         pos_string ="{ \"X\": 0, \"Y\": 0, \"Width\": 400, \"Height\": 184 }" 
@@ -941,8 +941,8 @@ def process_folder_recolour(mode_list):
 
 ##Some code to test out the "plants" colour scheme on a rainbow. The result is stored in misc/rainbow_processed.png
 
-mode = "plants"
-process_rainbow()
+#mode = "plants"
+#process_rainbow()
 
 ##Code to create the Blue UI mod
 #mode = "UI"
@@ -962,8 +962,8 @@ process_rainbow()
 # process_folder()
 
 ##Putting everything together for the Weird Recolour mod
-#final_mode = "recolour"
-#process_folder_recolour(["ground","wood","plants","fall","flowers"])
+final_mode = "recolour"
+process_folder_recolour(["ground","wood","plants","fall","flowers"])
 
 ##Create the submods for Starry Blue UI mod
 #mode = "UIbase"
@@ -972,5 +972,5 @@ process_rainbow()
 #process_folder()
 
 ##Put together Starry Blue UI
-final_mode = "UIrecolour"
-process_folder_recolour(["UIbase","UIframe"])
+#final_mode = "UIrecolour"
+#process_folder_recolour(["UIbase","UIframe"])

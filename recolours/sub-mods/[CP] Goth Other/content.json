@@ -13,7 +13,7 @@
          "Target": "Maps/fall_outdoorsTileSheet2",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -38,7 +38,7 @@
          "Target": "Maps/summer_island_tilesheet_1",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -56,7 +56,7 @@
          "Target": "Maps/spring_beach",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -67,7 +67,7 @@
          "Target": "Maps/night_market_tilesheet_objects",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -85,7 +85,7 @@
          "Target": "Maps/paths",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -103,7 +103,7 @@
          "Target": "Maps/farmhouse_tiles",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -121,7 +121,7 @@
          "Target": "Maps/fall_island_tilesheet_1",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -139,7 +139,7 @@
          "Target": "Maps/Island_FieldOffice_Tilesheet",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -164,7 +164,7 @@
          "Target": "Maps/winter_beach",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -175,7 +175,7 @@
          "Target": "Maps/summer_monsterGraveTiles",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -186,7 +186,7 @@
          "Target": "Maps/bugLandTiles",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -204,7 +204,7 @@
          "Target": "Maps/springobjects",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -215,7 +215,7 @@
          "Target": "Maps/spring_outdoorsTileSheet",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -226,7 +226,7 @@
          "Target": "Maps/fall_monsterGraveTiles",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -244,7 +244,7 @@
          "Target": "Maps/nightSceneMaruTrees",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -262,7 +262,7 @@
          "Target": "Maps/Festivals",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -287,7 +287,7 @@
          "Target": "Maps/busPeople",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -298,7 +298,7 @@
          "Target": "Maps/fall_beach",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -316,7 +316,7 @@
          "Target": "Maps/winter_town",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -327,7 +327,7 @@
          "Target": "Maps/GreenHouseInterior",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -338,7 +338,7 @@
          "Target": "Maps/spring_BusStop",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -349,7 +349,7 @@
          "Target": "Maps/winter_monsterGraveTiles",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -360,7 +360,7 @@
          "Target": "Maps/boatTunnelTiles",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -385,7 +385,7 @@
          "Target": "Maps/summer_town",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -410,7 +410,7 @@
          "Target": "Maps/winter_island_tilesheet_1",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -421,7 +421,7 @@
          "Target": "Maps/winter_outdoorsTileSheet",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -453,7 +453,7 @@
          "Target": "Maps/spring_island_tilesheet_1",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -478,7 +478,7 @@
          "Target": "Maps/fall_town",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -489,7 +489,7 @@
          "Target": "Maps/coopTiles",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -500,7 +500,7 @@
          "Target": "Maps/cave",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -539,7 +539,7 @@
          "Target": "Maps/spring_outdoorsTileSheet2",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -550,7 +550,7 @@
          "Target": "Maps/Island_Hut_tilesheet",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -568,7 +568,7 @@
          "Target": "Maps/winter_outdoorsTileSheet2",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -586,7 +586,7 @@
          "Target": "Maps/summer_beach",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -597,7 +597,7 @@
          "Target": "Maps/cavedarker",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -608,7 +608,7 @@
          "Target": "Maps/fall_outdoorsTileSheet",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -619,7 +619,7 @@
          "Target": "Maps/summer_outdoorsTileSheet",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -637,7 +637,7 @@
          "Target": "Maps/spring_monsterGraveTiles",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -648,7 +648,7 @@
          "Target": "Maps/witchSwampTiles",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -666,7 +666,7 @@
          "Target": "Maps/WoodBuildings",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -684,7 +684,7 @@
          "Target": "Maps/TownIndoors",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -695,7 +695,7 @@
          "Target": "Maps/island_tilesheet_1",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -706,7 +706,7 @@
          "Target": "Maps/spring_town",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -717,7 +717,7 @@
          "Target": "Maps/LeoTreeHouse_Tilesheet",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -728,7 +728,7 @@
          "Target": "Maps/townInterior",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -739,7 +739,7 @@
          "Target": "Maps/FarmhouseTiles",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -750,7 +750,7 @@
          "Target": "Maps/island_tilesheet_2",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -768,7 +768,7 @@
          "Target": "LooseSprites/Movies",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -779,7 +779,7 @@
          "Target": "LooseSprites/LightRays",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -944,7 +944,7 @@
          "Target": "LooseSprites/PlayerStatusList",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -969,7 +969,7 @@
          "Target": "LooseSprites/SandDuggy",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1036,7 +1036,7 @@
          "Target": "LooseSprites/SpecialOrdersBoard",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1047,7 +1047,7 @@
          "Target": "LooseSprites/nightbg",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1121,7 +1121,7 @@
          "Target": "LooseSprites/SeaMonster",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1160,7 +1160,7 @@
          "Target": "LooseSprites/birds",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1185,7 +1185,7 @@
          "Target": "LooseSprites/shadow",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1196,7 +1196,7 @@
          "Target": "LooseSprites/daybg",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1228,7 +1228,7 @@
          "Target": "LooseSprites/swimShadow",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1316,7 +1316,7 @@
          "Target": "TerrainFeatures/tree_palm",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1327,7 +1327,7 @@
          "Target": "TerrainFeatures/Flooring",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1345,7 +1345,7 @@
          "Target": "TerrainFeatures/tree_palm2",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1370,7 +1370,7 @@
          "Target": "TerrainFeatures/Flooring_winter",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1948,7 +1948,7 @@
          "Target": "TileSheets/Floors",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1973,7 +1973,7 @@
          "Target": "TileSheets/crops",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -1991,7 +1991,7 @@
          "Target": "TileSheets/animations",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -2051,7 +2051,7 @@
          "Target": "TileSheets/bushes",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -2062,7 +2062,7 @@
          "Target": "TileSheets/SecretNotesImages",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -2087,7 +2087,7 @@
          "Target": "TileSheets/debris",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3764,7 +3764,7 @@
          "Target": "Buildings/Barn",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3775,7 +3775,7 @@
          "Target": "Buildings/Big Barn",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3786,7 +3786,7 @@
          "Target": "Buildings/Big Coop",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3797,7 +3797,7 @@
          "Target": "Buildings/Big Shed",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3808,7 +3808,7 @@
          "Target": "Buildings/Coop",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3819,7 +3819,7 @@
          "Target": "Buildings/Deluxe Barn",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3830,7 +3830,7 @@
          "Target": "Buildings/Deluxe Coop",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3841,7 +3841,7 @@
          "Target": "Buildings/Desert Obelisk",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3852,7 +3852,7 @@
          "Target": "Buildings/Earth Obelisk",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3863,7 +3863,7 @@
          "Target": "Buildings/Fish Pond",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3874,7 +3874,7 @@
          "Target": "Buildings/Gold Clock",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3885,7 +3885,7 @@
          "Target": "Buildings/Greenhouse",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3896,7 +3896,7 @@
          "Target": "Buildings/Junimo Hut",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3907,7 +3907,7 @@
          "Target": "Buildings/Log Cabin",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3918,7 +3918,7 @@
          "Target": "Buildings/Mill",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3929,7 +3929,7 @@
          "Target": "Buildings/Plank Cabin",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3940,7 +3940,7 @@
          "Target": "Buildings/Shed",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3951,7 +3951,7 @@
          "Target": "Buildings/Shipping Bin",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3962,7 +3962,7 @@
          "Target": "Buildings/Silo",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3973,7 +3973,7 @@
          "Target": "Buildings/Slime Hutch",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3984,7 +3984,7 @@
          "Target": "Buildings/Stable",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -3995,7 +3995,7 @@
          "Target": "Buildings/Stone Cabin",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -4006,7 +4006,7 @@
          "Target": "Buildings/Water Obelisk",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -4017,7 +4017,7 @@
          "Target": "Buildings/Well",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
@@ -4028,7 +4028,7 @@
          "Target": "Buildings/houses",
          "FromFile": "assets/{{Target}}.png",
          "When":{
-             "LocationContext": "Valley"
+             "LocationContext": "Valley,Desert"
          },
          "Update": "OnLocationChange",
          "PatchMode": "Overlay"
