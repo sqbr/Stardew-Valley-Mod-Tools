@@ -812,6 +812,7 @@ def image_code_background():
     return s
 
 def set_disposition(name):
+    #character information that used to be in NPCDispositions
     relationships = ""
     if name =="Abigail":
         relationships = "\"Caroline\": \"{{CarolineParent}}\", \"Pierre\": \"{{PierreParent}}\""
@@ -824,7 +825,7 @@ def set_disposition(name):
     elif name =="Penny":
         relationships = "\"Pam\": \"{{PamParent}}\""  
     elif name =="Sam":
-        relationships = "\"Vincent\": \"little {{VincentSibling}}\", \"Jodi\": \"{{JodiParent}}\", Kent\": \"{{KentParent}}\""  
+        relationships = "\"Vincent\": \"little {{VincentSibling}}\", \"Jodi\": \"{{JodiParent}}\", \"Kent\": \"{{KentParent}}\""  
     elif name =="Sebastian":
         relationships = "\"Robin\": \"{{RobinParent}}\", \"Maru\": \"half-{{MaruSibling}}\""  
     elif name =="Shane":
@@ -838,7 +839,7 @@ def set_disposition(name):
     elif name =="George": 
         relationships = "\"Evelyn\": \"{{EvelynSpouse}}\", \"Alex\": \"grand{{AlexChild}}\""   
     elif name =="Jodi": 
-        relationships = "\"Sam\": \"{{SamChild}}\", \"Vincent\": \"{{VincentChild}}\", \"Kent\" \"{{KentSpouse}}\""  
+        relationships = "\"Sam\": \"{{SamChild}}\", \"Vincent\": \"{{VincentChild}}\", \"Kent\": \"{{KentSpouse}}\""  
     elif name =="Kent": 
         relationships = "\"Jodi\": \"{{JodiSpouse}}\", \"Sam\": \"{{SamChild}}\", \"Vincent\": \"{{VincentChild}}\""       
     elif name =="Marnie": 
@@ -851,15 +852,28 @@ def set_disposition(name):
         relationships = "\"Demetrius\": \"{{DemetriusSpouse}}\", \"Maru\": \"{{MaruChild}}\", \"Sebastian\": \"{{SebastianChild}}\""                           
 
     s = "		{\"Action\": \"EditData\",\"Target\": \"Data/Characters\","
-    s+="\"TargetField\": [\""+name+"\"],\n"
-    s+="\"Entries\": {\n"
-    s+="\"Gender\": "+str(genders.index(orig_gender_dict[name]))+",\n" 
+    s+="\"TargetField\": [\""+name+"\"],"
+    s+="\"Entries\": {"
+    s+="\"Gender\": "+str(genders.index(orig_gender_dict[name])) 
     if relationships!="":
-        s+="\"FriendsAndFamily\": {"+relationships+"},\n"
+        s+=", \"FriendsAndFamily\": {"+relationships+"}"
     s+="}"
     if name =="Leo":
         s+=",\"When\": {\"EditIslandCharacters\": \"Full\"}"
     s+="},\n"
+    return s
+
+def change_names():
+    s = "\n		{\n"
+    s+= "		    \"Action\": \"EditData\",\n"
+    s+= "		    \"Target\": \"Strings/NPCNames\",\n"
+    s+="		    \"Entries\": {\n"
+    for name in name_list:
+        if name =="Wizard":
+            s+="		        \""+name+"\": \"{{"+name+"Title}}\",\n"	
+        else:    
+            s+="		        \""+name+"\": \"{{"+name+"Name}}\",\n"		
+    s+="		    }\n		},\n"
     return s
     
 def dance_wedding():
@@ -874,8 +888,8 @@ def dance_wedding():
         s += "\"FromFile\": \"assets/Wedding/"+name+"_Wedding.png\",\"ToArea\": { \"X\": 0, \"Y\": "+Y+", \"Width\": 48, \"Height\": 32 },"
         s += "\"When\": { \""+name+"GameGender\": \""+genderswap(o_gender)+"\", \"DayEvent\": \"wedding\",\""+name+"Images\":\"false\", \"PatchOriginalWeddingArt\":\"true\"}},"
         s+="\n"
-        s += "		{\"Action\": \"EditData\",\"Target\": \"Data/NPCDispositions\",\"Update\": \"OnLocationChange\","
-        s+="\"Fields\": {\""+name+"\": {4: \""+genderswap(o_gender).lower()+"\"}},"
+        s+= "		{\"Action\": \"EditData\",\"Target\": \"Data/Characters\",\"TargetField\": [\""+name+"\"],\"Entries\": {"
+        s+="\"Gender\": "+str(genders.index(genderswap(o_gender)))+"},"   
         s+="\"When\": { \""+name+"GameGender\": \""+genderswap(o_gender)+"\",\"DayEvent|contains=flower dance\": \"false\"}},\n\n"
     s+="		{\"Action\": \"EditData\",\"Target\": \"Strings/Locations\",\n"
     s+="             \"Entries\": {\n"
@@ -970,8 +984,7 @@ def create_content():
         content.write("\n")
         for name in birthday_dict.keys():
             content.write(set_disposition(name))
-        with open("./mine/change_names.json","r") as f:
-            content.write(f.read())	
+        content.write(change_names())	    
         content.write(dance_wedding())	
         with open("./mine/farmer.json","r") as f:
             content.write(f.read())	         

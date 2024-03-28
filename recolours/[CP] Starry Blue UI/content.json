@@ -6,20 +6,6 @@
    "Changes": [
       {
          "Action": "EditImage",
-         "Target": "Maps/MenuTiles",
-         "FromFile": "assets/{{Target}}.png",
-         "PatchMode": "Overlay"
-      },
-
-      {
-         "Action": "EditImage",
-         "Target": "Maps/MenuTilesUncolored",
-         "FromFile": "assets/{{Target}}.png",
-         "PatchMode": "Overlay"
-      },
-
-      {
-         "Action": "EditImage",
          "Target": "LooseSprites/chatBox",
          "FromFile": "assets/{{Target}}.png",
          "PatchMode": "Overlay"
@@ -36,6 +22,13 @@
          "Action": "EditImage",
          "Target": "LooseSprites/Cursors",
          "FromFile": "assets/{{Target}}_{{language}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "LooseSprites/Cursors_1_6",
+         "FromFile": "assets/{{Target}}.png",
          "PatchMode": "Overlay"
       },
 
@@ -148,6 +141,20 @@
          "Action": "EditImage",
          "Target": "Minigames/TitleButtons",
          "FromFile": "assets/{{Target}}_{{language}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/MenuTiles",
+         "FromFile": "assets/{{Target}}.png",
+         "PatchMode": "Overlay"
+      },
+
+      {
+         "Action": "EditImage",
+         "Target": "Maps/MenuTilesUncolored",
+         "FromFile": "assets/{{Target}}.png",
          "PatchMode": "Overlay"
       },
 

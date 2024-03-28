@@ -484,14 +484,14 @@ colour_mode[mode] = "RGBA"
 end_path[mode] = "[CP] Blue UI/"
 
 files[mode] = { 
-    "LooseSprites":['chatBox.png', 'textBox.png','skillTitles.png','Cursors.png', 'DialogBoxGreen.png', 'ControllerMaps.png', 'yellowLettersLogo.png', 'letterBG.png', 'tailoring.png', 'boardGameBorder.png', 'font_bold.png', 'SpecialOrdersBoard.png','logo.png', 'JunimoNote.png', 'LanguageButtons.png', 'Cursors2.png', 'Billboard.png','daybg.png','nightbg.png',],
+    "LooseSprites":['chatBox.png', 'textBox.png','skillTitles.png','Cursors.png','Cursors_1_6.png', 'DialogBoxGreen.png', 'ControllerMaps.png', 'yellowLettersLogo.png', 'letterBG.png', 'tailoring.png', 'boardGameBorder.png', 'font_bold.png', 'SpecialOrdersBoard.png','logo.png', 'JunimoNote.png', 'LanguageButtons.png', 'Cursors2.png', 'Billboard.png','daybg.png','nightbg.png','map.png','map_summer.png','map_fall.png','map_winter.png'],
     "Minigames": ['TitleButtons.png'],
     "Maps": ['MenuTiles.png', 'MenuTilesUncolored.png'],
     
 }
 
 masks[mode] = { #Masked images
-    "LooseSprites":['Cursors.png','Cursors2.png','tailoring.png','JunimoNote.png','font_bold.png','daybg.png','nightbg.png','Billboard.png',],
+    "LooseSprites":['Cursors.png','Cursors_1_6.png','Cursors2.png','tailoring.png','JunimoNote.png','font_bold.png','daybg.png','nightbg.png','Billboard.png','map.png','map_summer.png','map_fall.png','map_winter.png'],
     "Minigames": ['TitleButtons.png'],
     "Maps": ['MenuTiles.png']
 }
@@ -507,14 +507,14 @@ colour_mode[mode] = "RGBA"
 end_path[mode] = "sub-mods/[CP] UI base/"
 
 files[mode] = { 
-    "LooseSprites":['chatBox.png', 'textBox.png','Cursors.png', 'DialogBoxGreen.png', 'ControllerMaps.png', 'yellowLettersLogo.png', 'letterBG.png', 'tailoring.png', 'boardGameBorder.png', 'font_bold.png','logo.png', 'JunimoNote.png', 'LanguageButtons.png', 'Cursors2.png', 'Billboard.png','daybg.png','nightbg.png','SpecialOrdersBoard.png',],
+    "LooseSprites":['chatBox.png', 'textBox.png','Cursors.png','Cursors_1_6.png', 'DialogBoxGreen.png', 'ControllerMaps.png', 'yellowLettersLogo.png', 'letterBG.png', 'tailoring.png', 'boardGameBorder.png', 'font_bold.png','logo.png', 'JunimoNote.png', 'LanguageButtons.png', 'Cursors2.png', 'Billboard.png','daybg.png','nightbg.png','SpecialOrdersBoard.png',],
     "Minigames": ['TitleButtons.png'],
     "Maps": ['MenuTiles.png', 'MenuTilesUncolored.png'],
     
 }
 
 masks[mode] = { #Masked images
-    "LooseSprites":['Cursors.png','Cursors2.png','textBox.png','tailoring.png','JunimoNote.png','letterBG.png','font_bold.png','daybg.png','nightbg.png','Billboard.png','SpecialOrdersBoard.png'],
+    "LooseSprites":['Cursors.png','Cursors2.png','Cursors_1_6.png','textBox.png','tailoring.png','JunimoNote.png','letterBG.png','font_bold.png','daybg.png','nightbg.png','Billboard.png','SpecialOrdersBoard.png',],
     "Minigames": ['TitleButtons.png'],
     "Maps": ['MenuTiles.png']
 }
@@ -531,14 +531,14 @@ colour_mode[mode] = "RGBA"
 end_path[mode] = "sub-mods/[CP] UI frame/"
 
 files[mode] = { 
-    "LooseSprites":['textBox.png','Cursors.png', 'DialogBoxGreen.png', 'boardGameBorder.png','SpecialOrdersBoard.png','LanguageButtons.png', 'Cursors2.png', 'Billboard.png','daybg.png','nightbg.png',],
+    "LooseSprites":['textBox.png','Cursors.png','Cursors_1_6.png', 'DialogBoxGreen.png', 'boardGameBorder.png','SpecialOrdersBoard.png','LanguageButtons.png', 'Cursors2.png', 'Billboard.png','daybg.png','nightbg.png',],
     "Minigames": ['TitleButtons.png'],
     "Maps": ['MenuTiles.png', 'MenuTilesUncolored.png'],
     
 }
 
 masks[mode] = { #Masked images
-    "LooseSprites":['Cursors.png','Cursors2.png','daybg.png','DialogBoxGreen.png','LanguageButtons.png','nightbg.png','Billboard.png','SpecialOrdersBoard.png','textBox.png',],
+    "LooseSprites":['Cursors.png','Cursors_1_6.png','Cursors2.png','daybg.png','DialogBoxGreen.png','LanguageButtons.png','nightbg.png','Billboard.png','SpecialOrdersBoard.png','textBox.png',],
     "Minigames": ['TitleButtons.png'],
     "Maps": ['MenuTiles.png']
 }
@@ -583,14 +583,14 @@ initialise(mode)
 end_path[mode] = "sub-mods/[CP] Goth Plants/"
 
 files[mode] = { 
-    "LooseSprites":['Cursors.png','map.png','tailoring.png', 'Cursors2.png','stardewPanorama.png',],
+    "LooseSprites":['Cursors_1_6.png', 'Cursors.png','map.png','tailoring.png', 'Cursors2.png','stardewPanorama.png',],
     "Maps": [ 'HarveyBalloonTiles.png','spring_beach.png', 'winter_beach.png','fall_beach.png', 'summer_beach.png','winter_town.png', 'spring_town.png','fall_town.png','summer_town.png','springobjects.png', 'fall_outdoorsTileSheet.png','spring_outdoorsTileSheet.png','summer_outdoorsTileSheet.png','spring_outdoorsTileSheet2.png','summer_outdoorsTileSheet2.png','fall_outdoorsTileSheet2.png','townInterior.png','winter_outdoorsTileSheet.png',],
     'TerrainFeatures': [ 'tree1_fall.png', 'tree1_spring.png', 'tree1_summer.png', 'tree2_fall.png', 'tree2_spring.png', 'tree2_summer.png', 'tree3_fall.png', 'tree3_winter.png','tree3_spring.png', 'tree8_fall.png', 'tree8_spring.png', 'tree8_summer.png', ],
     "TileSheets":['bushes.png'],
     'Minigames': ['Clouds.png',],
 }
 masks[mode] = { #these files show up in multiple mods
-    "LooseSprites":['Cursors.png','map.png','tailoring.png','Cursors2.png','stardewPanorama.png',],
+    "LooseSprites":['Cursors.png','Cursors_1_6.png','map.png','tailoring.png','Cursors2.png','stardewPanorama.png',],
     "Maps": ['HarveyBalloonTiles.png','spring_beach.png', 'winter_beach.png','fall_beach.png', 'summer_beach.png','winter_town.png', 'spring_town.png','fall_town.png','summer_town.png','springobjects.png','fall_outdoorsTileSheet.png','spring_outdoorsTileSheet.png','summer_outdoorsTileSheet.png','spring_outdoorsTileSheet2.png','summer_outdoorsTileSheet2.png','fall_outdoorsTileSheet2.png','townInterior.png','winter_outdoorsTileSheet.png',],
     'Minigames': ['Clouds.png',],
 }
@@ -925,8 +925,10 @@ def process_folder_recolour(mode_list):
     for folder in have_image.keys():
         for sprite_name in have_image[folder]:
             split_name = sprite_name.split("_")
-            if (len(split_name) ==1) or (final_mode != "UIrecolour") or (sprite_name =="font_bold.png"):
-                content.write(create_code(folder, sprite_name))    
+            #underscores usually mean a translation but there's a few exceptions
+            if (len(split_name) ==1) or (final_mode != "UIrecolour") or (sprite_name in ["font_bold.png", "Cursors_1_6.png", "map_summer.png","map_fall.png","map_winter.png"]):
+                content.write(create_code(folder, sprite_name))  
+
     if final_mode == "UIrecolour":
         pos_string ="{ \"X\": 0, \"Y\": 0, \"Width\": 400, \"Height\": 184 }" 
         code = "      {\n"
@@ -945,8 +947,8 @@ def process_folder_recolour(mode_list):
 #process_rainbow()
 
 ##Code to create the Blue UI mod
-#mode = "UI"
-#process_folder()
+mode = "UI"
+process_folder()
 
 ##Create the submods for Weird Recolour
 
@@ -962,15 +964,15 @@ def process_folder_recolour(mode_list):
 # process_folder()
 
 ##Putting everything together for the Weird Recolour mod
-final_mode = "recolour"
-process_folder_recolour(["ground","wood","plants","fall","flowers"])
+#final_mode = "recolour"
+#process_folder_recolour(["ground","wood","plants","fall","flowers"])
 
 ##Create the submods for Starry Blue UI mod
-#mode = "UIbase"
-#process_folder()
-#mode = "UIframe"
-#process_folder()
+mode = "UIbase"
+process_folder()
+mode = "UIframe"
+process_folder()
 
 ##Put together Starry Blue UI
-#final_mode = "UIrecolour"
-#process_folder_recolour(["UIbase","UIframe"])
+final_mode = "UIrecolour"
+process_folder_recolour(["UIbase","UIframe"])
