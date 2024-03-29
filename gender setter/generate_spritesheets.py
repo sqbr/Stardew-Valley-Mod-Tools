@@ -47,10 +47,12 @@ def in_dictionary(dictionary, folder, name):
 spouse_list = ["Abigail","Alex","Elliott","Emily","Haley","Harvey","Leah","Maru","Penny","Sam","Sebastian","Shane"]
 orig_gender_dict = {"ProfessorSnail": "Male","Abigail":"Female","Alex":"Male","Birdie":"Female","Bouncer":"Male","Caroline":"Female","Charlie":"Female","Clint":"Male","Demetrius":"Male","Dwarf":"Male","Elliott":"Male","Emily":"Female","Evelyn":"Female","George":"Male","Gil":"Male","Governor":"Male","Grandpa":"Male","Gunther":"Male","Gus":"Male","Haley":"Female","Harvey":"Male","Henchman":"Male","Jas":"Female","Jodi":"Female","Kent":"Male","Krobus":"Male","Leah":"Female","Leo":"Male","Lewis":"Male","Linus":"Male","Marcello":"Male","Marlon":"Male","Marnie":"Female","Maru":"Female","MisterQi":"Male","Morris":"Male","OldMariner":"Male","Pam":"Female","Penny":"Female","Pierre":"Male","Robin":"Female","Sam":"Male","Sandy":"Female","Sebastian":"Male","Shane":"Male","Vincent":"Male","Willy":"Male","Wizard":"Male",}
 
-name_list1= ["Abigail","Alex", "Birdie", "Caroline","Clint","Demetrius","Dwarf", "Elliott","Emily","Evelyn","George","Governor","Gunther","Gus","Haley","Harvey","Henchman","Jas","Jodi","Kent","Leah","Lewis","Linus","Krobus", "Marcello","Marlon","Marnie","Maru","MrQi","Morris","Mariner","Pam","Penny","Pierre",]
+name_list1= ["Abigail","Alex", "Birdie", "Caroline","Clint","Demetrius","Dwarf", "Elliott","Emily","Evelyn","George","Governor","Fizz", "Gunther","Gus","Haley","Harvey","Henchman","Jas","Jodi","Kent","Leah","Lewis","Linus","Krobus", "Marcello","Marlon","Marnie","Maru","MrQi","Morris","Mariner","Pam","Penny","Pierre",]
 name_list2= ["Robin","Sam","Sandy","Sebastian","Shane","Vincent","Willy","Wizard",]
 sprite_list = sorted(name_list1 + ["ParrotBoy","SafariGuy","Maru_Hospital","Krobus_Trenchcoat"]+name_list2)
 beach_bodies = ["Abigail","Alex","Caroline","Clint","Elliott","Emily","Haley","Harvey","Jodi","Leah","Marnie","Maru","Pam","Penny","Pierre","Robin","Sam","Sebastian","Shane"]
+winter_bodies = ["Abigail","Alex","Caroline","Clint","Elliott","Emily","Evelyn", "George", "Haley","Harvey","Jas", "Jodi","Kent", "Leah","Lewis", "Marnie","Maru","Pam","ParrotBoy", "Penny","Pierre","Robin","Sam","Sebastian","Shane","Vincent","Willy"]
+
 
 darker_chars = ["Marnie","Jas","Elliott","Grandpa","Sandy","Caroline","ParrotBoy","Birdie","SafariGuy"]
 wheelchair_chars = ["Leah"]
@@ -107,7 +109,7 @@ def process_image(name,o_gender):
         save_string = name+"_m"   
     img.save(end_path+save_string+".png")  
 
-def make_screenshot(width, height, filepath, isBeach, image_type):
+def make_screenshot(width, height, filepath, isBeach, isWinter, image_type):
 
     if image_type == "HD":
         image_height = 256
@@ -121,6 +123,8 @@ def make_screenshot(width, height, filepath, isBeach, image_type):
 
     if isBeach:
         filelist = beach_bodies
+    elif isWinter:
+        filelist = winter_bodies    
     elif image_type == "sprites":
         filelist = sprite_list
     else:
@@ -136,6 +140,8 @@ def make_screenshot(width, height, filepath, isBeach, image_type):
             current_image = filelist[current] 
             if isBeach:
                 current_image+="_Beach"
+            elif isWinter:
+                current_image+="_Winter"
             img= Image.open(filepath+current_image+".png")
             h = image_height
             if image_type == "sprites":
@@ -147,6 +153,8 @@ def make_screenshot(width, height, filepath, isBeach, image_type):
     save_name+= image_type
     if isBeach:
        save_name+= "_beach"   
+    if isWinter:
+       save_name+= "_Winter"      
     save_name += ".png"           
     screenshot.save(save_name)   
 
@@ -207,6 +215,7 @@ def make_comparison_screenshot(filepath, image_type):
 
 
 def set_folders(path): 
+    #Don't think I use this?
     images =sort(list_directory(path,"*.png"))  #all images in path
     print("images "+str(len(images)))   
     beach_items = []
@@ -222,25 +231,25 @@ def set_folders(path):
 def make_screenshots():
     path = "../../Gender Setter/[CP] Gender Setter/Androgynous/Portraits/"
     
-    make_screenshot(width =7, height =3, filepath = path, isBeach = True, image_type = "portraits")        
+    make_screenshot(width =7, height =3, filepath = path, isBeach = True,isWinter = False, image_type = "portraits")        
             
-    make_screenshot(width =14, height =4, filepath = path, isBeach = False, image_type = "portraits")        
+    make_screenshot(width =14, height =4, filepath = path, isBeach = False,isWinter = False, image_type = "portraits")        
 
     make_comparison_screenshot(filepath = path, image_type = "portraits")   
 
     path = "../../[CP] Configurable HD Portraits/Androgynous/Portraits/"
 
-    make_screenshot(width =6, height =5, filepath = path, isBeach = True, image_type = "HD")        
+    make_screenshot(width =6, height =5, filepath = path, isBeach = True,isWinter = False, image_type = "HD")        
             
-    make_screenshot(width =12, height =4, filepath = path, isBeach = False, image_type = "HD")   
+    make_screenshot(width =12, height =4, filepath = path, isBeach = False,isWinter = False, image_type = "HD")   
 
     make_comparison_screenshot(filepath = path, image_type = "HD")   
         
     path = "../../Gender Setter/[CP] Gender Setter/Androgynous/Characters/"
 
-    make_screenshot(width =12, height =2, filepath = path, isBeach = True, image_type = "sprites")        
+    make_screenshot(width =12, height =2, filepath = path, isBeach = True,isWinter = False, image_type = "sprites")        
             
-    make_screenshot(width =13, height =4, filepath = path, isBeach = False, image_type = "sprites")        
+    make_screenshot(width =13, height =4, filepath = path, isBeach = False,isWinter = False, image_type = "sprites")        
       
     make_comparison_screenshot(filepath = path, image_type = "sprites")   
 
@@ -269,6 +278,8 @@ def copy_image_line(name, type,variant):
     copy_image(name, full_start, end+location(variant, type))
     if name in beach_bodies:
         copy_image(name+"_Beach", full_start, end+location(variant, type))
+    if name in winter_bodies:
+        copy_image(name+"_Winter", full_start, end+location(variant, type))    
 
 def locations(type):
     start= "../../Gender Setter/[CP] Gender Setter/Androgynous/"
@@ -285,6 +296,8 @@ def transfer_folder(location, list):
     for image in list:
         copy_image(image, start+location, end+location)       
 
+# Sprites and non-HD portraits start in Gender Setter/[CP] Gender Setter/Androgynous/ and get copied elsewhere
+# HD sprites start in Gender Setter HD/[CP] Gender Setter/Androgynous/ and get copied elsewhere       
 def transfer_images():   
     #this is so inefficient it's embarassing, shh
     for name in portrait_list:
@@ -300,10 +313,11 @@ def transfer_images():
             copy_image_line(name, "sprite", "Islander")               
     for name in no_portrait_list:   
         copy_image_line(name, "sprite", "")    
-    transfer_folder("Gil/", ["towninterior"])     
+    transfer_folder("Gil/", ["towninterior"])   
+    transfer_folder("Characters/", ["Assorted_Fishermen_Winter","Assorted_Fishermen"])     
     transfer_folder("Grandpa/", ["Cursors_Darker", "Cursors", "Cursors2_Darker", "Cursors2","jojacorps_Darker","jojacorps"])          
     transfer_folder("Haley/", ["cowPhotosWinter","cowPhotos"])  
-    transfer_folder("MarnieJas/", ["Cursors_Marnie_Darker", "Cursors_Marnie","Marnie_Paintings_Darker","Marnie_Paintings","SecretNotesImages_Darker","SecretNotesImages"])   
+    transfer_folder("MarnieJas/", ["Cursors_Marnie_Darker", "Cursors_Marnie","Cursors_Marnie_Winter_Darker", "Cursors_Marnie_Winter","Marnie_Paintings_Darker","Marnie_Paintings","SecretNotesImages_Darker","SecretNotesImages"])   
     transfer_folder("Other/", ["Cursors_witch","Cursors2_fairy","emojis_darker","emojis","Gourmand_EDGI","IslandTrader","jojacorps","JunimoNote_Darker","JunimoNote","MovieTheater_TileSheet"]) 
     transfer_folder("Wedding/", [name+"_Wedding" for name in spouse_list] )        
         
@@ -311,7 +325,7 @@ def transfer_images():
 #process_image("Abigail")
 make_screenshots()
 
-for isHD in [True,False]:
+for isHD in [False]:
     transfer_images()
 #process_folder()
 

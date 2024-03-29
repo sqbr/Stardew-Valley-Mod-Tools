@@ -67,7 +67,7 @@ def make_p_dict(pronoun, dict1,dict2):
    
 ## Original data
 
-name_list1= ["Abigail","Alex","Birdie","Bouncer","Caroline","Charlie","Clint","Demetrius","Dwarf","Elliott","Emily","Evelyn","George","Gil","Governor","Grandpa","Gunther","Gus","Haley","Harvey","Henchman","Jas","Jodi","Kent","Krobus","Leah","Leo","Lewis","Linus","Marcello","Marlon","Marnie","Maru","MisterQi","Morris","OldMariner","Pam","Penny","Pierre",]
+name_list1= ["Abigail","Alex","Birdie","Bouncer","Caroline","Charlie","Clint","Demetrius","Dwarf","Elliott","Emily","Evelyn","Fizz", "George","Gil","Governor","Grandpa","Gunther","Gus","Haley","Harvey","Henchman","Jas","Jodi","Kent","Krobus","Leah","Leo","Lewis","Linus","Marcello","Marlon","Marnie","Maru","MisterQi","Morris","OldMariner","Pam","Penny","Pierre",]
 name_list2= ["Robin","Sam","Sandy","Sebastian","Shane","Vincent","Willy","Witch","Wizard",]
 
 name_list = name_list1 + ["ProfessorSnail"]+name_list2 #for pronouns etc
@@ -77,6 +77,7 @@ sprite_list.remove("Gil")
 sprite_list.remove("Witch")
 
 beach_bodies = ["Abigail","Alex","Caroline","Clint","Elliott","Emily","Haley","Harvey","Jodi","Leah","Marnie","Maru","Pam","Penny","Pierre","Robin","Sam","Sebastian","Shane"]
+winter_bodies = ["Abigail","Alex","Caroline","Clint","Elliott","Emily","Evelyn", "George", "Haley","Harvey","Jas", "Jodi","Kent", "Leah","Lewis", "Marnie","Maru","Pam","ParrotBoy", "Penny","Pierre","Robin","Sam","Sebastian","Shane","Vincent","Willy"]
 spouse_list = ["Abigail","Alex","Elliott","Emily","Haley","Harvey","Leah","Maru","Penny","Sam","Sebastian","Shane"]
 
 no_portrait_list = ["Marcello","OldMariner"]
@@ -91,7 +92,7 @@ for name in sprite_list:
 portrait_list = sorted(portrait_list)
 extras = {"Maru":"Maru_Hospital", "Krobus": "Krobus_Trenchcoat"}
 possession_dict= {"ProfessorSnail": "'s","Abigail":"'s","Alex":"'s","Birdie":"'s","Bouncer":"'s","Caroline":"'s","Charlie":"'s","Clint":"'s","Demetrius":"'","Dwarf":"'s","Elliott":"'s","Emily":"'s","Evelyn":"'s","George":"'s","Gil":"'s","Governor":"'s","Grandpa":"'s","Gunther":"'s","Gus":"'","Haley":"'s","Harvey":"'s","Henchman":"'s","Jas":"'","Jodi":"'s","Kent":"'s","Krobus":"'","Leah":"'s","Leo":"'s","Lewis":"'","Linus":"'","Marcello":"'s","Marlon":"'s","Marnie":"'s","Maru":"'s","MisterQi":"'s","Morris":"'","OldMariner":"'s","Pam":"'s","Penny":"'s","Pierre":"'s","Robin":"'s","Sam":"'s","Sandy":"'s","Sebastian":"'s","Shane":"'s","Vincent":"'s","Willy":"'s","Wizard":"'",}
-orig_gender_dict = {"ProfessorSnail": "Male","Abigail":"Female","Alex":"Male","Birdie":"Female","Bouncer":"Male","Caroline":"Female","Charlie":"Female","Clint":"Male","Demetrius":"Male","Dwarf":"Male","Elliott":"Male","Emily":"Female","Evelyn":"Female","George":"Male","Gil":"Male","Governor":"Male","Grandpa":"Male","Gunther":"Male","Gus":"Male","Haley":"Female","Harvey":"Male","Henchman":"Male","Jas":"Female","Jodi":"Female","Kent":"Male","Krobus":"Male","Leah":"Female","Leo":"Male","Lewis":"Male","Linus":"Male","Marcello":"Male","Marlon":"Male","Marnie":"Female","Maru":"Female","MisterQi":"Male","Morris":"Male","OldMariner":"Male","Pam":"Female","Penny":"Female","Pierre":"Male","Robin":"Female","Sam":"Male","Sandy":"Female","Sebastian":"Male","Shane":"Male","Vincent":"Male","Willy":"Male","Witch":"Female","Wizard":"Male",}
+orig_gender_dict = {"ProfessorSnail": "Male","Abigail":"Female","Alex":"Male","Birdie":"Female","Bouncer":"Male","Caroline":"Female","Charlie":"Female","Clint":"Male","Demetrius":"Male","Dwarf":"Male","Elliott":"Male","Emily":"Female","Evelyn":"Female","Fizz":"Male","George":"Male","Gil":"Male","Governor":"Male","Grandpa":"Male","Gunther":"Male","Gus":"Male","Haley":"Female","Harvey":"Male","Henchman":"Male","Jas":"Female","Jodi":"Female","Kent":"Male","Krobus":"Male","Leah":"Female","Leo":"Male","Lewis":"Male","Linus":"Male","Marcello":"Male","Marlon":"Male","Marnie":"Female","Maru":"Female","MisterQi":"Male","Morris":"Male","OldMariner":"Male","Pam":"Female","Penny":"Female","Pierre":"Male","Robin":"Female","Sam":"Male","Sandy":"Female","Sebastian":"Male","Shane":"Male","Vincent":"Male","Willy":"Male","Witch":"Female","Wizard":"Male",}
 orig_pronoun_dict ={
     "Male": "He",
     "Female": "She",
@@ -138,7 +139,7 @@ variables_dict = {"Child2": "Godchild", "Child3": "nibling",
     "GenderUC":"They","GenderLC":"They","PronounUC1":"_Them","PronounLC1":"Them","PronounUC2":"_Their","PronounLC2":"Their","PronounLC3":"Theirs",
     "GenderLC2":"Adult","GenderLC3":"Guy","GenderLC4":"Kid","Child":"Child","Sibling":"Sibling","Relation":"_Auncle","ParentUC":"Parent","ParentLC":"Parent","MarriedUC":"Spouse","MarriedLC":"Spouse","Marital":"Mx","Elder":"_Grandparent",}
 
-nb_names_dict = {"Abigail":"Ashley","Alex":"Alex","Birdie":"Birdie","Bouncer":"Bouncer","Caroline":"Cary","Charlie":"Charley","Clint":"Coby","Demetrius":"Dubaku","Dwarf":"Smoluanu","Elliott":"Eden","Emily":"Elery","Evelyn":"Evelyn","George":"Georgie","Gil":"Gili","Governor":"Governor","Grandpa":"Grandie","Gunther":"Greer","Gus":"Gabi","Haley":"Hadyn","Harvey":"Harper","Henchman":"Guard","Jas":"Jay","Jodi":"Joey","Kent":"Kim","Krobus":"Krobus","Leah":"Leigh","Leo":"Lee","Lewis":"Lou","Linus":"Lucky","Marcello":"Modeste","Marlon":"Merlyn","Marnie":"Martie","Maru":"Maru","MisterQi":"Qi","Morris":"Moran","OldMariner":"Old Mariner","Pam":"Pat","Penny":"Pip","Pierre":"Paget","ProfessorSnail":"Professor Snail","Robin":"Robin","Sam":"Sam","Sandy":"Sandy","Sebastian":"September","Shane":"Shae","Vincent":"Vinnie","Willy":"Willie","Witch":"Rowan","Wizard":"Morgan",}
+nb_names_dict = {"Abigail":"Ashley","Alex":"Alex","Birdie":"Birdie","Bouncer":"Bouncer","Caroline":"Cary","Charlie":"Charley","Clint":"Coby","Demetrius":"Dubaku","Dwarf":"Smoluanu","Elliott":"Eden","Emily":"Elery","Evelyn":"Evelyn","Fizz":"Fizz","George":"Georgie","Gil":"Gili","Governor":"Governor","Grandpa":"Grandie","Gunther":"Greer","Gus":"Gabi","Haley":"Hadyn","Harvey":"Harper","Henchman":"Guard","Jas":"Jay","Jodi":"Joey","Kent":"Kim","Krobus":"Krobus","Leah":"Leigh","Leo":"Lee","Lewis":"Lou","Linus":"Lucky","Marcello":"Modeste","Marlon":"Merlyn","Marnie":"Martie","Maru":"Maru","MisterQi":"Qi","Morris":"Moran","OldMariner":"Old Mariner","Pam":"Pat","Penny":"Pip","Pierre":"Paget","ProfessorSnail":"Professor Snail","Robin":"Robin","Sam":"Sam","Sandy":"Sandy","Sebastian":"September","Shane":"Shae","Vincent":"Vinnie","Willy":"Willie","Witch":"Rowan","Wizard":"Morgan",}
 
 variants_dict = {"Harvey": ["Shaved"],"Emily": ["LongSleeved"], "Pam": ["Young"], "Linus": ["Coat"],"Wizard": ["Young"]}
 genderswap_list = ["Alex","Elliott","Harvey","Sam", "Shane","Sebastian","Wizard","Willy"]
@@ -499,9 +500,12 @@ def image_start_talkoh(name, type, variant):
             location = "Mods/talkohSeasonal/"     
 
     extra_code = ""
-    if name in beach_bodies and (name,variant) !=("Emily","LongSleeved"):
+    if name in winter_bodies and (name,variant) !=("Emily","LongSleeved"):
         extra_code =", "+location
-        extra_code+=name+"_Beach"
+        extra_code+=name+"_Winter"  
+        if name in beach_bodies:
+            extra_code+=", "+location+name+"_Beach"
+          
     if name in extras.keys():
         extra_code =", "+location
         extra_code+=extras[name]  
@@ -522,9 +526,11 @@ def image_start_talkoh2(name, type, variant):
             location = "Mods/talkohPortraits/"     
 
     extra_code = ""
-    if name in beach_bodies and (name,variant) !=("Emily","LongSleeved"):
+    if name in winter_bodies and (name,variant) !=("Emily","LongSleeved"):
         extra_code =", "+location
-        extra_code+=name+"_Beach"
+        extra_code+=name+"_Winter" 
+        if name in beach_bodies:   
+            extra_code+=", "+location+name+"_Beach"
     if name in extras.keys():
         extra_code =", "+location
         extra_code+=extras[name]  
@@ -594,9 +600,11 @@ def image_start(name, type, variant):
         location = "Portraits/"       
         
     extra_code = ""
-    if name in beach_bodies:
+    if name in winter_bodies:
         extra_code =", "+location
-        extra_code+=name+"_Beach"
+        extra_code+=name+"_Winter" 
+        if name in beach_bodies:
+            extra_code+=", "+location+name+"_Beach"
     if name in extras.keys():
         extra_code =", "+location
         extra_code+=extras[name]  
@@ -764,6 +772,8 @@ def extra_sprites(name):
         s+=image_pair_pos(name, "TileSheets/SecretNotesImages","MarnieJas/SecretNotesImages","Darker", 146, 89, 16,24,18, 28)   
         s+=image_pair_pos(name, "LooseSprites/Cursors","MarnieJas/Cursors_Marnie","", 557, 1424,0,0,62, 28)    
         s+=image_pair_pos(name, "LooseSprites/Cursors","MarnieJas/Cursors_Marnie","Darker", 557, 1424,0,0,62, 28) 
+        s+=image_pair_pos(name, "LooseSprites/marnie_winter_dance","MarnieJas/Cursors_Marnie_Winter","", 0, 0,0,0,62, 28)    
+        s+=image_pair_pos(name, "LooseSprites/marnie_winter_dance","MarnieJas/Cursors_Marnie_Winter","Darker", 0, 0,0,0,62, 28) 
         s+=image_pair_pos(name, "LooseSprites/Cursors","MarnieJas/Marnie_Paintings","", 0, 1925,0,0,50, 47)   
         s+=image_pair_pos(name, "LooseSprites/Cursors","MarnieJas/Marnie_Paintings","Darker", 0, 1925,0,0,50, 47)   
         s+=image_pair_pos(name, "LooseSprites/emojis","Other/emojis","", 0, 108,0,108,9, 9)  
@@ -807,8 +817,11 @@ def image_code_background():
     s+=image_line_other("Toddler_girl")
     s+=image_line_other("Toddler_girl_dark")
     s+=image_line_other("Toddler_dark")
+    #s+=image_line_other("Assorted_Fishermen_Winter")
+    #s+=image_line_other("Assorted_Fishermen")
     s+=image_pair("other","Characters/LeahExFemale","Characters/LeahEx","")
     s+=image_pair("other","Characters/LeahExMale","Characters/LeahEx","")
+    
     return s
 
 def set_disposition(name):
